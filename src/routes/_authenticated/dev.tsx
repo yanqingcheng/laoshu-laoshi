@@ -1,3 +1,4 @@
+import { VoiceCheck } from "@/components/VoiceCheck";
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
@@ -93,6 +94,12 @@ function Dev() {
             )}
           </div>
         )}
+      </section>
+
+      <section className="paper-card mt-6 p-5">
+        <h2 className="text-lg font-semibold">Live voice connection check</h2>
+        <p className="mt-1 text-sm text-muted-foreground">Open the preview in its own browser tab first — embedded previews often block the microphone.</p>
+        <VoiceCheck />
       </section>
 
       <section className="paper-card mt-6 p-5">
