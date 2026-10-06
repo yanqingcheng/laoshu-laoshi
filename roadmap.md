@@ -18,3 +18,4 @@
 - [x] Run both demo photo books through import
 - [ ] Live voice talk: needs a real-mic test in its own tab
 - [ ] Produce the hackathon launch video from the finished app and available artwork; add Qing's voiceover when supplied
+- [ ] Check whether Astra's game work has synced and include real game visuals in the launch video when available
