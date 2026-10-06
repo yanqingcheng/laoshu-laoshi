@@ -9,6 +9,7 @@ import { checkAiConnection } from "@/lib/ai/openai.functions";
 import { STAGES } from "@/lib/stages";
 import { WordText } from "@/components/WordText";
 import { Button } from "@/components/ui/button";
+import { ArtGallery } from "@/components/ArtGallery";
 
 export const Route = createFileRoute("/_authenticated/dev")({
   head: () => ({ meta: [{ title: "Developer — Laoshu Laoshi" }, { name: "description", content: "Build status, data checks and development tools." }, { property: "og:title", content: "Developer — Laoshu Laoshi" }, { property: "og:description", content: "Build status." }] }),
@@ -126,6 +127,7 @@ function Dev() {
           ))}
         </div>
       </section>
+      <ArtGallery />
     </AppShell>
   );
 }

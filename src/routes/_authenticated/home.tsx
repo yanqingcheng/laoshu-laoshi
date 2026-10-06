@@ -25,13 +25,14 @@ function Home() {
   const [panel, setPanel] = useState<null | "desk" | "shelf">(null);
   const due = q.data?.due;
   const hotspots: Hotspot[] = [
-    { key: "desk", label: "Desk · reviews", x: 0.36, y: 0.55, w: 0.26, h: 0.2, built: true, badge: due ? String(due.recognise + due.produce || "") || undefined : undefined, onActivate: () => setPanel("desk") },
-    { key: "shelf", label: "Shelf · lessons", x: 0.04, y: 0.12, w: 0.22, h: 0.42, built: true, onActivate: () => setPanel("shelf") },
-    { key: "camera", label: "Camera · add a book", x: 0.63, y: 0.5, w: 0.13, h: 0.14, built: stageBuilt(7), onActivate: () => nav({ to: "/book" }) },
-    { key: "console", label: "Console · Astra game preview", x: 0.66, y: 0.74, w: 0.17, h: 0.16, built: true, onActivate: () => nav({ to: "/game-preview" }) },
-    { key: "radio", label: "Radio · listening", x: 0.28, y: 0.3, w: 0.12, h: 0.14, built: stageBuilt(16) },
-    { key: "phone", label: "Phone · dramas", x: 0.44, y: 0.32, w: 0.1, h: 0.14, built: stageBuilt(12) },
-    { key: "door", label: "Door · to town", x: 0.82, y: 0.12, w: 0.15, h: 0.56, built: true, onActivate: () => nav({ to: "/town" }) },
+    { key: "desk", label: "Desk · reviews", shortLabel: "Reviews", x: 0.28, y: 0.52, w: 0.15, h: 0.10, built: true, badge: due ? String(due.recognise + due.produce || "") || undefined : undefined, onActivate: () => setPanel("desk") },
+    { key: "shelf", label: "Shelf · lessons", shortLabel: "Lessons", x: 0.11, y: 0.42, w: 0.28, h: 0.09, built: true, onActivate: () => setPanel("shelf") },
+    { key: "camera", label: "Camera · add a book", shortLabel: "Camera", x: 0.21, y: 0.50, w: 0.06, h: 0.09, built: stageBuilt(7), onActivate: () => nav({ to: "/book" }) },
+    { key: "console", label: "Console · Astra game preview", shortLabel: "Games", x: 0.68, y: 0.54, w: 0.10, h: 0.08, built: true, onActivate: () => nav({ to: "/game-preview" }) },
+    { key: "radio", label: "Radio · listening", shortLabel: "Listening", x: 0.15, y: 0.32, w: 0.11, h: 0.09, built: stageBuilt(16) },
+    { key: "phone", label: "Phone · dramas", shortLabel: "Dramas", x: 0.61, y: 0.54, w: 0.065, h: 0.08, built: stageBuilt(12) },
+    { key: "plants", label: "Plants · care", shortLabel: "Plants", x: 0.345, y: 0.16, w: 0.28, h: 0.23, built: stageBuilt(17) },
+    { key: "door", label: "Door · to town", shortLabel: "Town", x: 0.80, y: 0.12, w: 0.17, h: 0.53, built: true, onActivate: () => nav({ to: "/town" }) },
   ];
   return (
     <AppShell title="Home">
@@ -44,7 +45,7 @@ function Home() {
           </p>
         )}
       </div>
-      <Scene alt="Your home room" hotspots={hotspots} />
+      <Scene art="core/home-room.png" alt="Your room, with a review desk, books, radio, camera, phone, games and a door to town" hotspots={hotspots} />
       <HotspotList hotspots={hotspots} />
 
       <Sheet open={panel !== null} onOpenChange={(o) => !o && setPanel(null)}>

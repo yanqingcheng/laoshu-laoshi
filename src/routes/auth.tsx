@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Art } from "@/components/Art";
 
 export const Route = createFileRoute("/auth")({
   validateSearch: z.object({ redirect: z.string().optional() }),
@@ -51,6 +52,7 @@ function AuthPage() {
   return (
     <main className="flex min-h-screen items-center justify-center px-4">
       <div className="paper-card w-full max-w-sm p-7">
+        <Art file="landing/welcome-trio.png" alt="The mouse teacher and friends welcome you" eager className="mx-auto mb-4 w-56" />
         <div className="text-5xl" style={{ fontFamily: "var(--font-han)" }} lang="zh-CN">老鼠老师</div>
         <h1 className="mt-1 text-2xl font-semibold">Laoshu Laoshi</h1>
         <p className="mt-1 text-sm text-muted-foreground">Your words become a little world.</p>

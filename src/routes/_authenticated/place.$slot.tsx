@@ -7,6 +7,7 @@ import { Scene, HotspotList, type Hotspot } from "@/components/Scene";
 import { WordText } from "@/components/WordText";
 import { Button } from "@/components/ui/button";
 import { stageBuilt } from "@/lib/stages";
+import { Art } from "@/components/Art";
 import { getPlace, markVisited, makePlaceLevel } from "@/lib/place.functions";
 import { TalkPanel } from "@/components/TalkPanel";
 
@@ -18,8 +19,8 @@ export const Route = createFileRoute("/_authenticated/place/$slot")({
 const NAMES: Record<string, string> = { mouse: "老师 · the mouse teacher", dog: "毛毛 · the dog", cat: "咪咪 · the cat" };
 const SPOTS = ["shelf", "table", "floor", "wall"];
 const POS: Record<string, [number, number, number, number]> = {
-  host: [0.4, 0.25, 0.2, 0.5], tv: [0.05, 0.2, 0.2, 0.25], console: [0.7, 0.65, 0.18, 0.18], book: [0.3, 0.78, 0.16, 0.14],
-  shelf: [0.75, 0.15, 0.15, 0.15], table: [0.52, 0.8, 0.12, 0.12], floor: [0.08, 0.75, 0.14, 0.15], wall: [0.28, 0.05, 0.14, 0.14],
+  host: [0.75, 0.43, 0.19, 0.4], tv: [0.05, 0.43, 0.2, 0.18], console: [0.26, 0.63, 0.08, 0.08], book: [0.39, 0.56, 0.09, 0.07],
+  shelf: [0.421, 0.239, 0.166, 0.119], table: [0.602, 0.462, 0.101, 0.113], floor: [0.089, 0.763, 0.17, 0.132], wall: [0.69, 0.15, 0.21, 0.26],
 };
 
 function Place() {
@@ -39,7 +40,7 @@ function Place() {
 
   const pendingOn = (s: string) => (d?.items ?? []).filter((i: any) => i.surface === s && i.status === "pending").length;
   const surface = (key: string, label: string, stage: number): Hotspot => ({
-    key, label: pendingOn(key) ? `${label} ⚙` : label, x: POS[key][0], y: POS[key][1], w: POS[key][2], h: POS[key][3], built: stageBuilt(stage),
+    key, label, shortLabel: ({ host: "Talk", tv: "Dramas", console: "Games", book: "Stories" } as Record<string, string>)[key], marker: pendingOn(key) ? "pending" : undefined, status: pendingOn(key) ? "Being made" : undefined, x: POS[key][0], y: POS[key][1], w: POS[key][2], h: POS[key][3], built: stageBuilt(stage),
   });
   const objects: any[] = d?.place?.objects ?? [];
   const hotspots: Hotspot[] = [
@@ -58,7 +59,9 @@ function Place() {
       <AppShell title="Neighbour">
         <h1 className="mb-3 text-2xl font-semibold">{NAMES[slot] ?? "Neighbour"}</h1>
         <p className="mb-3 text-sm text-muted-foreground">Bundled neighbours get their lines and objects from "Make bundled places" (not built yet).</p>
-        <Scene alt="Neighbour's room" hotspots={hotspots.map((h) => ({ ...h, built: h.built && false }))} />
+        <Scene art="core/stock-room.png" alt="Neighbour's room" hotspots={hotspots.map((h) => ({ ...h, built: false }))}>
+          {["mouse", "dog", "cat"].includes(slot) && <Art file={`core/${slot}-neutral.png`} className="pointer-events-none absolute object-contain" style={{ left: "73%", top: "39%", width: "23%", height: "46%" }} />}
+        </Scene>
         <HotspotList hotspots={hotspots.map((h) => ({ ...h, built: false }))} />
       </AppShell>
     );
@@ -109,8 +112,8 @@ function Place() {
         <div className="mt-1"><WordText tokens={greet ?? []} lexicon={d.lexicon} size="md" /></div>
       </div>
       {d.levelDue && <p className="mb-2 text-sm">Level {d.levelDue} is ready to be made. <Button size="sm" variant="outline" disabled={!!making} onClick={async () => { setMaking("Making the next level…"); const r: any = await make({ data: { placeId: p.id } }); setMaking(r.ok ? null : `Failed: ${r.error}`); q.refetch(); }}>Make it</Button> {making}</p>}
-      <p className="mb-2 text-xs text-muted-foreground">Temporary stock room until this place's own art is made (stage 9). ⚙ = still being made.</p>
-      <Scene alt={`${p.host?.nameText ?? "Neighbour"}'s room`} hotspots={hotspots} />
+      <p className="mb-2 text-xs text-muted-foreground">Stock room until this neighbour’s own art is ready.</p>
+      <Scene art="core/stock-room.png" alt={`${p.host?.nameText ?? "Neighbour"}'s room`} hotspots={hotspots} />
       {talking && <TalkPanel placeId={p.id} hostName={p.host?.nameText ?? "the host"} onClose={() => { setTalking(false); q.refetch(); }} />}
       {said && (
         <div className="paper-card mt-3 p-4" role="status">

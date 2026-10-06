@@ -1,0 +1,122 @@
+CUSTOM GENERATION PROMPT PIPELINES v1 — 6 October 2026
+
+ENTRY POINT
+src/lib/ai/custom-generation/pack.v1.json is the portable prompt + pipeline registry.
+src/lib/ai/custom-generation/index.ts compiles prompts strictly, retains attachment roles,
+checks candidate-hash-bound acceptance and exposes dependency-ready stages.
+This pack does not deploy workers, make provider calls, store content or mark a feature built.
+Use the existing job/model-call infrastructure to execute it server-side.
+
+REUSE, NOT A REWRITE
+37 prompts / 11 chains cover photo intake, described sources, lessons, neighbours,
+place art, conversation, webcomic, microdrama, narration, game delegation and decorative art.
+Existing runtime prompts, the microdrama v1 templates and art library are copied with
+source SHA-256 hashes. Original accepted prompts and logs remain unchanged.
+The game chain delegates to docs/content/games/PIPELINE.v1.txt and its current validator
+pack; coordinate its exact version with the game chat. No new game prompt is imposed here.
+Do not replace the historical runtime registry wholesale: existing consumers retain their schemas.
+
+FASTEST BUILD ORDER
+After real source approval: generate first-lesson sentences and neighbour theme/identity.
+Once identity is checked, start the art chain and conversation brief. Start webcomic
+vocabulary/scenario/script next; four illustrated pages are the first media target.
+Microdrama reuses the vocabulary/scenario method but has its own episode plan/script.
+An existing accepted scenario may feed both branches with the same upstream hash.
+Never claim a webcomic and an eight-line drama are the same artifact without adaptation.
+Keep game work independent. Missing personalized art uses explicitly identified stock art.
+
+SERVER INPUT ENVELOPE (REQUIRED BEFORE DISPATCH)
+request_id, owner_id, source_id/version/hash, snapshot_id/hash, template version,
+approved source-new sense IDs frozen at approval, canonical word records (ID, w, p,
+sense, known/queued state), NEW/BRING IN/ALSO ALLOWED groups, explicit NAMES,
+actual review state or null, cast identities/voice profiles, continuity ledger,
+approved reference paths with roles/hashes, requested output settings, configured model
+IDs verified for this account, deadline and spend cap. Reject absent required fields.
+BRING IN: at most 12 existing words, half weakest/half newest when real state exists.
+Absent review state permits vocabulary reuse only, not a claim of scheduled practice.
+Public course content and private custom content have separate storage/cache ownership.
+
+EXECUTION CONTRACT
+1. Freeze envelope and bind request/owner/source/snapshot/model/settings/template hashes.
+2. compileCustomPrompt(id, vars) rejects missing inputs. Structured variables are JSON
+   strings; WORDS_AND_RULES may be compiled from ALLOWED and NAMES automatically.
+   Do not recursively substitute inside learner data. Actual image/reference attachments
+   must be passed separately; prose filenames alone are not attachments.
+3. Each pipeline stage's after[] requires ACCEPTED predecessor artifacts, not completed
+   calls. Bind the actual accepted outputs into its named inputs. App/external stages
+   are explicit adapters, not text prompts or simulated success.
+4. Validate schema, token IDs/readings/senses, checkText compounds, counts and references.
+   The pack's checks[] labels are instructions for adapters, not implemented validators.
+   New script tokens carry word_id; preserve it for checks and map to existing WordText
+   only at display. Punctuation carries no lexical ID. Recompute coverage from tokens.
+5. Send candidate plus checks and original evidence to a fresh reviewer. Generic reviews
+   use accept/revise/uncertain; microdrama review uses pass/repair/withhold. Normalize
+   only after strict schema validation. Missing evidence, malformed output, exceptions
+   or uncertainty are never accepted. Hash-bind review and checks to the candidate.
+6. Initial generation + ONE targeted repair per failed stage. Supply original expanded
+   prompt, full failed artifact and exact issues. Recheck and freshly review replacement.
+   One malformed-review retry is separate, within the same request budget. Preserve
+   accepted upstream stages; invalidate descendants when an upstream artifact changes.
+7. Persist accepted stage artifacts privately. Resume at first unaccepted stage; reconcile
+   timed-out provider jobs before resubmission. Never duplicate a render on page reload.
+8. Count generation, review, repairs, images, TTS, transcription and failed attempts under
+   one request. Unknown usage/cost stays null. Stop at configured deadline/spend cap.
+9. Publish only accepted content with its true required IDs and explicit unfamiliar IDs;
+   use the existing shelf/chooser for access and eligibility, never a prompt's assertion.
+
+POLICY CHECKS THE APP OWNS
+Custom gate: ceil(0.8 * frozen approved NEW senses) acquired + checked identity/lines.
+Zero new senses requires identity only. Queue edits never shrink the denominator.
+Generation, watching, reading and recreational gameplay never submit recall evidence.
+Easy stories: zero unfamiliar words and actual fluent eligibility. Medium/hard stories:
+only explicitly selected queued senses, provisional maximum 2%/5% lexical running-token
+occurrences respectively (exclude punctuation; repeated unknown occurrences all count).
+No rounding up to insert one unfamiliar word into a tiny story. These are story-specific
+policies; do not relax game, review, greeting or drama vocabulary with them.
+Town variants: validate each budget and let the chooser pick hardest suitable; English
+help on request does not permit arbitrary unknown words.
+
+WEBComIC ACCEPTANCE
+Four pages p1–p4: desire, obstacle, consequential action, payoff. Caption and narration
+arrays are identical. Meaningful old vocabulary and repeated new targets must appear
+in actual Chinese, not just art briefs. Independent naturalness/causality review precedes
+images. art.scene receives each accepted English picture description plus the actual
+identity/continuity references. Opaque images, no text or bubbles; captions use WordText.
+Inspect the actual four images for stable identity, prop logic and visible payoff.
+Check reader screenshots at phone/desktop sizes; this requires a reader integration.
+Narration is an optional separate branch; failed audio leaves usable accepted text/images.
+
+MICRODRAMA / VIDEO
+Retain existing microdrama method: 3 scenarios -> series -> 8-line script -> review ->
+storyboard -> one expanded prompt per supported clip -> provider render -> assembly.
+Any proposed contract_exception remains a blocker unless specifically approved; a model
+cannot approve its own departure from a required final-question/eight-line rule.
+Verify the connected Video Agents capabilities, duration/reference inputs and pricing.
+video-gateway.server.ts is the explicit Lovable AI gateway placeholder. Inject a server
+adapter implementing submit/reconcile/poll after inspecting the actual connector.
+Without it all calls return VIDEO_GATEWAY_NOT_CONFIGURED; no fake media is returned.
+Provider completion returns rendered, never ready. Copy temporary URLs into owned
+storage and run media checks before publication. The adapter must enforce session
+ownership, actual supported request settings, spending limits and durable idempotency;
+the interface alone does not implement those checks. It is not wired to a route yet.
+Controlled speech discards provider audio and uses checked TTS; native speech still
+requires actual transcription/listening. Neither decoding nor ASR proves pronunciation.
+Inspect shot continuity, captions, final playback/seeking and listen to demo speech.
+Optional motion comic reuses accepted comic pages with actual narration durations;
+label it motion comic, not character animation.
+
+ART AND PRIVACY
+Follow workspace AGENTS.md: append exact expanded PUBLIC request, unique run ID, UTC,
+reference paths/roles, transparency and intended filename before image calls; append
+actual outputs, duration, findings, exposed model/usage/cost (null if absent) afterward.
+Every retry gets a separate record. Keep originals. Never write private learner text or
+secrets into the shared art log: use protected runtime prompt storage and opaque IDs in
+shared metadata. Template versions are provenance, not successful-generation evidence.
+This work generated no images and made no provider calls.
+
+VALIDATION / VERSIONING
+Run: node scripts/build-custom-prompt-pack.mjs
+Run: npx vitest run src/test/custom-generation.test.ts
+The builder snapshots source templates; it does not run providers or accept content.
+Before changing an accepted v1 prompt, create v2 builder/output; retain v1 provenance.
+No stageBuilt flags should change merely because this pack exists.
