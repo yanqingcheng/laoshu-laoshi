@@ -34,10 +34,10 @@ export function AppShell({ children, title }: { children: React.ReactNode; title
       <header className="sticky top-0 z-20 border-b bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center gap-3 px-4 py-2">
           <Link to="/home" className="flex items-baseline gap-2">
-            <span className="text-xl text-primary" style={{ fontFamily: "var(--font-han)" }} lang="zh-CN">老鼠老师</span>
+            <span className="whitespace-nowrap text-lg text-primary sm:text-xl" style={{ fontFamily: "var(--font-han)" }} lang="zh-CN">老鼠老师</span>
             {title && <span className="hidden text-sm text-muted-foreground sm:inline">· {title}</span>}
           </Link>
-          <nav className="ml-auto flex items-center gap-1 text-sm">
+          <nav className="ml-auto flex items-center gap-0.5 text-xs sm:gap-1 sm:text-sm">
             <Link to="/home" className="rounded px-2 py-1 hover:bg-secondary" activeProps={{ className: "bg-secondary font-semibold" }}>Home</Link>
             <Link to="/town" className="rounded px-2 py-1 hover:bg-secondary" activeProps={{ className: "bg-secondary font-semibold" }}>Town</Link>
             <Link to="/settings" className="rounded px-2 py-1 hover:bg-secondary" activeProps={{ className: "bg-secondary font-semibold" }}>Settings</Link>
