@@ -315,7 +315,7 @@ function Book() {
               </li>
             ))}
           </ol>
-          {result.slot ? <p className="text-sm text-muted-foreground">A plot in town is reserved for this book's neighbour (made in a later stage).</p> : <p className="text-sm text-muted-foreground">Both book plots in town are taken.</p>}
+          {result.slot ? <p className="text-sm text-muted-foreground">Their house is in town now — padlocked until the lessons above are done.</p> : <p className="text-sm text-muted-foreground">Both book plots in town are taken.</p>}
           <Button asChild variant="outline"><Link to="/home">Home</Link></Button>
         </div>
       )}
