@@ -28,6 +28,20 @@ type Step = "start" | "reading" | "text" | "planning" | "approve" | "approving" 
 type Page = { id: string; text: string };
 type Plan = { language: string; found: { hanzi: string; pinyin: string; meaning: string; count: number; known: boolean }[]; unknown: Unknown[]; lessons: PlannedLesson[] };
 
+/** Shrink a phone photo to at most 2048px on its long edge (keeps orientation) before upload. */
+async function shrink(f: File): Promise<Blob> {
+  try {
+    const bmp = await createImageBitmap(f, { imageOrientation: "from-image" } as ImageBitmapOptions);
+    const k = Math.min(1, 2048 / Math.max(bmp.width, bmp.height));
+    const c = document.createElement("canvas");
+    c.width = Math.round(bmp.width * k); c.height = Math.round(bmp.height * k);
+    c.getContext("2d")!.drawImage(bmp, 0, 0, c.width, c.height);
+    return await new Promise((res) => c.toBlob((b) => res(b ?? f), "image/jpeg", 0.88));
+  } catch {
+    return f;
+  }
+}
+
 function Book() {
   const create = useServerFn(bookCreate);
   const read = useServerFn(bookRead);
@@ -81,8 +95,8 @@ function Book() {
         for (let i = 0; i < files.length; i++) {
           setProgress(`Uploading photo ${i + 1} of ${files.length}…`);
           const f = files[i];
-          const path = `${u.user!.id}/${jobId}/${String(i + 1).padStart(2, "0")}.${(f.name.split(".").pop() || "jpg").toLowerCase()}`;
-          const up = await supabase.storage.from("book-pages").upload(path, f, { contentType: f.type || "image/jpeg", upsert: true });
+          const path = `${u.user!.id}/${jobId}/${String(i + 1).padStart(2, "0")}.jpg`;
+          const up = await supabase.storage.from("book-pages").upload(path, await shrink(f), { contentType: "image/jpeg", upsert: true });
           if (up.error) throw new Error(`Upload failed: ${up.error.message}`);
           paths.push(path);
         }
