@@ -145,13 +145,17 @@ export const bookApprove = createServerFn({ method: "POST" })
     // place in a free custom slot (made in stage 8)
     const { data: taken } = await supabaseAdmin.from("places").select("slot").eq("learner_id", learner.id);
     const free = ["custom1", "custom2"].find((s) => !(taken ?? []).some((t: Any) => t.slot === s));
-    if (free) await supabaseAdmin.from("places").insert({ learner_id: learner.id, slot: free, source_id: src.id, status: "pending" });
+    let placeId: string | null = null;
+    if (free) {
+      const { data: pl } = await supabaseAdmin.from("places").insert({ learner_id: learner.id, slot: free, source_id: src.id, status: "pending" }).select("id").single();
+      placeId = pl?.id ?? null;
+    }
     // photos are deleted after approval
     if (job.outputs?.paths?.length) await supabaseAdmin.storage.from("book-pages").remove(job.outputs.paths);
     course.invalidateRef();
     await setJob(sb, job.id, { status: "ready", step: "approved", outputs: { ...job.outputs, sourceId: src.id, lessons: created, slot: free ?? null } });
     void book;
-    return { sourceId: src.id, lessons: created, slot: free ?? null };
+    return { sourceId: src.id, lessons: created, slot: free ?? null, placeId };
   });
 
 export const bookCancel = createServerFn({ method: "POST" })

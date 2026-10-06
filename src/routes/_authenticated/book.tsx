@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
+import { makePlaceLevel } from "@/lib/place.functions";
 import { bookCreate, bookRead, bookPlan, bookReplan, bookApprove, bookCancel, lessonSentences } from "@/lib/book.functions";
 import { toMarked } from "@/lib/chinese/pinyin";
 import type { Unknown, PlannedLesson } from "@/lib/bookplan";
@@ -35,6 +36,7 @@ function Book() {
   const approve = useServerFn(bookApprove);
   const cancel = useServerFn(bookCancel);
   const genSent = useServerFn(lessonSentences);
+  const makePlace = useServerFn(makePlaceLevel);
 
   const [step, setStep] = useState<Step>("start");
   const [mode, setMode] = useState<"photos" | "describe">("photos");
@@ -136,6 +138,12 @@ function Book() {
         } catch (e) {
           rep.push(`${custom[i].title}: sentence writing failed — ${(e as Error).message}`);
         }
+        setSentReport([...rep]);
+      }
+      if (r.placeId) {
+        setProgress("Making your new neighbour (theme, situation, host and lines)…");
+        const m: any = await makePlace({ data: { placeId: r.placeId } });
+        rep.push(m.ok ? `New neighbour made in ${Math.round(m.elapsedMs / 1000)}s — their house opens when the lessons above are done.` : `Making the neighbour failed: ${m.error} (retry from their house in town).`);
         setSentReport([...rep]);
       }
       setStep("done");
