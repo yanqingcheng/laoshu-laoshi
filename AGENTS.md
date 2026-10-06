@@ -14,3 +14,4 @@
 - Shared Chinese rendering is src/components/WordText.tsx + src/lib/chinese/pinyin.ts; all Chinese UI goes through it.
 - Build status is the single list in src/lib/stages.ts; world hotspots grey out via stageBuilt(n).
 - Word import runs as one SQL transaction (public.apply_word_import, service_role only) called after auth by importMyWords.
+- Product scope: read docs/PRODUCT-SPEC.md and docs/product/DECISIONS.md before feature work, then the applicable full stage in docs/product/contracts/BACKLOG.md and its exact contracts/runtime prompts. All 38 stages remain planned; short videos via Lovable Video Agents were restored to scope on 6 October 2026. Historical source snapshots are references, not implementation evidence; keep src/lib/stages.ts truthful.

@@ -1,0 +1,316 @@
+Generate the complete fixed artwork for Laoshu Laoshi now, during the hackathon, using the image generation tool. Carry out the full run below; do not just give me prompts or ask me to launch each image separately.
+
+I am building the app in Lovable. You are the local Astra art worker. You need no preparation repository or existing application code. The attached images are solely design guidance: d-story-garden-paper-detail.png (style), c-graphic-story-garden.png and b-paper-theatre.png (secondary style), laoshulaoshi.png (mouse identity), chowdog.png (dog identity), lihuacat.png (cat identity). Inspect the supplied references. Do not copy a reference image into the delivery as final art.
+
+Generate all twelve required assets below from scratch, preserving the exact filenames. The style board always means the attached d-story-garden-paper-detail.png. Every named home/room/house/sheet result means a new output from THIS run, never an afternoon experiment. Respect dependencies: home before stock room; stock house before town/house variants. Independent character sheets may run in parallel if the tool supports it. Optional avatars last. Keep all originals, validate the images themselves and allow up to two targeted retries per failing asset; count failed attempts too. Use actual transparent-background generation for cutouts.
+
+The town app owns eight slots: do not rely on the image model to invent usable placement geometry. Inspect the final composite and return suggested normalized positions for the eight houses/plots and room buttons. Suggestions must come from actual generated images; the app still validates them. Inspect character sheet alpha and cut boundaries before dividing poses. Never remove backgrounds by deleting cream colours.
+
+Save all accepted PNGs in event-art/, plus asset-manifest.json with filename, dimensions, alpha requirement/result, purpose, proposed hotspot/placement coordinates, and generation status. Include a human-readable list of any failed/missing assets. Package that directory's CONTENTS as event-art.zip so I can upload it to Lovable; also give me individual files if ZIP upload is unsupported. The manifest and packaging are generated tonight. No HTML, application code, private data or reference images in this bundle.
+
+Report model IDs, generation times and usage/cost where exposed. When the image tool does not expose usage, say the image cost is unknown; never invent a dollar figure. Return the download/file paths. Generate now from these complete instructions:
+
+## 1. Home room: `home-room.png`
+
+Adapted from a prompt tested 5 Oct; this wording is untested.
+
+Attach: the style board, `c-graphic-story-garden.png`.
+
+```text
+Generate ONE new wide 3:2 game background plate, NOT a reference board: the learner's own cosy living-and-study room in a Chinese storybook village, seen straight-on, facing the back wall, with a shallow strip of floor along the bottom. No characters.
+
+In the room, each clearly separate from the others so a button can sit over it, all whole and uncropped: a small freestanding writing desk centred at 25% of the canvas width, with its left edge at least 10% of the canvas width from the left border, with a small camera beside a closed notebook on it; a small low bookshelf of books behind the desk, fully inside the frame; a vintage radio on the bookshelf; a windowsill across the upper middle with three potted plants; a low table at the right with a phone lying on it and a handheld games console beside the phone; an open door at the right edge looking into a simple green garden. Frame the complete furniture grouping with a generous clear margin inside all four canvas edges: the desk, bookshelf and right table must have every outer edge and every foot visible, with wall or floor between them and the image border. Pull the camera back to fit them; do not crop furniture for a close-up. Keep a quiet clear floor area in the centre. No chairs or rugs. No television. No other decorative objects. The wall is plain: no pictures, scrolls, calendars or clocks. Book spines, the notebook and both screens are blank.
+
+Spacious flat architectural background with slightly richer foreground objects. Clear simple silhouettes, no excessive small detail.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 3:2 landscape, opaque.
+
+Accept if: desk, camera, bookshelf, radio, phone, console, windowsill plants and door are all present, separate and uncropped; the centre floor is clear; nothing on the wall or screens reads as writing.
+
+Hotspots to place in the app afterwards: desk, shelf, phone, console, radio, camera, door, windowsill plants.
+
+## 2. Stock neighbour room: `stock-room.png`
+
+New, untested.
+
+Attach: the style board, `c-graphic-story-garden.png`, `home-room.png`.
+
+```text
+Create ONE new wide 3:2 neighbour's room background plate, in the same artistic universe as the attached learner's room and with exactly the same camera: seen straight-on, facing the back wall, with a shallow strip of floor along the bottom, the floor line at the same height. A plain, friendly Chinese storybook cottage room that will be redecorated for many different neighbours, so it has no theme of its own. No characters, no animals.
+
+Cream plaster back wall, warm timber floor, one indigo timber beam along the top, one small round window high at the far left. Fixed furniture, each piece whole and clearly separate from the others:
+- At the left: a television with a blank dark screen on a low timber stand.
+- On the floor just right of the television stand: a small games console with a blank screen.
+- Low in the centre: a long low coffee table. One closed book with a plain cover lies on its left end. Its right end is completely empty.
+- On the wall above the coffee table: one short timber shelf, completely empty.
+
+Keep these four areas empty and uncluttered, because other pictures are placed there later: the floor at centre-right, wide and tall enough for a standing character; the floor at the front left, in front of the television; the wall at the upper right, plain cream with nothing on it; and the empty shelf and empty table end already described.
+
+Nothing else: no sofa, chairs, lamps, plants, rugs, pictures, ornaments or door. Finished warm illustration, not a diagram.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 3:2 landscape, opaque, the same size as `home-room.png`.
+
+Accept if: the TV, console, coffee table, book and shelf are all present; the shelf, the right end of the table, the centre-right floor, the front-left floor and the upper-right wall are empty; both screens are blank; it sits comfortably beside the home room.
+
+Hotspots to place in the app afterwards: host, TV, console, book, and the four object spots (shelf, table, floor, wall).
+
+## 3. Stock house: `stock-house.png`
+
+New, untested. This piece fixes the angle for the whole town; do not go on until it is right.
+
+Attach: the style board.
+
+```text
+Create ONE isolated game building cut-out: the plain village house that every other house in the town is repainted from.
+
+VIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.
+
+A small single-storey Chinese village cottage, a simple box under one gabled roof. Muted indigo ceramic tile roof, the whole roof visible from above. Warm cream plaster walls. On the front wall: a terracotta timber door in the middle with one small two-pane window on each side, jade frames. On the right-hand side wall: one small two-pane window. The house stands on a small irregular apron of its own ground, no wider than the house plus a narrow margin: a few paving stones at the door and short grass. No decoration, pots, lanterns or objects of any kind: it must stay plain.
+
+Square canvas. The house is centred and fills about three quarters of the canvas, nothing cropped, clear margin all round. Nothing else in the image: no lawn rectangle, no path, no fence, no neighbours, no people or animals.
+
+TRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 1:1 square, transparent.
+
+Accept if: the whole roof is visible from above, the front wall and the right-hand side wall are both visible, the door faces the lower left, edges are parallel, the shadow is at the lower right; the background is truly transparent; the house is plain. Reject anything that reads as a front view with a little depth.
+
+## 4. Town ground: `town-ground.png`
+
+New, untested.
+
+Attach: the style board, `c-graphic-story-garden.png`, `stock-house.png`.
+
+```text
+Generate ONE game map ground plate, NOT a reference board, landscape 3:2: the ground of a small Chinese storybook town with no buildings on it yet. The attached house shows the exact viewing angle; draw the ground it would stand on, without the house.
+
+VIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.
+
+The ground fills the whole frame, edge to edge. Warm sandy lanes run diagonally in the same parallel projection and meet at a small open paved square in the centre. A stream crosses the lower left under a small terracotta arched bridge. Along the lanes leave exactly EIGHT separate, fully visible empty lawn plots. Plan the composition around these eight open spaces before adding decoration. Each plot occupies about 18% of the image width and 18% of its height, with an uninterrupted flat middle; every plot lies inside the frame with a margin. Arrange exactly three plots in the top band, two in the middle band (one to either side of the central paved square), and three in the bottom band: 3 + 2 + 3 = 8. The bottom-middle plot is home. The central square is entirely paving and is NOT a ninth grass plot. Keep the eight plots large and whole; do not add any other plot-sized lawn anywhere. These are composition directions only: never print the counts, numbers or outlines. Keep lanes between plots. Restrict small plants and trees to the outer border and narrow gaps, never inside a plot or in front of its centre. All eight plots must be countable without relying on cropped areas beyond the image edge.
+
+NO houses, buildings, walls or roofs. NO people or animals. NO outlines, fences or markers around the patches: they must read as natural lawn. No moon gate, no distant hills.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 3:2 landscape, opaque.
+
+Accept if: no horizon or sky anywhere; lanes parallel, not converging; eight usable patches with clear middles; nothing reads as a building; `stock-house.png` laid over a patch looks as if it stands there.
+
+Hotspots to place in the app afterwards: home (the bottom-centre patch), the mouse teacher, the dog and the cat (the three patches above it), and the remaining four plots.
+
+## 5. The learner's home: `house-home.png`
+
+New, untested.
+
+Attach: the style board, `stock-house.png`.
+
+```text
+EDIT the attached plain house into this one: the learner's own home. Muted jade tile roof, ochre door, a row of small potted plants under the front windows, one cream paper lantern by the door.
+
+The attached house is the edit target and the geometric template. Preserve exactly its viewing angle, footprint, overall height, roof outline, wall edges, door and window positions, apron and shadow. Change only surface character: roof colour, door and window trim, and the small objects named above, placed on the existing apron. Do not add awnings, extensions, a second roof, fences or ground. No people or animals. Keep the same square canvas and framing.
+
+VIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.
+
+TRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 1:1 square, transparent, same framing as `stock-house.png`.
+
+Accept if: laid over `stock-house.png` it is the same shape and angle; it is clearly a different house from the others; transparent background.
+
+## 6. The mouse teacher's house: `house-mouse.png`
+
+New, untested.
+
+Attach: the style board, `stock-house.png`.
+
+```text
+EDIT the attached plain house into this one: the home of a scholarly mouse teacher. Deep indigo tile roof with an ochre ridge, indigo door, a neat stack of closed books and a basket of rolled paper scrolls beside the door. Book covers and scrolls are blank.
+
+The attached house is the edit target and the geometric template. Preserve exactly its viewing angle, footprint, overall height, roof outline, wall edges, door and window positions, apron and shadow. Change only surface character: roof colour, door and window trim, and the small objects named above, placed on the existing apron. Do not add awnings, extensions, a second roof, fences or ground. No people or animals. Keep the same square canvas and framing.
+
+VIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.
+
+TRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 1:1 square, transparent, same framing as `stock-house.png`.
+
+Accept if: laid over `stock-house.png` it is the same shape and angle; it is clearly a different house from the others; transparent background.
+
+## 7. The dog's house: `house-dog.png`
+
+New, untested.
+
+Attach: the style board, `stock-house.png`.
+
+```text
+EDIT the attached plain house into this one: the home of a friendly fluffy dog. Golden ochre tile roof, indigo door and window frames, a ceramic food bowl and a red ball beside the door.
+
+The attached house is the edit target and the geometric template. Preserve exactly its viewing angle, footprint, overall height, roof outline, wall edges, door and window positions, apron and shadow. Change only surface character: roof colour, door and window trim, and the small objects named above, placed on the existing apron. Do not add awnings, extensions, a second roof, fences or ground. No people or animals. Keep the same square canvas and framing.
+
+VIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.
+
+TRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 1:1 square, transparent, same framing as `stock-house.png`.
+
+Accept if: laid over `stock-house.png` it is the same shape and angle; it is clearly a different house from the others; transparent background.
+
+## 8. The cat's house: `house-cat.png`
+
+New, untested.
+
+Attach: the style board, `stock-house.png`.
+
+```text
+EDIT the attached plain house into this one: the home of an elegant striped cat. Terracotta tile roof, jade window shutters, two small red paper lanterns by the door, a round indigo cushion on the paving.
+
+The attached house is the edit target and the geometric template. Preserve exactly its viewing angle, footprint, overall height, roof outline, wall edges, door and window positions, apron and shadow. Change only surface character: roof colour, door and window trim, and the small objects named above, placed on the existing apron. Do not add awnings, extensions, a second roof, fences or ground. No people or animals. Keep the same square canvas and framing.
+
+VIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.
+
+TRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 1:1 square, transparent, same framing as `stock-house.png`.
+
+Accept if: laid over `stock-house.png` it is the same shape and angle; it is clearly a different house from the others; transparent background.
+
+## 9. Empty plot: `empty-plot.png`
+
+New, untested.
+
+Attach: the style board, `stock-house.png`.
+
+```text
+Create ONE isolated game map piece, in the same style and from exactly the same viewing angle as the attached house, sized to the same footprint as that house's apron.
+
+VIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.
+
+A neatly mown, slightly irregular patch of lawn with a short wooden stake at its front edge carrying a small blank cream board with nothing on it. A few daisies. Inviting, clearly waiting for a house. Square canvas, the patch centred in the lower half, clear margin all round. Nothing else in the image.
+
+TRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 1:1 square, transparent.
+
+Accept if: the board on the stake is blank; the patch lies flat at the same angle as the houses; transparent background.
+
+## 10. Mouse teacher sheet: `sheet-mouse.png`
+
+New, untested.
+
+Attach: the style board, `laoshulaoshi.png`.
+
+```text
+Create ONE character sheet: the tan rat teacher with pink-inner ears, round spectacles and a long blue Chinese robe, exactly as in the attached identity picture: same face, colouring, clothing and proportions, redrawn in the style of the attached style board.
+
+Two separate whole-body poses of the same character, side by side on a landscape 3:2 canvas. Left half: neutral, standing calmly with hands folded, a gentle smile. Right half: delighted, both arms raised, mouth open in a wide happy smile. Each pose stays wholly inside its own half, with a clear empty gap down the middle and clear margin all round. Identical body shape, face, colours, clothing and scale in both. Feet visible in both. Seen straight-on at eye level, facing the viewer. No props, no ground, no scenery.
+
+TRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under each pose, nothing spreading.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 3:2 landscape, transparent.
+
+Accept if: both poses are plainly the same character and match the identity picture; feet visible; nothing cropped or crossing the middle; transparent background.
+
+## 11. Dog sheet: `sheet-dog.png`
+
+New, untested.
+
+Attach: the style board, `chowdog.png`.
+
+```text
+Create ONE character sheet: the friendly golden fluffy Chow dog in a blue Chinese vest, exactly as in the attached identity picture: same face, colouring, clothing and proportions, redrawn in the style of the attached style board.
+
+Two separate whole-body poses of the same character, side by side on a landscape 3:2 canvas. Left half: neutral, sitting upright with paws visible, a calm friendly look. Right half: delighted, standing up on his hind legs with front paws raised, mouth open and tongue out. Each pose stays wholly inside its own half, with a clear empty gap down the middle and clear margin all round. Identical body shape, face, colours, clothing and scale in both. Feet visible in both. Seen straight-on at eye level, facing the viewer. No props, no ground, no scenery.
+
+TRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under each pose, nothing spreading.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 3:2 landscape, transparent.
+
+Accept if: both poses are plainly the same character and match the identity picture; feet visible; nothing cropped or crossing the middle; transparent background.
+
+## 12. Cat sheet: `sheet-cat.png`
+
+New, untested.
+
+Attach: the style board, `lihuacat.png`.
+
+```text
+Create ONE character sheet: the brown and gold striped Lihua cat with white muzzle and paws, a striped tail, and a dark vest with red and gold trim, exactly as in the attached identity picture: same face, colouring, clothing and proportions, redrawn in the style of the attached style board.
+
+Two separate whole-body poses of the same character, side by side on a landscape 3:2 canvas. Left half: neutral, sitting upright with paws visible, a calm friendly look. Right half: delighted, standing up on her hind legs with front paws raised, eyes closed in a wide happy smile, tail curled up. Each pose stays wholly inside its own half, with a clear empty gap down the middle and clear margin all round. Identical body shape, face, colours, clothing and scale in both. Feet visible in both. Seen straight-on at eye level, facing the viewer. No props, no ground, no scenery.
+
+TRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under each pose, nothing spreading.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 3:2 landscape, transparent.
+
+Accept if: both poses are plainly the same character and match the identity picture; feet visible; nothing cropped or crossing the middle; transparent background.
+
+## 13. Avatars (optional): `avatars.png`
+
+New, untested. Do this last, only if there is time.
+
+Attach: the style board.
+
+```text
+Create ONE sheet of TEN avatar portraits on plain warm cream paper, landscape 3:2, in two rows of five with wide even gaps. Each portrait is the head and shoulders of one friendly animal, facing the viewer, on its own flat round paper disc, wholly inside the disc, the same size as the others. Top row: panda, rabbit, tiger, frog, goose. Bottom row: monkey, fox, turtle, red-crowned crane, hedgehog. Disc colours alternate between indigo, muted jade, terracotta and ochre. Small dark eyes, simple expressive faces, no clothing. No mouse, dog or cat. Discs do not touch or overlap.
+
+STYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.
+NO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.
+```
+
+Canvas: 3:2 landscape, opaque. Cut the ten discs out by hand or by an even five-by-two grid.
+
+Accept if: ten distinct animals, each whole inside its own disc, discs not touching.
+
+## If something will not hold
+
+- The angle drifts toward a front view: attach `stock-house.png`, and add as the first line "Match the viewing angle of the attached house exactly."
+- A cut-out comes back with a background or a checkerboard: turn on the tool's transparent background setting and fire the same prompt again. Do not remove the background by colour; it eats cream characters.
+- Writing appears: fire again with "The image contains no writing of any kind; every board, book, screen and sign is blank." as the first line.
+- A piece looks pasted on beside the others: fire again with the accepted neighbouring pieces attached and "Match the attached pieces in scale, light and line weight." as the first line.
+- Three failed tries on one piece: move on with the plain version (the stock house for a house, the home room's style for a room) and come back if there is time.

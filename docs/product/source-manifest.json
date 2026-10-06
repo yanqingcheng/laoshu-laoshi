@@ -1,0 +1,212 @@
+{
+  "files": [
+    {
+      "snapshot_path": "sources/plan/requirements.md",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/requirements.md",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "4631ef3ec1a1a6b164f1113b3f12f33c0c89d0ce29c07cbae84b18e4738c0273",
+      "source_path": "docs/requirements.md"
+    },
+    {
+      "snapshot_path": "sources/plan/walkthroughs.md",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/walkthroughs.md",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "a706614227e4ad3ac07759299f1ef72ed4d3139136b56aaf97a41a2f7783405b",
+      "source_path": "docs/walkthroughs.md"
+    },
+    {
+      "snapshot_path": "sources/plan/decisions.md",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/decisions.md",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "047c80a361c7328f0ede14a4fff142e82245ef80cedc65c49b0e32196af3b8d0",
+      "source_path": "docs/decisions.md"
+    },
+    {
+      "snapshot_path": "sources/plan/source-lesson-gate-contract.md",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/source-lesson-gate-contract.md",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "bf33e9a0e646d511a9b1dd336f7a0aad14146a9e83eb5f5fe1e01a78af09f7a4",
+      "source_path": "docs/source-lesson-gate-contract.md"
+    },
+    {
+      "snapshot_path": "sources/plan/pinyin-ruby-contract.md",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/pinyin-ruby-contract.md",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "99af420cbc063581b75e964d2b25e3ab3c56b69f484357a80e8d675835aaa593",
+      "source_path": "docs/pinyin-ruby-contract.md"
+    },
+    {
+      "snapshot_path": "sources/plan/site-spec.md",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/site-spec.md",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "fd58c11fb4e91aef537aae32f86fd9f7f914ea2cf41bcf39fd28c6b6476f43eb",
+      "source_path": "docs/site-spec.md"
+    },
+    {
+      "snapshot_path": "sources/plan/site-acceptance.md",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/site-acceptance.md",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "939d881f231ad249779dd7268c7f2cb4a7a9e9821ffe6ac84edb1a556a60ebca",
+      "source_path": "docs/site-acceptance.md"
+    },
+    {
+      "snapshot_path": "sources/plan/build-backlog.json",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/build-backlog.json",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "ee832c86744a796b3e3f33237a806b1906cb0375fe1d6bf3b6dda234f153079c",
+      "source_path": "docs/build-backlog.json"
+    },
+    {
+      "snapshot_path": "sources/plan/build-prompts.md",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/build-prompts.md",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "7f0fd219ea1477bee6efaa113194bba51b5219196a324d79b928f5853a912c82",
+      "source_path": "docs/build-prompts.md"
+    },
+    {
+      "snapshot_path": "sources/plan/spec-v2.md",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/spec-v2.md",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "56f889765418cc3912df6db53df9baf96325a0a86c90c8b9db197d8a7de4c4db",
+      "source_path": "docs/spec-v2.md"
+    },
+    {
+      "snapshot_path": "sources/plan/prompts.md",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/prompts.md",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "50709ffc417b591fd8fa1e8b2f3be82db3edbf4506b1faa1550311870093e790",
+      "source_path": "docs/prompts.md"
+    },
+    {
+      "snapshot_path": "sources/plan/ILLUSTRATED-WORLD-BRIEF.md",
+      "repository": "https://github.com/yanqingcheng/laoshu-laoshi-plan",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-laoshi-plan/blob/bab833faca9bf8201d80445bb60f0ffd5f73273f/docs/ILLUSTRATED-WORLD-BRIEF.md",
+      "commit": "bab833faca9bf8201d80445bb60f0ffd5f73273f",
+      "sha256": "561948f71aac3ff513cd52a30c4274b28660881638354d168c8d9938aaee7d58",
+      "source_path": "docs/ILLUSTRATED-WORLD-BRIEF.md"
+    },
+    {
+      "snapshot_path": "sources/prompts/attachments/BUILD-RULES.txt",
+      "repository": "https://github.com/yanqingcheng/laoshu-prompts",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-prompts/blob/2465058a446e947c7cdf83a02b262da23272863d/attachments/BUILD-RULES.txt",
+      "commit": "2465058a446e947c7cdf83a02b262da23272863d",
+      "sha256": "76801885f774b32c74347e673f3ed1b189ec07a1fb1cb85e00dd8d9a73975abe",
+      "source_path": "attachments/BUILD-RULES.txt"
+    },
+    {
+      "snapshot_path": "sources/prompts/attachments/RUNTIME-PROMPTS.txt",
+      "repository": "https://github.com/yanqingcheng/laoshu-prompts",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-prompts/blob/2465058a446e947c7cdf83a02b262da23272863d/attachments/RUNTIME-PROMPTS.txt",
+      "commit": "2465058a446e947c7cdf83a02b262da23272863d",
+      "sha256": "04027dd9e4469854194b554dad2aedb14fc6a5b6cfe93b657bc7bf59f7a2e974",
+      "source_path": "attachments/RUNTIME-PROMPTS.txt"
+    },
+    {
+      "snapshot_path": "sources/prompts/attachments/DATA-ATTRIBUTION.txt",
+      "repository": "https://github.com/yanqingcheng/laoshu-prompts",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-prompts/blob/2465058a446e947c7cdf83a02b262da23272863d/attachments/DATA-ATTRIBUTION.txt",
+      "commit": "2465058a446e947c7cdf83a02b262da23272863d",
+      "sha256": "6bbed6b4dca51f8bd81e9d397b55333b4aa502b598b2c8c27372b4298cf8ecb0",
+      "source_path": "attachments/DATA-ATTRIBUTION.txt"
+    },
+    {
+      "snapshot_path": "sources/prompts/prompts/01-lovable-build-the-app.txt",
+      "repository": "https://github.com/yanqingcheng/laoshu-prompts",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-prompts/blob/2465058a446e947c7cdf83a02b262da23272863d/prompts/01-lovable-build-the-app.txt",
+      "commit": "2465058a446e947c7cdf83a02b262da23272863d",
+      "sha256": "32e9aa01dfed79f4f290e1e66a62ab5a60f6cdc12969faa89be08e6264cd3944",
+      "source_path": "prompts/01-lovable-build-the-app.txt"
+    },
+    {
+      "snapshot_path": "sources/prompts/prompts/02-astra-generate-all-art.txt",
+      "repository": "https://github.com/yanqingcheng/laoshu-prompts",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-prompts/blob/2465058a446e947c7cdf83a02b262da23272863d/prompts/02-astra-generate-all-art.txt",
+      "commit": "2465058a446e947c7cdf83a02b262da23272863d",
+      "sha256": "2ca54b6e9c1a7a544239d3842807c6308f75e98b71607cb39f71d8e9270676a9",
+      "source_path": "prompts/02-astra-generate-all-art.txt"
+    },
+    {
+      "snapshot_path": "sources/prompts/prompts/03-lovable-apply-art-and-finish.txt",
+      "repository": "https://github.com/yanqingcheng/laoshu-prompts",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-prompts/blob/2465058a446e947c7cdf83a02b262da23272863d/prompts/03-lovable-apply-art-and-finish.txt",
+      "commit": "2465058a446e947c7cdf83a02b262da23272863d",
+      "sha256": "96737da77b978cc8bda96dc3d66209515d0581d5268759f32f9b0485d1a7d5da",
+      "source_path": "prompts/03-lovable-apply-art-and-finish.txt"
+    },
+    {
+      "snapshot_path": "sources/prompts/prompts/04-astra-finish-and-verify.txt",
+      "repository": "https://github.com/yanqingcheng/laoshu-prompts",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-prompts/blob/2465058a446e947c7cdf83a02b262da23272863d/prompts/04-astra-finish-and-verify.txt",
+      "commit": "2465058a446e947c7cdf83a02b262da23272863d",
+      "sha256": "1f3ae6ceed50c23499e8ef70c145b24fe138fdaaaba02a811dd90b81265cc79d",
+      "source_path": "prompts/04-astra-finish-and-verify.txt"
+    },
+    {
+      "snapshot_path": "sources/prompts/prompts/05-lovable-final-integration.txt",
+      "repository": "https://github.com/yanqingcheng/laoshu-prompts",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-prompts/blob/2465058a446e947c7cdf83a02b262da23272863d/prompts/05-lovable-final-integration.txt",
+      "commit": "2465058a446e947c7cdf83a02b262da23272863d",
+      "sha256": "680f13ece4d552d93381e1eb96a48a36b80cf27ded3afcbab25282240103b6be",
+      "source_path": "prompts/05-lovable-final-integration.txt"
+    },
+    {
+      "snapshot_path": "sources/prompts/prompts/06-astra-edit-the-demo.txt",
+      "repository": "https://github.com/yanqingcheng/laoshu-prompts",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-prompts/blob/2465058a446e947c7cdf83a02b262da23272863d/prompts/06-astra-edit-the-demo.txt",
+      "commit": "2465058a446e947c7cdf83a02b262da23272863d",
+      "sha256": "fa80c4718279eb3ca6e8f8716bc6a2cbc7e129d62793ebe202bd86dcd87220fb",
+      "source_path": "prompts/06-astra-edit-the-demo.txt"
+    },
+    {
+      "snapshot_path": "sources/prompts/prompts/07-astra-prepare-submission.txt",
+      "repository": "https://github.com/yanqingcheng/laoshu-prompts",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-prompts/blob/2465058a446e947c7cdf83a02b262da23272863d/prompts/07-astra-prepare-submission.txt",
+      "commit": "2465058a446e947c7cdf83a02b262da23272863d",
+      "sha256": "11c2cf203be0018982bb87a8326855f82f33415738e926ba38ef9bf2c14a91d1",
+      "source_path": "prompts/07-astra-prepare-submission.txt"
+    },
+    {
+      "snapshot_path": "sources/prompts/prompts/side-lovable-new-learner-first-lessons.txt",
+      "repository": "https://github.com/yanqingcheng/laoshu-prompts",
+      "snapshot_basis": "local working file; hash identifies content even if different from HEAD",
+      "source_url": "https://github.com/yanqingcheng/laoshu-prompts/blob/2465058a446e947c7cdf83a02b262da23272863d/prompts/side-lovable-new-learner-first-lessons.txt",
+      "commit": "2465058a446e947c7cdf83a02b262da23272863d",
+      "sha256": "17bab578fbcc7c46264617feff5a9a760ece21379f976343a7ea7fc9d084c9b2",
+      "source_path": "prompts/side-lovable-new-learner-first-lessons.txt"
+    }
+  ],
+  "captured_utc": "2026-10-06T18:25:58.7927731Z"
+}

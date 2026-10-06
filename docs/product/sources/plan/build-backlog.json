@@ -1,0 +1,631 @@
+{
+  "source": "requirements.md at fable/world-and-demo 33003b8; stable R IDs",
+  "coverage": "planned primary assignment only; not implementation evidence",
+  "tasks": [
+    {
+      "id": "B00",
+      "type": "execution-task",
+      "title": "Independent Chinese-content validation",
+      "scope": "demo",
+      "depends_on": [],
+      "requirements": [
+        "R12",
+        "R38",
+        "R39",
+        "R39a",
+        "R39b",
+        "R39c",
+        "R42",
+        "R43",
+        "R43a"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": []
+    },
+    {
+      "id": "B01",
+      "type": "execution-task",
+      "title": "Four recall records and reliable review",
+      "scope": "demo",
+      "depends_on": [
+        "B00"
+      ],
+      "requirements": [
+        "R64",
+        "R65",
+        "R64a",
+        "R64b",
+        "R1",
+        "R2",
+        "R2a",
+        "R2b",
+        "R2c",
+        "R3",
+        "R4",
+        "R8",
+        "R9",
+        "R10",
+        "R11",
+        "R11a",
+        "R11b",
+        "R11c",
+        "R11d",
+        "R11e",
+        "R14",
+        "R14a"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G01",
+        "G08"
+      ]
+    },
+    {
+      "id": "B02",
+      "type": "execution-task",
+      "title": "Home and plants",
+      "scope": "demo",
+      "depends_on": [
+        "B01"
+      ],
+      "requirements": [
+        "R80",
+        "R80a",
+        "R81",
+        "R82",
+        "R83",
+        "R83a",
+        "R93",
+        "R94",
+        "R100",
+        "R100a",
+        "R100b",
+        "R115",
+        "R116",
+        "R118",
+        "R119",
+        "R120",
+        "R121",
+        "R122",
+        "R123"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": []
+    },
+    {
+      "id": "B03",
+      "type": "execution-task",
+      "title": "Book and word intake",
+      "scope": "demo",
+      "depends_on": [
+        "B00",
+        "B01",
+        "B02"
+      ],
+      "requirements": [
+        "R18",
+        "R20",
+        "R20a",
+        "R24",
+        "R25",
+        "R26",
+        "R28"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G12"
+      ]
+    },
+    {
+      "id": "B04",
+      "type": "execution-task",
+      "title": "Lessons and stored speech",
+      "scope": "demo",
+      "depends_on": [
+        "B03"
+      ],
+      "requirements": [
+        "R5",
+        "R6",
+        "R7",
+        "R15",
+        "R16",
+        "R27",
+        "R29"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": []
+    },
+    {
+      "id": "B05",
+      "type": "execution-task",
+      "title": "Shared generation jobs",
+      "scope": "demo",
+      "depends_on": [
+        "B04"
+      ],
+      "requirements": [],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": []
+    },
+    {
+      "id": "B06",
+      "type": "execution-task",
+      "title": "Map and source neighbour",
+      "scope": "demo",
+      "depends_on": [
+        "B02",
+        "B05"
+      ],
+      "requirements": [
+        "R84",
+        "R85",
+        "R85a",
+        "R86",
+        "R87",
+        "R88",
+        "R89",
+        "R90",
+        "R90a",
+        "R91",
+        "R91a",
+        "R92",
+        "R95",
+        "R124",
+        "R125",
+        "R126",
+        "R127",
+        "R128",
+        "R129",
+        "R130",
+        "R131",
+        "R137"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G02",
+        "G05"
+      ]
+    },
+    {
+      "id": "B07",
+      "type": "execution-task",
+      "title": "Staged drama",
+      "scope": "demo",
+      "depends_on": [
+        "B06"
+      ],
+      "requirements": [
+        "R106",
+        "R107",
+        "R108",
+        "R109",
+        "R110"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G05"
+      ]
+    },
+    {
+      "id": "B08",
+      "type": "execution-task",
+      "title": "Checked isolated game",
+      "scope": "demo",
+      "depends_on": [
+        "B05",
+        "B06"
+      ],
+      "requirements": [
+        "R101",
+        "R102",
+        "R102a",
+        "R103",
+        "R104"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G11"
+      ]
+    },
+    {
+      "id": "B09",
+      "type": "execution-task",
+      "title": "Planned conversation",
+      "scope": "demo",
+      "depends_on": [
+        "B06"
+      ],
+      "requirements": [
+        "R13",
+        "R54",
+        "R55",
+        "R56",
+        "R57",
+        "R58",
+        "R59",
+        "R59a",
+        "R59b",
+        "R59c",
+        "R70",
+        "R71",
+        "R71a",
+        "R71b",
+        "R71c",
+        "R72",
+        "R73",
+        "R74",
+        "R75",
+        "R114"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G08"
+      ]
+    },
+    {
+      "id": "B10",
+      "type": "execution-task",
+      "title": "First day and individual swipes",
+      "scope": "extension",
+      "depends_on": [
+        "B01",
+        "B02",
+        "B04",
+        "B06"
+      ],
+      "requirements": [
+        "R17",
+        "R17a",
+        "R17c",
+        "R17d",
+        "R17e",
+        "R17f",
+        "R17g",
+        "R17h",
+        "R17i",
+        "R17j",
+        "R17b",
+        "R138",
+        "R139"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G03",
+        "G06"
+      ]
+    },
+    {
+      "id": "B11",
+      "type": "execution-task",
+      "title": "Stories, print and radio",
+      "scope": "extension",
+      "depends_on": [
+        "B05",
+        "B06",
+        "B09"
+      ],
+      "requirements": [
+        "R53",
+        "R30",
+        "R31",
+        "R32",
+        "R32a",
+        "R33",
+        "R33a",
+        "R34",
+        "R34a",
+        "R35",
+        "R36",
+        "R66",
+        "R67",
+        "R68",
+        "R69",
+        "R40",
+        "R41",
+        "R41a",
+        "R41b",
+        "R44",
+        "R44a",
+        "R44b",
+        "R45",
+        "R46",
+        "R47",
+        "R117"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G05",
+        "G07"
+      ]
+    },
+    {
+      "id": "P01",
+      "type": "execution-task",
+      "title": "Course and complete intake",
+      "scope": "product",
+      "depends_on": [
+        "B03",
+        "B10"
+      ],
+      "requirements": [
+        "R19",
+        "R21",
+        "R22",
+        "R23",
+        "R37"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G04",
+        "G12"
+      ]
+    },
+    {
+      "id": "P02",
+      "type": "execution-task",
+      "title": "Daily practice selection",
+      "scope": "product",
+      "depends_on": [
+        "B11"
+      ],
+      "requirements": [
+        "R48",
+        "R49",
+        "R49a",
+        "R49b",
+        "R50",
+        "R51",
+        "R52",
+        "R60",
+        "R61",
+        "R62",
+        "R63",
+        "R96",
+        "R96a"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G07"
+      ]
+    },
+    {
+      "id": "P03",
+      "type": "execution-task",
+      "title": "Language purchases and coins",
+      "scope": "product",
+      "depends_on": [
+        "B09",
+        "P02"
+      ],
+      "requirements": [
+        "R97",
+        "R97a",
+        "R98",
+        "R98a",
+        "R98b",
+        "R98c",
+        "R98d",
+        "R98e",
+        "R99",
+        "R99a"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G01",
+        "G03",
+        "G08"
+      ]
+    },
+    {
+      "id": "P04",
+      "type": "execution-task",
+      "title": "Drills, grammar and jobs",
+      "scope": "product",
+      "depends_on": [
+        "P01",
+        "P02"
+      ],
+      "requirements": [
+        "R132",
+        "R133",
+        "R134",
+        "R135"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G08",
+        "G09"
+      ]
+    },
+    {
+      "id": "P05",
+      "type": "execution-task",
+      "title": "Bundled and paid content",
+      "scope": "product",
+      "depends_on": [
+        "P01",
+        "P03"
+      ],
+      "requirements": [
+        "R76",
+        "R77",
+        "R78",
+        "R79",
+        "R76a",
+        "R76b",
+        "R76c",
+        "R76d",
+        "R76e",
+        "R76f",
+        "R76g",
+        "R76h",
+        "R76i",
+        "R76j",
+        "R76k",
+        "R76l",
+        "R105",
+        "R105a"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G03"
+      ]
+    },
+    {
+      "id": "P06",
+      "type": "execution-task",
+      "title": "Broader world",
+      "scope": "product",
+      "depends_on": [
+        "P04",
+        "P05"
+      ],
+      "requirements": [
+        "R136",
+        "R111",
+        "R112",
+        "R113"
+      ],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": [
+        "G02",
+        "G10"
+      ]
+    },
+    {
+      "id": "P07",
+      "type": "execution-task",
+      "title": "Whole-product checks",
+      "scope": "product",
+      "depends_on": [
+        "P06",
+        "B07",
+        "B08"
+      ],
+      "requirements": [],
+      "prompt": "docs/build-prompts.md",
+      "status": "planned",
+      "decisions": []
+    }
+  ],
+  "decisions": [
+    {
+      "id": "G01",
+      "type": "decision",
+      "owner": "Qing",
+      "status": "open"
+    },
+    {
+      "id": "G02",
+      "type": "decision",
+      "owner": "Qing",
+      "status": "open"
+    },
+    {
+      "id": "G03",
+      "type": "decision",
+      "owner": "Qing",
+      "status": "open"
+    },
+    {
+      "id": "G04",
+      "type": "decision",
+      "owner": "Qing",
+      "status": "open"
+    },
+    {
+      "id": "G05",
+      "type": "decision",
+      "owner": "Qing",
+      "status": "open"
+    },
+    {
+      "id": "G06",
+      "type": "decision",
+      "owner": "Qing",
+      "status": "open"
+    },
+    {
+      "id": "G07",
+      "type": "decision",
+      "owner": "Qing",
+      "status": "open"
+    },
+    {
+      "id": "G08",
+      "type": "decision",
+      "owner": "Qing",
+      "status": "open"
+    },
+    {
+      "id": "G09",
+      "type": "decision",
+      "owner": "Qing",
+      "status": "open"
+    },
+    {
+      "id": "G10",
+      "type": "decision",
+      "owner": "Qing",
+      "status": "open"
+    },
+    {
+      "id": "G11",
+      "type": "decision",
+      "owner": "organisers",
+      "status": "open"
+    },
+    {
+      "id": "G12",
+      "type": "decision",
+      "owner": "Qing",
+      "status": "open"
+    }
+  ],
+  "charters": [
+    {
+      "id": "X01",
+      "type": "test-charter",
+      "status": "planned"
+    },
+    {
+      "id": "X02",
+      "type": "test-charter",
+      "status": "planned"
+    },
+    {
+      "id": "X03",
+      "type": "test-charter",
+      "status": "planned"
+    },
+    {
+      "id": "X04",
+      "type": "test-charter",
+      "status": "planned"
+    },
+    {
+      "id": "X05",
+      "type": "test-charter",
+      "status": "planned"
+    }
+  ]
+}

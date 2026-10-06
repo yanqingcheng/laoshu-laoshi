@@ -1,0 +1,15 @@
+In this same Laoshu Laoshi project, bring the new-learner path forward now, out of order. Judges will open the app, sign up and look around, so their first ten minutes must work without me. This does not change the book-to-world demo path: do not alter or slow it, and do not touch word memory's interfaces. Implement it now and tell me what exists; do not return only a plan. Then return to the BACKLOG where you left off.
+
+1. SIGN-UP. A stranger can create an account from the public preview URL and get straight in: no email confirmation, no invitation (BACKLOG stage 1). Each account is its own learner. Tom's demo account and its imported words are untouched.
+
+2. BUILD BACKLOG STAGE 14, new learner and placement, exactly as written in BUILD-RULES.txt. If avatars.png was not uploaded use the plain coloured discs. A learner who answers "no" must be taught the 21-word starter lesson first, through the normal lesson and quiz, since every later lesson sentence assumes those words. Then show the home room with one screen pointing out the desk (reviews), the shelf (lessons) and the door (town); one tap dismisses it for good.
+
+3. THE FIRST NEIGHBOURS HAVE CONTENT. Run "Make bundled places" from BACKLOG stage 8 for the mouse teacher, the dog and the cat, then fill their content with the app's own generators: greeting and return lines, up to four room objects with their lines, one story and one game each. Do the mouse teacher completely first, then the dog, then the cat. Everything passes the same word check as all other content and is stored once for every learner. Run this as a background job from the developer page, safe to run twice, with each item's true status shown. It must not block or queue behind a learner's own book generation.
+
+A new learner who finishes course lesson 1 must find the mouse teacher's house open, be greeted in Chinese they can read, and have at least one thing to read and one thing to play. Until an item exists the room shows the cog, never an empty or broken screen.
+
+RULES
+Real model calls through the existing pipelines. No hand-written stand-in content, no canned success. If the place, story or game generator is not built yet, build parts 1 and 2 now, wire the job, and tell me which generator it is waiting on. Keep the provider key server-side. Open sign-up exposes spending: bundled content is free to view, and a new account may start at most one book or described source of its own.
+
+DELIVERY
+Tell me: the public URL a judge should use, what a new account sees step by step, which of the three neighbours have which content ready, the job's cost so far where reported, and anything unavailable.

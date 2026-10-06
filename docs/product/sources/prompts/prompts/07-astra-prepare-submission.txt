@@ -1,0 +1,7 @@
+Prepare the final submission text for the GPT-6 Astra Hackathon London from the attached actual event build summary, team names, public implementation-repository link and public one-minute-video link. Deadline 20:30 London, 6 October 2026.
+
+Return ready-to-paste fields: team name and members, short project description, repository URL, video URL, and how we used OpenAI and Lovable. Explain the parenting/Chinese-learning problem and the demonstrated book-to-personal-world solution concretely.
+
+Distinguish Lovable building the interface, Astra building/testing/integrating and editing the video, and actual runtime Astra/image/TTS/Realtime capabilities. Only claim contributions and features evidenced by tonight's working build. Do not claim Lovable is a runtime AI service merely because it built the UI. Include exact model IDs where recorded, and actual costs only with their scope/unknowns.
+
+Clearly state that implementation and final demonstration content were created during the event; beforehand we prepared prompts, existing reference data and design guidance. The public implementation repo must show the event-created work; do not submit the preparation materials as the implementation. Verify that both public links open without login/access requests and that the video is one minute with audible narration. If required names or links are missing, list the exact missing fields without inventing them. Return the submission text; do not submit it automatically.
