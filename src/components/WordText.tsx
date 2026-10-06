@@ -37,6 +37,7 @@ export function WordText({
   targetId,
   hideTarget,
   tappable = true,
+  markUnknown = false,
   className = "",
 }: {
   tokens: WTToken[];
@@ -46,6 +47,7 @@ export function WordText({
   targetId?: string;
   hideTarget?: boolean;
   tappable?: boolean;
+  markUnknown?: boolean;
   className?: string;
 }) {
   return (
@@ -56,7 +58,8 @@ export function WordText({
         const segs = word.punct ? [{ han: word.w, py: "" }] : alignWord(word.w, reading).segs;
         const isTarget = !!targetId && word.id === targetId;
         const hidden = isTarget && hideTarget;
-        const cls = `wt-word ${isTarget ? (hidden ? "wt-hidden" : "wt-target") : ""}`;
+        const unknown = markUnknown && !word.punct && !word.name && !lex?.known;
+        const cls = `wt-word ${isTarget ? (hidden ? "wt-hidden" : "wt-target") : ""} ${unknown ? "wt-unknown" : ""}`;
         const body = (
           <>
             <span className="wt-cols" aria-label={pinyin && reading ? `${word.w} (${toMarked(reading)})` : undefined}>
