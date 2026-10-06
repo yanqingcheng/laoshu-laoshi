@@ -1,0 +1,39 @@
+ART INTEGRATION — 6 OCTOBER 2026
+
+Live in the local application:
+- Landing: desktop and portrait hero compositions, with real copy and links over
+  the cream area. Mobile extends the cream area so text never covers the cast.
+  Copy follows the broader personal-vocabulary pitch in product/sources/plan/
+  spec-v2.md section 4 and requirements.md section 1, rather than the book demo.
+- Sign-in: welcome trio.
+- Home: original room plate, with hotspots aligned to the illustrated objects.
+  Original fixed plants remain decorative until persisted plant state exists.
+- Town: full ground canvas and eight registered house/plot overlays. Bundled
+  houses use the existing lesson gates; locked art is shown only with loaded data.
+  Southwest bridge has separate Park and Gym exits, also reachable by action lists.
+- Neighbours: stock room and matching neutral mouse, dog or cat.
+- Dev: all 56 original library assets, with a nine-state plant composition preview.
+
+Ready for future features, preview-only:
+- Delighted poses, avatar/character sheets and stock custom house.
+- Nine plant states and the empty-windowsill plate; plantFile preserves maturity
+  across condition changes. No growth thresholds or saved care are invented.
+- Collectibles, currency, wall art, care feedback and the remaining status markers.
+  No invented ownership, rewards, affection, pending jobs or unseen content.
+- Newly supplied park/gym scenes are integrated by the separate RecreationHub.
+
+Implementation:
+src/lib/art.ts is the shared catalogue/placement adapter. Art renders registered
+full canvases, responsive WebP derivatives and optional optical bounds for icons.
+Scene preserves the 3:2 canvas. Below 768px, small object hotspots yield to equivalent
+48px-minimum action-list controls; lock markers and bridge exits remain visible.
+Generation manifests, originals and prompt logs are unchanged. No images generated.
+
+Validation:
+Production build and TypeScript check passed. Automated checks cover referenced
+image files, all nine plant states, eight map placements and button/list parity.
+Desktop (1280px) and phone (390px) hero and scene compositions inspected in browser.
+Scenes were inspected through an isolated fixture using production components and
+route coordinates; no signed-in learner was available in the local browser.
+Live authenticated workflows, 200% text zoom and the layout editor remain unverified.
+Stage 6 remains partial. This integration does not publish or mark later stages built.

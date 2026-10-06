@@ -12,8 +12,11 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as ParkPreviewRouteImport } from './routes/park-preview'
 import { Route as AuthenticatedDevRouteImport } from './routes/_authenticated/dev'
+import { Route as AuthenticatedGymRouteImport } from './routes/_authenticated/gym'
 import { Route as AuthenticatedHomeRouteImport } from './routes/_authenticated/home'
+import { Route as AuthenticatedParkRouteImport } from './routes/_authenticated/park'
 import { Route as AuthenticatedSettingsRouteImport } from './routes/_authenticated/settings'
 import { Route as AuthenticatedTownRouteImport } from './routes/_authenticated/town'
 import { Route as AuthenticatedLessonLessonIdRouteImport } from './routes/_authenticated/lesson.$lessonId'
@@ -34,14 +37,29 @@ const AuthRoute = AuthRouteImport.update({
   path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ParkPreviewRoute = ParkPreviewRouteImport.update({
+  id: '/park-preview',
+  path: '/park-preview',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthenticatedDevRoute = AuthenticatedDevRouteImport.update({
   id: '/dev',
   path: '/dev',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedGymRoute = AuthenticatedGymRouteImport.update({
+  id: '/gym',
+  path: '/gym',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedHomeRoute = AuthenticatedHomeRouteImport.update({
   id: '/home',
   path: '/home',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedParkRoute = AuthenticatedParkRouteImport.update({
+  id: '/park',
+  path: '/park',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedSettingsRoute = AuthenticatedSettingsRouteImport.update({
@@ -75,8 +93,11 @@ const AuthenticatedReviewDirectionRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/park-preview': typeof ParkPreviewRoute
   '/dev': typeof AuthenticatedDevRoute
+  '/gym': typeof AuthenticatedGymRoute
   '/home': typeof AuthenticatedHomeRoute
+  '/park': typeof AuthenticatedParkRoute
   '/settings': typeof AuthenticatedSettingsRoute
   '/town': typeof AuthenticatedTownRoute
   '/lesson/$lessonId': typeof AuthenticatedLessonLessonIdRoute
@@ -86,8 +107,11 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/park-preview': typeof ParkPreviewRoute
   '/dev': typeof AuthenticatedDevRoute
+  '/gym': typeof AuthenticatedGymRoute
   '/home': typeof AuthenticatedHomeRoute
+  '/park': typeof AuthenticatedParkRoute
   '/settings': typeof AuthenticatedSettingsRoute
   '/town': typeof AuthenticatedTownRoute
   '/lesson/$lessonId': typeof AuthenticatedLessonLessonIdRoute
@@ -99,8 +123,11 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
+  '/park-preview': typeof ParkPreviewRoute
   '/_authenticated/dev': typeof AuthenticatedDevRoute
+  '/_authenticated/gym': typeof AuthenticatedGymRoute
   '/_authenticated/home': typeof AuthenticatedHomeRoute
+  '/_authenticated/park': typeof AuthenticatedParkRoute
   '/_authenticated/settings': typeof AuthenticatedSettingsRoute
   '/_authenticated/town': typeof AuthenticatedTownRoute
   '/_authenticated/lesson/$lessonId': typeof AuthenticatedLessonLessonIdRoute
@@ -112,8 +139,11 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/auth'
+    | '/park-preview'
     | '/dev'
+    | '/gym'
     | '/home'
+    | '/park'
     | '/settings'
     | '/town'
     | '/lesson/$lessonId'
@@ -123,8 +153,11 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/auth'
+    | '/park-preview'
     | '/dev'
+    | '/gym'
     | '/home'
+    | '/park'
     | '/settings'
     | '/town'
     | '/lesson/$lessonId'
@@ -135,8 +168,11 @@ export interface FileRouteTypes {
     | '/'
     | '/_authenticated'
     | '/auth'
+    | '/park-preview'
     | '/_authenticated/dev'
+    | '/_authenticated/gym'
     | '/_authenticated/home'
+    | '/_authenticated/park'
     | '/_authenticated/settings'
     | '/_authenticated/town'
     | '/_authenticated/lesson/$lessonId'
@@ -148,6 +184,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AuthRoute: typeof AuthRoute
+  ParkPreviewRoute: typeof ParkPreviewRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -173,6 +210,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/park-preview': {
+      id: '/park-preview'
+      path: '/park-preview'
+      fullPath: '/park-preview'
+      preLoaderRoute: typeof ParkPreviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_authenticated/dev': {
       id: '/_authenticated/dev'
       path: '/dev'
@@ -180,11 +224,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedDevRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/gym': {
+      id: '/_authenticated/gym'
+      path: '/gym'
+      fullPath: '/gym'
+      preLoaderRoute: typeof AuthenticatedGymRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/home': {
       id: '/_authenticated/home'
       path: '/home'
       fullPath: '/home'
       preLoaderRoute: typeof AuthenticatedHomeRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/park': {
+      id: '/_authenticated/park'
+      path: '/park'
+      fullPath: '/park'
+      preLoaderRoute: typeof AuthenticatedParkRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/settings': {
@@ -227,7 +285,9 @@ declare module '@tanstack/react-router' {
 
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedDevRoute: typeof AuthenticatedDevRoute
+  AuthenticatedGymRoute: typeof AuthenticatedGymRoute
   AuthenticatedHomeRoute: typeof AuthenticatedHomeRoute
+  AuthenticatedParkRoute: typeof AuthenticatedParkRoute
   AuthenticatedSettingsRoute: typeof AuthenticatedSettingsRoute
   AuthenticatedTownRoute: typeof AuthenticatedTownRoute
   AuthenticatedLessonLessonIdRoute: typeof AuthenticatedLessonLessonIdRoute
@@ -237,7 +297,9 @@ interface AuthenticatedRouteRouteChildren {
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedDevRoute: AuthenticatedDevRoute,
+  AuthenticatedGymRoute: AuthenticatedGymRoute,
   AuthenticatedHomeRoute: AuthenticatedHomeRoute,
+  AuthenticatedParkRoute: AuthenticatedParkRoute,
   AuthenticatedSettingsRoute: AuthenticatedSettingsRoute,
   AuthenticatedTownRoute: AuthenticatedTownRoute,
   AuthenticatedLessonLessonIdRoute: AuthenticatedLessonLessonIdRoute,
@@ -252,6 +314,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AuthRoute: AuthRoute,
+  ParkPreviewRoute: ParkPreviewRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

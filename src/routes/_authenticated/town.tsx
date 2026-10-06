@@ -9,6 +9,9 @@ import { stageBuilt } from "@/lib/stages";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { BUNDLED, isOpen } from "@/lib/places";
+import { Art } from "@/components/Art";
+import { TOWN_LAYOUT } from "@/lib/art";
+import { TownExits } from "@/components/TownExits";
 
 export const Route = createFileRoute("/_authenticated/town")({
   head: () => ({ meta: [{ title: "Town — Laoshu Laoshi" }, { name: "description", content: "Your town of neighbours, shop, park and gym." }, { property: "og:title", content: "Town — Laoshu Laoshi" }, { property: "og:description", content: "Your town." }] }),
@@ -23,11 +26,8 @@ function Town() {
   const nav = useNavigate();
   const [locked, setLocked] = useState<null | { label: string; lessonId: string; title: string; need: number }>(null);
   const L = q.data?.lessons ?? [];
-  const pos: Record<string, [number, number]> = {
-    home: [0.42, 0.42], mouse: [0.14, 0.18], dog: [0.42, 0.1], cat: [0.7, 0.18], custom1: [0.12, 0.62], custom2: [0.72, 0.62], shop: [0.42, 0.72], park: [0.82, 0.42],
-  };
   const spot = (key: string, label: string, built: boolean, extra: Partial<Hotspot> = {}): Hotspot => ({
-    key, label, x: pos[key][0], y: pos[key][1], w: 0.16, h: 0.2, built, ...extra,
+    ...TOWN_LAYOUT[key as keyof typeof TOWN_LAYOUT], key, label, built, ...extra,
   });
   const hotspots: Hotspot[] = [
     spot("home", "Home", true, { onActivate: () => nav({ to: "/home" }) }),
@@ -35,25 +35,30 @@ function Town() {
       const l = L[b.lesson];
       const open = isOpen(l);
       return spot(b.slot, b.label, true, {
-        badge: open ? undefined : "🔒",
+        marker: l && !open ? "locked" : undefined,
+        status: !l ? "Loading lesson progress" : open ? undefined : "Locked · learn more words to visit",
         onActivate: () =>
           open
             ? nav({ to: "/place/$slot", params: { slot: b.slot } })
             : l && setLocked({ label: b.label, lessonId: l.id, title: l.title, need: Math.ceil(l.total * 0.8) - l.learned }),
       });
     }),
-    spot("custom1", "Empty plot · your book's place", stageBuilt(8)),
-    spot("custom2", "Empty plot · your book's place", stageBuilt(8)),
+    spot("custom1", "Empty plot · your book's place", stageBuilt(8), { shortLabel: "Your next neighbour" }),
+    spot("custom2", "Empty plot · your book's place", stageBuilt(8), { shortLabel: "Your next neighbour" }),
     spot("shop", "Shop", stageBuilt(17)),
-    spot("park", "Park & gym", stageBuilt(18)),
+    spot("park", "Park & gym", stageBuilt(18), { onActivate: () => nav({ to: "/park" }) }),
+    { key: "gym-exit", label: "Gym · across the bridge", x: 0.1, y: 0.86, w: 0.1, h: 0.1, built: stageBuilt(18), onActivate: () => nav({ to: "/gym" }) },
   ];
   return (
     <AppShell title="Town">
       {q.isError && <CouldNotLoad onRetry={() => q.refetch()} />}
       <h1 className="mb-3 text-2xl font-semibold">Town</h1>
-      <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-        <div className="min-w-[640px]"><Scene alt="Town map, raised three-quarter view" hotspots={hotspots} /></div>
-      </div>
+      <Scene art="core/town-ground.png" alt="Town map with three neighbours, your home and four plots" hotspots={hotspots.filter((h) => h.key !== "gym-exit")}>
+        {Object.entries(TOWN_LAYOUT).map(([key, slot]) => <Art key={key} file={slot.file}
+          className={`pointer-events-none absolute object-contain ${hotspots.find((h) => h.key === key)?.built ? "" : "grayscale opacity-60"}`}
+          style={{ left: `${slot.x * 100}%`, top: `${slot.y * 100}%`, width: `${slot.w * 100}%`, height: `${slot.h * 100}%` }} />)}
+        <TownExits />
+      </Scene>
       <HotspotList hotspots={hotspots} />
       <Dialog open={!!locked} onOpenChange={(o) => !o && setLocked(null)}>
         <DialogContent className="bg-paper">

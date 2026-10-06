@@ -4,6 +4,8 @@ Recorded 6 October 2026. Distinguish product intent, event implementation contra
 
 ## New decisions for this repository
 
+**Park and gym are separate connected scenes (6 October 2026).** Qing requested a broad Neopets-style collection of tone and pinyin minigames entered through recognizable playground/gym equipment. The playground and gym each have a direct town exit and a separate entrance to the other; the gym window overlooks the same playground. Keep the scenes spacious. The tone circuit is a literal miniature obstacle circuit for the ordered pairs 11, 12, 13, 14, 21, 22, 23, 24, 31, 32, 33, 34, 41, 42, 43, 44. Requested activities include seeing and saying tone combinations, hearing and entering combinations, and hearing sentence words and entering pinyin. Vocal pitch calibration precedes contour feedback; pitch feedback must not claim full pronunciation assessment. These decisions expand stages 18/30 without marking implementation accepted.
+
 **Custom neighbours unlock at 80%.** Qing chose the frozen approved-source gate on 6 October: `ceil(0.8 × N)` acquired senses, plus ready checked identity/lines. This supersedes event SPEC section 7's prerequisite-plus-lesson-1 gate. The remaining content is independently vocabulary-filtered; queue edits do not change the denominator.
 
 **Medium/hard stories may use unfamiliar words, from the queue only.** Qing approved approximately 2%/5% running-word allowances, exclusively selected from the learner's queue. This is a scoped exception to the historical all-repertoire chooser rule. It does not relax game/review rules or make an encounter acquisition evidence.

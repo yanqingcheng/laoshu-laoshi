@@ -4,6 +4,36 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Tiny painted objects have their full-size, equivalent controls below the art. */
+.scene-hotspot { min-width: 48px; min-height: 48px; }
+.scene-hotspot[aria-disabled="true"] .scene-label { color: var(--muted-foreground); }
+.scene-label { white-space: nowrap; }
+.landing-hero { display: grid; isolation: isolate; max-width: 1600px; margin: auto; background: #fbf3df; }
+.landing-art, .landing-copy { grid-area: 1 / 1; }
+.landing-art { display: block; align-self: end; margin-top: 11rem; }
+.landing-copy { z-index: 1; align-self: start; padding: 2rem 8% 90vw; pointer-events: none; }
+.landing-copy a { pointer-events: auto; }
+.landing-copy h1 { font-size: clamp(1.65rem, 4.6vw, 2.5rem); max-width: 20ch; }
+.landing-copy p { max-width: 34ch; font-size: 1rem; }
+.landing-brand { font-size: 1.8rem; }
+@media (max-width: 380px) {
+  .landing-art { margin-top: 16rem; }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .landing-art { margin-top: 4rem; }
+  .landing-copy { padding-top: 3rem; max-width: 38rem; }
+}
+@media (min-width: 900px) {
+  .landing-art { margin-top: 0; }
+  .landing-copy { width: 34%; padding: 12% 0 4% 4.5%; }
+  .landing-copy h1 { font-size: clamp(1.5rem, 2.4vw, 2.5rem); }
+  .landing-copy p { font-size: clamp(.875rem, 1.15vw, 1.125rem); }
+  .landing-brand { font-size: clamp(1.75rem, 3vw, 3rem); }
+}
+@media (max-width: 767px) {
+  .scene-hotspot { display: none; }
+}
+
 @theme inline {
   --font-display: "Fraunces", Georgia, serif;
   --font-sans: "Nunito Sans", system-ui, sans-serif;
