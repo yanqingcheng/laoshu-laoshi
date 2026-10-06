@@ -184,7 +184,8 @@
 .wt-col .han { font-family: var(--font-han); font-size: var(--wt-han); line-height: 1.2; }
 .wt-word.wt-tap { cursor: pointer; }
 .wt-word.wt-tap:hover, .wt-word.wt-tap:focus-visible { background: oklch(0.37 0.11 272 / 0.08); outline: none; }
-.wt-target .wt-cols .han { color: var(--primary); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; text-decoration-color: var(--terracotta); }
+.wt-target .wt-cols .han { color: var(--primary); }
+.wt-target .wt-cols { border-bottom: 2px solid var(--terracotta); }
 .wt-hidden .wt-cols .han { color: transparent; background: oklch(0.6 0.13 40 / 0.18); border-bottom: 2px solid var(--terracotta); }
 .wt-punct { margin-inline-start: -0.05em; }
 .wt-nopy .wt-py { display: none; }
