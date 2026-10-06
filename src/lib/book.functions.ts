@@ -222,3 +222,17 @@ export const myBooks = createServerFn({ method: "POST" })
       jobs: jobs ?? [],
     };
   });
+
+/** Re-run the Exact lesson plan after the learner drops words (no model call). */
+export const bookReplan = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((d: Any) => z.object({ jobId: z.string().uuid(), drop: z.array(z.string()).max(500) }).parse(d))
+  .handler(async ({ context, data }) => {
+    const { course, learner, sb } = await ctx(context);
+    const { planLessons } = await import("@/lib/bookplan");
+    const job = await getJob(sb, data.jobId);
+    const drop = new Set(data.drop);
+    const ref = await course.ref();
+    const { repertoire } = await sets(sb, learner.id);
+    return planLessons((job.outputs?.plan?.unknown ?? []).filter((u: Any) => !drop.has(u.key)), ref.courseLessons, repertoire);
+  });
