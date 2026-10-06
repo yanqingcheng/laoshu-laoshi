@@ -19,3 +19,29 @@ export const checkAiConnection = createServerFn({ method: "POST" })
       error: ping.error,
     };
   });
+
+// Mints a short-lived Realtime client secret for the browser. The real API
+// key never leaves the server; the browser only gets a token valid ~1 minute.
+export const createVoiceSession = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .handler(async () => {
+    const { AI_MODELS, VOICE_CAST } = await import("./config");
+    const key = process.env["OPENAI_API_KEY"];
+    if (!key) return { ok: false as const, error: "OPENAI_API_KEY is not configured" };
+    const r = await fetch("https://api.openai.com/v1/realtime/client_secrets", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        expires_after: { anchor: "created_at", seconds: 60 },
+        session: {
+          type: "realtime",
+          model: AI_MODELS.realtime,
+          instructions: "This is a connection check. Say one short friendly sentence in simple Mandarin: 你好！",
+          audio: { output: { voice: VOICE_CAST.hostMouse } },
+        },
+      }),
+    });
+    const j: any = await r.json().catch(() => ({}));
+    if (!r.ok) return { ok: false as const, error: `${r.status}: ${j?.error?.message ?? "unknown error"}` };
+    return { ok: true as const, value: j.value as string, expiresAt: j.expires_at as number, model: AI_MODELS.realtime };
+  });

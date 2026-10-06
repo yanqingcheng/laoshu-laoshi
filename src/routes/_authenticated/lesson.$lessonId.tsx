@@ -5,7 +5,8 @@ import { useMemo, useState } from "react";
 import { AppShell, CouldNotLoad } from "@/components/AppShell";
 import { QuestionCard, type QCard } from "@/components/QuestionCard";
 import { WordText } from "@/components/WordText";
-import { getLesson, lessonAnswer, declareKnownFn } from "@/lib/app.functions";
+import { getLesson, lessonAnswer, declareKnownFn, homeSummary } from "@/lib/app.functions";
+import { BUNDLED, isOpen } from "@/lib/places";
 import { toMarked } from "@/lib/chinese/pinyin";
 import { Button } from "@/components/ui/button";
 
@@ -30,6 +31,13 @@ function Lesson() {
   const [learned, setLearned] = useState<string[]>([]);
   const [reqId, setReqId] = useState(() => crypto.randomUUID());
 
+  const home = useServerFn(homeSummary);
+  const before = useQuery({ queryKey: ["home-before", lessonId], queryFn: () => home(), staleTime: Infinity, refetchOnWindowFocus: false });
+  const [finished, setFinished] = useState(false);
+  const after = useQuery({ queryKey: ["home-after", lessonId, learned.length, known.size], queryFn: () => home(), enabled: finished });
+  const opened = before.data && after.data
+    ? BUNDLED.filter((b) => !isOpen(before.data.lessons[b.lesson]) && isOpen(after.data.lessons[b.lesson])).map((b) => b.label)
+    : null;
   const questions = useMemo(() => (q.data ? q.data.questions.filter((x) => !known.has(x.wordId)) : []), [q.data, known]);
 
   if (q.isError) return <AppShell title="Lesson"><CouldNotLoad onRetry={() => q.refetch()} detail={(q.error as Error).message} /></AppShell>;
@@ -97,16 +105,19 @@ function Lesson() {
   const cur = order[0];
   if (!questions.length || cur === undefined) {
     qc.invalidateQueries({ queryKey: ["home"] });
+    if (!finished) setTimeout(() => setFinished(true), 0);
     return (
       <AppShell title={d.lesson.title}>
         <div className="paper-card mx-auto max-w-md p-6 text-center">
           <h2 className="text-2xl font-semibold">Lesson sitting done</h2>
           <p className="mt-2">Words learned: {learned.length ? learned.join("、") : "none this time"}</p>
           {known.size > 0 && <p className="text-sm text-muted-foreground">Marked as already known: {known.size}</p>}
-          <p className="mt-2 text-sm text-muted-foreground">New content that opens from these words will appear here once places are built.</p>
+          <p className="mt-3 font-semibold">
+            {opened === null ? "Checking what opened…" : opened.length ? `Now open in town: ${opened.join("、")}` : "Nothing new opened this time."}
+          </p>
           <div className="mt-4 flex justify-center gap-2">
             {d.lesson.remaining - learned.length - known.size > 0 && (
-              <Button onClick={() => { qc.removeQueries({ queryKey: ["lesson", lessonId] }); setStep(0); setQueue(null); setLearned([]); setKnown(new Set()); setRound(1); q.refetch(); }}>Next sitting</Button>
+              <Button onClick={() => { qc.removeQueries({ queryKey: ["lesson", lessonId] }); setStep(0); setFinished(false); setQueue(null); setLearned([]); setKnown(new Set()); setRound(1); q.refetch(); }}>Next sitting</Button>
             )}
             <Button asChild variant="outline"><Link to="/home">Home</Link></Button>
           </div>
