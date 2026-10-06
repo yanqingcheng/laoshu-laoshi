@@ -150,7 +150,7 @@ export const makePlaceLevel = createServerFn({ method: "POST" })
       if (neighbour) Object.assign(patch, { host: neighbour.host, lines: neighbour.lines, objects: neighbour.objects, art: { stock: true, house_en: neighbour.house_en, room_en: neighbour.room_en } });
       await supabaseAdmin.from("places").update(patch).eq("id", p.id);
       // pending items for console, host and TV, made by later stages
-      const idsFor = (words: string[]) => words.map((h) => (ref.wordsByHanzi.get(h) ?? []).find((r: Any) => allowed.ids.has(r.id))?.id).filter(Boolean);
+      const idsFor = (words: string[]): string[] => words.map((h) => (ref.wordsByHanzi.get(h) ?? []).find((r: Any) => allowed.ids.has(r.id))?.id).filter(Boolean) as string[];
       const rows = [["console", "game", scen.ideas.game], ["host", "talk", scen.ideas.talk], ["tv", "drama", scen.ideas.drama], ["book", "story", scen.ideas.story]].map(([surface, format, idea]: Any) => ({
         learner_id: learner.id, place_id: p.id, surface, format, level, required_word_ids: idsFor(idea?.words ?? []), payload: { idea }, status: "pending",
       }));
