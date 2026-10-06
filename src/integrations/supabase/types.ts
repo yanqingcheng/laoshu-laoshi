@@ -700,7 +700,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      apply_word_import: { Args: { p: Json }; Returns: Json }
+      apply_word_import: { Args: { p: Json; uid: string }; Returns: Json }
     }
     Enums: {
       [_ in never]: never
