@@ -10,12 +10,14 @@ Live in the local application:
   Original fixed plants remain decorative until persisted plant state exists.
 - Town: full ground canvas and eight registered house/plot overlays. Bundled
   houses use the existing lesson gates; locked art is shown only with loaded data.
+  Custom neighbours use the stock house once a place exists, with real lock/pending
+  markers. Book creation, custom greetings, objects and conversation remain intact.
   Southwest bridge has separate Park and Gym exits, also reachable by action lists.
 - Neighbours: stock room and matching neutral mouse, dog or cat.
 - Dev: all 56 original library assets, with a nine-state plant composition preview.
 
 Ready for future features, preview-only:
-- Delighted poses, avatar/character sheets and stock custom house.
+- Delighted poses and avatar/character sheets.
 - Nine plant states and the empty-windowsill plate; plantFile preserves maturity
   across condition changes. No growth thresholds or saved care are invented.
 - Collectibles, currency, wall art, care feedback and the remaining status markers.
@@ -36,4 +38,5 @@ Desktop (1280px) and phone (390px) hero and scene compositions inspected in brow
 Scenes were inspected through an isolated fixture using production components and
 route coordinates; no signed-in learner was available in the local browser.
 Live authenticated workflows, 200% text zoom and the layout editor remain unverified.
-Stage 6 remains partial. This integration does not publish or mark later stages built.
+Stage 6 remains partial. Art alone does not mark later stages built.
+Merged the shared main branch and Lovable sync work before the integration push.
