@@ -10,6 +10,26 @@ import { STAGES } from "@/lib/stages";
 import { WordText } from "@/components/WordText";
 import { Button } from "@/components/ui/button";
 import { ArtGallery } from "@/components/ArtGallery";
+import { DramaVideo } from "@/components/DramaVideo";
+import type { DramaStartInput } from "@/lib/video/drama.functions";
+
+const DEV_DRAMA: DramaStartInput = {
+  contentRef: "dev-sample-caterpillar-v1",
+  setting: "A cosy cut-paper kitchen with a round table, a fruit bowl and a sunny window.",
+  cast: [{ name: "Little Caterpillar", look: "a small round green caterpillar with a red face, big friendly eyes and tiny feet" }],
+  beats: [
+    "The caterpillar peeks over the table edge, tummy rumbling, eyeing a red apple.",
+    "It munches a perfect round hole straight through the apple and pops out the other side.",
+    "It pats its now-round full tummy and smiles contentedly at the camera.",
+  ],
+  sound: "gentle kitchen ambience, crunchy munching, a light playful pizzicato score",
+  captions: [
+    { atS: 0, untilS: 3, zh: "毛毛虫很饿。", en: "The caterpillar is hungry.", tokens: [{ w: "毛毛虫", p: "mao2 mao2 chong2" }, { w: "很", p: "hen3" }, { w: "饿", p: "e4" }, { w: "。", punct: true }] },
+    { atS: 3, untilS: 8, zh: "它吃了一个苹果。", en: "It ate an apple.", tokens: [{ w: "它", p: "ta1" }, { w: "吃", p: "chi1" }, { w: "了", p: "le5" }, { w: "一个", p: "yi1 ge4" }, { w: "苹果", p: "ping2 guo3" }, { w: "。", punct: true }] },
+  ],
+  aspect: "9:16",
+  durationS: 8,
+};
 
 export const Route = createFileRoute("/_authenticated/dev")({
   head: () => ({ meta: [{ title: "Developer — Laoshu Laoshi" }, { name: "description", content: "Build status, data checks and development tools." }, { property: "og:title", content: "Developer — Laoshu Laoshi" }, { property: "og:description", content: "Build status." }] }),
@@ -102,6 +122,12 @@ function Dev() {
         <h2 className="text-lg font-semibold">Live voice connection check</h2>
         <p className="mt-1 text-sm text-muted-foreground">Open the preview in its own browser tab first — embedded previews often block the microphone.</p>
         <VoiceCheck />
+      </section>
+
+      <section className="paper-card mt-6 p-5">
+        <h2 className="text-lg font-semibold">Microdrama video hook (test)</h2>
+        <p className="mt-1 text-sm text-muted-foreground">Sends a sample checked scene to the video model; captions are overlaid by the app, not drawn by the model. Spends AI credits.</p>
+        <DramaVideo request={DEV_DRAMA} />
       </section>
 
       <section className="paper-card mt-6 p-5">
