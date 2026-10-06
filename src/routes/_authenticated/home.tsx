@@ -28,10 +28,10 @@ function Home() {
     { key: "desk", label: "Desk · reviews", shortLabel: "Reviews", x: 0.28, y: 0.52, w: 0.15, h: 0.10, built: true, badge: due ? String(due.recognise + due.produce || "") || undefined : undefined, onActivate: () => setPanel("desk") },
     { key: "shelf", label: "Shelf · lessons", shortLabel: "Lessons", x: 0.11, y: 0.42, w: 0.28, h: 0.09, built: true, onActivate: () => setPanel("shelf") },
     { key: "camera", label: "Camera · add a book", shortLabel: "Camera", x: 0.21, y: 0.50, w: 0.06, h: 0.09, built: stageBuilt(7), onActivate: () => nav({ to: "/book" }) },
-    { key: "console", label: "Console · games", shortLabel: "Games", x: 0.68, y: 0.54, w: 0.10, h: 0.08, built: stageBuilt(10) },
+    { key: "console", label: "Console · prepared panda game", shortLabel: "Panda game", x: 0.68, y: 0.54, w: 0.10, h: 0.08, built: true, onActivate: () => nav({ to: "/demo-pack" }) },
     { key: "radio", label: "Radio · listening", shortLabel: "Listening", x: 0.15, y: 0.32, w: 0.11, h: 0.09, built: stageBuilt(16) },
     { key: "phone", label: "Phone · dramas", shortLabel: "Dramas", x: 0.61, y: 0.54, w: 0.065, h: 0.08, built: stageBuilt(12) },
-    { key: "plants", label: "Plants · care", shortLabel: "Plants", x: 0.345, y: 0.16, w: 0.28, h: 0.23, built: stageBuilt(17) },
+    { key: "plants", label: "Plants · review words", shortLabel: "Review words", x: 0.345, y: 0.20, w: 0.28, h: 0.19, built: true, badge: due ? `${due.recognise} due` : undefined, onActivate: () => nav({ to: "/review/$direction", params: { direction: "recognise" } }) },
     { key: "door", label: "Door · to town", shortLabel: "Town", x: 0.80, y: 0.12, w: 0.17, h: 0.53, built: true, onActivate: () => nav({ to: "/town" }) },
   ];
   return (
@@ -45,7 +45,7 @@ function Home() {
           </p>
         )}
       </div>
-      <Scene art="core/home-room.png" alt="Your room, with a review desk, books, radio, camera, phone, games and a door to town" hotspots={hotspots} />
+      <Scene art="core/home-room.png" alt="Your room, with review plants on the windowsill, a review desk, books, radio, camera, phone, games and a door to town" hotspots={hotspots} />
       <HotspotList hotspots={hotspots} />
 
       <Sheet open={panel !== null} onOpenChange={(o) => !o && setPanel(null)}>

@@ -29,9 +29,9 @@ export function DramaVideo({ request, autoStart = false }: { request: DramaStart
   useEffect(() => { if (autoStart) void go(); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, []);
 
   useEffect(() => {
-    if (!row || row.status !== "running") return;
+    if (!row || !['running','queued'].includes(row.status)) return;
     const h = setTimeout(async () => {
-      try { setRow(await check({ data: { id: row.id } }) as Row); } catch (e) { setErr((e as Error).message); }
+      try { setRow(await check({ data: { id: row.id } }) as Row); } catch (e) { setErr((e as Error).message); setRow(previous => previous ? {...previous} : null); }
     }, 8000);
     return () => clearTimeout(h);
   }, [row, check]);
@@ -43,7 +43,7 @@ export function DramaVideo({ request, autoStart = false }: { request: DramaStart
     <div className="space-y-2">
       {!row && <Button onClick={() => go()} disabled={busy}>{busy ? "Starting…" : "Make the video"}</Button>}
       {row && row.status !== "ready" && row.status !== "failed" && (
-        <p className="text-sm text-muted-foreground" role="status">Making the video… {row.progress != null ? `${row.progress}%` : ""} This usually takes one to three minutes.</p>
+        <p className="text-sm text-muted-foreground" role="status">{row.error ?? 'Making the video…'} {row.progress != null ? `${row.progress}%` : ""}</p>
       )}
       {row?.status === "failed" && (
         <div className="space-y-2 rounded-md border border-destructive/40 p-3 text-sm">

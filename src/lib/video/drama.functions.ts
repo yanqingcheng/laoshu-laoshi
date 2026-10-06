@@ -55,6 +55,29 @@ export const startDramaVideo = createServerFn({ method: "POST" })
   .handler(async ({ data, context }) => {
     const db = await admin();
     const learnerId = context.userId;
+    // Production requests are resolved from the server's reviewed artifact, never
+    // from a browser's claim that its captions have already been checked.
+    if (data.contentRef.startsWith('episode:')) {
+      const itemId = data.contentRef.split(':')[1];
+      const { data: item, error } = await db.from('content_items').select('*').eq('id', itemId).eq('learner_id', learnerId).single();
+      if (error || !item) throw new Error('Episode not found');
+      const drama = (item.payload as any)?.drama;
+      const request = drama?.accepted && drama.requests?.find((r: any) => r.contentRef === data.contentRef);
+      if (!request) throw new Error('This shot has no accepted script');
+      data = StartInput.parse({ ...request, retry: data.retry });
+    } else if (data.captions.length) {
+      // Dev hook remains useful, but cannot publish unchecked Chinese either.
+      const core = await import('@/lib/memory/core.server');
+      const { ref: loadRef } = await import('@/lib/course.server');
+      const { checkTokens } = await import('@/lib/place.server');
+      const learner = await core.getLearner(context.supabase, learnerId);
+      const ids = new Set((await core.queryWords(context.supabase, learner, { status: 'repertoire' })).map(w => w.id));
+      const ref = await loadRef();
+      for (const c of data.captions) {
+        if (!c.tokens?.length || c.zh !== c.tokens.map(t => t.w).join('') || !checkTokens(c.tokens, ids, ref, core, new Set()).ok) throw new Error('Caption must contain checked repertoire tokens');
+      }
+    }
+    for (const c of data.captions) if (c.untilS <= c.atS || c.untilS > data.durationS) throw new Error('Caption timing is outside the clip');
     const { data: existing } = await db.from("drama_videos").select("*").eq("learner_id", learnerId).eq("content_ref", data.contentRef).maybeSingle();
     // Reload / double-tap must not create duplicate jobs or spend.
     if (existing && !(existing.status === "failed" && data.retry)) return existing;
@@ -66,15 +89,26 @@ export const startDramaVideo = createServerFn({ method: "POST" })
       captions: data.captions, aspect: data.aspect, duration_s: data.durationS,
       status: "queued", error: null, gateway_job_id: null, storage_path: null, progress: null, updated_at: new Date().toISOString(),
     };
-    const { data: saved, error } = await db.from("drama_videos").upsert(row as never, { onConflict: "learner_id,content_ref" }).select("*").single();
-    if (error) throw new Error(error.message);
+    // A unique insert (or conditional retry claim) wins before any provider spend.
+    const { data: saved, error } = existing
+      ? await db.from('drama_videos').update(row as never).eq('id', existing.id).eq('status', 'failed').select('*').maybeSingle()
+      : await db.from('drama_videos').insert(row as never).select('*').single();
+    if (error?.code === '23505' || (!error && !saved)) {
+      const {data: winner, error: winnerError} = await db.from('drama_videos').select('*').eq('learner_id',learnerId).eq('content_ref',data.contentRef).single();
+      if(winnerError) throw new Error(winnerError.message);
+      return winner;
+    }
+    if (error || !saved) throw new Error(error?.message ?? 'Could not reserve video job');
     try {
       const job = await createVideo(prompt, data.durationS, data.aspect);
       const { data: upd } = await db.from("drama_videos").update({ gateway_job_id: job.id, status: "running", progress: job.progress ?? 0 } as never).eq("id", saved.id).select("*").single();
       return upd ?? saved;
     } catch (e) {
       const msg = e instanceof VideoGatewayError ? `${e.status}: ${e.message}` : (e as Error).message;
-      const { data: upd } = await db.from("drama_videos").update({ status: "failed", error: msg.slice(0, 500) } as never).eq("id", saved.id).select("*").single();
+      // Network/5xx may have created a paid provider job. Preserve queued state
+      // for reconciliation rather than offering a duplicate-spend retry.
+      const definitive = e instanceof VideoGatewayError && e.status >= 400 && e.status < 500;
+      const { data: upd } = await db.from("drama_videos").update({ status: definitive ? 'failed' : 'queued', error: definitive ? msg.slice(0,500) : 'Submission outcome unknown; reconcile the provider job before retrying.' } as never).eq("id", saved.id).select("*").single();
       return upd ?? saved;
     }
   });
@@ -112,6 +146,13 @@ export const checkDramaVideo = createServerFn({ method: "POST" })
     }
     let url: string | null = null;
     if (row.status === "ready" && row.storage_path) {
+      if(row.content_ref.startsWith('episode:')) {
+        const {data:item}=await db.from('content_items').select('required_word_ids').eq('id',row.content_ref.split(':')[1]).eq('learner_id',context.userId).single();
+        const core=await import('@/lib/memory/core.server');
+        const learner=await core.getLearner(context.supabase,context.userId);
+        const known=new Set((await core.queryWords(context.supabase,learner,{status:'repertoire'})).map(w=>w.id));
+        if(!item||(item.required_word_ids??[]).some(id=>!known.has(id))) return {...row,url:null,pollError:'This scene is generated. Learn its words to watch it.'};
+      }
       const s = await db.storage.from("drama-videos").createSignedUrl(row.storage_path, 3600);
       url = s.data?.signedUrl ?? null;
     }

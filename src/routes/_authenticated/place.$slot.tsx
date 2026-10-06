@@ -10,6 +10,7 @@ import { stageBuilt } from "@/lib/stages";
 import { Art } from "@/components/Art";
 import { getPlace, markVisited, makePlaceLevel } from "@/lib/place.functions";
 import { TalkPanel } from "@/components/TalkPanel";
+import { DramaPanel } from "@/components/DramaPanel";
 
 export const Route = createFileRoute("/_authenticated/place/$slot")({
   head: () => ({ meta: [{ title: "Neighbour — Laoshu Laoshi" }, { name: "description", content: "Visit a neighbour's room." }, { property: "og:title", content: "Neighbour — Laoshu Laoshi" }, { property: "og:description", content: "Visit a neighbour." }] }),
@@ -33,6 +34,7 @@ function Place() {
   const [said, setSaid] = useState<{ label?: any[]; line: any[] } | null>(null);
   const [making, setMaking] = useState<string | null>(null);
   const [talking, setTalking] = useState(false);
+  const [watching, setWatching] = useState(false);
   const d: any = q.data;
   useEffect(() => {
     if (d?.place && d.open && d.firstVisit) visit({ data: { placeId: d.place.id } });
@@ -45,7 +47,7 @@ function Place() {
   const objects: any[] = d?.place?.objects ?? [];
   const hotspots: Hotspot[] = [
     { ...surface("host", d?.place?.host ? `Talk to ${d.place.host.nameText}` : "Talk to the host", 11), built: stageBuilt(11), onActivate: () => setTalking(true) },
-    surface("tv", "TV · dramas", 12),
+    { ...surface("tv", "TV · dramas", 12), onActivate: () => setWatching(true) },
     surface("console", "Console · games", 10),
     surface("book", "Book · stories", 15),
     ...SPOTS.map((s, i): Hotspot => {
@@ -115,6 +117,7 @@ function Place() {
       <p className="mb-2 text-xs text-muted-foreground">Stock room until this neighbour’s own art is ready.</p>
       <Scene art="core/stock-room.png" alt={`${p.host?.nameText ?? "Neighbour"}'s room`} hotspots={hotspots} />
       {talking && <TalkPanel placeId={p.id} hostName={p.host?.nameText ?? "the host"} onClose={() => { setTalking(false); q.refetch(); }} />}
+      {watching && <DramaPanel placeId={p.id} onClose={() => setWatching(false)} />}
       {said && (
         <div className="paper-card mt-3 p-4" role="status">
           {said.label && <WordText tokens={said.label} lexicon={d.lexicon} size="sm" />}

@@ -8,6 +8,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
 import { makePlaceLevel } from "@/lib/place.functions";
+import { prepareDrama } from "@/lib/video/prepare.functions";
+import { startDramaVideo, checkDramaVideo } from "@/lib/video/drama.functions";
+import { prepareTalk } from "@/lib/talk.functions";
 import { bookCreate, bookRead, bookPlan, bookReplan, bookApprove, bookCancel, lessonSentences } from "@/lib/book.functions";
 import { toMarked } from "@/lib/chinese/pinyin";
 import type { Unknown, PlannedLesson } from "@/lib/bookplan";
@@ -51,6 +54,10 @@ function Book() {
   const cancel = useServerFn(bookCancel);
   const genSent = useServerFn(lessonSentences);
   const makePlace = useServerFn(makePlaceLevel);
+  const makeDrama = useServerFn(prepareDrama);
+  const makeTalk = useServerFn(prepareTalk);
+  const startVideo = useServerFn(startDramaVideo);
+  const checkVideo = useServerFn(checkDramaVideo);
 
   const [step, setStep] = useState<Step>("start");
   const [mode, setMode] = useState<"photos" | "describe">("photos");
@@ -141,8 +148,34 @@ function Book() {
       const r: any = await approve({ data: { jobId: jobId!, drop: [...drop] } });
       setResult(r);
       const custom = r.lessons.filter((l: any) => l.kind === "custom");
-      setStep("sentences");
+      // Lessons are usable immediately; generation continues while the learner studies.
+      setStep("done");
       const rep: string[] = [];
+      const report = (line: string) => { rep.push(line); setSentReport([...rep]); };
+      const world = (async () => {
+        if(!r.placeId) return;
+        report('Making your neighbour and preparing its content…');
+        try {
+          const m: any = await makePlace({data:{placeId:r.placeId}});
+          if(!m.ok) throw new Error(m.error);
+          report('Neighbour identity ready. Preparing conversation and drama…');
+          await Promise.allSettled([
+            (async()=>{try{const t:any=await makeTalk({data:{placeId:r.placeId}});report(t.ok?'Conversation ready.':`Conversation: ${t.error}`);}catch(e){report(`Conversation: ${(e as Error).message}`);}})(),
+            (async()=>{try{
+              const d:any=await makeDrama({data:{placeId:r.placeId,prepareOnly:true}});
+              if(d.status!=='script_ready'){report('Drama script is already being prepared.');return;}
+              report('Drama script checked. Generating four video scenes…');
+              for(const request of d.episode.requests){
+                const v:any=await startVideo({data:request});
+                report(`${request.contentRef.split(':').at(-1)}: ${v.status}${v.error?` — ${v.error}`:''}`);
+                // Provider jobs survive navigation; the TV also polls/downloads on return.
+                if(v.status==='running') void checkVideo({data:{id:v.id}}).catch(()=>{});
+              }
+            }catch(e){report(`Drama generation: ${(e as Error).message}`);}})(),
+          ]);
+        }catch(e){report(`Neighbour generation: ${(e as Error).message} — retry from Town.`);}
+      })();
+      report('Writing lesson examples. You can start learning now.');
       for (let i = 0; i < custom.length; i++) {
         setProgress(`Writing example sentences for ${custom[i].title} (${i + 1} of ${custom.length})…`);
         try {
@@ -154,12 +187,7 @@ function Book() {
         }
         setSentReport([...rep]);
       }
-      if (r.placeId) {
-        setProgress("Making your new neighbour (theme, situation, host and lines)…");
-        const m: any = await makePlace({ data: { placeId: r.placeId } });
-        rep.push(m.ok ? `New neighbour made in ${Math.round(m.elapsedMs / 1000)}s — their house opens when the lessons above are done.` : `Making the neighbour failed: ${m.error} (retry from their house in town).`);
-        setSentReport([...rep]);
-      }
+      await world;
       setStep("done");
     } catch (e) {
       fail(e, "approve");
@@ -181,6 +209,7 @@ function Book() {
     <AppShell title="Bring a book">
       <h1 className="mb-1 text-2xl font-semibold">Bring a book</h1>
       <Steps step={step} />
+      <p className="mb-4 text-sm"><Link to="/demo-pack" className="underline">Open the prepared panda book pack</Link></p>
       {err && <div role="alert" className="paper-card mb-4 border-destructive p-4 text-destructive">{err}</div>}
 
       {step === "start" && (

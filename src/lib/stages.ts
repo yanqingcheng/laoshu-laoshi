@@ -15,7 +15,7 @@ export const STAGES: Stage[] = [
   { n: 9, name: "Place art", status: "unbuilt" },
   { n: 10, name: "Games", status: "unbuilt" },
   { n: 11, name: "Live voice", status: "partial", note: "talk.brief (checked) → talk.instructions → short-lived realtime credential → WebRTC mic + text fallback, speaking indicator, End → transcript via splitText with unfamiliar words marked + Add to my words; earlier transcripts linked. Needs a live test with a real microphone in its own tab." },
-  { n: 12, name: "Animated dramas", status: "partial", note: "Video hook built: checked script → AI video job (no model speech/text) → stored clip with ruby caption overlay, retry on failure; tested on Dev. Drama script generation and checks not yet." },
+  { n: 12, name: "Animated dramas", status: "partial", note: "Book approval starts neighbour → checked/reviewed drama script → four silent video jobs; TV opens script and captioned clips. Live book-to-video acceptance, reference-image consistency, speech and final media QA remain." },
   { n: 13, name: "Word library and adding words", status: "unbuilt" },
   { n: 14, name: "New learner and placement", status: "unbuilt" },
   { n: 15, name: "Stories", status: "unbuilt" },
