@@ -8,6 +8,7 @@ import { WordText } from "@/components/WordText";
 import { Button } from "@/components/ui/button";
 import { stageBuilt } from "@/lib/stages";
 import { getPlace, markVisited, makePlaceLevel } from "@/lib/place.functions";
+import { TalkPanel } from "@/components/TalkPanel";
 
 export const Route = createFileRoute("/_authenticated/place/$slot")({
   head: () => ({ meta: [{ title: "Neighbour — Laoshu Laoshi" }, { name: "description", content: "Visit a neighbour's room." }, { property: "og:title", content: "Neighbour — Laoshu Laoshi" }, { property: "og:description", content: "Visit a neighbour." }] }),
@@ -30,6 +31,7 @@ function Place() {
   const q = useQuery({ queryKey: ["place", slot], queryFn: () => fn({ data: { slot } }), enabled: isCustom });
   const [said, setSaid] = useState<{ label?: any[]; line: any[] } | null>(null);
   const [making, setMaking] = useState<string | null>(null);
+  const [talking, setTalking] = useState(false);
   const d: any = q.data;
   useEffect(() => {
     if (d?.place && d.open && d.firstVisit) visit({ data: { placeId: d.place.id } });
@@ -41,7 +43,7 @@ function Place() {
   });
   const objects: any[] = d?.place?.objects ?? [];
   const hotspots: Hotspot[] = [
-    { ...surface("host", d?.place?.host ? `Talk to ${d.place.host.nameText}` : "Talk to the host", 11), built: stageBuilt(11) },
+    { ...surface("host", d?.place?.host ? `Talk to ${d.place.host.nameText}` : "Talk to the host", 11), built: stageBuilt(11), onActivate: () => setTalking(true) },
     surface("tv", "TV · dramas", 12),
     surface("console", "Console · games", 10),
     surface("book", "Book · stories", 15),
@@ -109,6 +111,7 @@ function Place() {
       {d.levelDue && <p className="mb-2 text-sm">Level {d.levelDue} is ready to be made. <Button size="sm" variant="outline" disabled={!!making} onClick={async () => { setMaking("Making the next level…"); const r: any = await make({ data: { placeId: p.id } }); setMaking(r.ok ? null : `Failed: ${r.error}`); q.refetch(); }}>Make it</Button> {making}</p>}
       <p className="mb-2 text-xs text-muted-foreground">Temporary stock room until this place's own art is made (stage 9). ⚙ = still being made.</p>
       <Scene alt={`${p.host?.nameText ?? "Neighbour"}'s room`} hotspots={hotspots} />
+      {talking && <TalkPanel placeId={p.id} hostName={p.host?.nameText ?? "the host"} onClose={() => { setTalking(false); q.refetch(); }} />}
       {said && (
         <div className="paper-card mt-3 p-4" role="status">
           {said.label && <WordText tokens={said.label} lexicon={d.lexicon} size="sm" />}

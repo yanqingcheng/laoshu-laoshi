@@ -14,7 +14,7 @@ export const STAGES: Stage[] = [
   { n: 8, name: "Make a place", status: "partial", note: "Approval reserves a custom plot; place.theme → place.scenario → place.neighbour with checkText + one repair; padlock/cog markers; room shows host, greeting and tappable objects; later levels on lesson completion. Bundled places generation not yet." },
   { n: 9, name: "Place art", status: "unbuilt" },
   { n: 10, name: "Games", status: "unbuilt" },
-  { n: 11, name: "Live voice", status: "unbuilt" },
+  { n: 11, name: "Live voice", status: "partial", note: "talk.brief (checked) → talk.instructions → short-lived realtime credential → WebRTC mic + text fallback, speaking indicator, End → transcript via splitText with unfamiliar words marked + Add to my words; earlier transcripts linked. Needs a live test with a real microphone in its own tab." },
   { n: 12, name: "Animated dramas", status: "unbuilt" },
   { n: 13, name: "Word library and adding words", status: "unbuilt" },
   { n: 14, name: "New learner and placement", status: "unbuilt" },
