@@ -17,3 +17,4 @@
 - [x] Test Tom import (469 sum, re-import all skipped) via Settings in test browser
 - [x] Run both demo photo books through import
 - [ ] Live voice talk: needs a real-mic test in its own tab
+- [ ] Produce the hackathon launch video from the finished app and available artwork; add Qing's voiceover when supplied
