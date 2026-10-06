@@ -1,96 +1,121 @@
-# Laoshu Laoshi
+# Laoshu Laoshi · 老鼠老师
 
-## Product documentation for agents
+**[Try the live app → laoshulaoshi.lovable.app](https://laoshulaoshi.lovable.app)**
 
-Start with the [full planned product specification](docs/PRODUCT-SPEC.md), covering all 38 stages and the restored short-video feature through Lovable Video Agents. Read the [decisions and conflicts](docs/product/DECISIONS.md), [complete build queue](docs/product/contracts/BACKLOG.md) and [runtime prompts](docs/product/sources/prompts/attachments/RUNTIME-PROMPTS.txt) before implementing a feature. The [source index](docs/product/SOURCES.md) preserves references and exact snapshots from the plan and prompt repos. Planned scope is separate from implementation status in `src/lib/stages.ts`.
+**Learn the Chinese that matters to you, and turn it into a world you can explore.**
 
-The original build request follows; newer product decisions in the documentation above supersede historical scope restrictions.
+![The illustrated world of Laoshu Laoshi](public/art/landing/landing-hero-desktop.webp)
 
-Build me Laoshu Laoshi from scratch now: a beautiful, working, mobile-friendly Chinese-learning app where the words I want to learn become an explorable personal world. Implement it, run it and give me the working preview. Do not stop at a plan or ask me to send a separate prompt for each feature.
+Built for the OpenAI × Lovable hackathon in London, 6 October 2026, using Lovable and GPT-6 Astra.
 
-WHY THIS APP
+## Why we built it
 
-I'm Qing. My husband Tom wants to learn Chinese to keep up with our bilingual toddler Bea and read her favourite books. Tourist phrases and generic beginner courses do not meet that need. Tom brings a book; the app finds the words he needs, teaches them, and expands his world with a themed neighbour, stories, games and conversations that reuse his existing vocabulary as well as the new words.
+Qing’s husband Tom wants to learn Chinese to keep up with their bilingual toddler Bea and read her favourite books. A generic course does not necessarily teach the words a family needs tonight.
 
-The below is a long prompt and lots of attachments describing what I want - but I don't know you and I don't know your capabilities, so please feel free to break out the work and do it how it works best for you - I will be here and you can talk t me
+Laoshu Laoshi starts with what you want to understand: a book, a story idea, or your own vocabulary. The ambition is to turn those words into lessons, neighbours, conversations, stories and games in a personal illustrated village. Learning more Chinese gives you more things to do there.
 
-INPUTS ATTACHED TO THIS MESSAGE
+## Explore the submission
 
-- BUILD-RULES.txt: detailed learning rules, Chinese typography, generation, verification, voices and cost requirements, and at its end the BACKLOG: all thirty-eight build stages of the whole app, each with its own done-when and check. These are instructions for new work, not code.
+1. **Try the prepared panda garden at `/demo-pack`.** This public route introduces the illustrated world and a movement game: read a Chinese word, find its object, collect it and complete the four rounds. It supports keyboard and on-screen controls, pinyin, English help and restart. This is a prepared example; playing does not update learner progress.
+   For the explicitly dispatched Astra game, open `/game-preview`: *Lanternwing* asks you to collect and deliver the number of fireflies requested in Chinese. It is a playable preview with recorded browser checks; full production acceptance remains outstanding.
+2. **Sign in and explore `/home` and `/town`.** Open lessons and reviews from the illustrated room, and see the village and its neighbours. Settings includes a private vocabulary import.
+3. **Open `/book` to bring your own material.** Describe a story or upload ordered book photos, review the extracted text, inspect the proposed lessons and approve the plan. Approval starts custom-place, conversation and drama preparation; generation requires the configured backend services.
+4. **Visit a custom neighbour.** Explore its checked greeting and conversation, or open its TV for the drama script and video scenes. Live microphone and book-to-video acceptance testing remain outstanding.
 
-- RUNTIME-PROMPTS.txt: prompt templates to implement in the app's backend, not pregenerated content.
+The described-story flow has been exercised, and Lovable’s [event roadmap](roadmap.md) records photo import tests with real page photos and both demo books. These records do not establish full book-to-video acceptance. The prepared panda pack and Lanternwing preview are separate from the on-demand generation pipeline.
 
-- learning-data.json: existing curriculum, dictionary and compound reference data; its files mapping contains original filenames and their JSON contents. Load them idempotently. It contains no Tom export.
+## How we used Lovable and Astra
 
-- DATA-ATTRIBUTION.txt: retain the supplied data attribution.
+**Lovable built the initial application scaffolding**: the React and TanStack Start app, navigation, authentication, database-backed learner flows and the foundation for lessons and review. We continued using Lovable for application features, then merged its updates with local integration work.
 
-- d-story-garden-paper-detail.png, mockup-home-room.png, mockup-neighbour-room.png, mockup-review-card.png, mockup-phone-width.png: visual guidance only. Do not use these pictures as final application artwork.
+**Astra led the art production**, using image-generation tools to create the painted-paper world: rooms, houses, the mouse/dog/cat cast, objects, plants and landing illustrations. The art work included reusable prompts, consistent character references, asset manifests and placement guidance. Image synthesis is credited to the image tools; Astra’s contribution includes direction, prompting, review and assembly. Original assets and generation records are preserved in the [art handoff](docs/art/START-HERE.txt) and [prompt library](docs/art/prompt-library/README.txt).
 
-Read and apply all supplied instructions. Do not assume repository access or ask me to clone a preparation project. If an attachment is actually missing or unreadable, identify it rather than inventing its contents.
+Alongside the main app, we split the work into several strands:
 
-LOOK AND INTERACTION
+| Strand | Contribution and current state |
+| --- | --- |
+| Illustrated world and integration | Generated the asset library and integrated it into responsive home, town and neighbour scenes, with real controls aligned to the artwork. [Integration record](docs/art/INTEGRATION-STATUS.txt). |
+| Personal learning content | Runtime Astra prompts read sources, extract vocabulary, generate lesson sentences, propose themed places and write hosts, greetings and conversation briefs. These run against the learner’s vocabulary and application checks. |
+| Games | Integrated the explicitly dispatched Astra game, Lanternwing, in a sandboxed preview, alongside the prepared panda activity. On-demand production generation remains work in progress. [Dispatch provenance](docs/games/lanternwing-provenance.json) and [browser checks and limits](docs/games/LANTERNWING-TESTING.v1.txt). |
+| Short video microdramas | Wired vocabulary-checked script planning and review to four silent video scenes through Lovable’s AI gateway, with captioned playback in the neighbour’s TV. Live end-to-end rendering remains unverified. The separate pilot, *The Teacher’s Portrait*, has a [production prompt pack](docs/product/prompts/microdramas/README.md). |
+| Pronunciation practice and demo integration | Local coding work added illustrated park/gym practice, tone and pinyin drills, and worked through integration and demo readiness. Microphone feedback still needs human validation. |
 
-Warm cream paper, indigo, muted jade and terracotta; illustrated storybook rooms with painted-paper detail. Make it feel like a personal world, with crisp readable interface controls. Home is a room: desk for review, shelf for lessons and stories, camera for a book, console for games, radio for listening, phone for media, door to the town. Real buttons overlay objects, with accessible text alternatives. The town has eight authoritative slots and illustrated houses seen from a raised three-quarter view; unlock markers reflect real vocabulary eligibility. A neighbour's room has a host to speak to, a console, book and TV. Use the supplied mockups for composition, but generate or await newly generated final art. Local Astra will generate fixed art in parallel; build functional layouts with clearly temporary neutral placeholders until I upload that new art.
+These are development workstreams, not a claim that every supporting script or prototype was generated by Astra. In particular, the first game batch used inherited model settings and was rejected as an Astra demonstration; its records are retained separately from the explicitly dispatched replacement.
 
-BUILD THE WHOLE DEMO PATH, IN THIS PRIORITY
+## Astra inside the app
 
-1. Sign-in and learner-owned storage, course/dictionary import, word memory, scheduling, lessons and review. Keep scheduling and word checks in one module with the interfaces in BUILD-RULES. Seed 26 lessons, 326 unique words and 1,028 supplied sentences; report errors, never fabricate successful loads.
+Astra is also part of the runtime design, beyond helping us build the project:
 
-2. Shared Chinese rendering across the app, stories, game frames and video captions. Whole-word native ruby, proper tone marks, natural spacing and wrapping. Do not stretch Hanzi or make each character a separate card. Verify real sentences at phone and desktop sizes. The previous trial looked awkward despite passing overflow checks; inspect the actual appearance. Sandboxed games get the trusted injected adapter, not their own pinyin implementation.
+1. **Bring something you care about.** Upload ordered book photos or describe a story. Review the extracted text before continuing.
+2. **Find the words you need.** Compare source vocabulary with the learner’s existing repertoire and approve a lesson plan.
+3. **Make it a place.** Generate a theme, scenario, neighbour and checked dialogue around that vocabulary.
+4. **Practise in context.** Use a generated conversation brief with the voice experience; extend the same approach to stories, games and microdramas as those pipelines are integrated.
 
-3. Private 'Import my words' in Settings. Tom supplies his real export through the running app. Preserve learner progress according to the exact import contract. Never put the raw export in chat, code, logs or a public repo. Importing twice must not duplicate words. Use a clearly labelled synthetic learner only for development checks until Tom imports.
+The application owns vocabulary checks, scheduling, progress and unlocks. Generated content must fit those rules. Chinese text is rendered by shared components with word-level pinyin, rather than baked into illustrations.
 
-4. Illustrated home and town, reusable content shelf and eligibility rules. Wire actual actions before polishing. New content is offered only when its required words are in the learner's repertoire; unseen content first. Locked houses say what must be learned.
+Runtime model choices live in [one configuration](src/lib/ai/config.ts). Text/planning is configured for `gpt-6-astra`; images, speech, transcription and live voice use separate capability-specific models. The app includes an account model-availability check. Configuration alone is not evidence of a successful live run.
 
-5. Camera/book import: title plus ordered uploaded photos, OCR with verification, extracted vocabulary with source evidence, unfamiliar words compared with the actual learner snapshot, proposed lessons, learner approval, first custom lesson. Show meaningful progress and allow review of uncertain OCR. Preserve approval steps. Also allow an original story description as a source.
+### How game generation calls Astra
 
-6. After approval, create the themed place and generate its host, greeting, objects, house and room through real backend model jobs. Unlock it when its lessons are complete. Generate each level from its frozen approved vocabulary. Show truthful pending/failure states with bounded repair; do not substitute canned success.
+The on-demand game pipeline is designed to start with a frozen snapshot of the learner’s approved vocabulary. It asks Astra to develop a scenario and game mechanic, produce checked round data, then write the playable HTML from an explicit gameplay and art brief. Understanding Mandarin must matter to winning the game.
 
-7. A four-page illustrated story/webcomic using the new theme AND a meaningful selection of Tom's wider existing review vocabulary. Plan character motivation, obstacle, action and payoff before captions and images. Captions must be natural Mandarin within the allowed words; images carry what vocabulary cannot yet express. Use shared ruby; no model-drawn text. Add narration and a motion-comic export if the core reader works in time. Follow the attached media pipeline.
+The existing [server-side model runner](src/lib/ai/run.server.ts) calls the OpenAI Responses API with `AI_MODELS.text`, configured as `gpt-6-astra`. It supports structured JSON results, records attempts, elapsed time and reported token usage, and provides one repair attempt for a failing stage. The [game pipeline](docs/content/games/PIPELINE.v1.txt) defines how to extend that infrastructure to game production; full game orchestration and publication are still being integrated.
 
-8. Real generated games: one learner request starts vocabulary checks, creative concept selection, mechanic-specific data, script, design, build, verification and bounded repair. Offer genuinely different play including moving a sprite, snake-like collection, mazes or collecting and delivering things. Chinese comprehension must matter, not matching a picture alone. Separate gameplay from art style: paper, pixel and real low-poly 3D are choices, not different mechanics. Build an actual safe sandbox and browser acceptance integration. A ready message is not proof of a playable game. At least one generated movement game must complete its full loop with touch and keyboard controls, readable Chinese, feedback and restart. Use short onboarding and clear held keys when focus changes.
+For the page-building step, Astra receives the accepted rules, controls, visual direction, sandbox protocol and an English description of the data. The host injects checked Chinese and the shared pinyin renderer at play time. Generated code must pass sandbox checks and real browser playthroughs, including win, loss and restart, before publication. The current explicitly dispatched Astra experiment is a development run, separate from a completed unattended API workflow.
 
-9. Item collection and progression: reward real practice, acquire an item and place it at home or give it to a neighbour. Follow the coin, shop, buying, gift and plant rules in BACKLOG stage 17. Never claim collection from a decorative icon. Show a real vocabulary-based unlock.
+### How video generation uses Lovable’s AI gateway
 
-10. Live voice conversation with the generated neighbour. Use a short-lived backend-created session credential, real microphone and text fallback, the actual learner vocabulary and situation, an End control and transcript highlighting unfamiliar words. Keep provider secrets server-side. Wire an early connection check so this does not wait until the last minute.
+The implemented microdrama path pairs **Astra for writing and planning** with **a video model accessed through Lovable’s AI gateway for rendering**. The [script preparation service](src/lib/video/prepare.functions.ts) proposes scenarios, writes an eight-line episode from the neighbour’s vocabulary, checks the text and reviews the script before preparing four video scenes.
 
-Each item above is one or more stages of the BACKLOG at the end of BUILD-RULES.txt; that stage's full text, done-when and check apply. When the ten items work, do not stop: carry straight on through the remaining BACKLOG stages in the order it gives (animated dramas, new learner and placement, word library and adding words, listening tape and spoken cards, park and gym drills, settings with export and report a problem), and then stages 20 to 38, the rest of the planned product, in number order. I want the full app built, demo path first. I will tell you when to stop.
+The [runtime gateway](src/lib/video/gateway.server.ts) submits visual prompts to Lovable’s video API using the server-only `LOVABLE_API_KEY`. Its configured model is `google/gemini-omni-1.1-flash`; this is a code setting, not evidence of a successful provider run. The [video service](src/lib/video/drama.functions.ts) creates and polls jobs, copies completed MP4 files into the private `drama-videos` bucket and serves signed playback URLs. Requests are tracked per learner and content reference, with uncertain submissions held for reconciliation.
 
-Show the whole app from the first preview. Everything planned has its place in the world from the start; anything whose stage is not built yet is visibly greyed out with a short "Not built yet" label and does nothing when tapped. Take the grey off as each stage lands. Never disguise a missing feature with a fake generation, fake API result or prerecorded interaction. Keep a true list of built, partly built and unbuilt stages on the developer page, and report it whenever you pause.
+The video model receives visual instructions without Mandarin dialogue or text. Hanzi and pinyin captions come from the application’s shared text renderer. Current clips are intended to be silent; speech, reference-image consistency and final media quality checks remain unfinished. The separate scripted pilot, *The Teacher’s Portrait*, is a six-shot, 48-second village misunderstanding and is not a completed runtime episode.
 
-MODELS AND JOBS
+**Current integration boundary:** book approval is wired to script preparation and video submission, and the neighbour’s TV exposes the checked script and scene controls. A live book-to-video run has not been validated. The separate [custom-generation adapter contract](src/lib/ai/custom-generation/video-gateway.server.ts) is an additional integration seam; it is not the runtime gateway described above.
 
-Use GPT-6 Astra for actual runtime text/planning/code generation and the configured OpenAI image, TTS and Realtime models for their capabilities. Confirm supported model IDs against the account at runtime rather than guessing. OpenAI TTS replaces the earlier Azure idea. Cast voices consistently by character, transcribe generated speech to check completeness, and listen to demo-selected clips. Store one configuration for exact model IDs. Ask for the OpenAI key through backend secret configuration, never in source or browser code.
+## Hackathon build status
 
-One-shot means no human steering after the learner starts generation: multiple stages, independent checks and one repair per failing stage are allowed. Count every attempt, review and repair, input/output/cached tokens where reported, cost and end-to-end elapsed time. Missing usage is unknown, not free. Keep failed outputs private for debugging. Follow BUILD-RULES for sandbox restrictions and vocabulary checks.
+Implemented paths include sign-in, lesson and review flows, learner-word import, illustrated navigation, source-to-lesson planning, the prepared panda game and the sandboxed Lanternwing preview. Custom places, live voice, pronunciation drills and video microdramas are partially implemented. On-demand generated games, story readers and the wider progression systems are still in development. Game previews do not mark the full generated-games stage as complete.
 
-WORKING WITH LOCAL ASTRA
+See the [stage registry](src/lib/stages.ts) for the current built/partial/unbuilt breakdown. The [full product specification](docs/PRODUCT-SPEC.md) describes the larger ambition, not a list of completed demo features.
 
-I am also giving local Astra a prompt to generate new art. Build an import screen that accepts its event-art.zip or the individual files named by its asset-manifest.json. Associate files by exact name, check dimensions/alpha and place hotspots from actual images. The generator will provide home-room.png, stock-room.png, stock-house.png, town-ground.png, house-home.png, house-mouse.png, house-dog.png, house-cat.png, empty-plot.png and sheet-mouse.png, sheet-dog.png, sheet-cat.png. Optional avatars.png comes last. Do not wait for art to implement the app. Never reuse the attached design references as production art.
+## Run locally
 
-If this environment cannot run browser acceptance, implement the job/request and callback contract, explain the exact required service configuration, and keep generated games awaiting acceptance. Local Astra can build that service during the event; do not claim an edge function or hidden iframe already supplied it.
-
-DELIVERY
-
-Build and test now. Give me the working preview, concise setup actions genuinely requiring my account, what I can try, and any actual blockers. Verify the book-to-lesson-to-world path with real runtime calls once secrets are configured. Record the development/tool contribution and event-time changes for the submission. All implementation and final content must be created during this event; only these prompts, existing reference data and design guidance are prepared beforehand.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/0446607f-8a47-4a51-9870-b34d98b84354).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Stack: TypeScript, React 19, TanStack Start, Vite, Tailwind CSS, Supabase and the OpenAI SDK.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
+
+Use Node.js and npm. Connect a Supabase project, apply the migrations in `supabase/migrations`, and configure authentication and these environment variables:
+
+| Variable | Purpose |
+| --- | --- |
+| `VITE_SUPABASE_URL` | Browser Supabase endpoint |
+| `VITE_SUPABASE_PUBLISHABLE_KEY` | Browser publishable key |
+| `SUPABASE_URL` | Server Supabase endpoint |
+| `SUPABASE_PUBLISHABLE_KEY` | Server authentication key |
+| `SUPABASE_SERVICE_ROLE_KEY` | Server-only database administration |
+| `OPENAI_API_KEY` | Server-only generation and speech access |
+| `LOVABLE_API_KEY` | Server-only Lovable video gateway access |
+
+Keep service-role, OpenAI and Lovable keys out of browser variables and source control. Authenticated and AI features require the backend configuration; installing dependencies alone does not provision it. Apply the video migrations as well as the learning-data migrations so the video job table and private storage bucket exist. The public `/demo-pack` route provides a prepared activity without a learner sign-in.
+
+```sh
+npm test
+npx tsc --noEmit
+npm run build
+```
+
+You can also continue development in the [Lovable project](https://lovable.dev/projects/0446607f-8a47-4a51-9870-b34d98b84354).
+
+## Project records
+
+- [Product decisions](docs/product/DECISIONS.md) and [38-stage backlog](docs/product/contracts/BACKLOG.md)
+- [Source and handoff index](docs/product/SOURCES.md), including the original build prompts
+- [Runtime prompt contracts](docs/product/contracts/PROMPTS.md)
+- [Art direction](docs/art/ART-DIRECTION.txt), [asset manifest](docs/art/asset-manifest.json) and [generation log](docs/art/prompt-library/live-runs.jsonl)
+- [Learning-data attribution](public/DATA-ATTRIBUTION.txt)
+
+Prepared specifications, reference data and design guidance are distinguished from event implementation and generated assets in the source records. Private learner exports do not belong in this repository.
