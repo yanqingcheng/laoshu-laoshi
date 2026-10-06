@@ -7,3 +7,6 @@
 - [ ] Book import, place generation, stories, games, items, live voice (stages 7–11, 15–17)
 - [ ] Remaining BACKLOG stages 12–38
 - [ ] GitHub: user connects via Plus (+) → GitHub → Connect project (user action; I can't do it from chat)
+- [ ] GitHub connect: user must do it while I'm paused between stages (blocked during active builds). Resume on their word.
+- [x] OpenAI key saved + verified live (all 5 model IDs available); config in src/lib/ai/config.ts, check on /dev.
+- [ ] Next backlog stage: book/camera import (OCR → vocab → proposed lessons → approval).

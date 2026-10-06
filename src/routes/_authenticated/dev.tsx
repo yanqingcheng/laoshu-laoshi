@@ -4,6 +4,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
 import { AppShell, CouldNotLoad } from "@/components/AppShell";
 import { devStatus, devSynthetic, devReset } from "@/lib/app.functions";
+import { checkAiConnection } from "@/lib/ai/openai.functions";
 import { STAGES } from "@/lib/stages";
 import { WordText } from "@/components/WordText";
 import { Button } from "@/components/ui/button";
@@ -23,9 +24,12 @@ function Dev() {
   const st = useServerFn(devStatus);
   const syn = useServerFn(devSynthetic);
   const reset = useServerFn(devReset);
+  const aiCheck = useServerFn(checkAiConnection);
   const qc = useQueryClient();
   const q = useQuery({ queryKey: ["dev"], queryFn: () => st() });
   const [msg, setMsg] = useState<string | null>(null);
+  const [ai, setAi] = useState<Awaited<ReturnType<typeof checkAiConnection>> | null>(null);
+  const [aiBusy, setAiBusy] = useState(false);
   const counts = q.data?.counts as Record<string, number> | null;
   return (
     <AppShell title="Developer">
@@ -53,6 +57,42 @@ function Dev() {
           </Button>
         </div>
         {msg && <p className="mt-2 text-sm">{msg}</p>}
+      </section>
+
+      <section className="paper-card mt-6 p-5">
+        <h2 className="text-lg font-semibold">AI connection (OpenAI key)</h2>
+        <p className="mt-1 text-sm text-muted-foreground">Checks the saved key, confirms the configured model IDs against the account, and makes one tiny live text call.</p>
+        <Button
+          variant="outline"
+          className="mt-3"
+          disabled={aiBusy}
+          onClick={async () => {
+            setAiBusy(true);
+            try {
+              setAi(await aiCheck());
+            } finally {
+              setAiBusy(false);
+            }
+          }}
+        >
+          {aiBusy ? "Checking…" : "Run AI connection check"}
+        </Button>
+        {ai && (
+          <div className="mt-3 text-sm">
+            {ai.ok ? (
+              <p className="text-jade font-semibold">Connected — live reply: {ai.reply}</p>
+            ) : (
+              <p className="text-destructive">Failed at {ai.stage}: {ai.error}</p>
+            )}
+            {"models" in ai && ai.models && (
+              <ul className="mt-2 space-y-0.5">
+                {ai.models.map((m) => (
+                  <li key={m.id}>{m.available ? "✓" : "✗"} {m.id}{!m.available && <span className="text-muted-foreground"> — not visible to this key</span>}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
       </section>
 
       <section className="paper-card mt-6 p-5">
