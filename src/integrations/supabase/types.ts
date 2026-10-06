@@ -136,6 +136,68 @@ export type Database = {
         }
         Relationships: []
       }
+      drama_videos: {
+        Row: {
+          aspect: string
+          captions: Json
+          content_ref: string
+          created_at: string
+          duration_s: number
+          error: string | null
+          gateway_job_id: string | null
+          id: string
+          learner_id: string
+          model: string
+          progress: number | null
+          prompt: string
+          status: string
+          storage_path: string | null
+          updated_at: string
+        }
+        Insert: {
+          aspect?: string
+          captions?: Json
+          content_ref: string
+          created_at?: string
+          duration_s?: number
+          error?: string | null
+          gateway_job_id?: string | null
+          id?: string
+          learner_id: string
+          model: string
+          progress?: number | null
+          prompt: string
+          status?: string
+          storage_path?: string | null
+          updated_at?: string
+        }
+        Update: {
+          aspect?: string
+          captions?: Json
+          content_ref?: string
+          created_at?: string
+          duration_s?: number
+          error?: string | null
+          gateway_job_id?: string | null
+          id?: string
+          learner_id?: string
+          model?: string
+          progress?: number | null
+          prompt?: string
+          status?: string
+          storage_path?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "drama_videos_learner_id_fkey"
+            columns: ["learner_id"]
+            isOneToOne: false
+            referencedRelation: "learners"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       evidence: {
         Row: {
           activity: string
