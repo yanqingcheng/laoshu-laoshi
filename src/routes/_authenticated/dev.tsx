@@ -60,6 +60,42 @@ function Dev() {
       </section>
 
       <section className="paper-card mt-6 p-5">
+        <h2 className="text-lg font-semibold">AI connection (OpenAI key)</h2>
+        <p className="mt-1 text-sm text-muted-foreground">Checks the saved key, confirms the configured model IDs against the account, and makes one tiny live text call.</p>
+        <Button
+          variant="outline"
+          className="mt-3"
+          disabled={aiBusy}
+          onClick={async () => {
+            setAiBusy(true);
+            try {
+              setAi(await aiCheck());
+            } finally {
+              setAiBusy(false);
+            }
+          }}
+        >
+          {aiBusy ? "Checking…" : "Run AI connection check"}
+        </Button>
+        {ai && (
+          <div className="mt-3 text-sm">
+            {ai.ok ? (
+              <p className="text-jade font-semibold">Connected — live reply: {ai.reply}</p>
+            ) : (
+              <p className="text-destructive">Failed at {ai.stage}: {ai.error}</p>
+            )}
+            {"models" in ai && ai.models && (
+              <ul className="mt-2 space-y-0.5">
+                {ai.models.map((m) => (
+                  <li key={m.id}>{m.available ? "✓" : "✗"} {m.id}{!m.available && <span className="text-muted-foreground"> — not visible to this key</span>}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
+      </section>
+
+      <section className="paper-card mt-6 p-5">
         <h2 className="text-lg font-semibold">Build status (true list)</h2>
         <ul className="mt-2 space-y-1 text-sm">
           {STAGES.map((s) => (
