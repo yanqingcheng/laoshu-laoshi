@@ -17,3 +17,5 @@
 - [x] Test Tom import (469 sum, re-import all skipped) via Settings in test browser
 - [x] Run both demo photo books through import
 - [ ] Live voice talk: needs a real-mic test in its own tab
+- [x] Produce the hackathon launch video from the finished app and available artwork; add Qing's voiceover when supplied
+- [x] Check whether Astra's game work has synced and include real game visuals in the launch video when available (no generated games synced; park/gym drills only)
