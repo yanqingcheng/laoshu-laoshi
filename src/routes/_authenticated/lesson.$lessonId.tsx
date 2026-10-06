@@ -43,7 +43,7 @@ function Lesson() {
   if (q.isError) return <AppShell title="Lesson"><CouldNotLoad onRetry={() => q.refetch()} detail={(q.error as Error).message} /></AppShell>;
   if (!q.data) return <AppShell title="Lesson"><p className="text-muted-foreground">Loading…</p></AppShell>;
   const d = q.data;
-  const wordById = new Map(d.words.map((w) => [w.word.id, w.word]));
+  const wordById = new Map<string, any>(d.words.map((w: any) => [w.word.id, w.word]));
 
   if (!d.words.length)
     return (
