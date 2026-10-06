@@ -4,15 +4,21 @@ Recorded 6 October 2026. Distinguish product intent, event implementation contra
 
 ## New decisions for this repository
 
+**Custom neighbours unlock at 80%.** Qing chose the frozen approved-source gate on 6 October: `ceil(0.8 × N)` acquired senses, plus ready checked identity/lines. This supersedes event SPEC section 7's prerequisite-plus-lesson-1 gate. The remaining content is independently vocabulary-filtered; queue edits do not change the denominator.
+
+**Medium/hard stories may use unfamiliar words, from the queue only.** Qing approved approximately 2%/5% running-word allowances, exclusively selected from the learner's queue. This is a scoped exception to the historical all-repertoire chooser rule. It does not relax game/review rules or make an encounter acquisition evidence.
+
+**English help is available in town, and town text should adapt.** Qing approved Chinese by default with English meanings on tap and requested aiming for comprehensible input through different text versions filtered to the hardest level the learner can cope with. Whole-caption English remains available on request. The main spec defines checked variants and centralized selection; the precise difficulty measure beyond vocabulary eligibility remains provisional. No general unknown-word allowance for all town copy has been approved.
+
 **Short videos are in scope.** Qing confirmed on 6 October 2026 that Lovable has a Video Agents connector and brought short videos back into the product. This supersedes the old stage-38 restriction that video is an optional addition if a video model happens to be available. Build the connector integration for short drama videos as described in [Short videos](../PRODUCT-SPEC.md#short-videos). Connector availability is user-provided context; exact actions, account permissions, quotas, costs and callback behaviour need inspection during implementation. This documentation does not claim a connected or tested service.
 
 ## Conflicts that must stay visible
 
 | Topic | Source disagreement | Guidance and remaining decision |
 |---|---|---|
-| Custom neighbour opening | Planning R127/source gate: acquire `ceil(0.8 × N)` of frozen approved not-yet-acquired senses. Event SPEC section 7 Exact: finish prerequisites and lesson 1, with host/lines ready. | Event Exact is the existing repo build baseline. Preserve the 80% intent; a switch requires an explicit policy decision and consistent tests. Bundled gates remain 80%. |
-| Medium/hard stories | Stage 21 includes selected queued unknowns. Exact chooser requires every required word in repertoire, derived from all tokens. | Strict serving withholds these stories. Define a scoped story policy before stage 21 can pass; retain selected unknown IDs/budgets, never globally loosen checks or mark unknowns learned. The pack leaves this exception incomplete. |
-| Town immersion | Plan says Chinese-only; SPEC popovers show meaning and stage 12 shows English captions. Rehearsal proposed returning home for English. | Preserve meaning access and immersion intent. The home detour is a proposal, not approved final policy. Decide gloss/caption presentation before claiming full immersion. |
+| Custom neighbour opening | Planning 80% versus event prerequisite/lesson-1 gate | Resolved by Qing: frozen approved-source 80% rule, plus checked identity. Historical Exact wording is superseded. |
+| Medium/hard stories | Selected unknowns versus historical all-repertoire serving | Resolved by Qing: scoped queue-only allowance at about 2%/5%; explicit policy checks, no arbitrary unknowns. |
+| Town immersion | Chinese-only versus English support | Resolved by Qing: Chinese default, in-place English on request, adaptive checked text versions. Exact difficulty selection metric remains provisional. |
 | Word identity | Planning R1 distinguishes senses sharing Hanzi; Exact course matching uses Hanzi first. | Follow the explicit import/course rule for that pipeline; retain source senses. Do not infer all homographs collapse everywhere. |
 | Retirement | Stage 35 requires solid in both skills; SPEC defines solid from recognition only. | Define per-skill solidity before automatic retirement. Recognition alone is not production mastery. |
 | Shared easy stories | Stage 20 creates shared easy stories from course words; stage 21 defines easy using individual solidity. | Check learner strength before labelling shared content easy for them. |
