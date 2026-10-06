@@ -1,0 +1,9 @@
+# Data and reference provenance
+
+`learning-data.json → data/dictionary.json` is CC-CEDICT, by the CC-CEDICT contributors, distributed through [MDBG's CC-CEDICT download](https://www.mdbg.net/chinese/dictionary?page=cedict), release 6 October 2026 07:22:39 GMT. The release is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/). This copy converts dictionary entries to JSON rows of simplified Hanzi, numbered pinyin and slash-separated meanings. Retain the attribution and license when redistributing the dictionary or modified dictionary data. The project is not endorsed by CC-CEDICT or MDBG.
+
+`learning-data.json → data/course/` contains the existing Laoshu HSK 1/2 curriculum: 26 lesson lists, 326 unique words and 1,028 authored example sentences. These are prepared reference data, not content created during the hackathon. `learning-data.json → data/compounds.json` is the project's seeded transparent/opaque classification table; it is a policy input, not an independently validated linguistic gold standard.
+
+`references/` contains Laoshu cast identity pictures, generated style boards and prior visual mockups supplied with the planning work. They are design references. `references/README.md` identifies their intended use and the obsolete town-camera angle. They are not production art to copy into tonight's submission.
+
+This file records provenance and the dictionary's license; it does not assign a blanket new license to Qing's writing, curriculum or character art.
