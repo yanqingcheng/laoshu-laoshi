@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as ParkPreviewRouteImport } from './routes/park-preview'
+import { Route as AuthenticatedBookRouteImport } from './routes/_authenticated/book'
 import { Route as AuthenticatedDevRouteImport } from './routes/_authenticated/dev'
 import { Route as AuthenticatedGymRouteImport } from './routes/_authenticated/gym'
 import { Route as AuthenticatedHomeRouteImport } from './routes/_authenticated/home'
@@ -41,6 +42,11 @@ const ParkPreviewRoute = ParkPreviewRouteImport.update({
   id: '/park-preview',
   path: '/park-preview',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedBookRoute = AuthenticatedBookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedDevRoute = AuthenticatedDevRouteImport.update({
   id: '/dev',
@@ -94,6 +100,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/park-preview': typeof ParkPreviewRoute
+  '/book': typeof AuthenticatedBookRoute
   '/dev': typeof AuthenticatedDevRoute
   '/gym': typeof AuthenticatedGymRoute
   '/home': typeof AuthenticatedHomeRoute
@@ -108,6 +115,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/park-preview': typeof ParkPreviewRoute
+  '/book': typeof AuthenticatedBookRoute
   '/dev': typeof AuthenticatedDevRoute
   '/gym': typeof AuthenticatedGymRoute
   '/home': typeof AuthenticatedHomeRoute
@@ -124,6 +132,7 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
   '/park-preview': typeof ParkPreviewRoute
+  '/_authenticated/book': typeof AuthenticatedBookRoute
   '/_authenticated/dev': typeof AuthenticatedDevRoute
   '/_authenticated/gym': typeof AuthenticatedGymRoute
   '/_authenticated/home': typeof AuthenticatedHomeRoute
@@ -140,6 +149,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/park-preview'
+    | '/book'
     | '/dev'
     | '/gym'
     | '/home'
@@ -154,6 +164,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/park-preview'
+    | '/book'
     | '/dev'
     | '/gym'
     | '/home'
@@ -169,6 +180,7 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/auth'
     | '/park-preview'
+    | '/_authenticated/book'
     | '/_authenticated/dev'
     | '/_authenticated/gym'
     | '/_authenticated/home'
@@ -216,6 +228,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/park-preview'
       preLoaderRoute: typeof ParkPreviewRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/book': {
+      id: '/_authenticated/book'
+      path: '/book'
+      fullPath: '/book'
+      preLoaderRoute: typeof AuthenticatedBookRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/dev': {
       id: '/_authenticated/dev'
@@ -284,6 +303,7 @@ declare module '@tanstack/react-router' {
 }
 
 interface AuthenticatedRouteRouteChildren {
+  AuthenticatedBookRoute: typeof AuthenticatedBookRoute
   AuthenticatedDevRoute: typeof AuthenticatedDevRoute
   AuthenticatedGymRoute: typeof AuthenticatedGymRoute
   AuthenticatedHomeRoute: typeof AuthenticatedHomeRoute
@@ -296,6 +316,7 @@ interface AuthenticatedRouteRouteChildren {
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedBookRoute: AuthenticatedBookRoute,
   AuthenticatedDevRoute: AuthenticatedDevRoute,
   AuthenticatedGymRoute: AuthenticatedGymRoute,
   AuthenticatedHomeRoute: AuthenticatedHomeRoute,

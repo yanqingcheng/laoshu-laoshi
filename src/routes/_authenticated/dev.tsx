@@ -19,6 +19,7 @@ export const Route = createFileRoute("/_authenticated/dev")({
 const GALLERY = [
   { tokens: [{ w: "我", p: "wo3" }, { w: "的", p: "de5" }, { w: "朋友", p: "peng2 you5" }, { w: "叫", p: "jiao4" }, { w: "什么", p: "shen2 me5" }, { w: "名字", p: "ming2 zi5" }, { w: "？", punct: true }], note: "neutral tones, punctuation" },
   { tokens: [{ w: "女儿", p: "nu:3 er2" }, { w: "在", p: "zai4" }, { w: "哪儿", p: "nar3" }, { w: "？", punct: true }], note: "ü, erhua" },
+  { tokens: [{ w: "我们", p: "wo3 men5" }, { w: "在", p: "zai4" }, { w: "这儿", p: "zher4" }, { w: "等", p: "deng3" }, { w: "一会儿", p: "yi1 huir4" }, { w: "，", punct: true }, { w: "好", p: "hao3" }, { w: "吗", p: "ma5" }, { w: "？", punct: true }], note: "erhua: r sits over 儿" },
   { tokens: [{ w: "毛毛虫", p: "mao2 mao2 chong2" }, { w: "很", p: "hen3" }, { w: "饿", p: "e4" }, { w: "，", punct: true }, { w: "它", p: "ta1" }, { w: "吃", p: "chi1" }, { w: "了", p: "le5" }, { w: "一个", p: "yi1 ge4" }, { w: "苹果", p: "ping2 guo3" }, { w: "、", punct: true }, { w: "两个", p: "liang3 ge4" }, { w: "梨", p: "li2" }, { w: "和", p: "he2" }, { w: "很多", p: "hen3 duo1" }, { w: "很多", p: "hen3 duo1" }, { w: "草莓", p: "cao3 mei2" }, { w: "。", punct: true }], note: "long line, repeated and multi-syllable words" },
 ];
 

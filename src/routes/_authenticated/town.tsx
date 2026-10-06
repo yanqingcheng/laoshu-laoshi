@@ -5,6 +5,7 @@ import { useState } from "react";
 import { AppShell, CouldNotLoad, useBootstrap } from "@/components/AppShell";
 import { Scene, HotspotList, type Hotspot } from "@/components/Scene";
 import { homeSummary } from "@/lib/app.functions";
+import { townState } from "@/lib/place.functions";
 import { stageBuilt } from "@/lib/stages";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -23,7 +24,19 @@ function Town() {
   const boot = useBootstrap();
   const fn = useServerFn(homeSummary);
   const q = useQuery({ queryKey: ["home"], queryFn: () => fn(), enabled: !!boot.data });
+  const tfn = useServerFn(townState);
+  const t = useQuery({ queryKey: ["town"], queryFn: () => tfn(), enabled: !!boot.data });
   const nav = useNavigate();
+  const customSpot = (slot: string) => {
+    const pl: any = (t.data ?? []).find((x: any) => x.slot === slot);
+    if (!pl) return spot(slot, "Empty plot · bring a book to fill it", true, { shortLabel: "Add a neighbour", onActivate: () => nav({ to: "/book" }) });
+    return spot(slot, `${pl.hostName ?? "New neighbour"} · ${pl.title}`, true, {
+      marker: pl.marker === "padlock" ? "locked" : pl.marker === "cog" ? "pending" : undefined,
+      shortLabel: pl.hostName ?? "New neighbour",
+      status: pl.marker === "padlock" ? "Locked" : pl.marker === "cog" ? "Being made" : undefined,
+      onActivate: () => nav({ to: "/place/$slot", params: { slot } }),
+    });
+  };
   const [locked, setLocked] = useState<null | { label: string; lessonId: string; title: string; need: number }>(null);
   const L = q.data?.lessons ?? [];
   const spot = (key: string, label: string, built: boolean, extra: Partial<Hotspot> = {}): Hotspot => ({
@@ -43,8 +56,8 @@ function Town() {
             : l && setLocked({ label: b.label, lessonId: l.id, title: l.title, need: Math.ceil(l.total * 0.8) - l.learned }),
       });
     }),
-    spot("custom1", "Empty plot · your book's place", stageBuilt(8), { shortLabel: "Your next neighbour" }),
-    spot("custom2", "Empty plot · your book's place", stageBuilt(8), { shortLabel: "Your next neighbour" }),
+    customSpot("custom1"),
+    customSpot("custom2"),
     spot("shop", "Shop", stageBuilt(17)),
     spot("park", "Park & gym", stageBuilt(18), { onActivate: () => nav({ to: "/park" }) }),
     { key: "gym-exit", label: "Gym · across the bridge", x: 0.1, y: 0.86, w: 0.1, h: 0.1, built: stageBuilt(18), onActivate: () => nav({ to: "/gym" }) },
@@ -52,9 +65,10 @@ function Town() {
   return (
     <AppShell title="Town">
       {q.isError && <CouldNotLoad onRetry={() => q.refetch()} />}
+      {t.isError && <CouldNotLoad onRetry={() => t.refetch()} />}
       <h1 className="mb-3 text-2xl font-semibold">Town</h1>
       <Scene art="core/town-ground.png" alt="Town map with three neighbours, your home and four plots" hotspots={hotspots.filter((h) => h.key !== "gym-exit")}>
-        {Object.entries(TOWN_LAYOUT).map(([key, slot]) => <Art key={key} file={slot.file}
+        {Object.entries(TOWN_LAYOUT).map(([key, slot]) => <Art key={key} file={key.startsWith("custom") && (t.data ?? []).some((p: any) => p.slot === key) ? "core/stock-house.png" : slot.file}
           className={`pointer-events-none absolute object-contain ${hotspots.find((h) => h.key === key)?.built ? "" : "grayscale opacity-60"}`}
           style={{ left: `${slot.x * 100}%`, top: `${slot.y * 100}%`, width: `${slot.w * 100}%`, height: `${slot.h * 100}%` }} />)}
         <TownExits />
