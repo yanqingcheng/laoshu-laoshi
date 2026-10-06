@@ -78,7 +78,8 @@ function Settings() {
             try {
               const json = JSON.parse(await file.text());
               const r = await imp({ data: json });
-              setImportMsg(`${r.entered} entered your words, ${r.queued} queued, ${r.skipped} skipped (already yours)${r.duplicatesInFile ? `, ${r.duplicatesInFile} duplicates in the file merged` : ""}.`);
+              const skipped = r.skipped + (r.duplicatesInFile ?? 0);
+              setImportMsg(`${r.entered} entered your repertoire · ${r.queued} queued · ${skipped} skipped (${r.skipped} already yours${r.duplicatesInFile ? `, ${r.duplicatesInFile} repeated entries in the file — the most recently reviewed copy was kept` : ""}). Total ${r.entered + r.queued + skipped}.`);
               qc.invalidateQueries();
             } catch (err) {
               setImportMsg("Import failed, nothing was changed. " + (err as Error).message.slice(0, 300));
