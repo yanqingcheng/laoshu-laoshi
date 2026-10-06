@@ -8,7 +8,7 @@ type CourseJson = {
   lessons: { key: string; ord: number; title: string; words: string[] }[];
   sentences: { k: string; t: { w: string; name?: boolean; punct?: boolean }[]; e: string; u: boolean; tg: [string, string | null, string[]][] }[];
 };
-const C = course as CourseJson;
+const C = course as unknown as CourseJson;
 export const EXPECTED = { lessons: C.lessons.length, words: C.words.length, sentences: C.sentences.length, compounds: compounds.transparent.length + compounds.opaque.length };
 
 async function admin() {
