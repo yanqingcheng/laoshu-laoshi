@@ -4,28 +4,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/*
- * Design system definition.
- *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
- *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
- */
-
 @theme inline {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Nunito Sans", system-ui, sans-serif;
+  --font-han: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -42,6 +29,12 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-jade: var(--jade);
+  --color-jade-foreground: var(--jade-foreground);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-foreground: var(--terracotta-foreground);
+  --color-paper: var(--paper);
+  --color-placeholder: var(--placeholder);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -62,83 +55,118 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
-}
-
-.dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --radius: 0.75rem;
+  --background: oklch(0.965 0.022 85);
+  --paper: oklch(0.985 0.014 88);
+  --foreground: oklch(0.27 0.05 270);
+  --card: oklch(0.985 0.014 88);
+  --card-foreground: oklch(0.27 0.05 270);
+  --popover: oklch(0.99 0.01 88);
+  --popover-foreground: oklch(0.27 0.05 270);
+  --primary: oklch(0.37 0.11 272);
+  --primary-foreground: oklch(0.97 0.02 85);
+  --secondary: oklch(0.92 0.03 80);
+  --secondary-foreground: oklch(0.3 0.06 270);
+  --muted: oklch(0.925 0.02 82);
+  --muted-foreground: oklch(0.5 0.04 270);
+  --accent: oklch(0.9 0.04 165);
+  --accent-foreground: oklch(0.3 0.06 170);
+  --jade: oklch(0.6 0.075 168);
+  --jade-foreground: oklch(0.98 0.01 85);
+  --terracotta: oklch(0.6 0.13 40);
+  --terracotta-foreground: oklch(0.98 0.01 85);
+  --placeholder: oklch(0.88 0.008 80);
+  --destructive: oklch(0.55 0.18 28);
+  --destructive-foreground: oklch(0.98 0.01 85);
+  --border: oklch(0.85 0.03 80);
+  --input: oklch(0.85 0.03 80);
+  --ring: oklch(0.55 0.1 272);
+  --chart-1: oklch(0.6 0.13 40);
+  --chart-2: oklch(0.6 0.075 168);
+  --chart-3: oklch(0.37 0.11 272);
+  --chart-4: oklch(0.8 0.1 85);
+  --chart-5: oklch(0.7 0.08 20);
+  --sidebar: oklch(0.95 0.02 85);
+  --sidebar-foreground: oklch(0.27 0.05 270);
+  --sidebar-primary: oklch(0.37 0.11 272);
+  --sidebar-primary-foreground: oklch(0.97 0.02 85);
+  --sidebar-accent: oklch(0.92 0.03 80);
+  --sidebar-accent-foreground: oklch(0.3 0.06 270);
+  --sidebar-border: oklch(0.85 0.03 80);
+  --sidebar-ring: oklch(0.55 0.1 272);
+  --shadow-paper: 0 1px 0 oklch(1 0 0 / 0.6) inset, 0 6px 18px -8px oklch(0.3 0.05 60 / 0.35);
 }
 
 @layer base {
   * {
     border-color: var(--color-border);
   }
-
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    background-image: radial-gradient(oklch(0.8 0.03 80 / 0.18) 1px, transparent 1px);
+    background-size: 5px 5px;
   }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+}
+
+@utility paper-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-paper);
+}
+
+/* ---------- Shared Chinese text (WordText) ----------
+   Native ruby, one whole word per ruby unit; wrap only between words. */
+.wt {
+  font-family: var(--font-han);
+  line-height: 1.25;
+  display: block;
+  text-align: start;
+  word-break: keep-all;
+}
+.wt-size-lg { --wt-han: 30px; --wt-py: 14px; }
+.wt-size-md { --wt-han: 24px; --wt-py: 13px; }
+.wt-size-sm { --wt-han: 18px; --wt-py: 11px; }
+.wt-word {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: bottom;
+  margin-inline-end: 0.14em;
+  padding-top: 0.2em;
+  border-radius: 6px;
+  font-size: var(--wt-han, 30px);
+}
+.wt-word:last-child { margin-inline-end: 0; }
+.wt-word ruby {
+  display: ruby;
+  ruby-position: over;
+  ruby-align: center;
+}
+.wt-word rt {
+  display: ruby-text;
+  font-family: var(--font-sans);
+  font-size: var(--wt-py, 14px);
+  letter-spacing: 0.01em;
+  color: var(--muted-foreground);
+  font-weight: 600;
+  padding-bottom: 0.15em;
+}
+.wt-word.wt-tap { cursor: pointer; }
+.wt-word.wt-tap:hover, .wt-word.wt-tap:focus-visible { background: oklch(0.37 0.11 272 / 0.08); outline: none; }
+.wt-target ruby > span.han { color: var(--primary); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; text-decoration-color: var(--terracotta); }
+.wt-hidden .han { color: transparent; background: oklch(0.6 0.13 40 / 0.18); border-radius: 4px; border-bottom: 2px solid var(--terracotta); }
+.wt-hidden rt { visibility: hidden; }
+.wt-punct { margin-inline-start: -0.12em; }
+.wt-nopy rt { display: none; }
+
+/* greyed "Not built yet" */
+.not-built {
+  filter: grayscale(1);
+  opacity: 0.5;
+  cursor: not-allowed;
 }

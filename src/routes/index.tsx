@@ -1,24 +1,33 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Laoshu Laoshi — learn the Chinese in your books" },
+      { name: "description", content: "Bring a book; Laoshu Laoshi finds the words, teaches them, and grows a little world of neighbours, stories and games around them." },
+      { property: "og:title", content: "Laoshu Laoshi — learn the Chinese in your books" },
+      { property: "og:description", content: "Your words become an explorable personal world." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Landing,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Landing() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="mx-auto flex min-h-screen max-w-2xl flex-col justify-center px-6 py-16">
+      <div className="text-6xl text-primary" style={{ fontFamily: "var(--font-han)" }} lang="zh-CN">老鼠老师</div>
+      <h1 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">Learn the Chinese in the books you actually read.</h1>
+      <p className="mt-4 text-lg text-muted-foreground">
+        Photograph a picture book. The mouse teacher finds the words you need, teaches them, and builds a neighbour,
+        stories and games that reuse everything you already know.
+      </p>
+      <div className="mt-8 flex gap-3">
+        <Button asChild size="lg"><Link to="/home">Enter your world</Link></Button>
+        <Button asChild size="lg" variant="outline"><Link to="/auth">Sign in</Link></Button>
+      </div>
+    </main>
   );
 }
