@@ -111,7 +111,7 @@ export const bookApprove = createServerFn({ method: "POST" })
     const job = await getJob(sb, data.jobId);
     const plan0 = job.outputs?.plan;
     if (!plan0) throw new Error("No plan to approve");
-    if (job.status === "done") return { sourceId: job.outputs.sourceId, lessons: job.outputs.lessons };
+    if (job.status === "ready" && job.outputs?.sourceId) return { sourceId: job.outputs.sourceId, lessons: job.outputs.lessons };
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const drop = new Set(data.drop);
     const unknown = (plan0.unknown as Any[]).filter((u) => !drop.has(u.key));
@@ -123,7 +123,7 @@ export const bookApprove = createServerFn({ method: "POST" })
       if (u.wordId) continue;
       const { data: ex } = await supabaseAdmin.from("words").select("id").eq("hanzi", u.hanzi).eq("pinyin", u.pinyin).neq("origin", "course").maybeSingle();
       if (ex) { u.wordId = ex.id; continue; }
-      const { data: w, error } = await supabaseAdmin.from("words").insert({ hanzi: u.hanzi, pinyin: u.pinyin, meaning: u.meaning || u.hanzi, origin: u.inDictionary ? "dictionary" : "book" }).select("id").single();
+      const { data: w, error } = await supabaseAdmin.from("words").insert({ hanzi: u.hanzi, pinyin: u.pinyin, meaning: u.meaning || u.hanzi, origin: u.inDictionary ? "dictionary" : "manual" }).select("id").single();
       if (error) throw new Error(error.message);
       u.wordId = w.id;
     }
@@ -149,7 +149,7 @@ export const bookApprove = createServerFn({ method: "POST" })
     // photos are deleted after approval
     if (job.outputs?.paths?.length) await supabaseAdmin.storage.from("book-pages").remove(job.outputs.paths);
     course.invalidateRef();
-    await setJob(sb, job.id, { status: "done", step: "approved", outputs: { ...job.outputs, sourceId: src.id, lessons: created, slot: free ?? null } });
+    await setJob(sb, job.id, { status: "ready", step: "approved", outputs: { ...job.outputs, sourceId: src.id, lessons: created, slot: free ?? null } });
     void book;
     return { sourceId: src.id, lessons: created, slot: free ?? null };
   });
@@ -162,7 +162,7 @@ export const bookCancel = createServerFn({ method: "POST" })
     const job = await getJob(sb, data.jobId);
     const { data: files } = await sb.storage.from("book-pages").list(`${learner.id}/${job.id}`);
     if (files?.length) await sb.storage.from("book-pages").remove(files.map((f: Any) => `${learner.id}/${job.id}/${f.name}`));
-    await setJob(sb, job.id, { status: "cancelled" });
+    await setJob(sb, job.id, { status: "failed", step: "cancelled", error: "Cancelled by the learner" });
     return { ok: true };
   });
 

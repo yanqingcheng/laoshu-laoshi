@@ -54,7 +54,7 @@ export async function describeStory(learnerId: string, jobId: string, topic: str
 function evidenceFor(text: string, w: string) {
   const sentences = text.split(/(?<=[。！？!?\n])/);
   const s = sentences.find((x) => x.includes(w));
-  return (s ?? "").trim().slice(0, 60);
+  return (s ?? "").replace(/^[\s“”"「」]+|[\s“”"「」]+$/g, "").slice(0, 60);
 }
 
 /** Steps 2-4: split, source.words, compare with the learner's snapshot, plan lessons (Exact). */
