@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as GamePreviewRouteImport } from './routes/game-preview'
 import { Route as AuthenticatedBookRouteImport } from './routes/_authenticated/book'
 import { Route as AuthenticatedDevRouteImport } from './routes/_authenticated/dev'
 import { Route as AuthenticatedHomeRouteImport } from './routes/_authenticated/home'
@@ -33,6 +34,11 @@ const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GamePreviewRoute = GamePreviewRouteImport.update({
+  id: '/game-preview',
+  path: '/game-preview',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthenticatedBookRoute = AuthenticatedBookRouteImport.update({
@@ -81,6 +87,7 @@ const AuthenticatedReviewDirectionRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/game-preview': typeof GamePreviewRoute
   '/book': typeof AuthenticatedBookRoute
   '/dev': typeof AuthenticatedDevRoute
   '/home': typeof AuthenticatedHomeRoute
@@ -93,6 +100,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/game-preview': typeof GamePreviewRoute
   '/book': typeof AuthenticatedBookRoute
   '/dev': typeof AuthenticatedDevRoute
   '/home': typeof AuthenticatedHomeRoute
@@ -107,6 +115,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
+  '/game-preview': typeof GamePreviewRoute
   '/_authenticated/book': typeof AuthenticatedBookRoute
   '/_authenticated/dev': typeof AuthenticatedDevRoute
   '/_authenticated/home': typeof AuthenticatedHomeRoute
@@ -121,6 +130,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/auth'
+    | '/game-preview'
     | '/book'
     | '/dev'
     | '/home'
@@ -133,6 +143,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/auth'
+    | '/game-preview'
     | '/book'
     | '/dev'
     | '/home'
@@ -146,6 +157,7 @@ export interface FileRouteTypes {
     | '/'
     | '/_authenticated'
     | '/auth'
+    | '/game-preview'
     | '/_authenticated/book'
     | '/_authenticated/dev'
     | '/_authenticated/home'
@@ -160,6 +172,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AuthRoute: typeof AuthRoute
+  GamePreviewRoute: typeof GamePreviewRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -183,6 +196,13 @@ declare module '@tanstack/react-router' {
       path: '/auth'
       fullPath: '/auth'
       preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/game-preview': {
+      id: '/game-preview'
+      path: '/game-preview'
+      fullPath: '/game-preview'
+      preLoaderRoute: typeof GamePreviewRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_authenticated/book': {
@@ -273,6 +293,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AuthRoute: AuthRoute,
+  GamePreviewRoute: GamePreviewRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

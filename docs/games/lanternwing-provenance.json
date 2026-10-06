@@ -1,0 +1,10 @@
+{
+  "model": "gpt-6-astra",
+  "requestedReasoningEffort": "max",
+  "learningEvidenceAwarded": false,
+  "usage": null,
+  "htmlSha256": "a1f0f4672220371d22350ad118d2d039f4391f69f092e95289125db31b607daf",
+  "status": "preview",
+  "cost": null,
+  "creativeAgent": "/root/astra_restart"
+}

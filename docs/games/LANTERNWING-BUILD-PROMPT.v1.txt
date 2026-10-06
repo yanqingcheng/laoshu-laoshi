@@ -1,0 +1,118 @@
+IMPLEMENTATION PROMPT v1 — saved before game source, 2026-10-06
+Requested model gpt-6-astra, max reasoning. Actual exposed model/usage/cost null.
+
+Make Lanternwing, the strongest polished small game you can build, as a single
+self-contained HTML page. It should feel like a real game somebody loved making.
+The user rejected prior games for no convincing art or dynamic gameplay. Do not
+read or imitate them. Own only docs/content/games/experiments/astra-numbers/.
+Do not use external assets, image generation, paid APIs, or other agents.
+
+SETTING AND THINGS TO DRAW
+A cream mouse aviator lights a dusk festival by piloting a jade leaf glider and
+gathering fireflies. Draw its large pink inner ears, tapered snout, bead eyes,
+copper goggles, individual paws, curved tail and flowing coral scarf. The glider
+is a curled jade leaf with veins, ribs, cords and a glass belly cargo lantern.
+Fireflies are gold bodies, dark heads, flapping wings and dotted light trails.
+Rain clouds have layered slate-blue lobes, sleepy faces and falling teardrops.
+A large apricot paper lantern has ribbed curved panels, scalloped seams, brass
+rim, candle and tassel. Correct delivery streams lights into it, makes its flame
+grow, stretches its body and lifts it into a distant floating lantern parade.
+Draw cream/violet evening sky, peach horizon, three layers of teal mountains,
+forest islands, an illustrated lower festival roof/deck, pennants, string lights,
+stars, tiny distant buildings and paper grain. Crop side scenery on phones and
+keep the central arena legible. Hand-drawn shapes with controlled fine strokes,
+soft rim light and subtle textural flecks; no emoji or generic box UI.
+
+RULES
+Ten course number requests, one through ten, in supplied order: 3,1,5,2,7,4,9,6,10,8.
+The target is only the supplied Mandarin number (with trusted marked ruby), never
+an Arabic target, countdown, target-sized rack or target-colour cue. Current cargo
+may show an Arabic number and actual orbiting captured lights. A wordless demo and
+first guided request deliberately connect three lights with the Chinese three;
+the scaffold disappears after that first successful request.
+Read phase before every round: movement and hazards paused, unlimited reading,
+clear play triangle control. It says the word when the round begins. Start action
+explicitly. Steer by tapping/dragging in the arena, or arrows/WASD. Auto motion
+eases towards the latest destination. Catch fireflies by contact, one per light;
+avoid rain clouds that knock you gently and release one captured light. Cargo is
+capped at ten; a minus control/Backspace/X releases one intentionally. Clouds have
+a visible silhouette and forgiving collision circle; no damage in the first round.
+Fireflies persist/respawn so every target remains reachable, without a timer.
+The large send control or Space sends the cargo to the lantern. If its count
+matches, animate delivery then lantern takeoff, award points and a combo, and offer
+the next untimed read phase. If wrong, one of three lives is spent, the attempt's
+count is crossed out, the same requested Chinese and its correct quantity are
+shown in a clear correction. Leave feedback visible until acknowledged, reset
+cargo for another attempt. Three wrong deliveries lose. Ten correct deliveries
+win. Score is an integer; first-try precision/combo earns more, reading speed earns
+nothing. Exactly one done message per finished run, no automatic continuation.
+
+FIRST-TIME UNDERSTANDING
+Title screen uses the real rendered world and a looping wordless demonstration,
+not a giant card hiding it. Show the checked title and a preview request. Animate
+the hero collecting three visible lights, show the cargo fill, animate a drawn
+hand pressing the send icon, pour light into the lantern, launch it. Three small
+pictogram beats show steer/capture/send. A large play triangle starts. First real
+round uses three very slow pickups, a dotted flight cue and a hand-drag hint.
+Persistent ? suspends any current phase and replays this same demo; close restores
+exact prior state. English how-to belongs only in separate host-facing text.
+
+PRESENTATION AND FEEL
+One RAF loop with elapsed seconds clamped after backgrounding. Motion includes
+spring-eased steering, bank angle, ear/scarf secondary motion, pickup squash,
+particle arcs, wind trails, candle flicker, depth/parallax, swinging lanterns,
+score/combo pop, subtle miss shake and paper confetti. Winning is a distinct
+lantern parade with little mouse spectators and celebratory flight. A persistent
+reduced-motion control also honours prefers-reduced-motion: remove ambient loops,
+shake and parallax; preserve understandable controlled motion at gentler speeds.
+Mobile/keyboard are equal. All tap targets at least 56px. No hover-only behavior.
+Always-visible Restart above every overlay resets all simulation, keys, pointers,
+feedback, score and completion guard. Enter starts/restarts/acknowledges; Space is
+action; arrows steer; X/Backspace discard; Escape pauses; R restarts. Prevent
+accidental repeated submissions and clear held inputs at phase changes.
+
+RUNTIME CONTRACT (EXACT)
+The first executable action installs a message listener. Until receiving a valid
+{type:'init',data} from event.source === parent, do nothing. Repeated valid init
+resets the game. Within one second build the start screen and send
+parent.postMessage({type:'ready'},'*'). Afterwards send only say and done.
+say uses the current round.word tokens' w joined; no title/instruction speech.
+done carries only a finite whole-number score once per completed win or loss.
+Only Chinese token input comes from injected data. Source is Chinese/pinyin-free.
+Every Chinese title, clue, correction and feedback passes directly to the trusted
+window.LaoshuText.render(tokens,{pinyin:'marked'}); do not define or replace it,
+do not convert pinyin or draw text on canvas. Use data or symbols for displayed
+strings; visible English may only be Restart. Native whole-word ruby is 28px Hanzi
+and 14px pinyin minimum and its internal styles must remain untouched. Reserve
+space rather than clip or shrink. No external resources, network, links, forms,
+storage, cookies, navigation, audio elements, speech synthesis or parent DOM.
+Optional synthesized beeps only after user input; game is fully usable without it.
+Run in sandbox='allow-scripts' with first-head CSP default-src 'none'; script-src
+'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'unsafe-inline'; img-src data:.
+Trusted host inlines existing lab/renderer.js before game scripts. Keep prototype
+source and deterministic host assembly separate. No changes to production/stages.
+
+DATA CONTRACT
+data: {schemaVersion:1,mechanic:'lanternwing',title:Token[],how_to:[],how_to_en:string,
+feedback:{good:Token[],retry:Token[]},rounds:[{id:string,word:Token[],target:integer
+1..10,tones:number[],meaning_en:string}],requiredWords:[{w,p}],meta:{lessonKey,
+focusWords,deferredWords,sourcePath,sourceSHA256,requestedModel,actualModel,usage,cost}}.
+Token = {w:string,p?:string}; punctuation has w only. Exact readings come from
+src/data/course.json prefix through hsk1-numbers-calendar, no altered sandhi.
+Title uses the three number tokens separated by punctuation; good uses existing
+starter good. Correction reuses current word; do not invent teaching prose.
+
+DELIVERABLES AND EVIDENCE
+Save game.v1.html and data.v1.json. First build a static art proof using the exact
+shipping drawing code and retain a screenshot/intermediate source. Then implement
+the complete game with that art. Host preview loads no third-party service; parent
+has server at 127.0.0.1:4317 serving docs/content/games. Use existing trusted renderer
+for sandbox assembly. Browser runtime is installed Playwright with Edge channel at
+C:/Users/yanqi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules.
+Save screenshots at 320x480,390x700,900x600, and motion proof if practical. Inspect
+pixels and public-control play rather than claim that ready means acceptable.
+Run public interaction win, three-mistake loss, correction, discard, restart from
+reachable states, re-init and touch/keyboard checks. No private solve method.
+Save TESTING.txt with selectors, walkthrough, hashes and candid outstanding checks.
+No independent blind play or production checkText acceptance claim unless actually
+performed. Do not mark any production stage built or alter the lab catalog.

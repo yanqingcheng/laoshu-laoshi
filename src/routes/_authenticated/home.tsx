@@ -28,7 +28,7 @@ function Home() {
     { key: "desk", label: "Desk · reviews", x: 0.36, y: 0.55, w: 0.26, h: 0.2, built: true, badge: due ? String(due.recognise + due.produce || "") || undefined : undefined, onActivate: () => setPanel("desk") },
     { key: "shelf", label: "Shelf · lessons", x: 0.04, y: 0.12, w: 0.22, h: 0.42, built: true, onActivate: () => setPanel("shelf") },
     { key: "camera", label: "Camera · add a book", x: 0.63, y: 0.5, w: 0.13, h: 0.14, built: stageBuilt(7), onActivate: () => nav({ to: "/book" }) },
-    { key: "console", label: "Console · games", x: 0.66, y: 0.74, w: 0.17, h: 0.16, built: stageBuilt(10) },
+    { key: "console", label: "Console · Astra game preview", x: 0.66, y: 0.74, w: 0.17, h: 0.16, built: true, onActivate: () => nav({ to: "/game-preview" }) },
     { key: "radio", label: "Radio · listening", x: 0.28, y: 0.3, w: 0.12, h: 0.14, built: stageBuilt(16) },
     { key: "phone", label: "Phone · dramas", x: 0.44, y: 0.32, w: 0.1, h: 0.14, built: stageBuilt(12) },
     { key: "door", label: "Door · to town", x: 0.82, y: 0.12, w: 0.15, h: 0.56, built: true, onActivate: () => nav({ to: "/town" }) },
