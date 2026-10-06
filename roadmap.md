@@ -18,3 +18,5 @@
 - [ ] Write game acceptance-service contract doc for Astra/Fable
 - [ ] Coordinate: Fable/Astra own game templates, acceptance service, park drills, README
 - [ ] Test photo book import with user's page photos
+- [ ] Test Tom import (469 sum, re-import all skipped) via Settings in test browser
+- [ ] Run both demo photo books through import
