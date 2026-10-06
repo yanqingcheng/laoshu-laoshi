@@ -15,7 +15,7 @@ function erhuaVariants(syls: string[]): string[][] {
   for (const s of syls) {
     const m = /^(.+?)r([0-5])$/.exec(s);
     const opts: string[][] = [[s]];
-    if (m && m[1].length > 0 && !/^e$/.test(m[1]) && s !== "er2" && !/er[0-5]$/.test(s)) {
+    if (m && !/^e?r[0-5]$/.test(s)) {
       opts.push([`${m[1]}${m[2]}`, "r5"]);
       opts.push([`${m[1]}${m[2]}`, "er5"]);
     }
@@ -94,10 +94,7 @@ export function checkPinyin(answer: string, target: PinyinTarget): PinyinVerdict
       if (!m.lettersOk) continue;
       if (m.wrong.length === 0) return { kind: "right" };
       const allNeutral = v.tones.every((t) => t.includes(5));
-      if (!m.anyTone && !allNeutral) {
-        nearly = nearly ?? null;
-        continue;
-      }
+      if (!m.anyTone && !allNeutral) continue; // tones are required
       if (!nearly) nearly = { syllables: m.wrong.map((i) => v.letters[i]) };
     }
   }
