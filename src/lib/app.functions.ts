@@ -278,7 +278,7 @@ export const getLesson = createServerFn({ method: "POST" })
         }));
       return { word: wordView(w), examples: sents.slice(0, 5), sentences: sents };
     });
-    const questions = shuffle(
+    const questions = shuffle<Any>(
       words.flatMap((w: Any) => {
         const s1 = w.sentences[0] ?? null;
         const s2 = w.sentences[1] ?? w.sentences[0] ?? null;
