@@ -14,3 +14,5 @@
 - [ ] Book/camera import stage (design drafted by helper, then build)
 - [ ] Import check with Tom-demo-backup.json (waiting on user file)
 - [ ] QA leftovers: review Good focus/Nearly, town dialog (check after features)
+- [ ] Pull pushed art: import screen + wire home-room/town/houses/sheets
+- [ ] Write game acceptance-service contract doc for Astra/Fable
