@@ -242,10 +242,26 @@ export const getLesson = createServerFn({ method: "POST" })
   .inputValidator((d: { lessonId: string }) => z.object({ lessonId: z.string().uuid() }).parse(d))
   .handler(async ({ context, data }) => {
     const { course, learner, sb } = await ctxAll(context);
-    const ref = await course.ref();
+    let ref = await course.ref();
     const { repertoire, queued } = await repertoireSets(sb, learner.id);
-    const lesson = ref.courseLessons.find((l: Any) => l.id === data.lessonId);
-    if (!lesson) throw new Error("Lesson not found");
+    let lesson: Any = ref.courseLessons.find((l: Any) => l.id === data.lessonId);
+    let targetsByWord: Map<string, Any[]> = ref.targetsByWord;
+    let sentencesById: Map<string, Any> = ref.sentences;
+    if (!lesson) {
+      // a learner's own book lesson: sentences are learner-owned rows
+      const { data: own, error: le } = await sb.from("lessons").select("id,ord,title,word_ids").eq("id", data.lessonId).maybeSingle();
+      if (le || !own) throw new Error("Lesson not found");
+      lesson = own;
+      if (own.word_ids.some((id: string) => !ref.words.has(id))) { course.invalidateRef(); ref = await course.ref(); }
+      const { data: ts, error: te } = await sb.from("sentence_targets").select("sentence_id,word_id,gap,answers,sentences!inner(id,tokens,english,needs_user_name,learner_id)").in("word_id", own.word_ids).eq("sentences.learner_id", learner.id);
+      if (te) throw new Error(te.message);
+      targetsByWord = new Map();
+      sentencesById = new Map();
+      for (const t of ts ?? []) {
+        targetsByWord.set(t.word_id, [...(targetsByWord.get(t.word_id) ?? []), t]);
+        sentencesById.set(t.sentence_id, t.sentences);
+      }
+    }
     const starter = new Set<string>(ref.courseLessons[0]?.word_ids ?? []);
     const allowed = new Set<string>([...repertoire, ...lesson.word_ids, ...starter]);
     const todo = lesson.word_ids.filter((id: string) => !repertoire.has(id));
@@ -253,8 +269,8 @@ export const getLesson = createServerFn({ method: "POST" })
     const r = rng(hashStr(lesson.id + learner.id + todo.length));
     const words = sitting.map((id: string) => {
       const w = ref.words.get(id);
-      const sents = (ref.targetsByWord.get(id) ?? [])
-        .map((t: Any) => ({ t, s: ref.sentences.get(t.sentence_id) }))
+      const sents = (targetsByWord.get(id) ?? [])
+        .map((t: Any) => ({ t, s: sentencesById.get(t.sentence_id) }))
         .filter((x: Any) => x.s && sentenceAllowed(x.s, id, allowed, learner))
         .map((x: Any) => ({
           id: x.s.id, tokens: personalise(x.s.tokens, learner)!, english: x.s.english.replaceAll("{USER_NAME}", learner.display_name),
@@ -262,7 +278,7 @@ export const getLesson = createServerFn({ method: "POST" })
         }));
       return { word: wordView(w), examples: sents.slice(0, 5), sentences: sents };
     });
-    const questions = shuffle(
+    const questions = shuffle<Any>(
       words.flatMap((w: Any) => {
         const s1 = w.sentences[0] ?? null;
         const s2 = w.sentences[1] ?? w.sentences[0] ?? null;

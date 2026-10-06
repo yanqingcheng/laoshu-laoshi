@@ -10,3 +10,13 @@
 - [ ] GitHub connect: user must do it while I'm paused between stages (blocked during active builds). Resume on their word.
 - [x] OpenAI key saved + verified live (all 5 model IDs available); config in src/lib/ai/config.ts, check on /dev.
 - [ ] Next backlog stage: book/camera import (OCR → vocab → proposed lessons → approval).
+- [ ] Ruby module rewrite: per-character aligned pinyin, erhua, no duplicate pinyin line; shared by app + video/games; tested
+- [ ] Book/camera import stage (design drafted by helper, then build)
+- [ ] Import check with Tom-demo-backup.json (waiting on user file)
+- [ ] QA leftovers: review Good focus/Nearly, town dialog (check after features)
+- [ ] Pull pushed art: import screen + wire home-room/town/houses/sheets
+- [ ] Write game acceptance-service contract doc for Astra/Fable
+- [ ] Coordinate: Fable/Astra own game templates, acceptance service, park drills, README
+- [ ] Test photo book import with user's page photos
+- [ ] Test Tom import (469 sum, re-import all skipped) via Settings in test browser
+- [ ] Run both demo photo books through import

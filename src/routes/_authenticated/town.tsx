@@ -5,6 +5,7 @@ import { useState } from "react";
 import { AppShell, CouldNotLoad, useBootstrap } from "@/components/AppShell";
 import { Scene, HotspotList, type Hotspot } from "@/components/Scene";
 import { homeSummary } from "@/lib/app.functions";
+import { townState } from "@/lib/place.functions";
 import { stageBuilt } from "@/lib/stages";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -20,7 +21,17 @@ function Town() {
   const boot = useBootstrap();
   const fn = useServerFn(homeSummary);
   const q = useQuery({ queryKey: ["home"], queryFn: () => fn(), enabled: !!boot.data });
+  const tfn = useServerFn(townState);
+  const t = useQuery({ queryKey: ["town"], queryFn: () => tfn(), enabled: !!boot.data });
   const nav = useNavigate();
+  const customSpot = (slot: string) => {
+    const pl: any = (t.data ?? []).find((x: any) => x.slot === slot);
+    if (!pl) return spot(slot, "Empty plot · bring a book to fill it", true, { onActivate: () => nav({ to: "/book" }) });
+    return spot(slot, `${pl.hostName ?? "New neighbour"} · ${pl.title}`, true, {
+      badge: pl.marker === "padlock" ? "🔒" : pl.marker === "cog" ? "⚙" : undefined,
+      onActivate: () => nav({ to: "/place/$slot", params: { slot } }),
+    });
+  };
   const [locked, setLocked] = useState<null | { label: string; lessonId: string; title: string; need: number }>(null);
   const L = q.data?.lessons ?? [];
   const pos: Record<string, [number, number]> = {
@@ -42,8 +53,8 @@ function Town() {
             : l && setLocked({ label: b.label, lessonId: l.id, title: l.title, need: Math.ceil(l.total * 0.8) - l.learned }),
       });
     }),
-    spot("custom1", "Empty plot · your book's place", stageBuilt(8)),
-    spot("custom2", "Empty plot · your book's place", stageBuilt(8)),
+    customSpot("custom1"),
+    customSpot("custom2"),
     spot("shop", "Shop", stageBuilt(17)),
     spot("park", "Park & gym", stageBuilt(18)),
   ];
