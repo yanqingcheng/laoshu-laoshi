@@ -1,0 +1,445 @@
+{
+  "version": 1,
+  "purpose": "Independent lifetime-growth and current-backlog signals. Nine complete plant layers, not nine levels of one linear progression.",
+  "semantics": {
+    "maturity": [
+      "seedling",
+      "growing",
+      "thriving"
+    ],
+    "condition": [
+      "healthy",
+      "drooping",
+      "recovering"
+    ],
+    "transition": "Keep current maturity when watering; drooping -> recovering -> healthy within same maturity. Never die; never reset lifetime growth. Backend owns thresholds and recovery duration.",
+    "thresholds": null
+  },
+  "base_plate": "plants/home-room-empty-windowsill.png",
+  "placement": {
+    "coordinate_system": "top-left origin, normalized against native 1536x1024 background; use full transparent layer canvas, never auto-trim by alpha bounding box",
+    "reference_background_dimensions": [
+      1536,
+      1024
+    ],
+    "layer_dimensions": [
+      1536,
+      1024
+    ],
+    "layer_box_pixels": {
+      "x": 526,
+      "y": 160,
+      "width": 430,
+      "height": 287
+    },
+    "layer_box_normalized": {
+      "x": 0.3424479166666667,
+      "y": 0.15625,
+      "width": 0.2799479166666667,
+      "height": 0.2802734375
+    },
+    "pot_baseline_pixels": 390,
+    "pot_baseline_normalized": 0.380859375,
+    "pot_centers_pixels": [
+      609,
+      746,
+      882
+    ],
+    "pot_centers_normalized": [
+      0.396484375,
+      0.4856770833333333,
+      0.57421875
+    ],
+    "paint_order": [
+      "empty room plate",
+      "one plant state layer",
+      "interactive hit regions"
+    ],
+    "whole_group_hitbox_normalized": {
+      "x": 0.344,
+      "y": 0.16,
+      "width": 0.28,
+      "height": 0.223
+    },
+    "individual_hitboxes_normalized": [
+      {
+        "id": "leafy",
+        "x": 0.349,
+        "y": 0.19,
+        "width": 0.089,
+        "height": 0.195
+      },
+      {
+        "id": "flower",
+        "x": 0.438,
+        "y": 0.21,
+        "width": 0.092,
+        "height": 0.175
+      },
+      {
+        "id": "narrow-leaf",
+        "x": 0.53,
+        "y": 0.16,
+        "width": 0.092,
+        "height": 0.225
+      }
+    ]
+  },
+  "validation": {
+    "visual_review": "All nine composited over actual empty-sill room at documented rectangle; inspected contact sheet. Pots fit sill, broad and narrow leaves occupy window rather than furniture, tiny/medium/mature silhouettes distinguish lifetime growth. Droop remains alive; recovery carries dew.",
+    "alpha_review": "All plant PNGs RGBA with actual alpha0 pixels. Most source interiors peak at253/254 rather than255, near-opaque. Fine low-alpha fringe pixels make raw alpha bounding boxes misleading; do not trim or use them for placement. Coloured RGB in alpha0 areas is invisible in normal compositing.",
+    "contact_sheet": "annotations/plants-in-room-contact-sheet.jpg"
+  },
+  "minor_deviations": [
+    "Generator did not retain exact numeric pot geometry; seedling plant columns were resized independently using their existing alpha, and all stages baseline-registered. At the intended 430px wide room placement, residual pot size/center differences are a few pixels. Use short crossfade rather than hard swapping if desired.",
+    "Pot motifs and leaf placement vary slightly between conditions; same blue-white/terracotta/jade identities retained.",
+    "Recovering dew is visually subtle at room scale; pair watering with app animation or accessible state text.",
+    "Thriving has four open pink flowers, not the five requested in its prompt.",
+    "Actual generated palette is brighter green and somewhat more textured than original room, but compatible at native placement."
+  ],
+  "generation_count": 13,
+  "cost_note": "Image cost unknown; model IDs and usage not exposed by built-in tool.",
+  "assets": [
+    {
+      "file": "home-room-empty-windowsill.png",
+      "prompt": "Edit ONLY the three potted plants in this room: remove all three pots and all their leaves, stems and flowers from the upper middle windowsill. Reconstruct the garden scenery behind them and the wooden sill naturally, so the entire windowsill is empty. Preserve everything else exactly including camera, canvas 1536x1024, window frame, desk and camera and notebook, books, radio, right table phone console, door, floor, paper grain and gouache storybook style. No text, no added objects.",
+      "seconds": 33.133,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "transparent_pixels": 0,
+      "opaque_pixels": 1572864,
+      "alpha_bbox": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "preparation": "none",
+      "path": "plants/home-room-empty-windowsill.png",
+      "generation_tool": "built-in image_gen",
+      "model_id": null,
+      "cost": null,
+      "usage": null,
+      "alpha_requirement": "opaque",
+      "status": "accepted",
+      "meaning": "Replacement base plate needed for interchangeable plant states. Existing baked plants removed, sill and garden reconstructed."
+    },
+    {
+      "file": "plants-growing.png",
+      "prompt": "Precise alpha cleanup edit of this three plant layer. Keep ALL leaves and stems and pots their shapes and positions, colours, size, painted paper texture. Remove the diffuse coloured glowing halos and haze surrounding each plant entirely. Outside the crisp silhouettes must be fully transparent alpha 0 with absolutely no mist, bloom, aura, glow, background, ground, vignette or shadows. Pot and leaf interiors must be fully opaque alpha255. Only a 1px antialiased edge may be partially transparent. Preserve landscape1536x1024 with generous margins. No writing.",
+      "seconds": 23.637,
+      "initial_prompt": "Create an isolated transparent PNG game layer, landscape 3:2 canvas 1536x1024, with the THREE windowsill plants from this reference room, as separate growing-stage plants in one evenly spaced row. Keep the original identity: left blue-and-white Chinese ceramic round pot with blue floral motif and broad dark jade leaves; middle squat terracotta pot with compact leafy stems and a few closed pink flower buds; right round muted jade pot with narrower upright lance leaves. Front-on view same as room, warm flat gouache painted paper and folk woodblock style, no glossy 3D. Geometry template for all future states: pot centres x=330, 768, 1206 pixels; all pot bottoms at y=850; each pot width 180px, height150px, exactly same baseline. Medium growing foliage reaches y=370. Leaves must stay within each plant's separate zone: x=120-540, 558-978, 996-1416. Generous transparent margins all sides and between plants; no overlap. Opaque pots and leaves, actual transparent alpha everywhere else, no background no checkerboard no floor no window no scenery no writing. Growth is gentle and friendly; fresh healthy youthful leaves.",
+      "initial_seconds": 30.527,
+      "note": "RGB behind fully transparent alpha looks like coloured haze in raw preview, but true alpha composite is clean.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 1068984,
+      "opaque_pixels": 0,
+      "alpha_bbox": [
+        21,
+        6,
+        1524,
+        989
+      ],
+      "preparation": "Full layer translated vertically -3px to baseline820; original alpha retained.",
+      "path": "plants/plants-growing.png",
+      "generation_tool": "built-in image_gen",
+      "model_id": null,
+      "cost": null,
+      "usage": null,
+      "maturity": "growing",
+      "condition": "healthy",
+      "meaning": "Upright hydrated growth. Lifetime maturity remains intact.",
+      "alpha_requirement": "True alpha outside painted silhouettes; source alpha preserved, no colour removal.",
+      "status": "accepted_with_minor_generation_deviations"
+    },
+    {
+      "file": "plants-seedling.png",
+      "prompt": "EDIT the attached transparent three-pot plant layer. Preserve all three pots pixel-for-pixel in shape, decoration, size, position and baseline, identical canvas1536x1024. Change ONLY foliage to SEEDLING healthy maturity: left pot has 3 small broad upright jade leaves, middle pot a small fresh sprout with 3 oval leaves and no blooms, right pot 3 short narrow upright leaves. Foliage remains clearly tiny, roughly one third current height above soil. The pot sizes NEVER change. Friendly flat gouache paper storybook art, no faces. Actual transparent background alpha0, clean silhouettes, no glow no scenery no text no ground. Pot interiors and leaves fully opaque.",
+      "seconds": 31.941,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1379475,
+      "opaque_pixels": 1932,
+      "alpha_bbox": [
+        130,
+        298,
+        1417,
+        898
+      ],
+      "preparation": "Independent three transparent columns resized by measured pot width to 252px, centers295/785/1270, baseline820. Original alpha retained.",
+      "path": "plants/plants-seedling.png",
+      "generation_tool": "built-in image_gen",
+      "model_id": null,
+      "cost": null,
+      "usage": null,
+      "maturity": "seedling",
+      "condition": "healthy",
+      "meaning": "Upright hydrated growth. Lifetime maturity remains intact.",
+      "alpha_requirement": "True alpha outside painted silhouettes; source alpha preserved, no colour removal.",
+      "status": "accepted_with_minor_generation_deviations"
+    },
+    {
+      "file": "plants-thriving.png",
+      "prompt": "Edit attached growing plant trio to THRIVING healthy mature state. Same 1536x1024 transparent canvas, exactly same pots and their positions and sizes and bottoms, do not zoom or reframe. Left jade leafy plant fuller with additional broad leaves; middle full leafy flowering plant with 5 open soft coral pink five-petal flowers; right tall elegant narrow-leaf plant with fuller upward stems. Mature growth reaches higher but keep 70px minimum transparent top margin. Keep all three separate with empty gaps, no leaves clipped. Opaque painted gouache paper silhouettes, transparent alpha background, no scenery no ground no writing, no glow. Preserve pot identity and colours.",
+      "seconds": 33.722,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 836685,
+      "opaque_pixels": 0,
+      "alpha_bbox": [
+        0,
+        0,
+        1536,
+        951
+      ],
+      "preparation": "Full layer translated vertically -39px to baseline820; original alpha retained.",
+      "path": "plants/plants-thriving.png",
+      "generation_tool": "built-in image_gen",
+      "model_id": null,
+      "cost": null,
+      "usage": null,
+      "maturity": "thriving",
+      "condition": "healthy",
+      "meaning": "Upright hydrated growth. Lifetime maturity remains intact.",
+      "alpha_requirement": "True alpha outside painted silhouettes; source alpha preserved, no colour removal.",
+      "status": "accepted_with_minor_generation_deviations"
+    },
+    {
+      "file": "plants-drooping.png",
+      "prompt": "EDIT the attached mature THRIVING three-plant layer to a gentle DROOPING condition caused by current review backlog. Keep the SAME mature leaf count, flowers, lifetime growth, stem lengths and overall maturity. Curve existing leaves gently downward and bow flower stems; greens become slightly muted, pink petals stay attached. Never dead, brown, bare, shrunk, broken or leafless. IMPORTANT keep all three original pots EXACTLY same size positions shapes baseline and markings; no zoom. Preserve1536x1024 transparent canvas and margins; do not expand foliage sideways. Flat gouache paper. True transparent alpha, no scenery no writing no water can no facial expressions.",
+      "seconds": 34.734,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 916190,
+      "opaque_pixels": 0,
+      "alpha_bbox": [
+        31,
+        0,
+        1528,
+        949
+      ],
+      "preparation": "Full layer translated vertically -39px to baseline820; original alpha retained.",
+      "path": "plants/plants-drooping.png",
+      "generation_tool": "built-in image_gen",
+      "model_id": null,
+      "cost": null,
+      "usage": null,
+      "maturity": "thriving",
+      "condition": "drooping",
+      "meaning": "Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",
+      "alpha_requirement": "True alpha outside painted silhouettes; source alpha preserved, no colour removal.",
+      "status": "accepted_with_minor_generation_deviations"
+    },
+    {
+      "file": "plants-recovering.png",
+      "prompt": "EDIT attached mature plant trio to RECOVERING just watered state. Preserve all three pots exactly in positions, size, baseline, colours, decoration. Preserve mature lifetime growth, leaf count and open pink flowers; nothing shrinks or resets to seedling. All plants are refreshed with foliage mostly upright, a few outer tips still softly curved and three tiny discrete pale blue water droplets on leaves of EACH plant. No watering can, no splash backdrop no glow no ground no text. Same1536x1024 transparent canvas, same front-on gouache paper style, clean true alpha background. Do not change pot geometry.",
+      "seconds": 33.566,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 771112,
+      "opaque_pixels": 0,
+      "alpha_bbox": [
+        0,
+        0,
+        1536,
+        940
+      ],
+      "preparation": "Full layer translated vertically -68px to baseline820; original alpha retained.",
+      "path": "plants/plants-recovering.png",
+      "generation_tool": "built-in image_gen",
+      "model_id": null,
+      "cost": null,
+      "usage": null,
+      "maturity": "thriving",
+      "condition": "recovering",
+      "meaning": "Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",
+      "alpha_requirement": "True alpha outside painted silhouettes; source alpha preserved, no colour removal.",
+      "status": "accepted_with_minor_generation_deviations"
+    },
+    {
+      "file": "plants-seedling-drooping.png",
+      "prompt": "Edit the healthy three seedling plants to gentle drooping ONLY. Keep all pots and the 1536x1024 canvas identical. Left and middle each have exactly three leaves: arch the two side leaves softly downward; right three narrow leaves arch down. Keep alive green, no loss of size. IMPORTANT render a clean isolated transparent alpha cutout: absolutely no rectangular patches, gray blocks, background shadows, coloured haze, mist, texture outside the actual leaves and pots. All space between and around the three silhouettes MUST be alpha0. Leaves and pots fully opaque. No writing.",
+      "seconds": 29.464,
+      "previous_attempt": {
+        "prompt": "EDIT attached three SEEDLING plants to gentle DROOPING condition. They remain exactly this seedling maturity, same three leaves each; bend the little leaves softly downward at tips, still alive and green, never dead or brown. Keep all pots pixel-for-pixel identical in scale shapes colours positions baseline. Do not zoom or reframe. No extra leaves, flowers or objects. Same1536x1024 transparent canvas, paper gouache, true alpha, no writing no scenery no ground.",
+        "seconds": 23.382,
+        "reason": "Alpha background artifacts on cream composite"
+      },
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1378922,
+      "opaque_pixels": 2426,
+      "alpha_bbox": [
+        145,
+        302,
+        1408,
+        898
+      ],
+      "preparation": "Independent three transparent columns resized by measured pot width to 252px, centers295/785/1270, baseline820. Original alpha retained.",
+      "path": "plants/plants-seedling-drooping.png",
+      "generation_tool": "built-in image_gen",
+      "model_id": null,
+      "cost": null,
+      "usage": null,
+      "maturity": "seedling",
+      "condition": "drooping",
+      "meaning": "Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",
+      "alpha_requirement": "True alpha outside painted silhouettes; source alpha preserved, no colour removal.",
+      "status": "accepted_with_minor_generation_deviations"
+    },
+    {
+      "file": "plants-seedling-recovering.png",
+      "prompt": "EDIT attached three SEEDLING plants to just-watered RECOVERING condition. They remain exactly this seedling maturity with same three small leaves each; fresh upright leaves with a slight relaxed curve, one tiny pale blue water droplet per plant attached to a leaf. Keep pots pixel-for-pixel identical in scale shapes colours positions baseline. Do not zoom or reframe. No new leaves or flowers; watering revives without increasing or resetting growth. Same1536x1024 transparent canvas, paper gouache, true alpha, no writing no scenery no ground.",
+      "seconds": 24.612,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1371429,
+      "opaque_pixels": 2081,
+      "alpha_bbox": [
+        130,
+        314,
+        1414,
+        828
+      ],
+      "preparation": "Independent three transparent columns resized by measured pot width to 252px, centers295/785/1270, baseline820. Original alpha retained.",
+      "path": "plants/plants-seedling-recovering.png",
+      "generation_tool": "built-in image_gen",
+      "model_id": null,
+      "cost": null,
+      "usage": null,
+      "maturity": "seedling",
+      "condition": "recovering",
+      "meaning": "Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",
+      "alpha_requirement": "True alpha outside painted silhouettes; source alpha preserved, no colour removal.",
+      "status": "accepted_with_minor_generation_deviations"
+    },
+    {
+      "file": "plants-growing-drooping.png",
+      "prompt": "Edit the healthy growing three plants to gentle drooping ONLY. Keep all pots and1536x1024 canvas identical. Gently bow leaf tips and closed pink buds downward; maintain medium lifetime maturity and same foliage count. Alive green, no brown or loss of size. IMPORTANT clean isolated true transparent alpha cutout: no rectangular patches, gray blocks, background shadows, coloured haze, mist, vignette, blur or texture outside the actual leaves and pots. Every space between and around the silhouettes MUST be alpha0. Leaves and pots fully opaque and crisp. No writing. Do not change pot size or placement.",
+      "seconds": 30.737,
+      "previous_attempt": {
+        "prompt": "EDIT attached GROWING three-plant layer to gentle DROOPING condition. Same medium growing maturity, same leaf and closed pink bud count, bend broad leaves and narrow leaves downward a little and bow pink buds; healthy muted green, alive and safe, never bare dead brown shrunk or broken. Do NOT add open flowers or taller stems. Keep all pots identical size positions shapes baseline and markings; no zoom. Same1536x1024 transparent canvas. Flat gouache paper true alpha, no scenery no writing no ground no watering can.",
+        "seconds": 22.487,
+        "reason": "Alpha background artifacts on cream composite"
+      },
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 1060150,
+      "opaque_pixels": 0,
+      "alpha_bbox": [
+        45,
+        32,
+        1522,
+        971
+      ],
+      "preparation": "Full layer translated vertically -3px to baseline820; original alpha retained.",
+      "path": "plants/plants-growing-drooping.png",
+      "generation_tool": "built-in image_gen",
+      "model_id": null,
+      "cost": null,
+      "usage": null,
+      "maturity": "growing",
+      "condition": "drooping",
+      "meaning": "Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",
+      "alpha_requirement": "True alpha outside painted silhouettes; source alpha preserved, no colour removal.",
+      "status": "accepted_with_minor_generation_deviations"
+    },
+    {
+      "file": "plants-growing-recovering.png",
+      "prompt": "EDIT attached GROWING three-plant layer to just-watered RECOVERING condition. Same medium growing maturity, same foliage and closed pink buds, fresh greens and leaves mostly upright but a few outer tips still softly curved. Two tiny pale blue water droplets on leaves of each plant. NO open flowers, no new tall stems; watering restores health without resetting lifetime growth. Keep all pots identical size positions shapes baseline and markings; no zoom. Same1536x1024 transparent canvas, flat gouache paper, true alpha, no scenery no writing no ground no watering can.",
+      "seconds": 32.444,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "transparent_pixels": 1047732,
+      "opaque_pixels": 0,
+      "alpha_bbox": [
+        21,
+        22,
+        1536,
+        981
+      ],
+      "preparation": "Full layer translated vertically -3px to baseline820; original alpha retained.",
+      "path": "plants/plants-growing-recovering.png",
+      "generation_tool": "built-in image_gen",
+      "model_id": null,
+      "cost": null,
+      "usage": null,
+      "maturity": "growing",
+      "condition": "recovering",
+      "meaning": "Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",
+      "alpha_requirement": "True alpha outside painted silhouettes; source alpha preserved, no colour removal.",
+      "status": "accepted_with_minor_generation_deviations"
+    }
+  ]
+}

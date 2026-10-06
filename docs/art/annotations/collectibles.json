@@ -1,0 +1,317 @@
+{
+  "catalogue_note": "These are vocabulary-linked starter catalogue artworks, pending real app wordId association and actual ownership. No asset implies that a learner owns it.",
+  "assets": [
+    {
+      "id": "book",
+      "filename": "objects/book.png",
+      "purpose": "Collectible book / story content",
+      "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: one closed indigo cloth-bound storybook, blank cream rectangular label, ochre binding, cream pages, no characters on cover or spine. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+      "seconds": 39.159,
+      "placement": "shelf/table",
+      "ownership": "Starter catalogue artwork only; wordId association and ownership must come from app state.",
+      "wordId": null,
+      "tool": "built-in image_gen",
+      "attempts": 1,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "validation": "Visually inspected whole recognizable silhouette with no cropped parts, no text, coherent paper/gouache palette. Retain generated alpha without background color deletion. Some margins are narrower than requested 15%; all objects intact and can be scaled with UI padding.",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.4548812221942416,
+      "alpha_bbox_pixels": [
+        0,
+        5,
+        1226,
+        1222
+      ],
+      "alpha_over_10_bbox_pixels": [
+        146,
+        156,
+        1108,
+        1118
+      ],
+      "alpha_result": "pass",
+      "status": "accepted"
+    },
+    {
+      "id": "teacup",
+      "filename": "objects/teacup.png",
+      "purpose": "Vocabulary-linked shelf collectible",
+      "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: one small jade-glazed ceramic teacup with simple loop handle and visible tea, no saucer. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+      "seconds": 38.432,
+      "placement": "shelf/table",
+      "ownership": "Starter catalogue artwork only; wordId association and ownership must come from app state.",
+      "wordId": null,
+      "tool": "built-in image_gen",
+      "attempts": 1,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "validation": "Visually inspected whole recognizable silhouette with no cropped parts, no text, coherent paper/gouache palette. Retain generated alpha without background color deletion. Some margins are narrower than requested 15%; all objects intact and can be scaled with UI padding.",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.5430761912756372,
+      "alpha_bbox_pixels": [
+        0,
+        20,
+        1224,
+        1230
+      ],
+      "alpha_over_10_bbox_pixels": [
+        82,
+        234,
+        1219,
+        1127
+      ],
+      "alpha_result": "pass",
+      "status": "accepted"
+    },
+    {
+      "id": "apple",
+      "filename": "objects/apple.png",
+      "purpose": "Vocabulary-linked gift or shop item",
+      "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: one red terracotta apple with a short brown stem and one jade leaf. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+      "seconds": 36.757,
+      "placement": "shelf/table",
+      "ownership": "Starter catalogue artwork only; wordId association and ownership must come from app state.",
+      "wordId": null,
+      "tool": "built-in image_gen",
+      "attempts": 1,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "validation": "Visually inspected whole recognizable silhouette with no cropped parts, no text, coherent paper/gouache palette. Retain generated alpha without background color deletion. Some margins are narrower than requested 15%; all objects intact and can be scaled with UI padding.",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.5306127250851501,
+      "alpha_bbox_pixels": [
+        0,
+        32,
+        1246,
+        1230
+      ],
+      "alpha_over_10_bbox_pixels": [
+        160,
+        109,
+        1130,
+        1145
+      ],
+      "alpha_result": "pass",
+      "status": "accepted"
+    },
+    {
+      "id": "flower",
+      "filename": "objects/flower.png",
+      "purpose": "Vocabulary-linked home or neighbour gift",
+      "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: one small pink blossom flower with green stem and two leaves in a tiny cream ceramic bud vase. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+      "seconds": 60.164,
+      "placement": "shelf/table",
+      "ownership": "Starter catalogue artwork only; wordId association and ownership must come from app state.",
+      "wordId": null,
+      "tool": "built-in image_gen",
+      "attempts": 1,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "validation": "Visually inspected whole recognizable silhouette with no cropped parts, no text, coherent paper/gouache palette. Retain generated alpha without background color deletion. Some margins are narrower than requested 15%; all objects intact and can be scaled with UI padding.",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.7331276756484513,
+      "alpha_bbox_pixels": [
+        33,
+        19,
+        1236,
+        1230
+      ],
+      "alpha_over_10_bbox_pixels": [
+        316,
+        63,
+        937,
+        1201
+      ],
+      "alpha_result": "pass",
+      "status": "accepted"
+    },
+    {
+      "id": "lantern",
+      "filename": "objects/lantern.png",
+      "purpose": "Vocabulary-linked home decoration",
+      "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: one small terracotta Chinese paper lantern with ochre ribs and tassel, no glyphs, isolated hanging loop. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+      "seconds": 36.759,
+      "placement": "wall/hanging",
+      "ownership": "Starter catalogue artwork only; wordId association and ownership must come from app state.",
+      "wordId": null,
+      "tool": "built-in image_gen",
+      "attempts": 1,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "validation": "Visually inspected whole recognizable silhouette with no cropped parts, no text, coherent paper/gouache palette. Retain generated alpha without background color deletion. Some margins are narrower than requested 15%; all objects intact and can be scaled with UI padding.",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.7258145545100972,
+      "alpha_bbox_pixels": [
+        0,
+        19,
+        1232,
+        1254
+      ],
+      "alpha_over_10_bbox_pixels": [
+        253,
+        31,
+        1001,
+        1228
+      ],
+      "alpha_result": "pass",
+      "status": "accepted"
+    },
+    {
+      "id": "cushion",
+      "filename": "objects/cushion.png",
+      "purpose": "Vocabulary-linked movable floor item",
+      "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: one round indigo floor cushion with a restrained cream stitched edge and shallow button in centre. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+      "seconds": 37.535,
+      "placement": "floor",
+      "ownership": "Starter catalogue artwork only; wordId association and ownership must come from app state.",
+      "wordId": null,
+      "tool": "built-in image_gen",
+      "attempts": 1,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "validation": "Visually inspected whole recognizable silhouette with no cropped parts, no text, coherent paper/gouache palette. Retain generated alpha without background color deletion. Some margins are narrower than requested 15%; all objects intact and can be scaled with UI padding.",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.5656616530451837,
+      "alpha_bbox_pixels": [
+        0,
+        20,
+        1214,
+        1254
+      ],
+      "alpha_over_10_bbox_pixels": [
+        53,
+        315,
+        1203,
+        1039
+      ],
+      "alpha_result": "pass",
+      "status": "accepted"
+    },
+    {
+      "id": "kite",
+      "filename": "objects/kite.png",
+      "purpose": "Vocabulary-linked gift or collectible",
+      "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: one simple diamond-shaped ochre and terracotta paper kite with a short jade bow tail neatly contained inside the canvas. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+      "seconds": 44.529,
+      "placement": "wall/hanging",
+      "ownership": "Starter catalogue artwork only; wordId association and ownership must come from app state.",
+      "wordId": null,
+      "tool": "built-in image_gen",
+      "attempts": 1,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "validation": "Visually inspected whole recognizable silhouette with no cropped parts, no text, coherent paper/gouache palette. Retain generated alpha without background color deletion. Some margins are narrower than requested 15%; all objects intact and can be scaled with UI padding.",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.7598841601611684,
+      "alpha_bbox_pixels": [
+        41,
+        21,
+        1226,
+        1238
+      ],
+      "alpha_over_10_bbox_pixels": [
+        225,
+        32,
+        1036,
+        1234
+      ],
+      "alpha_result": "pass",
+      "status": "accepted"
+    },
+    {
+      "id": "basket",
+      "filename": "objects/basket.png",
+      "purpose": "Vocabulary-linked room object",
+      "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: one small woven ochre bamboo basket with curved handle, empty, no contents. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+      "seconds": 35.9,
+      "placement": "shelf/table",
+      "ownership": "Starter catalogue artwork only; wordId association and ownership must come from app state.",
+      "wordId": null,
+      "tool": "built-in image_gen",
+      "attempts": 1,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "validation": "Visually inspected whole recognizable silhouette with no cropped parts, no text, coherent paper/gouache palette. Retain generated alpha without background color deletion. Some margins are narrower than requested 15%; all objects intact and can be scaled with UI padding.",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "transparent_fraction": 0.5525877002205383,
+      "alpha_bbox_pixels": [
+        0,
+        21,
+        1230,
+        1190
+      ],
+      "alpha_over_10_bbox_pixels": [
+        109,
+        73,
+        1149,
+        1179
+      ],
+      "alpha_result": "pass",
+      "status": "accepted"
+    }
+  ]
+}

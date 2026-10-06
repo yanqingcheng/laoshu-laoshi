@@ -1,0 +1,2220 @@
+{
+  "project": "Laoshu Laoshi",
+  "date": "2026-10-06",
+  "status": "art handoff; no app source available",
+  "new_asset_count": 37,
+  "core_asset_count": 19,
+  "total_production_pngs": 56,
+  "model_id": null,
+  "usage": null,
+  "image_cost": null,
+  "cost_note": "Built-in image_gen does not expose model ID, usage or cost. Cost unknown. Measured call times and exact prompts are in annotations.",
+  "coordinate_rules": "Normalized image space, origin top-left. Use complete canvas for registered plants/core map placements. Use measured trim bounds for standalone objects and marker optical sizing. Preserve aspect ratio.",
+  "assets": [
+    {
+      "file": "core/avatars.png",
+      "category": "core",
+      "purpose": "Optional ten-animal avatar sheet",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/cat-delighted.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.4914601643880208,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        37,
+        62,
+        697,
+        927
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/cat-neutral.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5469347635904948,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        87,
+        126,
+        715,
+        922
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/dog-delighted.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.4584643046061198,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        64,
+        33,
+        667,
+        960
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/dog-neutral.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.4743550618489583,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        32,
+        173,
+        732,
+        959
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/empty-plot.png",
+      "category": "core",
+      "purpose": "Unoccupied town slot overlay",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.6634151894161967,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        49,
+        453,
+        1221,
+        1196
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "plot-1",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.22,
+            0.45
+          ],
+          "x": 0.135,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.22,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-2",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.78,
+            0.45
+          ],
+          "x": 0.695,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.78,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-3",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.2,
+            0.72
+          ],
+          "x": 0.115,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.2,
+            0.72
+          ]
+        },
+        {
+          "id": "plot-4",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.82,
+            0.72
+          ],
+          "x": 0.735,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.82,
+            0.72
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/home-room.png",
+      "category": "core",
+      "purpose": "Learner home background plate",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/house-cat.png",
+      "category": "core",
+      "purpose": "Town building variant using stock house geometry",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.41688669622439456,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        74,
+        57,
+        1222,
+        1222
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "cat",
+          "asset": "house-cat.png",
+          "ground_center": [
+            0.81,
+            0.2
+          ],
+          "x": 0.725,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.81,
+            0.255
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/house-dog.png",
+      "category": "core",
+      "purpose": "Town building variant using stock house geometry",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.39919530230535016,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        57,
+        49,
+        1228,
+        1221
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "dog",
+          "asset": "house-dog.png",
+          "ground_center": [
+            0.5,
+            0.19
+          ],
+          "x": 0.415,
+          "y": 0.0206,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.245
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/house-home.png",
+      "category": "core",
+      "purpose": "Town building variant using stock house geometry",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.4065478507054936,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        62,
+        51,
+        1223,
+        1220
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "home",
+          "asset": "house-home.png",
+          "ground_center": [
+            0.5,
+            0.72
+          ],
+          "x": 0.415,
+          "y": 0.5506,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.775
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/house-mouse.png",
+      "category": "core",
+      "purpose": "Town building variant using stock house geometry",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.40652241376240367,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        74,
+        58,
+        1226,
+        1225
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "mouse",
+          "asset": "house-mouse.png",
+          "ground_center": [
+            0.2,
+            0.2
+          ],
+          "x": 0.115,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.2,
+            0.255
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/mouse-delighted.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5334510803222656,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        31,
+        60,
+        698,
+        955
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/mouse-neutral.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.6161206563313802,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        101,
+        59,
+        638,
+        950
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/sheet-cat.png",
+      "category": "core",
+      "purpose": "Two-pose character sheet: neutral left, delighted right",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5191974639892578,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        87,
+        62,
+        1465,
+        927
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "split_x_pixels": 768
+      },
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/sheet-dog.png",
+      "category": "core",
+      "purpose": "Two-pose character sheet: neutral left, delighted right",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.46640968322753906,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        32,
+        33,
+        1435,
+        960
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "split_x_pixels": 768
+      },
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/sheet-mouse.png",
+      "category": "core",
+      "purpose": "Two-pose character sheet: neutral left, delighted right",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5747858683268229,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        101,
+        59,
+        1466,
+        955
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "split_x_pixels": 768
+      },
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/stock-house.png",
+      "category": "core",
+      "purpose": "Plain geometric template for town buildings",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.41600657799348306,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        75,
+        59,
+        1221,
+        1220
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/stock-room.png",
+      "category": "core",
+      "purpose": "Reusable neighbour room background plate",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "host": {
+          "x": 0.755,
+          "y": 0.37,
+          "width": 0.18,
+          "height": 0.37,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.845,
+            0.74
+          ]
+        },
+        "object_shelf": {
+          "x": 0.421,
+          "y": 0.239,
+          "width": 0.166,
+          "height": 0.119,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.504,
+            0.358
+          ]
+        },
+        "object_table": {
+          "x": 0.602,
+          "y": 0.462,
+          "width": 0.101,
+          "height": 0.113,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.652,
+            0.575
+          ]
+        },
+        "object_floor": {
+          "x": 0.089,
+          "y": 0.763,
+          "width": 0.17,
+          "height": 0.132,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.174,
+            0.895
+          ]
+        },
+        "object_wall": {
+          "x": 0.69,
+          "y": 0.15,
+          "width": 0.21,
+          "height": 0.26,
+          "anchor": "center",
+          "anchor_position": [
+            0.795,
+            0.28
+          ]
+        }
+      },
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "core/town-ground.png",
+      "category": "core",
+      "purpose": "Eight-slot town background",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "mouse",
+          "asset": "house-mouse.png",
+          "ground_center": [
+            0.2,
+            0.2
+          ],
+          "x": 0.115,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.2,
+            0.255
+          ]
+        },
+        {
+          "id": "dog",
+          "asset": "house-dog.png",
+          "ground_center": [
+            0.5,
+            0.19
+          ],
+          "x": 0.415,
+          "y": 0.0206,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.245
+          ]
+        },
+        {
+          "id": "cat",
+          "asset": "house-cat.png",
+          "ground_center": [
+            0.81,
+            0.2
+          ],
+          "x": 0.725,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.81,
+            0.255
+          ]
+        },
+        {
+          "id": "plot-1",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.22,
+            0.45
+          ],
+          "x": 0.135,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.22,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-2",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.78,
+            0.45
+          ],
+          "x": 0.695,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.78,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-3",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.2,
+            0.72
+          ],
+          "x": 0.115,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.2,
+            0.72
+          ]
+        },
+        {
+          "id": "home",
+          "asset": "house-home.png",
+          "ground_center": [
+            0.5,
+            0.72
+          ],
+          "x": 0.415,
+          "y": 0.5506,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.775
+          ]
+        },
+        {
+          "id": "plot-4",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.82,
+            0.72
+          ],
+          "x": 0.735,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.82,
+            0.72
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "landing/landing-hero-desktop.png",
+      "category": "landing",
+      "purpose": "Desktop landing page hero; title, subtitle and CTA overlay on cream left",
+      "where": "Public landing page",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "text_safe_area": {
+          "x": 0.045,
+          "y": 0.19,
+          "width": 0.285,
+          "height": 0.46
+        },
+        "focal_point": {
+          "x": 0.675,
+          "y": 0.54
+        },
+        "crop_rules": "Use full 3:2 frame. Prefer contain or native aspect ratio. Do not center-crop to portrait; switch to mobile hero. Avoid text beyond x=0.33, as dog's tail enters around x=0.35."
+      },
+      "annotation": "annotations/landing.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "landing/landing-hero-mobile.png",
+      "category": "landing",
+      "purpose": "Mobile landing page portrait; title, subtitle and CTA overlay at top",
+      "where": "Public landing page",
+      "state": "static",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1024,
+        1536
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "text_safe_area": {
+          "x": 0.1,
+          "y": 0.035,
+          "width": 0.8,
+          "height": 0.21
+        },
+        "focal_point": {
+          "x": 0.5,
+          "y": 0.64
+        },
+        "crop_rules": "Use full 2:3 frame without cropping ears, paws or side tails. Maintain cream top area. On very narrow layouts render image at natural aspect ratio rather than cover. Keep overlay within conservative safe box; edge foliage begins around y=0.26."
+      },
+      "annotation": "annotations/landing.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "landing/welcome-trio.png",
+      "category": "landing",
+      "purpose": "Transparent onboarding and welcome-back illustration; all three characters waving together",
+      "where": "Onboarding / welcome-back card, never resident in personal home",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.41942087809244794,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        28,
+        51,
+        1500,
+        934
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "text_safe_area": null,
+        "focal_point": {
+          "x": 0.5,
+          "y": 0.49
+        },
+        "crop_rules": "Use contain; keep complete trio and original alpha. Do not crop or split characters because they overlap. Put text outside artwork. No background color removal."
+      },
+      "annotation": "annotations/landing.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "plants/home-room-empty-windowsill.png",
+      "category": "plants",
+      "purpose": "Replacement base plate needed for interchangeable plant states. Existing baked plants removed, sill and garden reconstructed.",
+      "where": "Replacement home room backdrop",
+      "state": "room base",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 255,
+        "maximum": 255,
+        "zero_fraction": 0.0,
+        "edge_alpha_max": 255
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "plants/plants-drooping.png",
+      "category": "plants",
+      "purpose": "Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "drooping",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5824979146321615,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        34,
+        160,
+        1508,
+        824
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "plants/plants-growing-drooping.png",
+      "category": "plants",
+      "purpose": "Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "growing-drooping",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.6740252176920573,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        48,
+        250,
+        1503,
+        825
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "plants/plants-growing-recovering.png",
+      "category": "plants",
+      "purpose": "Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "growing-recovering",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.6661300659179688,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        28,
+        160,
+        1524,
+        825
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "plants/plants-growing.png",
+      "category": "plants",
+      "purpose": "Upright hydrated growth. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "growing",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.6796417236328125,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        28,
+        168,
+        1521,
+        823
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "plants/plants-recovering.png",
+      "category": "plants",
+      "purpose": "Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "recovering",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.4902598063151042,
+        "edge_alpha_max": 2
+      },
+      "visible_bounds_alpha_gt_8": [
+        12,
+        8,
+        1528,
+        823
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "plants/plants-seedling-drooping.png",
+      "category": "plants",
+      "purpose": "Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "seedling-drooping",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.8766949971516927,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        164,
+        453,
+        1406,
+        822
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "plants/plants-seedling-recovering.png",
+      "category": "plants",
+      "purpose": "Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "seedling-recovering",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.8719310760498047,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        158,
+        445,
+        1397,
+        822
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "plants/plants-seedling.png",
+      "category": "plants",
+      "purpose": "Upright hydrated growth. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "seedling",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.8770465850830078,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        165,
+        443,
+        1397,
+        823
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "plants/plants-thriving.png",
+      "category": "plants",
+      "purpose": "Upright hydrated growth. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "thriving",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5319499969482422,
+        "edge_alpha_max": 3
+      },
+      "visible_bounds_alpha_gt_8": [
+        10,
+        52,
+        1527,
+        823
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "markers/marker-complete.png",
+      "category": "markers",
+      "purpose": "Completed activity",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "complete",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5347665778917353,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        145,
+        154,
+        1111,
+        1113
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "markers/marker-construction.png",
+      "category": "markers",
+      "purpose": "Truthful active build states only",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "construction",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5311462649664614,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        109,
+        144,
+        1171,
+        1105
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "markers/marker-gift.png",
+      "category": "markers",
+      "purpose": "Gift or reward",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "gift",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.4241839192733174,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        80,
+        107,
+        1188,
+        1170
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "markers/marker-heart.png",
+      "category": "markers",
+      "purpose": "Favourite or affection",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "heart",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.6223815846706806,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        128,
+        214,
+        1126,
+        1060
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "markers/marker-help.png",
+      "category": "markers",
+      "purpose": "Help, never unseen content",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "help",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.48062086490693895,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        115,
+        126,
+        1140,
+        1135
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "markers/marker-locked.png",
+      "category": "markers",
+      "purpose": "Locked content",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "locked",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.6398612160385013,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        235,
+        151,
+        1019,
+        1100
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "markers/marker-new.png",
+      "category": "markers",
+      "purpose": "New content badge",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "new",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5992873840393357,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        78,
+        94,
+        1175,
+        1150
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "markers/marker-pending.png",
+      "category": "markers",
+      "purpose": "Pending generation",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "pending",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5765982667266979,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        64,
+        83,
+        1190,
+        1155
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "markers/marker-retry.png",
+      "category": "markers",
+      "purpose": "Retry action",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "retry",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.49258258739497723,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        121,
+        122,
+        1134,
+        1131
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "markers/marker-unseen.png",
+      "category": "markers",
+      "purpose": "Unseen content",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "unseen",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5180188945613272,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        136,
+        134,
+        1119,
+        1102
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/apple.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked gift or shop item",
+      "where": "Neighbour coffee table or shop item card",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5306127250851501,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        160,
+        109,
+        1130,
+        1145
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/basket.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked room object",
+      "where": "Clear room floor beside furniture; inventory",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5525877002205383,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        109,
+        73,
+        1149,
+        1180
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/book.png",
+      "category": "objects",
+      "purpose": "Collectible book / story content",
+      "where": "Neighbour shelf/table or collection card",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.4548812221942416,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        146,
+        156,
+        1108,
+        1118
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/care-sparkles.png",
+      "category": "objects",
+      "purpose": "Brief recovery or successful action feedback",
+      "where": "Brief overlay by recovered plants or successful action",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.7926806468105889,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        170,
+        117,
+        1121,
+        1134
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/coin.png",
+      "category": "objects",
+      "purpose": "Practice currency visual, never generation credits",
+      "where": "Real balance beside practice rewards; not generation credits",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.4872382856517835,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        112,
+        113,
+        1142,
+        1142
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/cushion.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked movable floor item",
+      "where": "Clear home floor, away from door and review desk",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5656616530451837,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        53,
+        315,
+        1204,
+        1040
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": {
+          "x": 0.5,
+          "y": 0.76,
+          "width": 0.12,
+          "height": 0.12
+        },
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/flower.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked home or neighbour gift",
+      "where": "Neighbour shelf/table; gift",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.7331276756484513,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        316,
+        63,
+        937,
+        1203
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/kite.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked gift or collectible",
+      "where": "Wall decoration / gift or shop item card",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.7598841601611684,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        225,
+        32,
+        1036,
+        1234
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/lantern.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked home decoration",
+      "where": "Upper wall or hanging decor slot, avoiding text/hotspots",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.7258145545100972,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        253,
+        31,
+        1001,
+        1229
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/teacup.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked shelf collectible",
+      "where": "Empty neighbour shelf; gift/inventory card",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5430761912756372,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        82,
+        234,
+        1219,
+        1127
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/wall-frame.png",
+      "category": "objects",
+      "purpose": "Vocabulary wall art: app renders learned words within blank insert",
+      "where": "Home upper-left wall; optional vocabulary picture",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.33533204113662435,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        47,
+        183,
+        1206,
+        1077
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": {
+          "x": 0.12,
+          "y": 0.15,
+          "width": 0.14,
+          "height": 0.17
+        },
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/wall-scroll.png",
+      "category": "objects",
+      "purpose": "Vocabulary wall hanging: real app text on blank paper",
+      "where": "Narrow wall between window and door; real vocabulary text",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.4813203808419119,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        163,
+        13,
+        1093,
+        1226
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": {
+          "x": 0.682,
+          "y": 0.235,
+          "width": 0.075,
+          "height": 0.245
+        },
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/water-drops.png",
+      "category": "objects",
+      "purpose": "Brief watering feedback, after a real care action",
+      "where": "Short-lived overlay above plants during watering",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.8259737897738402,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        224,
+        79,
+        1120,
+        1210
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    },
+    {
+      "file": "objects/watering-can.png",
+      "category": "objects",
+      "purpose": "Plant care control and watering animation prop",
+      "where": "Plant care control near windowsill",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.6156687753892488,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        41,
+        151,
+        1232,
+        1113
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false
+    }
+  ],
+  "new_generation_call_count": 40,
+  "new_repair_call_count": 3,
+  "missing_fixed_assets": []
+}

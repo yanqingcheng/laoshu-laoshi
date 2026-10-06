@@ -1,0 +1,57 @@
+﻿file,purpose,where,state,width,height,alpha,annotation
+core/avatars.png,Optional ten-animal avatar sheet,Previously approved scene/character asset; see core manifest,static,1536,1024,False,core/asset-manifest.json
+core/cat-delighted.png,"Individual character pose, exact half-sheet crop",Previously approved scene/character asset; see core manifest,static,768,1024,True,core/asset-manifest.json
+core/cat-neutral.png,"Individual character pose, exact half-sheet crop",Previously approved scene/character asset; see core manifest,static,768,1024,True,core/asset-manifest.json
+core/dog-delighted.png,"Individual character pose, exact half-sheet crop",Previously approved scene/character asset; see core manifest,static,768,1024,True,core/asset-manifest.json
+core/dog-neutral.png,"Individual character pose, exact half-sheet crop",Previously approved scene/character asset; see core manifest,static,768,1024,True,core/asset-manifest.json
+core/empty-plot.png,Unoccupied town slot overlay,Previously approved scene/character asset; see core manifest,static,1254,1254,True,core/asset-manifest.json
+core/home-room.png,Learner home background plate,Previously approved scene/character asset; see core manifest,static,1536,1024,False,core/asset-manifest.json
+core/house-cat.png,Town building variant using stock house geometry,Previously approved scene/character asset; see core manifest,static,1254,1254,True,core/asset-manifest.json
+core/house-dog.png,Town building variant using stock house geometry,Previously approved scene/character asset; see core manifest,static,1254,1254,True,core/asset-manifest.json
+core/house-home.png,Town building variant using stock house geometry,Previously approved scene/character asset; see core manifest,static,1254,1254,True,core/asset-manifest.json
+core/house-mouse.png,Town building variant using stock house geometry,Previously approved scene/character asset; see core manifest,static,1254,1254,True,core/asset-manifest.json
+core/mouse-delighted.png,"Individual character pose, exact half-sheet crop",Previously approved scene/character asset; see core manifest,static,768,1024,True,core/asset-manifest.json
+core/mouse-neutral.png,"Individual character pose, exact half-sheet crop",Previously approved scene/character asset; see core manifest,static,768,1024,True,core/asset-manifest.json
+core/sheet-cat.png,"Two-pose character sheet: neutral left, delighted right",Previously approved scene/character asset; see core manifest,static,1536,1024,True,core/asset-manifest.json
+core/sheet-dog.png,"Two-pose character sheet: neutral left, delighted right",Previously approved scene/character asset; see core manifest,static,1536,1024,True,core/asset-manifest.json
+core/sheet-mouse.png,"Two-pose character sheet: neutral left, delighted right",Previously approved scene/character asset; see core manifest,static,1536,1024,True,core/asset-manifest.json
+core/stock-house.png,Plain geometric template for town buildings,Previously approved scene/character asset; see core manifest,static,1254,1254,True,core/asset-manifest.json
+core/stock-room.png,Reusable neighbour room background plate,Previously approved scene/character asset; see core manifest,static,1536,1024,False,core/asset-manifest.json
+core/town-ground.png,Eight-slot town background,Previously approved scene/character asset; see core manifest,static,1536,1024,False,core/asset-manifest.json
+landing/landing-hero-desktop.png,"Desktop landing page hero; title, subtitle and CTA overlay on cream left",Public landing page,static,1536,1024,False,annotations/landing.json
+landing/landing-hero-mobile.png,"Mobile landing page portrait; title, subtitle and CTA overlay at top",Public landing page,static,1024,1536,False,annotations/landing.json
+landing/welcome-trio.png,Transparent onboarding and welcome-back illustration; all three characters waving together,"Onboarding / welcome-back card, never resident in personal home",static,1536,1024,True,annotations/landing.json
+plants/home-room-empty-windowsill.png,"Replacement base plate needed for interchangeable plant states. Existing baked plants removed, sill and garden reconstructed.",Replacement home room backdrop,room base,1536,1024,False,annotations/plants.json
+plants/plants-drooping.png,"Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json,drooping,1536,1024,True,annotations/plants.json
+plants/plants-growing-drooping.png,"Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json,growing-drooping,1536,1024,True,annotations/plants.json
+plants/plants-growing-recovering.png,"Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json,growing-recovering,1536,1024,True,annotations/plants.json
+plants/plants-growing.png,Upright hydrated growth. Lifetime maturity remains intact.,Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json,growing,1536,1024,True,annotations/plants.json
+plants/plants-recovering.png,"Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json,recovering,1536,1024,True,annotations/plants.json
+plants/plants-seedling-drooping.png,"Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json,seedling-drooping,1536,1024,True,annotations/plants.json
+plants/plants-seedling-recovering.png,"Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json,seedling-recovering,1536,1024,True,annotations/plants.json
+plants/plants-seedling.png,Upright hydrated growth. Lifetime maturity remains intact.,Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json,seedling,1536,1024,True,annotations/plants.json
+plants/plants-thriving.png,Upright hydrated growth. Lifetime maturity remains intact.,Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json,thriving,1536,1024,True,annotations/plants.json
+markers/marker-complete.png,Completed activity,Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.,complete,1254,1254,True,annotations/markers.json
+markers/marker-construction.png,Truthful active build states only,Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.,construction,1254,1254,True,annotations/markers.json
+markers/marker-gift.png,Gift or reward,Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.,gift,1254,1254,True,annotations/markers.json
+markers/marker-heart.png,Favourite or affection,Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.,heart,1254,1254,True,annotations/markers.json
+markers/marker-help.png,"Help, never unseen content",Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.,help,1254,1254,True,annotations/markers.json
+markers/marker-locked.png,Locked content,Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.,locked,1254,1254,True,annotations/markers.json
+markers/marker-new.png,New content badge,Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.,new,1254,1254,True,annotations/markers.json
+markers/marker-pending.png,Pending generation,Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.,pending,1254,1254,True,annotations/markers.json
+markers/marker-retry.png,Retry action,Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.,retry,1254,1254,True,annotations/markers.json
+markers/marker-unseen.png,Unseen content,Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.,unseen,1254,1254,True,annotations/markers.json
+objects/apple.png,Vocabulary-linked gift or shop item,Neighbour coffee table or shop item card,static,1254,1254,True,annotations/collectibles.json
+objects/basket.png,Vocabulary-linked room object,Clear room floor beside furniture; inventory,static,1254,1254,True,annotations/collectibles.json
+objects/book.png,Collectible book / story content,Neighbour shelf/table or collection card,static,1254,1254,True,annotations/collectibles.json
+objects/care-sparkles.png,Brief recovery or successful action feedback,Brief overlay by recovered plants or successful action,static,1254,1254,True,annotations/care-and-frames.json
+objects/coin.png,"Practice currency visual, never generation credits",Real balance beside practice rewards; not generation credits,static,1254,1254,True,annotations/care-and-frames.json
+objects/cushion.png,Vocabulary-linked movable floor item,"Clear home floor, away from door and review desk",static,1254,1254,True,annotations/collectibles.json
+objects/flower.png,Vocabulary-linked home or neighbour gift,Neighbour shelf/table; gift,static,1254,1254,True,annotations/collectibles.json
+objects/kite.png,Vocabulary-linked gift or collectible,Wall decoration / gift or shop item card,static,1254,1254,True,annotations/collectibles.json
+objects/lantern.png,Vocabulary-linked home decoration,"Upper wall or hanging decor slot, avoiding text/hotspots",static,1254,1254,True,annotations/collectibles.json
+objects/teacup.png,Vocabulary-linked shelf collectible,Empty neighbour shelf; gift/inventory card,static,1254,1254,True,annotations/collectibles.json
+objects/wall-frame.png,Vocabulary wall art: app renders learned words within blank insert,Home upper-left wall; optional vocabulary picture,static,1254,1254,True,annotations/care-and-frames.json
+objects/wall-scroll.png,Vocabulary wall hanging: real app text on blank paper,Narrow wall between window and door; real vocabulary text,static,1254,1254,True,annotations/care-and-frames.json
+objects/water-drops.png,"Brief watering feedback, after a real care action",Short-lived overlay above plants during watering,static,1254,1254,True,annotations/care-and-frames.json
+objects/watering-can.png,Plant care control and watering animation prop,Plant care control near windowsill,static,1254,1254,True,annotations/care-and-frames.json

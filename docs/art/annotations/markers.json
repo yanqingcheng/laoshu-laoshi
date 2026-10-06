@@ -1,0 +1,401 @@
+{
+  "generation_tool": "built-in image_gen",
+  "model_id": null,
+  "usage": null,
+  "cost": null,
+  "unknown_metadata_note": "The built-in tool did not expose model ID, usage or cost.",
+  "integrated_in_app": false,
+  "precedence": [
+    "empty",
+    "locked",
+    "pending",
+    "unseen",
+    "nothing"
+  ],
+  "precedence_mapping": {
+    "empty": "Use the empty plot state; no notification marker",
+    "locked": "marker-locked.png over faded place art",
+    "pending": "marker-pending.png",
+    "unseen": "marker-unseen.png",
+    "nothing": null
+  },
+  "semantics": [
+    "Help/question is help, never unseen content.",
+    "Construction is only for truthful active build states.",
+    "New, gift, heart, complete and retry are supplemental states/actions, not overrides of town marker precedence.",
+    "Animations are implementation suggestions only; files are static PNGs. Never bake flashing into art."
+  ],
+  "assets": [
+    {
+      "name": "unseen",
+      "prompt": "Create ONE game interface marker as a standalone transparent square PNG, about 1024 by 1024. Bold simple silhouette clearly readable at 32 pixels. The object fills 60-70 percent of the canvas width and height, centred with generous transparent margins. True transparent alpha background, no checkerboard, no coloured backdrop. Flat gouache and folk woodblock shapes on handmade paper, subtle paper grain, restrained imperfect cut edges, shallow paper layering. Match reference board palette and paper material only, never its layout. Indigo, muted jade, terracotta, cream and restrained ochre. Soft even daylight, no glossy 3D, no vector look. No spreading cast shadow. No border or watermark. No writing except the explicitly requested punctuation/check/arrow symbol. No added decorations or extra objects.\nSUBJECT: A bold indigo exclamation mark ! on a warm ochre paper medallion.",
+      "purpose": "Unseen content",
+      "animation": "gentle single bob on appearance; static for reduced motion",
+      "seconds": 37.546,
+      "filename": "marker-unseen.png",
+      "relative_path": "markers/marker-unseen.png",
+      "attempt": 1,
+      "status": "accepted",
+      "display_size_px": [
+        28,
+        40
+      ],
+      "minimum_click_target_px": 44,
+      "reduced_motion": "static",
+      "alpha_required": true,
+      "visual_validation": "Accepted: visually inspected at native size and 32px in readability preview. Clear recognizable silhouette; construction remains identifiable though hammer detail is tiny. No clipping or unwanted text.",
+      "framing_note": "Generations have generous clear margins but visual occupancy is approximately 77\u201390% rather than requested 60\u201370%; use measured alpha bounds for consistent optical scaling.",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "pixel_format": "Format32bppArgb",
+        "alpha_result": "PASS real zero background alpha",
+        "corner_alpha": 0,
+        "centre_alpha": 253,
+        "sample_stride": 8,
+        "zero_alpha_samples": 12828,
+        "partial_alpha_samples": 11815,
+        "alpha_bbox_sampled": [
+          144,
+          136,
+          1112,
+          1096
+        ]
+      }
+    },
+    {
+      "name": "help",
+      "prompt": "Create ONE game interface marker as a standalone transparent square PNG, about 1024 by 1024. Bold simple silhouette clearly readable at 32 pixels. The object fills 60-70 percent of the canvas width and height, centred with generous transparent margins. True transparent alpha background, no checkerboard, no coloured backdrop. Flat gouache and folk woodblock shapes on handmade paper, subtle paper grain, restrained imperfect cut edges, shallow paper layering. Match reference board palette and paper material only, never its layout. Indigo, muted jade, terracotta, cream and restrained ochre. Soft even daylight, no glossy 3D, no vector look. No spreading cast shadow. No border or watermark. No writing except the explicitly requested punctuation/check/arrow symbol. No added decorations or extra objects.\nSUBJECT: An indigo question mark ? on a cream paper medallion.",
+      "purpose": "Help, never unseen content",
+      "animation": "static",
+      "seconds": 34.545,
+      "filename": "marker-help.png",
+      "relative_path": "markers/marker-help.png",
+      "attempt": 1,
+      "status": "accepted",
+      "display_size_px": [
+        28,
+        40
+      ],
+      "minimum_click_target_px": 44,
+      "reduced_motion": "static",
+      "alpha_required": true,
+      "visual_validation": "Accepted: visually inspected at native size and 32px in readability preview. Clear recognizable silhouette; construction remains identifiable though hammer detail is tiny. No clipping or unwanted text.",
+      "framing_note": "Generations have generous clear margins but visual occupancy is approximately 77\u201390% rather than requested 60\u201370%; use measured alpha bounds for consistent optical scaling.",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "pixel_format": "Format32bppArgb",
+        "alpha_result": "PASS real zero background alpha",
+        "corner_alpha": 0,
+        "centre_alpha": 253,
+        "sample_stride": 8,
+        "zero_alpha_samples": 11883,
+        "partial_alpha_samples": 12753,
+        "alpha_bbox_sampled": [
+          120,
+          128,
+          1136,
+          1128
+        ]
+      }
+    },
+    {
+      "name": "new",
+      "prompt": "Create ONE game interface marker as a standalone transparent square PNG, about 1024 by 1024. Bold simple silhouette clearly readable at 32 pixels. The object fills 60-70 percent of the canvas width and height, centred with generous transparent margins. True transparent alpha background, no checkerboard, no coloured backdrop. Flat gouache and folk woodblock shapes on handmade paper, subtle paper grain, restrained imperfect cut edges, shallow paper layering. Match reference board palette and paper material only, never its layout. Indigo, muted jade, terracotta, cream and restrained ochre. Soft even daylight, no glossy 3D, no vector look. No spreading cast shadow. No border or watermark. No writing except the explicitly requested punctuation/check/arrow symbol. No added decorations or extra objects.\nSUBJECT: A muted jade paper starburst with one small cream sparkle inside. No words.",
+      "purpose": "New content badge",
+      "animation": "brief gentle scale-in on appearance; static for reduced motion",
+      "seconds": 37.275,
+      "filename": "marker-new.png",
+      "relative_path": "markers/marker-new.png",
+      "attempt": 1,
+      "status": "accepted",
+      "display_size_px": [
+        28,
+        40
+      ],
+      "minimum_click_target_px": 44,
+      "reduced_motion": "static",
+      "alpha_required": true,
+      "visual_validation": "Accepted: visually inspected at native size and 32px in readability preview. Clear recognizable silhouette; construction remains identifiable though hammer detail is tiny. No clipping or unwanted text.",
+      "framing_note": "Generations have generous clear margins but visual occupancy is approximately 77\u201390% rather than requested 60\u201370%; use measured alpha bounds for consistent optical scaling.",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "pixel_format": "Format32bppArgb",
+        "alpha_result": "PASS real zero background alpha",
+        "corner_alpha": 0,
+        "centre_alpha": 252,
+        "sample_stride": 8,
+        "zero_alpha_samples": 14818,
+        "partial_alpha_samples": 9817,
+        "alpha_bbox_sampled": [
+          80,
+          96,
+          1168,
+          1144
+        ]
+      }
+    },
+    {
+      "name": "pending",
+      "prompt": "Create ONE game interface marker as a standalone transparent square PNG, about 1024 by 1024. Bold simple silhouette clearly readable at 32 pixels. The object fills 60-70 percent of the canvas width and height, centred with generous transparent margins. True transparent alpha background, no checkerboard, no coloured backdrop. Flat gouache and folk woodblock shapes on handmade paper, subtle paper grain, restrained imperfect cut edges, shallow paper layering. Match reference board palette and paper material only, never its layout. Indigo, muted jade, terracotta, cream and restrained ochre. Soft even daylight, no glossy 3D, no vector look. No spreading cast shadow. No border or watermark. No writing except the explicitly requested punctuation/check/arrow symbol. No added decorations or extra objects.\nSUBJECT: A simple indigo eight-tooth cog with a clearly transparent round centre hole, alone.",
+      "purpose": "Pending generation",
+      "animation": "slow rotation only while pending; static for reduced motion",
+      "seconds": 34.34,
+      "filename": "marker-pending.png",
+      "relative_path": "markers/marker-pending.png",
+      "attempt": 1,
+      "status": "accepted",
+      "display_size_px": [
+        28,
+        40
+      ],
+      "minimum_click_target_px": 44,
+      "reduced_motion": "static",
+      "alpha_required": true,
+      "visual_validation": "Accepted: visually inspected at native size and 32px in readability preview. Clear recognizable silhouette; construction remains identifiable though hammer detail is tiny. No clipping or unwanted text.",
+      "framing_note": "Generations have generous clear margins but visual occupancy is approximately 77\u201390% rather than requested 60\u201370%; use measured alpha bounds for consistent optical scaling.",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "pixel_format": "Format32bppArgb",
+        "alpha_result": "PASS real zero background alpha",
+        "corner_alpha": 0,
+        "centre_alpha": 0,
+        "sample_stride": 8,
+        "zero_alpha_samples": 14232,
+        "partial_alpha_samples": 10403,
+        "alpha_bbox_sampled": [
+          72,
+          88,
+          1184,
+          1152
+        ]
+      }
+    },
+    {
+      "name": "locked",
+      "prompt": "Create ONE game interface marker as a standalone transparent square PNG, about 1024 by 1024. Bold simple silhouette clearly readable at 32 pixels. The object fills 60-70 percent of the canvas width and height, centred with generous transparent margins. True transparent alpha background, no checkerboard, no coloured backdrop. Flat gouache and folk woodblock shapes on handmade paper, subtle paper grain, restrained imperfect cut edges, shallow paper layering. Match reference board palette and paper material only, never its layout. Indigo, muted jade, terracotta, cream and restrained ochre. Soft even daylight, no glossy 3D, no vector look. No spreading cast shadow. No border or watermark. No writing except the explicitly requested punctuation/check/arrow symbol. No added decorations or extra objects.\nSUBJECT: A small ochre padlock alone, bold closed shackle.",
+      "purpose": "Locked content",
+      "animation": "static",
+      "seconds": 34.786,
+      "filename": "marker-locked.png",
+      "relative_path": "markers/marker-locked.png",
+      "attempt": 1,
+      "status": "accepted",
+      "display_size_px": [
+        28,
+        40
+      ],
+      "minimum_click_target_px": 44,
+      "reduced_motion": "static",
+      "alpha_required": true,
+      "visual_validation": "Accepted: visually inspected at native size and 32px in readability preview. Clear recognizable silhouette; construction remains identifiable though hammer detail is tiny. No clipping or unwanted text.",
+      "framing_note": "Generations have generous clear margins but visual occupancy is approximately 77\u201390% rather than requested 60\u201370%; use measured alpha bounds for consistent optical scaling.",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "pixel_format": "Format32bppArgb",
+        "alpha_result": "PASS real zero background alpha",
+        "corner_alpha": 0,
+        "centre_alpha": 253,
+        "sample_stride": 8,
+        "zero_alpha_samples": 15775,
+        "partial_alpha_samples": 8859,
+        "alpha_bbox_sampled": [
+          240,
+          152,
+          1016,
+          1096
+        ]
+      }
+    },
+    {
+      "name": "construction",
+      "prompt": "Create ONE game interface marker as a standalone transparent square PNG, about 1024 by 1024. Bold simple silhouette clearly readable at 32 pixels. The object fills 60-70 percent of the canvas width and height, centred with generous transparent margins. True transparent alpha background, no checkerboard, no coloured backdrop. Flat gouache and folk woodblock shapes on handmade paper, subtle paper grain, restrained imperfect cut edges, shallow paper layering. Match reference board palette and paper material only, never its layout. Indigo, muted jade, terracotta, cream and restrained ochre. Soft even daylight, no glossy 3D, no vector look. No spreading cast shadow. No border or watermark. No writing except the explicitly requested punctuation/check/arrow symbol. No added decorations or extra objects.\nSUBJECT: A small terracotta and cream striped wooden construction barrier with a little ochre hammer. No words.",
+      "purpose": "Truthful active build states only",
+      "animation": "static",
+      "seconds": 37.417,
+      "filename": "marker-construction.png",
+      "relative_path": "markers/marker-construction.png",
+      "attempt": 1,
+      "status": "accepted",
+      "display_size_px": [
+        28,
+        40
+      ],
+      "minimum_click_target_px": 44,
+      "reduced_motion": "static",
+      "alpha_required": true,
+      "visual_validation": "Accepted: visually inspected at native size and 32px in readability preview. Clear recognizable silhouette; construction remains identifiable though hammer detail is tiny. No clipping or unwanted text.",
+      "framing_note": "Generations have generous clear margins but visual occupancy is approximately 77\u201390% rather than requested 60\u201370%; use measured alpha bounds for consistent optical scaling.",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "pixel_format": "Format32bppArgb",
+        "alpha_result": "PASS real zero background alpha",
+        "corner_alpha": 0,
+        "centre_alpha": 253,
+        "sample_stride": 8,
+        "zero_alpha_samples": 13141,
+        "partial_alpha_samples": 11489,
+        "alpha_bbox_sampled": [
+          112,
+          152,
+          1168,
+          1096
+        ]
+      }
+    },
+    {
+      "name": "complete",
+      "prompt": "Create ONE game interface marker as a standalone transparent square PNG, about 1024 by 1024. Bold simple silhouette clearly readable at 32 pixels. The object fills 60-70 percent of the canvas width and height, centred with generous transparent margins. True transparent alpha background, no checkerboard, no coloured backdrop. Flat gouache and folk woodblock shapes on handmade paper, subtle paper grain, restrained imperfect cut edges, shallow paper layering. Match reference board palette and paper material only, never its layout. Indigo, muted jade, terracotta, cream and restrained ochre. Soft even daylight, no glossy 3D, no vector look. No spreading cast shadow. No border or watermark. No writing except the explicitly requested punctuation/check/arrow symbol. No added decorations or extra objects.\nSUBJECT: A cream check mark on a muted jade paper circle.",
+      "purpose": "Completed activity",
+      "animation": "brief scale-in on completion; static for reduced motion",
+      "seconds": 32.552,
+      "filename": "marker-complete.png",
+      "relative_path": "markers/marker-complete.png",
+      "attempt": 1,
+      "status": "accepted",
+      "display_size_px": [
+        28,
+        40
+      ],
+      "minimum_click_target_px": 44,
+      "reduced_motion": "static",
+      "alpha_required": true,
+      "visual_validation": "Accepted: visually inspected at native size and 32px in readability preview. Clear recognizable silhouette; construction remains identifiable though hammer detail is tiny. No clipping or unwanted text.",
+      "framing_note": "Generations have generous clear margins but visual occupancy is approximately 77\u201390% rather than requested 60\u201370%; use measured alpha bounds for consistent optical scaling.",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "pixel_format": "Format32bppArgb",
+        "alpha_result": "PASS real zero background alpha",
+        "corner_alpha": 0,
+        "centre_alpha": 253,
+        "sample_stride": 8,
+        "zero_alpha_samples": 13225,
+        "partial_alpha_samples": 11416,
+        "alpha_bbox_sampled": [
+          152,
+          160,
+          1104,
+          1104
+        ]
+      }
+    },
+    {
+      "name": "retry",
+      "prompt": "Create ONE game interface marker as a standalone transparent square PNG, about 1024 by 1024. Bold simple silhouette clearly readable at 32 pixels. The object fills 60-70 percent of the canvas width and height, centred with generous transparent margins. True transparent alpha background, no checkerboard, no coloured backdrop. Flat gouache and folk woodblock shapes on handmade paper, subtle paper grain, restrained imperfect cut edges, shallow paper layering. Match reference board palette and paper material only, never its layout. Indigo, muted jade, terracotta, cream and restrained ochre. Soft even daylight, no glossy 3D, no vector look. No spreading cast shadow. No border or watermark. No writing except the explicitly requested punctuation/check/arrow symbol. No added decorations or extra objects.\nSUBJECT: A bold indigo circular arrow on a cream paper disc.",
+      "purpose": "Retry action",
+      "animation": "static",
+      "seconds": 37.251,
+      "filename": "marker-retry.png",
+      "relative_path": "markers/marker-retry.png",
+      "attempt": 1,
+      "status": "accepted",
+      "display_size_px": [
+        28,
+        40
+      ],
+      "minimum_click_target_px": 44,
+      "reduced_motion": "static",
+      "alpha_required": true,
+      "visual_validation": "Accepted: visually inspected at native size and 32px in readability preview. Clear recognizable silhouette; construction remains identifiable though hammer detail is tiny. No clipping or unwanted text.",
+      "framing_note": "Generations have generous clear margins but visual occupancy is approximately 77\u201390% rather than requested 60\u201370%; use measured alpha bounds for consistent optical scaling.",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "pixel_format": "Format32bppArgb",
+        "alpha_result": "PASS real zero background alpha",
+        "corner_alpha": 0,
+        "centre_alpha": 253,
+        "sample_stride": 8,
+        "zero_alpha_samples": 12189,
+        "partial_alpha_samples": 12449,
+        "alpha_bbox_sampled": [
+          128,
+          128,
+          1128,
+          1128
+        ]
+      }
+    },
+    {
+      "name": "gift",
+      "prompt": "Create ONE game interface marker as a standalone transparent square PNG, about 1024 by 1024. Bold simple silhouette clearly readable at 32 pixels. The object fills 60-70 percent of the canvas width and height, centred with generous transparent margins. True transparent alpha background, no checkerboard, no coloured backdrop. Flat gouache and folk woodblock shapes on handmade paper, subtle paper grain, restrained imperfect cut edges, shallow paper layering. Match reference board palette and paper material only, never its layout. Indigo, muted jade, terracotta, cream and restrained ochre. Soft even daylight, no glossy 3D, no vector look. No spreading cast shadow. No border or watermark. No writing except the explicitly requested punctuation/check/arrow symbol. No added decorations or extra objects.\nSUBJECT: A small terracotta wrapped parcel with a muted jade ribbon.",
+      "purpose": "Gift or reward",
+      "animation": "gentle single bounce on reveal; static for reduced motion",
+      "seconds": 38.695,
+      "filename": "marker-gift.png",
+      "relative_path": "markers/marker-gift.png",
+      "attempt": 1,
+      "status": "accepted",
+      "display_size_px": [
+        28,
+        40
+      ],
+      "minimum_click_target_px": 44,
+      "reduced_motion": "static",
+      "alpha_required": true,
+      "visual_validation": "Accepted: visually inspected at native size and 32px in readability preview. Clear recognizable silhouette; construction remains identifiable though hammer detail is tiny. No clipping or unwanted text.",
+      "framing_note": "Generations have generous clear margins but visual occupancy is approximately 77\u201390% rather than requested 60\u201370%; use measured alpha bounds for consistent optical scaling.",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "pixel_format": "Format32bppArgb",
+        "alpha_result": "PASS real zero background alpha",
+        "corner_alpha": 0,
+        "centre_alpha": 253,
+        "sample_stride": 8,
+        "zero_alpha_samples": 10511,
+        "partial_alpha_samples": 14122,
+        "alpha_bbox_sampled": [
+          88,
+          112,
+          1184,
+          1168
+        ]
+      }
+    },
+    {
+      "name": "heart",
+      "prompt": "Create ONE game interface marker as a standalone transparent square PNG, about 1024 by 1024. Bold simple silhouette clearly readable at 32 pixels. The object fills 60-70 percent of the canvas width and height, centred with generous transparent margins. True transparent alpha background, no checkerboard, no coloured backdrop. Flat gouache and folk woodblock shapes on handmade paper, subtle paper grain, restrained imperfect cut edges, shallow paper layering. Match reference board palette and paper material only, never its layout. Indigo, muted jade, terracotta, cream and restrained ochre. Soft even daylight, no glossy 3D, no vector look. No spreading cast shadow. No border or watermark. No writing except the explicitly requested punctuation/check/arrow symbol. No added decorations or extra objects.\nSUBJECT: A terracotta paper heart alone.",
+      "purpose": "Favourite or affection",
+      "animation": "brief pulse on selection; static for reduced motion",
+      "seconds": 33.504,
+      "filename": "marker-heart.png",
+      "relative_path": "markers/marker-heart.png",
+      "attempt": 1,
+      "status": "accepted",
+      "display_size_px": [
+        28,
+        40
+      ],
+      "minimum_click_target_px": 44,
+      "reduced_motion": "static",
+      "alpha_required": true,
+      "visual_validation": "Accepted: visually inspected at native size and 32px in readability preview. Clear recognizable silhouette; construction remains identifiable though hammer detail is tiny. No clipping or unwanted text.",
+      "framing_note": "Generations have generous clear margins but visual occupancy is approximately 77\u201390% rather than requested 60\u201370%; use measured alpha bounds for consistent optical scaling.",
+      "validation": {
+        "width": 1254,
+        "height": 1254,
+        "pixel_format": "Format32bppArgb",
+        "alpha_result": "PASS real zero background alpha",
+        "corner_alpha": 0,
+        "centre_alpha": 253,
+        "sample_stride": 8,
+        "zero_alpha_samples": 15363,
+        "partial_alpha_samples": 9280,
+        "alpha_bbox_sampled": [
+          136,
+          216,
+          1120,
+          1056
+        ]
+      }
+    }
+  ],
+  "readability_preview": "previews/markers-readability.png"
+}

@@ -1,0 +1,1497 @@
+{
+  "project": "Laoshu Laoshi",
+  "date": "2026-10-06",
+  "tool": "built-in image_gen",
+  "model_id": null,
+  "usage": null,
+  "image_cost": null,
+  "metadata_note": "Model IDs, token usage and image costs were not exposed. Image cost unknown. Durations are observed tool wall-clock times, not provider compute times.",
+  "coordinate_system": "Normalized x/y, origin top left. Town x/y/width/height describe complete PNG canvas rectangles; preserve aspect ratio. Ground centers and anchors differ due to transparent padding. Room hotspots are visual estimates. App must validate all placements.",
+  "required_assets": 12,
+  "required_missing": [],
+  "optional_assets": [
+    "avatars.png"
+  ],
+  "supplemental_pose_files": 6,
+  "generation_call_count": 17,
+  "failed_attempts": 4,
+  "assets": [
+    {
+      "filename": "avatars.png",
+      "purpose": "Optional ten-animal avatar sheet",
+      "status": "accepted",
+      "validation": "Ten correct animals in two rows of five, separated whole discs; opaque cream background. Do not automatically crop on an equal-width grid: disc margins vary slightly.",
+      "alpha_required": false,
+      "proposed_placements": [],
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "Create ONE sheet of TEN avatar portraits on plain warm cream paper, landscape 3:2, in two rows of five with wide even gaps. Each portrait is the head and shoulders of one friendly animal, facing the viewer, on its own flat round paper disc, wholly inside the disc, the same size as the others. Top row: panda, rabbit, tiger, frog, goose. Bottom row: monkey, fox, turtle, red-crowned crane, hedgehog. Disc colours alternate between indigo, muted jade, terracotta and ochre. Small dark eyes, simple expressive faces, no clothing. No mouse, dog or cat. Discs do not touch or overlap.\r\n\r\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\r\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+          "seconds": 21.602,
+          "status": "accepted"
+        }
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_requirement": "opaque",
+      "alpha_result": {
+        "mode": "RGB",
+        "true_transparency": false,
+        "opaque": true
+      },
+      "hotspots": {},
+      "generation_status": "accepted"
+    },
+    {
+      "filename": "cat-delighted.png",
+      "source": "sheet-cat.png",
+      "crop_box_pixels": [
+        768,
+        0,
+        1536,
+        1024
+      ],
+      "width": 768,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 254,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.4914601643880208
+      },
+      "status": "accepted-derived",
+      "validation": "Exact half crop after verifying middle 30 pixels alpha <=1/255. Generated alpha retained without background removal; source unchanged. Whole pose, feet and tail visually verified.",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_requirement": "transparent",
+      "proposed_placements": {},
+      "hotspots": {},
+      "generation_status": "accepted-derived"
+    },
+    {
+      "filename": "cat-neutral.png",
+      "source": "sheet-cat.png",
+      "crop_box_pixels": [
+        0,
+        0,
+        768,
+        1024
+      ],
+      "width": 768,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 254,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.5469347635904948
+      },
+      "status": "accepted-derived",
+      "validation": "Exact half crop after verifying middle 30 pixels alpha <=1/255. Generated alpha retained without background removal; source unchanged. Whole pose, feet and tail visually verified.",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_requirement": "transparent",
+      "proposed_placements": {},
+      "hotspots": {},
+      "generation_status": "accepted-derived"
+    },
+    {
+      "filename": "dog-delighted.png",
+      "source": "sheet-dog.png",
+      "crop_box_pixels": [
+        768,
+        0,
+        1536,
+        1024
+      ],
+      "width": 768,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 254,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.4584643046061198
+      },
+      "status": "accepted-derived",
+      "validation": "Exact half crop after verifying middle 30 pixels alpha <=1/255. Generated alpha retained without background removal; source unchanged. Whole pose, feet and tail visually verified.",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_requirement": "transparent",
+      "proposed_placements": {},
+      "hotspots": {},
+      "generation_status": "accepted-derived"
+    },
+    {
+      "filename": "dog-neutral.png",
+      "source": "sheet-dog.png",
+      "crop_box_pixels": [
+        0,
+        0,
+        768,
+        1024
+      ],
+      "width": 768,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 254,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.4743550618489583
+      },
+      "status": "accepted-derived",
+      "validation": "Exact half crop after verifying middle 30 pixels alpha <=1/255. Generated alpha retained without background removal; source unchanged. Whole pose, feet and tail visually verified.",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_requirement": "transparent",
+      "proposed_placements": {},
+      "hotspots": {},
+      "generation_status": "accepted-derived"
+    },
+    {
+      "filename": "empty-plot.png",
+      "purpose": "Unoccupied town slot overlay",
+      "status": "accepted",
+      "validation": "Blank board, raised matching projection, true alpha, no text.",
+      "alpha_required": true,
+      "proposed_placements": [
+        {
+          "id": "plot-1",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.22,
+            0.45
+          ],
+          "x": 0.135,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.22,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-2",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.78,
+            0.45
+          ],
+          "x": 0.695,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.78,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-3",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.2,
+            0.72
+          ],
+          "x": 0.115,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.2,
+            0.72
+          ]
+        },
+        {
+          "id": "plot-4",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.82,
+            0.72
+          ],
+          "x": 0.735,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.82,
+            0.72
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "Create ONE isolated game map piece, in the same style and from exactly the same viewing angle as the attached house, sized to the same footprint as that house's apron.\r\n\r\nVIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.\r\n\r\nA neatly mown, slightly irregular patch of lawn with a short wooden stake at its front edge carrying a small blank cream board with nothing on it. A few daisies. Inviting, clearly waiting for a house. Square canvas, the patch centred in the lower half, clear margin all round. Nothing else in the image.\r\n\r\nTRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.\r\n\r\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\r\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+          "seconds": 43.069,
+          "status": "accepted"
+        }
+      ],
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_requirement": "transparent",
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 255,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.6634151894161967
+      },
+      "hotspots": {},
+      "generation_status": "accepted"
+    },
+    {
+      "filename": "home-room.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_requirement": "opaque",
+      "alpha_result": {
+        "mode": "RGB",
+        "true_transparency": false,
+        "opaque": true
+      },
+      "status": "accepted_with_minor_layout_deviation",
+      "purpose": "Learner home background plate",
+      "validation": "All eight requested hotspot subjects present, blank books/screens, no characters, no text, all furniture wholly inside frame; clear centre floor. Desk centre approximately .31 rather than requested .25; border margin now exceeds .10. Shelf partly behind desk as requested.",
+      "hotspots": {
+        "desk": [
+          0.307,
+          0.607
+        ],
+        "shelf": [
+          0.246,
+          0.462
+        ],
+        "phone": [
+          0.642,
+          0.575
+        ],
+        "console": [
+          0.724,
+          0.571
+        ],
+        "radio": [
+          0.206,
+          0.368
+        ],
+        "camera": [
+          0.238,
+          0.535
+        ],
+        "door": [
+          0.875,
+          0.38
+        ],
+        "windowsill_plants": [
+          0.485,
+          0.322
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "original": "art-originals/home-room-attempt1.png",
+          "prompt": "Generate ONE new wide 3:2 game background plate, NOT a reference board: the learner's own cosy living-and-study room in a Chinese storybook village, seen straight-on, facing the back wall, with a shallow strip of floor along the bottom. No characters.\r\n\r\nIn the room, each clearly separate from the others so a button can sit over it, all whole and uncropped: a small freestanding writing desk centred at 25% of the canvas width, with its left edge at least 10% of the canvas width from the left border, with a small camera beside a closed notebook on it; a small low bookshelf of books behind the desk, fully inside the frame; a vintage radio on the bookshelf; a windowsill across the upper middle with three potted plants; a low table at the right with a phone lying on it and a handheld games console beside the phone; an open door at the right edge looking into a simple green garden. Frame the complete furniture grouping with a generous clear margin inside all four canvas edges: the desk, bookshelf and right table must have every outer edge and every foot visible, with wall or floor between them and the image border. Pull the camera back to fit them; do not crop furniture for a close-up. Keep a quiet clear floor area in the centre. No chairs or rugs. No television. No other decorative objects. The wall is plain: no pictures, scrolls, calendars or clocks. Book spines, the notebook and both screens are blank.\r\n\r\nSpacious flat architectural background with slightly richer foreground objects. Clear simple silhouettes, no excessive small detail.\r\n\r\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\r\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+          "started": "2026-10-06T17:42:39.449Z",
+          "completed": "2026-10-06T17:43:06.599Z",
+          "elapsed_seconds": 27.15,
+          "status": "rejected",
+          "reason": "Desk leftmost edge too close to border, less than requested 10%."
+        },
+        {
+          "attempt": 2,
+          "original": "art-originals/home-room-attempt2.png",
+          "prompt": "Targeted framing correction to the supplied room image: move the desk right and reduce its width so its complete left edge is at 12% of canvas width and its centre is at 25%; every desk leg fully visible. Pull back as needed. Preserve all objects and style and maintain the furniture separation, clear central floor and right table. No writing. Generate ONE new wide 3:2 game background plate, NOT a reference board: the learner's own cosy living-and-study room in a Chinese storybook village, seen straight-on, facing the back wall, with a shallow strip of floor along the bottom. No characters.\r\n\r\nIn the room, each clearly separate from the others so a button can sit over it, all whole and uncropped: a small freestanding writing desk centred at 25% of the canvas width, with its left edge at least 10% of the canvas width from the left border, with a small camera beside a closed notebook on it; a small low bookshelf of books behind the desk, fully inside the frame; a vintage radio on the bookshelf; a windowsill across the upper middle with three potted plants; a low table at the right with a phone lying on it and a handheld games console beside the phone; an open door at the right edge looking into a simple green garden. Frame the complete furniture grouping with a generous clear margin inside all four canvas edges: the desk, bookshelf and right table must have every outer edge and every foot visible, with wall or floor between them and the image border. Pull the camera back to fit them; do not crop furniture for a close-up. Keep a quiet clear floor area in the centre. No chairs or rugs. No television. No other decorative objects. The wall is plain: no pictures, scrolls, calendars or clocks. Book spines, the notebook and both screens are blank.\r\n\r\nSpacious flat architectural background with slightly richer foreground objects. Clear simple silhouettes, no excessive small detail.\r\n\r\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\r\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+          "started": "2026-10-06T17:43:21.848Z",
+          "completed": "2026-10-06T17:43:41.176Z",
+          "elapsed_seconds": 19.328,
+          "status": "rejected",
+          "reason": "Desk margin improved but still approximately 8%, short of 10%."
+        },
+        {
+          "attempt": 3,
+          "original": "art-originals/home-room-attempt3.png",
+          "prompt": "EDIT TARGETED DESK POSITION ONLY. Preserve room, furniture, camera, notebook, radio, all plants, phone and console, door, floor and lighting unchanged. Shift the small writing desk and its camera and notebook 100 pixels to the right within this 1536x1024 composition, so desk's leftmost edge is 222 pixels from left canvas edge (14.5% width), desk right edge 610px. Keep all legs visible, clear margin from borders. No other changes. No text.",
+          "started": "2026-10-06T17:43:53.762Z",
+          "completed": "2026-10-06T17:44:19.948Z",
+          "elapsed_seconds": 26.186,
+          "status": "accepted_with_minor_layout_deviation",
+          "reason": "Margin corrected, desk centre .31 instead of .25; all acceptance-test objects visible."
+        }
+      ],
+      "proposed_placements": {},
+      "generation_status": "accepted_with_minor_layout_deviation"
+    },
+    {
+      "filename": "house-cat.png",
+      "prompt": "EDIT the attached plain house into this one: the home of an elegant striped cat. Terracotta tile roof, jade window shutters, two small red paper lanterns by the door, a round indigo cushion on the paving.\n\nThe attached house is the edit target and the geometric template. Preserve exactly its viewing angle, footprint, overall height, roof outline, wall edges, door and window positions, apron and shadow. Change only surface character: roof colour, door and window trim, and the small objects named above, placed on the existing apron. Do not add awnings, extensions, a second roof, fences or ground. No people or animals. Keep the same square canvas and framing.\n\nVIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.\n\nTRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.\n\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+      "seconds": 43.484,
+      "attempt": 1,
+      "model_id": null,
+      "model_note": "Built-in image_gen tool does not expose model ID",
+      "cost": null,
+      "usage": null,
+      "status": "accepted",
+      "alpha_required": true,
+      "visual_checks": "Same camera, roof silhouette, door/windows, and near-identical footprint; requested surface changes present; no text/characters",
+      "references": [
+        "event-art/stock-house.png",
+        "d-story-garden-paper-detail.png"
+      ],
+      "validation": {
+        "filename": "house-cat.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alpha_result": "RGBA with fully transparent background and antialiased partial alpha",
+        "sample_stride": 2,
+        "transparent_samples": 163875,
+        "partial_alpha_samples": 229070,
+        "silhouette_IoU": 0.9928974564736448,
+        "solid_alpha_bbox": [
+          76,
+          58,
+          1220,
+          1218
+        ]
+      },
+      "purpose": "Town building variant using stock house geometry",
+      "proposed_placements": [
+        {
+          "id": "cat",
+          "asset": "house-cat.png",
+          "ground_center": [
+            0.81,
+            0.2
+          ],
+          "x": 0.725,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.81,
+            0.255
+          ]
+        }
+      ],
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_requirement": "transparent",
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 255,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.41688669622439456
+      },
+      "hotspots": {},
+      "generation_status": "accepted"
+    },
+    {
+      "filename": "house-dog.png",
+      "prompt": "EDIT the attached plain house into this one: the home of a friendly fluffy dog. Golden ochre tile roof, indigo door and window frames, a ceramic food bowl and a red ball beside the door.\n\nThe attached house is the edit target and the geometric template. Preserve exactly its viewing angle, footprint, overall height, roof outline, wall edges, door and window positions, apron and shadow. Change only surface character: roof colour, door and window trim, and the small objects named above, placed on the existing apron. Do not add awnings, extensions, a second roof, fences or ground. No people or animals. Keep the same square canvas and framing.\n\nVIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.\n\nTRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.\n\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+      "seconds": 41.018,
+      "attempt": 1,
+      "model_id": null,
+      "model_note": "Built-in image_gen tool does not expose model ID",
+      "cost": null,
+      "usage": null,
+      "status": "accepted",
+      "alpha_required": true,
+      "visual_checks": "Same camera, roof silhouette, door/windows, and near-identical footprint; requested surface changes present; no text/characters",
+      "references": [
+        "event-art/stock-house.png",
+        "d-story-garden-paper-detail.png"
+      ],
+      "validation": {
+        "filename": "house-dog.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alpha_result": "RGBA with fully transparent background and antialiased partial alpha",
+        "sample_stride": 2,
+        "transparent_samples": 156931,
+        "partial_alpha_samples": 236085,
+        "silhouette_IoU": 0.9745419420525695,
+        "solid_alpha_bbox": [
+          58,
+          50,
+          1222,
+          1218
+        ]
+      },
+      "purpose": "Town building variant using stock house geometry",
+      "proposed_placements": [
+        {
+          "id": "dog",
+          "asset": "house-dog.png",
+          "ground_center": [
+            0.5,
+            0.19
+          ],
+          "x": 0.415,
+          "y": 0.0206,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.245
+          ]
+        }
+      ],
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_requirement": "transparent",
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 255,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.39919530230535016
+      },
+      "hotspots": {},
+      "generation_status": "accepted"
+    },
+    {
+      "filename": "house-home.png",
+      "prompt": "EDIT the attached plain house into this one: the learner's own home. Muted jade tile roof, ochre door, a row of small potted plants under the front windows, one cream paper lantern by the door.\n\nThe attached house is the edit target and the geometric template. Preserve exactly its viewing angle, footprint, overall height, roof outline, wall edges, door and window positions, apron and shadow. Change only surface character: roof colour, door and window trim, and the small objects named above, placed on the existing apron. Do not add awnings, extensions, a second roof, fences or ground. No people or animals. Keep the same square canvas and framing.\n\nVIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.\n\nTRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.\n\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+      "seconds": 29.103,
+      "attempt": 1,
+      "model_id": null,
+      "model_note": "Built-in image_gen tool does not expose model ID",
+      "cost": null,
+      "usage": null,
+      "status": "accepted",
+      "alpha_required": true,
+      "visual_checks": "Same camera, roof silhouette, door/windows, and near-identical footprint; requested surface changes present; no text/characters",
+      "references": [
+        "event-art/stock-house.png",
+        "d-story-garden-paper-detail.png"
+      ],
+      "validation": {
+        "filename": "house-home.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alpha_result": "RGBA with fully transparent background and antialiased partial alpha",
+        "sample_stride": 2,
+        "transparent_samples": 159969,
+        "partial_alpha_samples": 233128,
+        "silhouette_IoU": 0.9736699972994869,
+        "solid_alpha_bbox": [
+          64,
+          52,
+          1220,
+          1218
+        ]
+      },
+      "purpose": "Town building variant using stock house geometry",
+      "proposed_placements": [
+        {
+          "id": "home",
+          "asset": "house-home.png",
+          "ground_center": [
+            0.5,
+            0.72
+          ],
+          "x": 0.415,
+          "y": 0.5506,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.775
+          ]
+        }
+      ],
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_requirement": "transparent",
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 255,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.4065478507054936
+      },
+      "hotspots": {},
+      "generation_status": "accepted"
+    },
+    {
+      "filename": "house-mouse.png",
+      "prompt": "EDIT the attached plain house into this one: the home of a scholarly mouse teacher. Deep indigo tile roof with an ochre ridge, indigo door, a neat stack of closed books and a basket of rolled paper scrolls beside the door. Book covers and scrolls are blank.\n\nThe attached house is the edit target and the geometric template. Preserve exactly its viewing angle, footprint, overall height, roof outline, wall edges, door and window positions, apron and shadow. Change only surface character: roof colour, door and window trim, and the small objects named above, placed on the existing apron. Do not add awnings, extensions, a second roof, fences or ground. No people or animals. Keep the same square canvas and framing.\n\nVIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.\n\nTRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.\n\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+      "seconds": 43.16,
+      "attempt": 1,
+      "model_id": null,
+      "model_note": "Built-in image_gen tool does not expose model ID",
+      "cost": null,
+      "usage": null,
+      "status": "accepted",
+      "alpha_required": true,
+      "visual_checks": "Same camera, roof silhouette, door/windows, and near-identical footprint; requested surface changes present; no text/characters",
+      "references": [
+        "event-art/stock-house.png",
+        "d-story-garden-paper-detail.png"
+      ],
+      "validation": {
+        "filename": "house-mouse.png",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alpha_result": "RGBA with fully transparent background and antialiased partial alpha",
+        "sample_stride": 2,
+        "transparent_samples": 159893,
+        "partial_alpha_samples": 233068,
+        "silhouette_IoU": 0.9936063253453072,
+        "solid_alpha_bbox": [
+          76,
+          60,
+          1222,
+          1220
+        ]
+      },
+      "purpose": "Town building variant using stock house geometry",
+      "proposed_placements": [
+        {
+          "id": "mouse",
+          "asset": "house-mouse.png",
+          "ground_center": [
+            0.2,
+            0.2
+          ],
+          "x": 0.115,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.2,
+            0.255
+          ]
+        }
+      ],
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_requirement": "transparent",
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 255,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.40652241376240367
+      },
+      "hotspots": {},
+      "generation_status": "accepted"
+    },
+    {
+      "filename": "mouse-delighted.png",
+      "source": "sheet-mouse.png",
+      "crop_box_pixels": [
+        768,
+        0,
+        1536,
+        1024
+      ],
+      "width": 768,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 254,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.5334510803222656
+      },
+      "status": "accepted-derived",
+      "validation": "Exact half crop after verifying middle 30 pixels alpha <=1/255. Generated alpha retained without background removal; source unchanged. Whole pose, feet and tail visually verified.",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_requirement": "transparent",
+      "proposed_placements": {},
+      "hotspots": {},
+      "generation_status": "accepted-derived"
+    },
+    {
+      "filename": "mouse-neutral.png",
+      "source": "sheet-mouse.png",
+      "crop_box_pixels": [
+        0,
+        0,
+        768,
+        1024
+      ],
+      "width": 768,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 254,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.6161206563313802
+      },
+      "status": "accepted-derived",
+      "validation": "Exact half crop after verifying middle 30 pixels alpha <=1/255. Generated alpha retained without background removal; source unchanged. Whole pose, feet and tail visually verified.",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_requirement": "transparent",
+      "proposed_placements": {},
+      "hotspots": {},
+      "generation_status": "accepted-derived"
+    },
+    {
+      "filename": "sheet-cat.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_pixel_fraction": 0.5191974639892578,
+      "alpha_over_240_fraction": 0.4357624053955078,
+      "nonzero_bounds": [
+        0,
+        9,
+        1520,
+        990
+      ],
+      "middle_30px_alpha_range": [
+        0,
+        1
+      ],
+      "edge_alpha_max": 1,
+      "left_pose_bounds": [
+        0,
+        9,
+        768,
+        990
+      ],
+      "right_pose_bounds_relative_to_half": [
+        0,
+        21,
+        752,
+        954
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 254,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.5191974639892578
+      },
+      "status": "accepted",
+      "attempts": 1,
+      "prompt": "Create ONE character sheet: the brown and gold striped Lihua cat with white muzzle and paws, a striped tail, and a dark vest with red and gold trim, exactly as in the attached identity picture: same face, colouring, clothing and proportions, redrawn in the style of the attached style board.\r\n\r\nTwo separate whole-body poses of the same character, side by side on a landscape 3:2 canvas. Left half: neutral, sitting upright with paws visible, a calm friendly look. Right half: delighted, standing up on her hind legs with front paws raised, eyes closed in a wide happy smile, tail curled up. Each pose stays wholly inside its own half, with a clear empty gap down the middle and clear margin all round. Identical body shape, face, colours, clothing and scale in both. Feet visible in both. Seen straight-on at eye level, facing the viewer. No props, no ground, no scenery.\r\n\r\nTRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under each pose, nothing spreading.\r\n\r\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\r\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+      "generation_wall_clock_seconds": 34.599,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "tool": "built-in image_gen",
+      "pose_cut_x": 768,
+      "validation_notes": "Both whole-body poses match supplied identity and maintain consistent clothing, color and scale. Feet and tails visible, no content crosses center. Real alpha confirmed. Center 30px and canvas edges have at most alpha 1/255 residual; visually clear, no background removal performed. No cropping performed.",
+      "purpose": "Two-pose character sheet: neutral left, delighted right",
+      "proposed_placements": {
+        "split_x_pixels": 768
+      },
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_requirement": "transparent",
+      "hotspots": {},
+      "generation_status": "accepted"
+    },
+    {
+      "filename": "sheet-dog.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_pixel_fraction": 0.46640968322753906,
+      "alpha_over_240_fraction": 0.4931182861328125,
+      "nonzero_bounds": [
+        28,
+        31,
+        1520,
+        1024
+      ],
+      "middle_30px_alpha_range": [
+        0,
+        1
+      ],
+      "edge_alpha_max": 1,
+      "left_pose_bounds": [
+        28,
+        104,
+        768,
+        1024
+      ],
+      "right_pose_bounds_relative_to_half": [
+        0,
+        31,
+        752,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 254,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.46640968322753906
+      },
+      "status": "accepted",
+      "attempts": 1,
+      "prompt": "Create ONE character sheet: the friendly golden fluffy Chow dog in a blue Chinese vest, exactly as in the attached identity picture: same face, colouring, clothing and proportions, redrawn in the style of the attached style board.\r\n\r\nTwo separate whole-body poses of the same character, side by side on a landscape 3:2 canvas. Left half: neutral, sitting upright with paws visible, a calm friendly look. Right half: delighted, standing up on his hind legs with front paws raised, mouth open and tongue out. Each pose stays wholly inside its own half, with a clear empty gap down the middle and clear margin all round. Identical body shape, face, colours, clothing and scale in both. Feet visible in both. Seen straight-on at eye level, facing the viewer. No props, no ground, no scenery.\r\n\r\nTRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under each pose, nothing spreading.\r\n\r\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\r\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+      "generation_wall_clock_seconds": 37.106,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "tool": "built-in image_gen",
+      "pose_cut_x": 768,
+      "validation_notes": "Both whole-body poses match supplied identity and maintain consistent clothing, color and scale. Feet and tails visible, no content crosses center. Real alpha confirmed. Center 30px and canvas edges have at most alpha 1/255 residual; visually clear, no background removal performed. No cropping performed.",
+      "purpose": "Two-pose character sheet: neutral left, delighted right",
+      "proposed_placements": {
+        "split_x_pixels": 768
+      },
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_requirement": "transparent",
+      "hotspots": {},
+      "generation_status": "accepted"
+    },
+    {
+      "filename": "sheet-mouse.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "transparent_pixel_fraction": 0.5747858683268229,
+      "alpha_over_240_fraction": 0.38587188720703125,
+      "nonzero_bounds": [
+        0,
+        2,
+        1510,
+        1024
+      ],
+      "middle_30px_alpha_range": [
+        0,
+        1
+      ],
+      "edge_alpha_max": 1,
+      "left_pose_bounds": [
+        0,
+        2,
+        768,
+        1024
+      ],
+      "right_pose_bounds_relative_to_half": [
+        1,
+        19,
+        742,
+        1004
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 254,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.5747858683268229
+      },
+      "status": "accepted",
+      "attempts": 1,
+      "prompt": "Create ONE character sheet: the tan rat teacher with pink-inner ears, round spectacles and a long blue Chinese robe, exactly as in the attached identity picture: same face, colouring, clothing and proportions, redrawn in the style of the attached style board.\r\n\r\nTwo separate whole-body poses of the same character, side by side on a landscape 3:2 canvas. Left half: neutral, standing calmly with hands folded, a gentle smile. Right half: delighted, both arms raised, mouth open in a wide happy smile. Each pose stays wholly inside its own half, with a clear empty gap down the middle and clear margin all round. Identical body shape, face, colours, clothing and scale in both. Feet visible in both. Seen straight-on at eye level, facing the viewer. No props, no ground, no scenery.\r\n\r\nTRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under each pose, nothing spreading.\r\n\r\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\r\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+      "generation_wall_clock_seconds": 33.669,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "tool": "built-in image_gen",
+      "pose_cut_x": 768,
+      "validation_notes": "Both whole-body poses match supplied identity and maintain consistent clothing, color and scale. Feet and tails visible, no content crosses center. Real alpha confirmed. Center 30px and canvas edges have at most alpha 1/255 residual; visually clear, no background removal performed. No cropping performed.",
+      "purpose": "Two-pose character sheet: neutral left, delighted right",
+      "proposed_placements": {
+        "split_x_pixels": 768
+      },
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_requirement": "transparent",
+      "hotspots": {},
+      "generation_status": "accepted"
+    },
+    {
+      "filename": "stock-house.png",
+      "purpose": "Plain geometric template for town buildings",
+      "status": "accepted",
+      "validation": "Raised parallel view, front and right walls visible, blank plain cottage; true alpha.",
+      "alpha_required": true,
+      "proposed_placements": [],
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "Create ONE isolated game building cut-out: the plain village house that every other house in the town is repainted from.\r\n\r\nVIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.\r\n\r\nA small single-storey Chinese village cottage, a simple box under one gabled roof. Muted indigo ceramic tile roof, the whole roof visible from above. Warm cream plaster walls. On the front wall: a terracotta timber door in the middle with one small two-pane window on each side, jade frames. On the right-hand side wall: one small two-pane window. The house stands on a small irregular apron of its own ground, no wider than the house plus a narrow margin: a few paving stones at the door and short grass. No decoration, pots, lanterns or objects of any kind: it must stay plain.\r\n\r\nSquare canvas. The house is centred and fills about three quarters of the canvas, nothing cropped, clear margin all round. Nothing else in the image: no lawn rectangle, no path, no fence, no neighbours, no people or animals.\r\n\r\nTRUE transparent background, real alpha, no checkerboard. A small soft contact shadow directly under it, nothing spreading.\r\n\r\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\r\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+          "seconds": 39.725,
+          "status": "accepted"
+        }
+      ],
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_requirement": "transparent",
+      "alpha_result": {
+        "mode": "RGBA",
+        "minimum": 0,
+        "maximum": 255,
+        "true_transparency": true,
+        "transparent_pixel_fraction": 0.41600657799348306
+      },
+      "hotspots": {},
+      "generation_status": "accepted"
+    },
+    {
+      "filename": "stock-room.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_requirement": "opaque",
+      "alpha_result": {
+        "mode": "RGB",
+        "true_transparency": false,
+        "opaque": true
+      },
+      "status": "accepted",
+      "purpose": "Reusable neighbour room background plate",
+      "validation": "TV, floor console, coffee table, book and empty shelf present. Blank screens; plain upper right wall; clear right table end; floor spaces empty. Same 3:2 straight-on framing and warm paper style as home. Baseboard lower edge approximately .66 versus home's .645; similar not pixel-identical.",
+      "hotspots": {
+        "host": [
+          0.846,
+          0.631
+        ],
+        "tv": [
+          0.148,
+          0.514
+        ],
+        "console": [
+          0.299,
+          0.662
+        ],
+        "book": [
+          0.434,
+          0.584
+        ],
+        "object_shelf": [
+          0.504,
+          0.327
+        ],
+        "object_table": [
+          0.651,
+          0.58
+        ],
+        "object_floor": [
+          0.174,
+          0.834
+        ],
+        "object_wall": [
+          0.801,
+          0.294
+        ]
+      },
+      "placements": {
+        "host": {
+          "x": 0.755,
+          "y": 0.37,
+          "width": 0.18,
+          "height": 0.37,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.845,
+            0.74
+          ]
+        },
+        "object_shelf": {
+          "x": 0.421,
+          "y": 0.239,
+          "width": 0.166,
+          "height": 0.119,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.504,
+            0.358
+          ]
+        },
+        "object_table": {
+          "x": 0.602,
+          "y": 0.462,
+          "width": 0.101,
+          "height": 0.113,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.652,
+            0.575
+          ]
+        },
+        "object_floor": {
+          "x": 0.089,
+          "y": 0.763,
+          "width": 0.17,
+          "height": 0.132,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.174,
+            0.895
+          ]
+        },
+        "object_wall": {
+          "x": 0.69,
+          "y": 0.15,
+          "width": 0.21,
+          "height": 0.26,
+          "anchor": "center",
+          "anchor_position": [
+            0.795,
+            0.28
+          ]
+        }
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "original": "art-originals/stock-room-attempt1.png",
+          "prompt": "Create ONE new wide 3:2 neighbour's room background plate, in the same artistic universe as the attached learner's room and with exactly the same camera: seen straight-on, facing the back wall, with a shallow strip of floor along the bottom, the floor line at the same height. A plain, friendly Chinese storybook cottage room that will be redecorated for many different neighbours, so it has no theme of its own. No characters, no animals.\r\n\r\nCream plaster back wall, warm timber floor, one indigo timber beam along the top, one small round window high at the far left. Fixed furniture, each piece whole and clearly separate from the others:\r\n- At the left: a television with a blank dark screen on a low timber stand.\r\n- On the floor just right of the television stand: a small games console with a blank screen.\r\n- Low in the centre: a long low coffee table. One closed book with a plain cover lies on its left end. Its right end is completely empty.\r\n- On the wall above the coffee table: one short timber shelf, completely empty.\r\n\r\nKeep these four areas empty and uncluttered, because other pictures are placed there later: the floor at centre-right, wide and tall enough for a standing character; the floor at the front left, in front of the television; the wall at the upper right, plain cream with nothing on it; and the empty shelf and empty table end already described.\r\n\r\nNothing else: no sofa, chairs, lamps, plants, rugs, pictures, ornaments or door. Finished warm illustration, not a diagram.\r\n\r\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\r\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+          "started": "2026-10-06T17:44:55.518Z",
+          "completed": "2026-10-06T17:45:19.196Z",
+          "elapsed_seconds": 23.678,
+          "status": "rejected",
+          "reason": "Floor line lower than home; targeted correction."
+        },
+        {
+          "attempt": 2,
+          "original": "art-originals/stock-room-attempt2.png",
+          "prompt": "Edit the first image (stock neighbour room) to match the second image (home room) floor line: move the horizontal back-wall/floor boundary up to y=650 pixels of this 1024px tall canvas (about 63.5% height), exactly the same height as the home room. Preserve all stock room furniture and its positions, blank TV and console screens, book, empty short wall shelf, indigo top beam, round left window, wide empty upper right wall and standing-character area at right. Extend the timber floor upward to this new wall boundary. Keep the whole 1536x1024 canvas and style. Do not add objects, characters or writing. This is a single targeted camera/framing correction.",
+          "started": "2026-10-06T17:45:34.259Z",
+          "completed": "2026-10-06T17:45:57.225Z",
+          "elapsed_seconds": 22.966,
+          "status": "accepted",
+          "reason": "Floor height brought close to home, all required objects and clear zones retained."
+        }
+      ],
+      "proposed_placements": {
+        "host": {
+          "x": 0.755,
+          "y": 0.37,
+          "width": 0.18,
+          "height": 0.37,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.845,
+            0.74
+          ]
+        },
+        "object_shelf": {
+          "x": 0.421,
+          "y": 0.239,
+          "width": 0.166,
+          "height": 0.119,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.504,
+            0.358
+          ]
+        },
+        "object_table": {
+          "x": 0.602,
+          "y": 0.462,
+          "width": 0.101,
+          "height": 0.113,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.652,
+            0.575
+          ]
+        },
+        "object_floor": {
+          "x": 0.089,
+          "y": 0.763,
+          "width": 0.17,
+          "height": 0.132,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.174,
+            0.895
+          ]
+        },
+        "object_wall": {
+          "x": 0.69,
+          "y": 0.15,
+          "width": 0.21,
+          "height": 0.26,
+          "anchor": "center",
+          "anchor_position": [
+            0.795,
+            0.28
+          ]
+        }
+      },
+      "generation_status": "accepted"
+    },
+    {
+      "filename": "town-ground.png",
+      "purpose": "Eight-slot town background",
+      "status": "accepted",
+      "validation": "First attempt rejected: only seven plots. Second accepted: eight plots; actual house/plot overlays visually inspected in town-composite-preview.png. Lawn plots are larger than nominal 18% width, but all eight fit and remain usable.",
+      "alpha_required": false,
+      "proposed_placements": [
+        {
+          "id": "mouse",
+          "asset": "house-mouse.png",
+          "ground_center": [
+            0.2,
+            0.2
+          ],
+          "x": 0.115,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.2,
+            0.255
+          ]
+        },
+        {
+          "id": "dog",
+          "asset": "house-dog.png",
+          "ground_center": [
+            0.5,
+            0.19
+          ],
+          "x": 0.415,
+          "y": 0.0206,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.245
+          ]
+        },
+        {
+          "id": "cat",
+          "asset": "house-cat.png",
+          "ground_center": [
+            0.81,
+            0.2
+          ],
+          "x": 0.725,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.81,
+            0.255
+          ]
+        },
+        {
+          "id": "plot-1",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.22,
+            0.45
+          ],
+          "x": 0.135,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.22,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-2",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.78,
+            0.45
+          ],
+          "x": 0.695,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.78,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-3",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.2,
+            0.72
+          ],
+          "x": 0.115,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.2,
+            0.72
+          ]
+        },
+        {
+          "id": "home",
+          "asset": "house-home.png",
+          "ground_center": [
+            0.5,
+            0.72
+          ],
+          "x": 0.415,
+          "y": 0.5506,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.775
+          ]
+        },
+        {
+          "id": "plot-4",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.82,
+            0.72
+          ],
+          "x": 0.735,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.82,
+            0.72
+          ]
+        }
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "prompt": "Generate ONE game map ground plate, NOT a reference board, landscape 3:2: the ground of a small Chinese storybook town with no buildings on it yet. The attached house shows the exact viewing angle; draw the ground it would stand on, without the house.\r\n\r\nVIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.\r\n\r\nThe ground fills the whole frame, edge to edge. Warm sandy lanes run diagonally in the same parallel projection and meet at a small open paved square in the centre. A stream crosses the lower left under a small terracotta arched bridge. Along the lanes leave exactly EIGHT separate, fully visible empty lawn plots. Plan the composition around these eight open spaces before adding decoration. Each plot occupies about 18% of the image width and 18% of its height, with an uninterrupted flat middle; every plot lies inside the frame with a margin. Arrange exactly three plots in the top band, two in the middle band (one to either side of the central paved square), and three in the bottom band: 3 + 2 + 3 = 8. The bottom-middle plot is home. The central square is entirely paving and is NOT a ninth grass plot. Keep the eight plots large and whole; do not add any other plot-sized lawn anywhere. These are composition directions only: never print the counts, numbers or outlines. Keep lanes between plots. Restrict small plants and trees to the outer border and narrow gaps, never inside a plot or in front of its centre. All eight plots must be countable without relying on cropped areas beyond the image edge.\r\n\r\nNO houses, buildings, walls or roofs. NO people or animals. NO outlines, fences or markers around the patches: they must read as natural lawn. No moon gate, no distant hills.\r\n\r\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\r\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+          "seconds": 25.83,
+          "status": "rejected"
+        },
+        {
+          "attempt": 2,
+          "prompt": "Correct the attached town ground image: it has only SEVEN lawn plots. Redesign the lower left so there is a complete EIGHTH lawn plot matching the other seven. Move the stream and bridge to the very lower-left border, making them much smaller so a full bottom-left lawn plot fits at normalized centre (0.20,0.78). Three clear plots in TOP row, two in MIDDLE row, three in BOTTOM row. Shrink ALL plots to approximately 18% canvas width if necessary. Remove all fences and the small stone pagoda. Keep parallel elevated projection and the existing style. No text. Full requirements follow:\nGenerate ONE game map ground plate, NOT a reference board, landscape 3:2: the ground of a small Chinese storybook town with no buildings on it yet. The attached house shows the exact viewing angle; draw the ground it would stand on, without the house.\r\n\r\nVIEW: seen from above at a raised three-quarter angle, like a city-building game such as The Sims: camera about 40 degrees above the ground, turned so the front wall and the right-hand side wall of a building are both visible beneath its whole roof, with the front door facing the lower left of the image. Parallel projection: no perspective convergence, no vanishing point, no horizon, no sky. Light from the upper left; shadows are soft, fall to the lower right and stay close to the base.\r\n\r\nThe ground fills the whole frame, edge to edge. Warm sandy lanes run diagonally in the same parallel projection and meet at a small open paved square in the centre. A stream crosses the lower left under a small terracotta arched bridge. Along the lanes leave exactly EIGHT separate, fully visible empty lawn plots. Plan the composition around these eight open spaces before adding decoration. Each plot occupies about 18% of the image width and 18% of its height, with an uninterrupted flat middle; every plot lies inside the frame with a margin. Arrange exactly three plots in the top band, two in the middle band (one to either side of the central paved square), and three in the bottom band: 3 + 2 + 3 = 8. The bottom-middle plot is home. The central square is entirely paving and is NOT a ninth grass plot. Keep the eight plots large and whole; do not add any other plot-sized lawn anywhere. These are composition directions only: never print the counts, numbers or outlines. Keep lanes between plots. Restrict small plants and trees to the outer border and narrow gaps, never inside a plot or in front of its centre. All eight plots must be countable without relying on cropped areas beyond the image edge.\r\n\r\nNO houses, buildings, walls or roofs. NO people or animals. NO outlines, fences or markers around the patches: they must read as natural lawn. No moon gate, no distant hills.\r\n\r\nSTYLE: follow the attached story garden style board faithfully, for style and palette only; do not copy its layout, panels or headings. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; painted-paper detail, imperfect cut edges, paper grain, shallow layer shadows; soft daylight. No photorealism, no glossy 3D, no vector look.\r\nNO writing, lettering or numbers anywhere; any sign or board is blank. No labels, borders, watermarks or interface.",
+          "seconds": 22.598,
+          "status": "accepted"
+        }
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_requirement": "opaque",
+      "alpha_result": {
+        "mode": "RGB",
+        "true_transparency": false,
+        "opaque": true
+      },
+      "hotspots": {},
+      "generation_status": "accepted"
+    }
+  ],
+  "town_slots": [
+    {
+      "id": "mouse",
+      "asset": "house-mouse.png",
+      "ground_center": [
+        0.2,
+        0.2
+      ],
+      "x": 0.115,
+      "y": 0.0306,
+      "width": 0.17,
+      "height": 0.255,
+      "anchor": [
+        0.5,
+        0.88
+      ],
+      "anchor_position": [
+        0.2,
+        0.255
+      ]
+    },
+    {
+      "id": "dog",
+      "asset": "house-dog.png",
+      "ground_center": [
+        0.5,
+        0.19
+      ],
+      "x": 0.415,
+      "y": 0.0206,
+      "width": 0.17,
+      "height": 0.255,
+      "anchor": [
+        0.5,
+        0.88
+      ],
+      "anchor_position": [
+        0.5,
+        0.245
+      ]
+    },
+    {
+      "id": "cat",
+      "asset": "house-cat.png",
+      "ground_center": [
+        0.81,
+        0.2
+      ],
+      "x": 0.725,
+      "y": 0.0306,
+      "width": 0.17,
+      "height": 0.255,
+      "anchor": [
+        0.5,
+        0.88
+      ],
+      "anchor_position": [
+        0.81,
+        0.255
+      ]
+    },
+    {
+      "id": "plot-1",
+      "asset": "empty-plot.png",
+      "ground_center": [
+        0.22,
+        0.45
+      ],
+      "x": 0.135,
+      "y": 0.2715,
+      "width": 0.17,
+      "height": 0.255,
+      "anchor": [
+        0.5,
+        0.7
+      ],
+      "anchor_position": [
+        0.22,
+        0.45
+      ]
+    },
+    {
+      "id": "plot-2",
+      "asset": "empty-plot.png",
+      "ground_center": [
+        0.78,
+        0.45
+      ],
+      "x": 0.695,
+      "y": 0.2715,
+      "width": 0.17,
+      "height": 0.255,
+      "anchor": [
+        0.5,
+        0.7
+      ],
+      "anchor_position": [
+        0.78,
+        0.45
+      ]
+    },
+    {
+      "id": "plot-3",
+      "asset": "empty-plot.png",
+      "ground_center": [
+        0.2,
+        0.72
+      ],
+      "x": 0.115,
+      "y": 0.5415,
+      "width": 0.17,
+      "height": 0.255,
+      "anchor": [
+        0.5,
+        0.7
+      ],
+      "anchor_position": [
+        0.2,
+        0.72
+      ]
+    },
+    {
+      "id": "home",
+      "asset": "house-home.png",
+      "ground_center": [
+        0.5,
+        0.72
+      ],
+      "x": 0.415,
+      "y": 0.5506,
+      "width": 0.17,
+      "height": 0.255,
+      "anchor": [
+        0.5,
+        0.88
+      ],
+      "anchor_position": [
+        0.5,
+        0.775
+      ]
+    },
+    {
+      "id": "plot-4",
+      "asset": "empty-plot.png",
+      "ground_center": [
+        0.82,
+        0.72
+      ],
+      "x": 0.735,
+      "y": 0.5415,
+      "width": 0.17,
+      "height": 0.255,
+      "anchor": [
+        0.5,
+        0.7
+      ],
+      "anchor_position": [
+        0.82,
+        0.72
+      ]
+    }
+  ],
+  "validation_notes": [
+    "All required assets delivered. Four rejected intermediate attempts retained outside bundle.",
+    "Home desk centre is approximately 31% instead of 25%.",
+    "Room floor boundaries differ by approximately 1.5% canvas height.",
+    "House geometry matches closely rather than pixel-exactly (sampled silhouette overlap 97.4\u201399.4%).",
+    "Character sheets retain negligible generated alpha noise, at most 1/255 at central cuts; alpha was never removed by colour.",
+    "Town composite visually verified with all eight overlays."
+  ]
+}

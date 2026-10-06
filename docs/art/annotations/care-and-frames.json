@@ -1,0 +1,80 @@
+[
+  {
+    "id": "watering-can",
+    "filename": "objects/watering-can.png",
+    "purpose": "Plant care control and watering animation prop",
+    "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: a small muted-jade metal watering can with ochre handle and a long spout pointing left, upright, no water coming out. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+    "seconds": 65.327,
+    "tool": "built-in image_gen",
+    "model_id": null,
+    "cost": null,
+    "status": "accepted",
+    "alpha_required": true,
+    "visual_validation": "Whole recognisable subject, paper texture, no unintended text. Alpha measured separately in master manifest."
+  },
+  {
+    "id": "water-drops",
+    "filename": "objects/water-drops.png",
+    "purpose": "Brief watering feedback, after a real care action",
+    "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: three separate blue water droplets falling in a gentle diagonal from upper right toward lower left, only three drops, no vessel. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+    "seconds": 34.535,
+    "tool": "built-in image_gen",
+    "model_id": null,
+    "cost": null,
+    "status": "accepted",
+    "alpha_required": true,
+    "visual_validation": "Whole recognisable subject, paper texture, no unintended text. Alpha measured separately in master manifest."
+  },
+  {
+    "id": "care-sparkles",
+    "filename": "objects/care-sparkles.png",
+    "purpose": "Brief recovery or successful action feedback",
+    "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: three small hand-cut ochre and cream four-point paper sparkles in a compact cluster. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+    "seconds": 32.531,
+    "tool": "built-in image_gen",
+    "model_id": null,
+    "cost": null,
+    "status": "accepted",
+    "alpha_required": true,
+    "visual_validation": "Whole recognisable subject, paper texture, no unintended text. Alpha measured separately in master manifest."
+  },
+  {
+    "id": "coin",
+    "filename": "objects/coin.png",
+    "purpose": "Practice currency visual, never generation credits",
+    "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: one round warm ochre Chinese-style coin with a square hole, simple raised rim, no characters, no text or numbers. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+    "seconds": 61.217,
+    "tool": "built-in image_gen",
+    "model_id": null,
+    "cost": null,
+    "status": "accepted",
+    "alpha_required": true,
+    "visual_validation": "Whole recognisable subject, paper texture, no unintended text. Alpha measured separately in master manifest."
+  },
+  {
+    "id": "wall-frame",
+    "filename": "objects/wall-frame.png",
+    "purpose": "Vocabulary wall art: app renders learned words within blank insert",
+    "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: one small rectangular indigo-painted wooden picture frame, front view, outer aspect ratio 4:3, empty warm-cream paper inside, no picture or writing, no hanger protruding. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+    "seconds": 37.442,
+    "tool": "built-in image_gen",
+    "model_id": null,
+    "cost": null,
+    "status": "accepted",
+    "alpha_required": true,
+    "visual_validation": "Whole recognisable subject, paper texture, no unintended text. Alpha measured separately in master manifest."
+  },
+  {
+    "id": "wall-scroll",
+    "filename": "objects/wall-scroll.png",
+    "purpose": "Vocabulary wall hanging: real app text on blank paper",
+    "prompt": "Use case: illustration-story. Create ONE isolated reusable game art cutout: one vertical rolled-paper wall hanging, ochre top and bottom rods, blank cream paper centre with spacious margins, jade hanging cord, no marks. Square canvas, whole object with clear 15% margins, bold recognizable silhouette readable at small display sizes. Seen straight on from very slightly above to match the supplied room furniture, soft daylight upper left. Style reference is the story garden board only for medium and palette: flat gouache and folk woodblock forms, handmade paper grain and imperfect painted edges, warm cream, indigo, muted jade, terracotta and ochre. Match the approved home room. True transparent background, preserve cream within the object. Only the described object, no ground plane, room, characters, extra props, writing, labels, UI or watermark. Small close contact shadow only when appropriate. Not glossy 3D or clean vector.",
+    "seconds": 40.285,
+    "tool": "built-in image_gen",
+    "model_id": null,
+    "cost": null,
+    "status": "accepted",
+    "alpha_required": true,
+    "visual_validation": "Whole recognisable subject, paper texture, no unintended text. Alpha measured separately in master manifest."
+  }
+]

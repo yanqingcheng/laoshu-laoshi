@@ -1,0 +1,70 @@
+ASTRA ART DELIVERY — 6 OCTOBER 2026
+
+56 production illustrations are now checked into public/art. This is an asset and
+planning delivery; it does not mark any unbuilt application stage as complete.
+
+FIRST INTEGRATION STEPS
+1. Landing route /: use /art/landing/landing-hero-desktop.webp on wide screens and
+   /art/landing/landing-hero-mobile.webp on phones. Use a picture/source switch;
+   avoid centre-cropping the desktop illustration. Real title and sign-in controls
+   go in the safe text areas documented in docs/art/annotations/landing.json.
+   Prefer content flowing above/beside art when copy is too long or text is enlarged.
+2. Home: /art/core/home-room.webp has the original fixed plants. For live plant
+   state use /art/plants/home-room-empty-windowsill.webp plus exactly one plant
+   state layer. Shared layer rectangle is in docs/art/annotations/plants.json.
+   Read exact home object coordinates from docs/art/core/asset-manifest.json;
+   the placeholder hotspot coordinates currently in home.tsx do not match this art.
+3. Town: /art/core/town-ground.webp plus separate house/plot layers. All eight
+   normalized placements are in docs/art/core/asset-manifest.json. Map plot-1/2
+   to custom1/2, plot-3 to shop, plot-4 to park; home is bottom-middle. These are
+   artist placement suggestions; preserve domain slot IDs and eligibility rules.
+4. Neighbour: /art/core/stock-room.webp and individual mouse/dog/cat neutral or
+   delighted PNG/WebP poses. Four object slots and host rectangle are annotated.
+5. Swap placeholder badges for /art/markers/*.webp only when corresponding state
+   exists. Map precedence: empty, locked, pending, unseen, none. Never fake pending
+   jobs or unseen content. Keep all accessible status text and keyboard focus.
+6. Plants: 3 maturity sizes x 3 conditions. Preserve maturity across droop/recovery.
+   The visuals do not decide numeric thresholds or save review/care progress.
+   These layers are registered to a shared full canvas: never trim them individually.
+7. Objects: /art/objects/*.webp supply care props, currency, blank frames and
+   collectibles. Connect items to real word IDs, vocabulary checks and ownership.
+   Frame/scroll inserts need real WordText, never generated Hanzi inside a picture.
+
+DELIVERY MAP
+public/art/asset-manifest.json: actual URLs, dimensions, alpha checks, optical bounds,
+PNG hashes and encoded byte sizes. WebP cutouts are lossless with identical alpha;
+opaque scenes use quality90, with smaller derivatives for narrow displays.
+Small cutout variants are also provided (128px markers, 384px objects, 512px cast
+and houses, 768px plant canvases). Prefer small_url at those display sizes; keep
+full-canvas aspect ratio for plant layers. Original PNGs remain unchanged.
+docs/art/START-HERE.txt and ART-DIRECTION.txt: overview and state/motion rules.
+docs/art/ART-INDEX.csv: every file, its purpose and intended placement.
+docs/art/previews/: labelled placement examples; do not use as production backdrops.
+docs/art/annotations/: detailed dimensions, crop rules, state mappings and prompts.
+docs/art/prompt-library/: 57 exact past prompts, 7 reusable versioned templates.
+
+DESKTOP AND MOBILE ACCEPTANCE
+- Scene buttons and accessible action lists must invoke the same working actions.
+- Entire room visible at native 3:2; do not cover important objects with long labels.
+- At 360/390px, prefer concise hotspot labels and full-width action list below.
+- At 768/1280/1440px, constrain text lines and keep scene plus activity visually balanced.
+- Touch targets >=48px; do not shrink controls to match tiny icon pixels.
+- Native ruby stays with each word, Hanzi 28-32px/pinyin13-15px where appropriate.
+- Test 200% text zoom, long titles, safe-area padding, keyboard, and reduced motion.
+- Source-specific scripts and app text remain real UI; never bake captions into art.
+- Lazy-load offscreen art; prefer WebP URLs. Fetch only selected plant state and
+  preload the next likely state; do not eagerly load all 56 full-size originals.
+- Validate against real rendered views, not just these static composition previews.
+
+PROMPT LOGGING FOR FUTURE ON-DEMAND ART
+Before each image call append exact expanded prompt, references/roles, transparency,
+output name, run ID and UTC timestamp to docs/art/prompt-library/live-runs.jsonl.
+Append results and every repair separately. Preserve old records and template versions.
+Unknown model/usage/cost remains null. Keep private learner material out of logs/repo.
+Generalized templates are adaptations: each actual result still needs validation.
+
+WHAT IS NOT CLAIMED
+No application integration, live review/plant logic, generated lesson content or
+browser visual QA has been completed by this asset commit. Existing stage flags
+remain truthful. Lesson scenario plans will be supplied under docs/content separately.
+All image costs remain unknown because the built-in image tool did not expose them.

@@ -1,0 +1,2830 @@
+{
+  "project": "Laoshu Laoshi",
+  "date": "2026-10-06",
+  "status": "art handoff; no app source available",
+  "new_asset_count": 37,
+  "core_asset_count": 19,
+  "total_production_pngs": 56,
+  "model_id": null,
+  "usage": null,
+  "image_cost": null,
+  "cost_note": "Built-in image_gen does not expose model ID, usage or cost. Cost unknown. Measured call times and exact prompts are in annotations.",
+  "coordinate_rules": "Normalized image space, origin top-left. Use complete canvas for registered plants/core map placements. Use measured trim bounds for standalone objects and marker optical sizing. Preserve aspect ratio.",
+  "assets": [
+    {
+      "file": "core/avatars.png",
+      "category": "core",
+      "purpose": "Optional ten-animal avatar sheet",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/avatars.png",
+      "webp_url": "/art/core/avatars.webp",
+      "png_bytes": 2723774,
+      "webp_bytes": 310132,
+      "source_sha256": "3010d18aa10b0f8de9a4026da59f67425c2a5ad03e5ac58e9db0196752fbd3d3",
+      "small_url": "/art/core/avatars-small.webp",
+      "small_dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "file": "core/cat-delighted.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.4914601643880208,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        37,
+        62,
+        697,
+        927
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/cat-delighted.png",
+      "webp_url": "/art/core/cat-delighted.webp",
+      "png_bytes": 1257836,
+      "webp_bytes": 620900,
+      "source_sha256": "e7a621257d9eb41efeea18d3cf61b699e7350b1fdd47c671c66fbcc40ea7f86e",
+      "small_url": "/art/core/cat-delighted-small.webp",
+      "small_dimensions": [
+        384,
+        512
+      ],
+      "small_bytes": 173092
+    },
+    {
+      "file": "core/cat-neutral.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5469347635904948,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        87,
+        126,
+        715,
+        922
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/cat-neutral.png",
+      "webp_url": "/art/core/cat-neutral.webp",
+      "png_bytes": 1179099,
+      "webp_bytes": 554736,
+      "source_sha256": "87ed1e44bacd22710021f77ab2499e069a983516b766a485353c3d1ea1ce1931",
+      "small_url": "/art/core/cat-neutral-small.webp",
+      "small_dimensions": [
+        384,
+        512
+      ],
+      "small_bytes": 155526
+    },
+    {
+      "file": "core/dog-delighted.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.4584643046061198,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        64,
+        33,
+        667,
+        960
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/dog-delighted.png",
+      "webp_url": "/art/core/dog-delighted.webp",
+      "png_bytes": 1299385,
+      "webp_bytes": 661952,
+      "source_sha256": "587e38e87b39ae11dd42625e08376789edeb17d9b6fe1e9d8e402baf7a19f9da",
+      "small_url": "/art/core/dog-delighted-small.webp",
+      "small_dimensions": [
+        384,
+        512
+      ],
+      "small_bytes": 181000
+    },
+    {
+      "file": "core/dog-neutral.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.4743550618489583,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        32,
+        173,
+        732,
+        959
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/dog-neutral.png",
+      "webp_url": "/art/core/dog-neutral.webp",
+      "png_bytes": 1251479,
+      "webp_bytes": 647930,
+      "source_sha256": "fb043b693022aac099cc8681d3cb3d64bced7aaf8c8a1459de5ad8c9a75f4d2c",
+      "small_url": "/art/core/dog-neutral-small.webp",
+      "small_dimensions": [
+        384,
+        512
+      ],
+      "small_bytes": 175834
+    },
+    {
+      "file": "core/empty-plot.png",
+      "category": "core",
+      "purpose": "Unoccupied town slot overlay",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.6634151894161967,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        49,
+        453,
+        1221,
+        1196
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "plot-1",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.22,
+            0.45
+          ],
+          "x": 0.135,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.22,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-2",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.78,
+            0.45
+          ],
+          "x": 0.695,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.78,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-3",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.2,
+            0.72
+          ],
+          "x": 0.115,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.2,
+            0.72
+          ]
+        },
+        {
+          "id": "plot-4",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.82,
+            0.72
+          ],
+          "x": 0.735,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.82,
+            0.72
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/empty-plot.png",
+      "webp_url": "/art/core/empty-plot.webp",
+      "png_bytes": 1234765,
+      "webp_bytes": 866242,
+      "source_sha256": "1d2ab45e459125a0cd05e1afca9444170ef41f1a60805c9e26c26c176ee9fd24",
+      "small_url": "/art/core/empty-plot-small.webp",
+      "small_dimensions": [
+        512,
+        512
+      ],
+      "small_bytes": 164658
+    },
+    {
+      "file": "core/home-room.png",
+      "category": "core",
+      "purpose": "Learner home background plate",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/home-room.png",
+      "webp_url": "/art/core/home-room.webp",
+      "png_bytes": 2503791,
+      "webp_bytes": 254532,
+      "source_sha256": "fdd50dc1079cd83bf5bfd25ea62a8eaf42b518599ffcef9b0803a2342859326a",
+      "small_url": "/art/core/home-room-small.webp",
+      "small_dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "file": "core/house-cat.png",
+      "category": "core",
+      "purpose": "Town building variant using stock house geometry",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.41688669622439456,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        74,
+        57,
+        1222,
+        1222
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "cat",
+          "asset": "house-cat.png",
+          "ground_center": [
+            0.81,
+            0.2
+          ],
+          "x": 0.725,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.81,
+            0.255
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/house-cat.png",
+      "webp_url": "/art/core/house-cat.webp",
+      "png_bytes": 1948184,
+      "webp_bytes": 1312954,
+      "source_sha256": "d6499eb90f0949920455dcd8458acf46dd7355116d624fe719175628096dc4b8",
+      "small_url": "/art/core/house-cat-small.webp",
+      "small_dimensions": [
+        512,
+        512
+      ],
+      "small_bytes": 254908
+    },
+    {
+      "file": "core/house-dog.png",
+      "category": "core",
+      "purpose": "Town building variant using stock house geometry",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.39919530230535016,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        57,
+        49,
+        1228,
+        1221
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "dog",
+          "asset": "house-dog.png",
+          "ground_center": [
+            0.5,
+            0.19
+          ],
+          "x": 0.415,
+          "y": 0.0206,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.245
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/house-dog.png",
+      "webp_url": "/art/core/house-dog.webp",
+      "png_bytes": 2013366,
+      "webp_bytes": 1377458,
+      "source_sha256": "4959079bf4b9c958ef57ef7fe69965ce411d650fa4e6be94a19b48aed5cc63ab",
+      "small_url": "/art/core/house-dog-small.webp",
+      "small_dimensions": [
+        512,
+        512
+      ],
+      "small_bytes": 259186
+    },
+    {
+      "file": "core/house-home.png",
+      "category": "core",
+      "purpose": "Town building variant using stock house geometry",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.4065478507054936,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        62,
+        51,
+        1223,
+        1220
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "home",
+          "asset": "house-home.png",
+          "ground_center": [
+            0.5,
+            0.72
+          ],
+          "x": 0.415,
+          "y": 0.5506,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.775
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/house-home.png",
+      "webp_url": "/art/core/house-home.webp",
+      "png_bytes": 2025729,
+      "webp_bytes": 1363818,
+      "source_sha256": "63d1d3a32c83c3b398194333ac8877b62b45ce650fd8b958c30c2ead1e5f9530",
+      "small_url": "/art/core/house-home-small.webp",
+      "small_dimensions": [
+        512,
+        512
+      ],
+      "small_bytes": 256430
+    },
+    {
+      "file": "core/house-mouse.png",
+      "category": "core",
+      "purpose": "Town building variant using stock house geometry",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.40652241376240367,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        74,
+        58,
+        1226,
+        1225
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "mouse",
+          "asset": "house-mouse.png",
+          "ground_center": [
+            0.2,
+            0.2
+          ],
+          "x": 0.115,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.2,
+            0.255
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/house-mouse.png",
+      "webp_url": "/art/core/house-mouse.webp",
+      "png_bytes": 1968509,
+      "webp_bytes": 1325648,
+      "source_sha256": "807c7c5d0f0ebff79dd7da915faf773d8355203576ac619eba22e82f9228700b",
+      "small_url": "/art/core/house-mouse-small.webp",
+      "small_dimensions": [
+        512,
+        512
+      ],
+      "small_bytes": 247730
+    },
+    {
+      "file": "core/mouse-delighted.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5334510803222656,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        31,
+        60,
+        698,
+        955
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/mouse-delighted.png",
+      "webp_url": "/art/core/mouse-delighted.webp",
+      "png_bytes": 1189155,
+      "webp_bytes": 543036,
+      "source_sha256": "33710eab4cfb592a2b6741ec9f8c666ad3f904158636420e27c0eebe45eef4d6",
+      "small_url": "/art/core/mouse-delighted-small.webp",
+      "small_dimensions": [
+        384,
+        512
+      ],
+      "small_bytes": 150122
+    },
+    {
+      "file": "core/mouse-neutral.png",
+      "category": "core",
+      "purpose": "Individual character pose, exact half-sheet crop",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.6161206563313802,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        101,
+        59,
+        638,
+        950
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/mouse-neutral.png",
+      "webp_url": "/art/core/mouse-neutral.webp",
+      "png_bytes": 1099388,
+      "webp_bytes": 451270,
+      "source_sha256": "8f6edd0d74dab76394e4f1ff1b816559c97b311a3f8d8baa664e9f5e52015035",
+      "small_url": "/art/core/mouse-neutral-small.webp",
+      "small_dimensions": [
+        384,
+        512
+      ],
+      "small_bytes": 125862
+    },
+    {
+      "file": "core/sheet-cat.png",
+      "category": "core",
+      "purpose": "Two-pose character sheet: neutral left, delighted right",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5191974639892578,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        87,
+        62,
+        1465,
+        927
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "split_x_pixels": 768
+      },
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/sheet-cat.png",
+      "webp_url": "/art/core/sheet-cat.webp",
+      "png_bytes": 2436053,
+      "webp_bytes": 1186728,
+      "source_sha256": "de82f2a5294d04242dd39fe55eb867787dfab56e3fab0dfbe864cc32155697fd",
+      "small_url": "/art/core/sheet-cat-small.webp",
+      "small_dimensions": [
+        512,
+        341
+      ],
+      "small_bytes": 158940
+    },
+    {
+      "file": "core/sheet-dog.png",
+      "category": "core",
+      "purpose": "Two-pose character sheet: neutral left, delighted right",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.46640968322753906,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        32,
+        33,
+        1435,
+        960
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "split_x_pixels": 768
+      },
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/sheet-dog.png",
+      "webp_url": "/art/core/sheet-dog.webp",
+      "png_bytes": 2554300,
+      "webp_bytes": 1318428,
+      "source_sha256": "17f51bd489676e37152e35748703ebf334516712d3d0dbb30a1704469f67e659",
+      "small_url": "/art/core/sheet-dog-small.webp",
+      "small_dimensions": [
+        512,
+        341
+      ],
+      "small_bytes": 169828
+    },
+    {
+      "file": "core/sheet-mouse.png",
+      "category": "core",
+      "purpose": "Two-pose character sheet: neutral left, delighted right",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5747858683268229,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        101,
+        59,
+        1466,
+        955
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "split_x_pixels": 768
+      },
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/sheet-mouse.png",
+      "webp_url": "/art/core/sheet-mouse.webp",
+      "png_bytes": 2299028,
+      "webp_bytes": 1006068,
+      "source_sha256": "3dbcaa500dce7b687e5d9adddc575093add80fbd63f5f7083fca07ff6813f4c6",
+      "small_url": "/art/core/sheet-mouse-small.webp",
+      "small_dimensions": [
+        512,
+        341
+      ],
+      "small_bytes": 132188
+    },
+    {
+      "file": "core/stock-house.png",
+      "category": "core",
+      "purpose": "Plain geometric template for town buildings",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.41600657799348306,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        75,
+        59,
+        1221,
+        1220
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/stock-house.png",
+      "webp_url": "/art/core/stock-house.webp",
+      "png_bytes": 2050711,
+      "webp_bytes": 1421210,
+      "source_sha256": "94b4f28ac24b30b35e158af07492a5f83f2b3e186affe5199dbfb4636dfc947c",
+      "small_url": "/art/core/stock-house-small.webp",
+      "small_dimensions": [
+        512,
+        512
+      ],
+      "small_bytes": 254302
+    },
+    {
+      "file": "core/stock-room.png",
+      "category": "core",
+      "purpose": "Reusable neighbour room background plate",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "host": {
+          "x": 0.755,
+          "y": 0.37,
+          "width": 0.18,
+          "height": 0.37,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.845,
+            0.74
+          ]
+        },
+        "object_shelf": {
+          "x": 0.421,
+          "y": 0.239,
+          "width": 0.166,
+          "height": 0.119,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.504,
+            0.358
+          ]
+        },
+        "object_table": {
+          "x": 0.602,
+          "y": 0.462,
+          "width": 0.101,
+          "height": 0.113,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.652,
+            0.575
+          ]
+        },
+        "object_floor": {
+          "x": 0.089,
+          "y": 0.763,
+          "width": 0.17,
+          "height": 0.132,
+          "anchor": "bottom-center",
+          "anchor_position": [
+            0.174,
+            0.895
+          ]
+        },
+        "object_wall": {
+          "x": 0.69,
+          "y": 0.15,
+          "width": 0.21,
+          "height": 0.26,
+          "anchor": "center",
+          "anchor_position": [
+            0.795,
+            0.28
+          ]
+        }
+      },
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/stock-room.png",
+      "webp_url": "/art/core/stock-room.webp",
+      "png_bytes": 2415692,
+      "webp_bytes": 210176,
+      "source_sha256": "c36f005356133c116596d228d1a986a28612caf5f319430ac96e72facd666330",
+      "small_url": "/art/core/stock-room-small.webp",
+      "small_dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "file": "core/town-ground.png",
+      "category": "core",
+      "purpose": "Eight-slot town background",
+      "where": "Previously approved scene/character asset; see core manifest",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": [
+        {
+          "id": "mouse",
+          "asset": "house-mouse.png",
+          "ground_center": [
+            0.2,
+            0.2
+          ],
+          "x": 0.115,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.2,
+            0.255
+          ]
+        },
+        {
+          "id": "dog",
+          "asset": "house-dog.png",
+          "ground_center": [
+            0.5,
+            0.19
+          ],
+          "x": 0.415,
+          "y": 0.0206,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.245
+          ]
+        },
+        {
+          "id": "cat",
+          "asset": "house-cat.png",
+          "ground_center": [
+            0.81,
+            0.2
+          ],
+          "x": 0.725,
+          "y": 0.0306,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.81,
+            0.255
+          ]
+        },
+        {
+          "id": "plot-1",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.22,
+            0.45
+          ],
+          "x": 0.135,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.22,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-2",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.78,
+            0.45
+          ],
+          "x": 0.695,
+          "y": 0.2715,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.78,
+            0.45
+          ]
+        },
+        {
+          "id": "plot-3",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.2,
+            0.72
+          ],
+          "x": 0.115,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.2,
+            0.72
+          ]
+        },
+        {
+          "id": "home",
+          "asset": "house-home.png",
+          "ground_center": [
+            0.5,
+            0.72
+          ],
+          "x": 0.415,
+          "y": 0.5506,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.88
+          ],
+          "anchor_position": [
+            0.5,
+            0.775
+          ]
+        },
+        {
+          "id": "plot-4",
+          "asset": "empty-plot.png",
+          "ground_center": [
+            0.82,
+            0.72
+          ],
+          "x": 0.735,
+          "y": 0.5415,
+          "width": 0.17,
+          "height": 0.255,
+          "anchor": [
+            0.5,
+            0.7
+          ],
+          "anchor_position": [
+            0.82,
+            0.72
+          ]
+        }
+      ],
+      "annotation": "core/asset-manifest.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/core/town-ground.png",
+      "webp_url": "/art/core/town-ground.webp",
+      "png_bytes": 3130750,
+      "webp_bytes": 498980,
+      "source_sha256": "a63f9629abae877c090cf58ae2f0c25645327433f648e1455ea9d27ff1c34a9d",
+      "small_url": "/art/core/town-ground-small.webp",
+      "small_dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "file": "landing/landing-hero-desktop.png",
+      "category": "landing",
+      "purpose": "Desktop landing page hero; title, subtitle and CTA overlay on cream left",
+      "where": "Public landing page",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "text_safe_area": {
+          "x": 0.045,
+          "y": 0.19,
+          "width": 0.285,
+          "height": 0.46
+        },
+        "focal_point": {
+          "x": 0.675,
+          "y": 0.54
+        },
+        "crop_rules": "Use full 3:2 frame. Prefer contain or native aspect ratio. Do not center-crop to portrait; switch to mobile hero. Avoid text beyond x=0.33, as dog's tail enters around x=0.35."
+      },
+      "annotation": "annotations/landing.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/landing/landing-hero-desktop.png",
+      "webp_url": "/art/landing/landing-hero-desktop.webp",
+      "png_bytes": 2884018,
+      "webp_bytes": 379538,
+      "source_sha256": "ee1fba0d3bf4fb963042a42b9996477121f34316b238b16a91456837500844dc",
+      "small_url": "/art/landing/landing-hero-desktop-small.webp",
+      "small_dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "file": "landing/landing-hero-mobile.png",
+      "category": "landing",
+      "purpose": "Mobile landing page portrait; title, subtitle and CTA overlay at top",
+      "where": "Public landing page",
+      "state": "static",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGB",
+        "has_alpha": false
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1024,
+        1536
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "text_safe_area": {
+          "x": 0.1,
+          "y": 0.035,
+          "width": 0.8,
+          "height": 0.21
+        },
+        "focal_point": {
+          "x": 0.5,
+          "y": 0.64
+        },
+        "crop_rules": "Use full 2:3 frame without cropping ears, paws or side tails. Maintain cream top area. On very narrow layouts render image at natural aspect ratio rather than cover. Keep overlay within conservative safe box; edge foliage begins around y=0.26."
+      },
+      "annotation": "annotations/landing.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/landing/landing-hero-mobile.png",
+      "webp_url": "/art/landing/landing-hero-mobile.webp",
+      "png_bytes": 2967559,
+      "webp_bytes": 401130,
+      "source_sha256": "96a93347b6ce8ace57f982a1e5912002772372b1718ce2bf4b68804f4c4bbe7d",
+      "small_url": "/art/landing/landing-hero-mobile-small.webp",
+      "small_dimensions": [
+        800,
+        1200
+      ]
+    },
+    {
+      "file": "landing/welcome-trio.png",
+      "category": "landing",
+      "purpose": "Transparent onboarding and welcome-back illustration; all three characters waving together",
+      "where": "Onboarding / welcome-back card, never resident in personal home",
+      "state": "static",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.41942087809244794,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        28,
+        51,
+        1500,
+        934
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "text_safe_area": null,
+        "focal_point": {
+          "x": 0.5,
+          "y": 0.49
+        },
+        "crop_rules": "Use contain; keep complete trio and original alpha. Do not crop or split characters because they overlap. Put text outside artwork. No background color removal."
+      },
+      "annotation": "annotations/landing.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/landing/welcome-trio.png",
+      "webp_url": "/art/landing/welcome-trio.webp",
+      "png_bytes": 2575457,
+      "webp_bytes": 1417958,
+      "source_sha256": "dc06f930264b45fcab844bf464189c02ef90f4b431e39fb059bb8096c5260fd5",
+      "small_url": "/art/landing/welcome-trio-small.webp",
+      "small_dimensions": [
+        512,
+        341
+      ],
+      "small_bytes": 187032
+    },
+    {
+      "file": "plants/home-room-empty-windowsill.png",
+      "category": "plants",
+      "purpose": "Replacement base plate needed for interchangeable plant states. Existing baked plants removed, sill and garden reconstructed.",
+      "where": "Replacement home room backdrop",
+      "state": "room base",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": false,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 255,
+        "maximum": 255,
+        "zero_fraction": 0.0,
+        "edge_alpha_max": 255
+      },
+      "visible_bounds_alpha_gt_8": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/plants/home-room-empty-windowsill.png",
+      "webp_url": "/art/plants/home-room-empty-windowsill.webp",
+      "png_bytes": 2382107,
+      "webp_bytes": 195514,
+      "source_sha256": "53f99b0193fac1f25061d33bd1a95cb0cb8321301c5964db7bea00d25b7594ab",
+      "small_url": "/art/plants/home-room-empty-windowsill-small.webp",
+      "small_dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "file": "plants/plants-drooping.png",
+      "category": "plants",
+      "purpose": "Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "drooping",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5824979146321615,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        34,
+        160,
+        1508,
+        824
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/plants/plants-drooping.png",
+      "webp_url": "/art/plants/plants-drooping.webp",
+      "png_bytes": 1616472,
+      "webp_bytes": 1096380,
+      "source_sha256": "d1ffadfddbb80d7bc2626c24270ce80c81bbab3ae5c5fa0534f50b4cd00247a4",
+      "small_url": "/art/plants/plants-drooping-small.webp",
+      "small_dimensions": [
+        768,
+        512
+      ],
+      "small_bytes": 336044
+    },
+    {
+      "file": "plants/plants-growing-drooping.png",
+      "category": "plants",
+      "purpose": "Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "growing-drooping",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.6740252176920573,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        48,
+        250,
+        1503,
+        825
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/plants/plants-growing-drooping.png",
+      "webp_url": "/art/plants/plants-growing-drooping.webp",
+      "png_bytes": 1252042,
+      "webp_bytes": 853642,
+      "source_sha256": "617d99d077a30e0b4fc32859b8d6ba4b4793e166ce6c4c299bdca34e304adefd",
+      "small_url": "/art/plants/plants-growing-drooping-small.webp",
+      "small_dimensions": [
+        768,
+        512
+      ],
+      "small_bytes": 267990
+    },
+    {
+      "file": "plants/plants-growing-recovering.png",
+      "category": "plants",
+      "purpose": "Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "growing-recovering",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.6661300659179688,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        28,
+        160,
+        1524,
+        825
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/plants/plants-growing-recovering.png",
+      "webp_url": "/art/plants/plants-growing-recovering.webp",
+      "png_bytes": 1269218,
+      "webp_bytes": 865266,
+      "source_sha256": "b416a5bf0d9dfd47f630106ca7e619913ae7fe6b3d19d9fc41c11a81ef0b08e6",
+      "small_url": "/art/plants/plants-growing-recovering-small.webp",
+      "small_dimensions": [
+        768,
+        512
+      ],
+      "small_bytes": 272650
+    },
+    {
+      "file": "plants/plants-growing.png",
+      "category": "plants",
+      "purpose": "Upright hydrated growth. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "growing",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.6796417236328125,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        28,
+        168,
+        1521,
+        823
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/plants/plants-growing.png",
+      "webp_url": "/art/plants/plants-growing.webp",
+      "png_bytes": 1180282,
+      "webp_bytes": 783968,
+      "source_sha256": "a03fd39da0514c01f5299beaa48f9b806697e73d64bd9e8eef5cfb075732bf5c",
+      "small_url": "/art/plants/plants-growing-small.webp",
+      "small_dimensions": [
+        768,
+        512
+      ],
+      "small_bytes": 245834
+    },
+    {
+      "file": "plants/plants-recovering.png",
+      "category": "plants",
+      "purpose": "Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "recovering",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.4902598063151042,
+        "edge_alpha_max": 2
+      },
+      "visible_bounds_alpha_gt_8": [
+        12,
+        8,
+        1528,
+        823
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/plants/plants-recovering.png",
+      "webp_url": "/art/plants/plants-recovering.webp",
+      "png_bytes": 2012783,
+      "webp_bytes": 1414810,
+      "source_sha256": "96e507e579e39821fcfcdbe8aafd4a83aa0e7bb09060b7a65a1e25399b1e1baf",
+      "small_url": "/art/plants/plants-recovering-small.webp",
+      "small_dimensions": [
+        768,
+        512
+      ],
+      "small_bytes": 426226
+    },
+    {
+      "file": "plants/plants-seedling-drooping.png",
+      "category": "plants",
+      "purpose": "Current backlog condition: gentle downward bend, still alive. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "seedling-drooping",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.8766949971516927,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        164,
+        453,
+        1406,
+        822
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/plants/plants-seedling-drooping.png",
+      "webp_url": "/art/plants/plants-seedling-drooping.webp",
+      "png_bytes": 506007,
+      "webp_bytes": 367320,
+      "source_sha256": "6f866eed168f62f5aa2fe4634edb6a4b356030f0257516872e5da9a4c80e998a",
+      "small_url": "/art/plants/plants-seedling-drooping-small.webp",
+      "small_dimensions": [
+        768,
+        512
+      ],
+      "small_bytes": 110514
+    },
+    {
+      "file": "plants/plants-seedling-recovering.png",
+      "category": "plants",
+      "purpose": "Immediate post-watering recovery: raised foliage and visible dew. Watering always revives, without resetting lifetime maturity.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "seedling-recovering",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.8719310760498047,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        158,
+        445,
+        1397,
+        822
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/plants/plants-seedling-recovering.png",
+      "webp_url": "/art/plants/plants-seedling-recovering.webp",
+      "png_bytes": 528801,
+      "webp_bytes": 380790,
+      "source_sha256": "6f5766b72cdeceb5cda3fbb1a361ff27e9d458a6119d5eeb66665cb46c503394",
+      "small_url": "/art/plants/plants-seedling-recovering-small.webp",
+      "small_dimensions": [
+        768,
+        512
+      ],
+      "small_bytes": 114570
+    },
+    {
+      "file": "plants/plants-seedling.png",
+      "category": "plants",
+      "purpose": "Upright hydrated growth. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "seedling",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.8770465850830078,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        165,
+        443,
+        1397,
+        823
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/plants/plants-seedling.png",
+      "webp_url": "/art/plants/plants-seedling.webp",
+      "png_bytes": 498125,
+      "webp_bytes": 350930,
+      "source_sha256": "c290b000132abe45004c594ca4833c0ec4ed1862887b9488d68241d683c0b6dc",
+      "small_url": "/art/plants/plants-seedling-small.webp",
+      "small_dimensions": [
+        768,
+        512
+      ],
+      "small_bytes": 105134
+    },
+    {
+      "file": "plants/plants-thriving.png",
+      "category": "plants",
+      "purpose": "Upright hydrated growth. Lifetime maturity remains intact.",
+      "where": "Interchangeable layer on empty windowsill; use shared layer coordinates in plants.json",
+      "state": "thriving",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 254,
+        "zero_fraction": 0.5319499969482422,
+        "edge_alpha_max": 3
+      },
+      "visible_bounds_alpha_gt_8": [
+        10,
+        52,
+        1527,
+        823
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/plants.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/plants/plants-thriving.png",
+      "webp_url": "/art/plants/plants-thriving.webp",
+      "png_bytes": 1872828,
+      "webp_bytes": 1302892,
+      "source_sha256": "b498ed033681ae324937521ff6cc19f5f3c18f0e15e3dfd9d27da221e1012e7e",
+      "small_url": "/art/plants/plants-thriving-small.webp",
+      "small_dimensions": [
+        768,
+        512
+      ],
+      "small_bytes": 388442
+    },
+    {
+      "file": "markers/marker-complete.png",
+      "category": "markers",
+      "purpose": "Completed activity",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "complete",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5347665778917353,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        145,
+        154,
+        1111,
+        1113
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/markers/marker-complete.png",
+      "webp_url": "/art/markers/marker-complete.webp",
+      "png_bytes": 1601772,
+      "webp_bytes": 1056016,
+      "source_sha256": "5f12f8577874ef774b2fe846cc5dd18265bb03b4e65950730cefd4576413758e",
+      "small_url": "/art/markers/marker-complete-small.webp",
+      "small_dimensions": [
+        128,
+        128
+      ],
+      "small_bytes": 12054
+    },
+    {
+      "file": "markers/marker-construction.png",
+      "category": "markers",
+      "purpose": "Truthful active build states only",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "construction",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5311462649664614,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        109,
+        144,
+        1171,
+        1105
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/markers/marker-construction.png",
+      "webp_url": "/art/markers/marker-construction.webp",
+      "png_bytes": 1638184,
+      "webp_bytes": 1152658,
+      "source_sha256": "3b8c34c3e44e751978d4513145e142196416762a850abc3ec7a318a755837370",
+      "small_url": "/art/markers/marker-construction-small.webp",
+      "small_dimensions": [
+        128,
+        128
+      ],
+      "small_bytes": 17842
+    },
+    {
+      "file": "markers/marker-gift.png",
+      "category": "markers",
+      "purpose": "Gift or reward",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "gift",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.4241839192733174,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        80,
+        107,
+        1188,
+        1170
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/markers/marker-gift.png",
+      "webp_url": "/art/markers/marker-gift.webp",
+      "png_bytes": 1999920,
+      "webp_bytes": 1377864,
+      "source_sha256": "d7a63fe1d1def935b78d03e41531eb43e8082a98ed2632b69c411e33882560f5",
+      "small_url": "/art/markers/marker-gift-small.webp",
+      "small_dimensions": [
+        128,
+        128
+      ],
+      "small_bytes": 18638
+    },
+    {
+      "file": "markers/marker-heart.png",
+      "category": "markers",
+      "purpose": "Favourite or affection",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "heart",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.6223815846706806,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        128,
+        214,
+        1126,
+        1060
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/markers/marker-heart.png",
+      "webp_url": "/art/markers/marker-heart.webp",
+      "png_bytes": 1357754,
+      "webp_bytes": 916020,
+      "source_sha256": "708cc2ff3a1951c133a2091501a605110c275ac28e060878c25fc1451c047ebd",
+      "small_url": "/art/markers/marker-heart-small.webp",
+      "small_dimensions": [
+        128,
+        128
+      ],
+      "small_bytes": 11312
+    },
+    {
+      "file": "markers/marker-help.png",
+      "category": "markers",
+      "purpose": "Help, never unseen content",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "help",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.48062086490693895,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        115,
+        126,
+        1140,
+        1135
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/markers/marker-help.png",
+      "webp_url": "/art/markers/marker-help.webp",
+      "png_bytes": 1754249,
+      "webp_bytes": 1212052,
+      "source_sha256": "afacfe2ed8a963674f23eb21d77814ba5a2bac9a9442cc3345dcb418f1d8ddfc",
+      "small_url": "/art/markers/marker-help-small.webp",
+      "small_dimensions": [
+        128,
+        128
+      ],
+      "small_bytes": 15728
+    },
+    {
+      "file": "markers/marker-locked.png",
+      "category": "markers",
+      "purpose": "Locked content",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "locked",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.6398612160385013,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        235,
+        151,
+        1019,
+        1100
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/markers/marker-locked.png",
+      "webp_url": "/art/markers/marker-locked.webp",
+      "png_bytes": 1207620,
+      "webp_bytes": 825538,
+      "source_sha256": "9dcf1c11d9cc7e3603ae8b6697482ed6170f465422373e7e762f2b484ac0087e",
+      "small_url": "/art/markers/marker-locked-small.webp",
+      "small_dimensions": [
+        128,
+        128
+      ],
+      "small_bytes": 10900
+    },
+    {
+      "file": "markers/marker-new.png",
+      "category": "markers",
+      "purpose": "New content badge",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "new",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5992873840393357,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        78,
+        94,
+        1175,
+        1150
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/markers/marker-new.png",
+      "webp_url": "/art/markers/marker-new.webp",
+      "png_bytes": 1562783,
+      "webp_bytes": 1028242,
+      "source_sha256": "d93328fe8bb3febeed083712069784d4b0c33563c24d08a8ee9c55361c2ae744",
+      "small_url": "/art/markers/marker-new-small.webp",
+      "small_dimensions": [
+        128,
+        128
+      ],
+      "small_bytes": 13322
+    },
+    {
+      "file": "markers/marker-pending.png",
+      "category": "markers",
+      "purpose": "Pending generation",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "pending",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5765982667266979,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        64,
+        83,
+        1190,
+        1155
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/markers/marker-pending.png",
+      "webp_url": "/art/markers/marker-pending.webp",
+      "png_bytes": 1565304,
+      "webp_bytes": 1059254,
+      "source_sha256": "f36698078589088a48b9c0368667cd56f416614ace00f80e9e412ef873e93b80",
+      "small_url": "/art/markers/marker-pending-small.webp",
+      "small_dimensions": [
+        128,
+        128
+      ],
+      "small_bytes": 13264
+    },
+    {
+      "file": "markers/marker-retry.png",
+      "category": "markers",
+      "purpose": "Retry action",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "retry",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.49258258739497723,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        121,
+        122,
+        1134,
+        1131
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/markers/marker-retry.png",
+      "webp_url": "/art/markers/marker-retry.webp",
+      "png_bytes": 1645020,
+      "webp_bytes": 1113310,
+      "source_sha256": "4c0cc2610969cfd0073109e0fa45a732613034a63d282fd6cde6d556554ff6f2",
+      "small_url": "/art/markers/marker-retry-small.webp",
+      "small_dimensions": [
+        128,
+        128
+      ],
+      "small_bytes": 14378
+    },
+    {
+      "file": "markers/marker-unseen.png",
+      "category": "markers",
+      "purpose": "Unseen content",
+      "where": "Above corresponding place or surface button; 28-40px art within >=48px accessible target. Trim for optical sizing.",
+      "state": "unseen",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5180188945613272,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        136,
+        134,
+        1119,
+        1102
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {},
+      "annotation": "annotations/markers.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/markers/marker-unseen.png",
+      "webp_url": "/art/markers/marker-unseen.webp",
+      "png_bytes": 1675989,
+      "webp_bytes": 1170800,
+      "source_sha256": "26b3b76aacc3563843be75df9f32aae1894a60055683ae16d42c078526ad738f",
+      "small_url": "/art/markers/marker-unseen-small.webp",
+      "small_dimensions": [
+        128,
+        128
+      ],
+      "small_bytes": 14630
+    },
+    {
+      "file": "objects/apple.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked gift or shop item",
+      "where": "Neighbour coffee table or shop item card",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5306127250851501,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        160,
+        109,
+        1130,
+        1145
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/apple.png",
+      "webp_url": "/art/objects/apple.webp",
+      "png_bytes": 1652773,
+      "webp_bytes": 1119240,
+      "source_sha256": "239f7cb6718708a71f73fc51e0b820848160b69796396f2bb98f2b1efe9d62de",
+      "small_url": "/art/objects/apple-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 107750
+    },
+    {
+      "file": "objects/basket.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked room object",
+      "where": "Clear room floor beside furniture; inventory",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5525877002205383,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        109,
+        73,
+        1149,
+        1180
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/basket.png",
+      "webp_url": "/art/objects/basket.webp",
+      "png_bytes": 1536672,
+      "webp_bytes": 1086350,
+      "source_sha256": "7cc51c0b4041efa478065c00c8cfcdcadc8a6dd876e77465e6404ad1de530bc9",
+      "small_url": "/art/objects/basket-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 116476
+    },
+    {
+      "file": "objects/book.png",
+      "category": "objects",
+      "purpose": "Collectible book / story content",
+      "where": "Neighbour shelf/table or collection card",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.4548812221942416,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        146,
+        156,
+        1108,
+        1118
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/book.png",
+      "webp_url": "/art/objects/book.webp",
+      "png_bytes": 1780602,
+      "webp_bytes": 1241730,
+      "source_sha256": "ed4045043273427c49861eb8ff43f36b9c32db1b50da8f995e297ce02729151c",
+      "small_url": "/art/objects/book-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 113232
+    },
+    {
+      "file": "objects/care-sparkles.png",
+      "category": "objects",
+      "purpose": "Brief recovery or successful action feedback",
+      "where": "Brief overlay by recovered plants or successful action",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.7926806468105889,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        170,
+        117,
+        1121,
+        1134
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/care-sparkles.png",
+      "webp_url": "/art/objects/care-sparkles.webp",
+      "png_bytes": 772775,
+      "webp_bytes": 524834,
+      "source_sha256": "93244059c08345f236bb6813341576f2add3bbdd445c8e328c3c1bf44a5ac612",
+      "small_url": "/art/objects/care-sparkles-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 56914
+    },
+    {
+      "file": "objects/coin.png",
+      "category": "objects",
+      "purpose": "Practice currency visual, never generation credits",
+      "where": "Real balance beside practice rewards; not generation credits",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.4872382856517835,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        112,
+        113,
+        1142,
+        1142
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/coin.png",
+      "webp_url": "/art/objects/coin.webp",
+      "png_bytes": 1743912,
+      "webp_bytes": 1226886,
+      "source_sha256": "bbb0c8a7f9733ddd167fb0685e272a1df8592d91e2ff4dd1a88afe4bfe177b4d",
+      "small_url": "/art/objects/coin-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 117778
+    },
+    {
+      "file": "objects/cushion.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked movable floor item",
+      "where": "Clear home floor, away from door and review desk",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5656616530451837,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        53,
+        315,
+        1204,
+        1040
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": {
+          "x": 0.5,
+          "y": 0.76,
+          "width": 0.12,
+          "height": 0.12
+        },
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/cushion.png",
+      "webp_url": "/art/objects/cushion.webp",
+      "png_bytes": 1505919,
+      "webp_bytes": 1018440,
+      "source_sha256": "45dc260c593acceabffdd90cc11e76dc89b44fc2d42e550a4308259990014519",
+      "small_url": "/art/objects/cushion-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 94784
+    },
+    {
+      "file": "objects/flower.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked home or neighbour gift",
+      "where": "Neighbour shelf/table; gift",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.7331276756484513,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        316,
+        63,
+        937,
+        1203
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/flower.png",
+      "webp_url": "/art/objects/flower.webp",
+      "png_bytes": 965670,
+      "webp_bytes": 656694,
+      "source_sha256": "0e91583f87020b343346f3b744ed3743f5e0e09151f2145d74972a2fbcced7b0",
+      "small_url": "/art/objects/flower-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 69146
+    },
+    {
+      "file": "objects/kite.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked gift or collectible",
+      "where": "Wall decoration / gift or shop item card",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.7598841601611684,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        225,
+        32,
+        1036,
+        1234
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/kite.png",
+      "webp_url": "/art/objects/kite.webp",
+      "png_bytes": 892589,
+      "webp_bytes": 589188,
+      "source_sha256": "d6d67035f7f6754856a6cd46e2416df12001a36c2fde8a1af6a69617e806a13b",
+      "small_url": "/art/objects/kite-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 62672
+    },
+    {
+      "file": "objects/lantern.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked home decoration",
+      "where": "Upper wall or hanging decor slot, avoiding text/hotspots",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.7258145545100972,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        253,
+        31,
+        1001,
+        1229
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/lantern.png",
+      "webp_url": "/art/objects/lantern.webp",
+      "png_bytes": 957216,
+      "webp_bytes": 661346,
+      "source_sha256": "e4918d8a69d5eacae2bf65414976765a6650f82334ddd991b8e2e315f46ca07c",
+      "small_url": "/art/objects/lantern-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 72940
+    },
+    {
+      "file": "objects/teacup.png",
+      "category": "objects",
+      "purpose": "Vocabulary-linked shelf collectible",
+      "where": "Empty neighbour shelf; gift/inventory card",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.5430761912756372,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        82,
+        234,
+        1219,
+        1127
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/collectibles.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/teacup.png",
+      "webp_url": "/art/objects/teacup.webp",
+      "png_bytes": 1611564,
+      "webp_bytes": 1113154,
+      "source_sha256": "543d1a6c15af1f8f9cbe1c91eaaddc2868e1e7c5d6f938ed0b52285b676c72e7",
+      "small_url": "/art/objects/teacup-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 111588
+    },
+    {
+      "file": "objects/wall-frame.png",
+      "category": "objects",
+      "purpose": "Vocabulary wall art: app renders learned words within blank insert",
+      "where": "Home upper-left wall; optional vocabulary picture",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.33533204113662435,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        47,
+        183,
+        1206,
+        1077
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": {
+          "x": 0.12,
+          "y": 0.15,
+          "width": 0.14,
+          "height": 0.17
+        },
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/wall-frame.png",
+      "webp_url": "/art/objects/wall-frame.webp",
+      "png_bytes": 2002808,
+      "webp_bytes": 1430580,
+      "source_sha256": "f94cc67961f2ff7e2e819093ea8e0ec701372ad41c989aa94ee301774f479db5",
+      "small_url": "/art/objects/wall-frame-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 127736
+    },
+    {
+      "file": "objects/wall-scroll.png",
+      "category": "objects",
+      "purpose": "Vocabulary wall hanging: real app text on blank paper",
+      "where": "Narrow wall between window and door; real vocabulary text",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.4813203808419119,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        163,
+        13,
+        1093,
+        1226
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": {
+          "x": 0.682,
+          "y": 0.235,
+          "width": 0.075,
+          "height": 0.245
+        },
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/wall-scroll.png",
+      "webp_url": "/art/objects/wall-scroll.webp",
+      "png_bytes": 1384676,
+      "webp_bytes": 986192,
+      "source_sha256": "30d28ab35864b05f917fb7aa287f0779cd4dab84cc6ba852a62d7c34b58c3826",
+      "small_url": "/art/objects/wall-scroll-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 98494
+    },
+    {
+      "file": "objects/water-drops.png",
+      "category": "objects",
+      "purpose": "Brief watering feedback, after a real care action",
+      "where": "Short-lived overlay above plants during watering",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.8259737897738402,
+        "edge_alpha_max": 0
+      },
+      "visible_bounds_alpha_gt_8": [
+        224,
+        79,
+        1120,
+        1210
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/water-drops.png",
+      "webp_url": "/art/objects/water-drops.webp",
+      "png_bytes": 677732,
+      "webp_bytes": 442460,
+      "source_sha256": "a554b762e166a7fb7d1632757848aeba7043fdc15f7d9af26d23e8ca6f771ddd",
+      "small_url": "/art/objects/water-drops-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 48542
+    },
+    {
+      "file": "objects/watering-can.png",
+      "category": "objects",
+      "purpose": "Plant care control and watering animation prop",
+      "where": "Plant care control near windowsill",
+      "state": "static",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_required": true,
+      "alpha_result": {
+        "mode": "RGBA",
+        "has_alpha": true,
+        "minimum": 0,
+        "maximum": 255,
+        "zero_fraction": 0.6156687753892488,
+        "edge_alpha_max": 1
+      },
+      "visible_bounds_alpha_gt_8": [
+        41,
+        151,
+        1232,
+        1113
+      ],
+      "bounds_note": "Bounds ignore <=8/255 generated alpha noise for optical layout only; original pixels and alpha remain untouched.",
+      "placement": {
+        "placement_mode": "trim visible-alpha bounding box first; preserve aspect ratio; contain inside suggested box",
+        "suggested_box": null,
+        "scope": "artist suggestion; validate in app"
+      },
+      "annotation": "annotations/care-and-frames.json",
+      "status": "accepted",
+      "integrated_in_app": false,
+      "png_url": "/art/objects/watering-can.png",
+      "webp_url": "/art/objects/watering-can.webp",
+      "png_bytes": 1361674,
+      "webp_bytes": 919460,
+      "source_sha256": "f86980314ed044a09d86f13b862874acc689563f8f73ce43c024457b5ddb34ec",
+      "small_url": "/art/objects/watering-can-small.webp",
+      "small_dimensions": [
+        384,
+        384
+      ],
+      "small_bytes": 95504
+    }
+  ],
+  "new_generation_call_count": 40,
+  "new_repair_call_count": 3,
+  "missing_fixed_assets": [],
+  "delivery_note": "Prefer webp_url in app. PNG originals are preserved. WebP alpha derivatives are lossless; opaque scenes quality90. Separate mobile hero composition, not desktop crop. Annotation files live in repository docs/art, not public routes. Alpha assets also have small display variants; registered canvases retain their aspect ratio. Full-size lossless WebP and PNG remain available."
+}

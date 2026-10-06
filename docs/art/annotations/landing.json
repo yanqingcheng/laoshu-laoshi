@@ -1,0 +1,124 @@
+{
+  "coordinate_note": "All regions suggested from visual inspection; validate overlays at actual viewport and type sizes. Rectangles use x,y,width,height in 0..1 image space.",
+  "assets": [
+    {
+      "filename": "landing-hero-desktop.png",
+      "purpose": "Desktop landing page hero; title, subtitle and CTA overlay on cream left",
+      "text_safe_area": {
+        "x": 0.045,
+        "y": 0.19,
+        "width": 0.285,
+        "height": 0.46
+      },
+      "subject_bbox": {
+        "x": 0.35,
+        "y": 0.245,
+        "width": 0.61,
+        "height": 0.53
+      },
+      "focal_point": {
+        "x": 0.675,
+        "y": 0.54
+      },
+      "alt": "A spectacled mouse teacher shares a blank book with a golden Chow dog and striped cat in a welcoming paper-textured Chinese village garden.",
+      "crop_rules": "Use full 3:2 frame. Prefer contain or native aspect ratio. Do not center-crop to portrait; switch to mobile hero. Avoid text beyond x=0.33, as dog's tail enters around x=0.35.",
+      "alpha_required": false,
+      "prompt": "Use case: illustration-story. Create ONE new polished 3:2 landscape landing-page hero illustration for Laoshu Laoshi, a welcoming immersive language-learning world. The input style board is style reference only; three input character sheets establish the cast's exact identities, never reproduce their sheet layouts. This scene is a Chinese storybook garden outside the village, not anyone's personal room. Composition: LEFT 40% is quiet warm cream handmade paper with only extremely pale sparse atmospheric washes, clean enough for real app title, subtitle and buttons to be placed over it. No foreground subjects or strong edges there. All action in RIGHT 55%: the mouse teacher in blue robe and round glasses presents a large open blank cream book to his friendly golden Chow dog and striped Lihua cat companions. The three full-bodied friends gather close in a welcoming semicircle, every head, ear, tail and foot fully within frame. Mouse center of group, dog beside him, cat beside him; identities and proportions match sheets. Small charming cottages with jade and indigo tiled roofs visible behind the group on the right, garden stepping stones, restrained bamboo and pink blossoms framing far right and upper right; generous breathing room, no clutter. Soft daylight, warm invitation to explore stories. Fade gently from richly colored right garden to quiet cream left, without a hard dividing line. Flat gouache and folk woodblock shapes on handmade paper, following the supplied D Story Garden + Paper Detail board for palette and medium only. Warm cream, indigo, muted jade, terracotta and restrained ochre; painted paper details, imperfect cut edges, fine paper grain, shallow soft layer shadows, soft daylight. No photorealism, no glossy 3D, no vector look. Character identity strictly follows supplied approved character sheets: tan mouse teacher with pink ears, round glasses and long blue Chinese robe; golden fluffy Chow with blue vest and ochre toggles; brown/gold striped Lihua cat with white muzzle/paws and dark vest with red and gold trim. Whole expressive faces, friendly natural interaction, same scale and proportions as character sheets. No writing, letters, numbers, symbols resembling text, labels, watermarks, frames, panels or interface. All books and signs blank.",
+      "generation_wall_clock_seconds": 40.321,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "attempts": 1,
+      "generation_status": "accepted",
+      "tool": "built-in image_gen",
+      "validation": "Inspected full image: correct cast, clothing, warm paper/gouache style, blank book where applicable, no text or baked UI, intact full bodies and faces. This art is for public landing and onboarding only; not personal home room.",
+      "coordinate_system": "normalized image coordinates, origin upper left",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "alpha_range": null,
+      "alpha_result": "pass"
+    },
+    {
+      "filename": "landing-hero-mobile.png",
+      "purpose": "Mobile landing page portrait; title, subtitle and CTA overlay at top",
+      "text_safe_area": {
+        "x": 0.1,
+        "y": 0.035,
+        "width": 0.8,
+        "height": 0.21
+      },
+      "subject_bbox": {
+        "x": 0.012,
+        "y": 0.424,
+        "width": 0.974,
+        "height": 0.414
+      },
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.64
+      },
+      "alt": "The mouse teacher, golden Chow and striped cat gather over an open blank book beneath cream paper sky in a flowering storybook village.",
+      "crop_rules": "Use full 2:3 frame without cropping ears, paws or side tails. Maintain cream top area. On very narrow layouts render image at natural aspect ratio rather than cover. Keep overlay within conservative safe box; edge foliage begins around y=0.26.",
+      "alpha_required": false,
+      "prompt": "Use case: illustration-story. Create ONE new polished 2:3 PORTRAIT mobile landing hero illustration for Laoshu Laoshi. Style board reference is for medium and palette only; the three approved character sheets establish exact identities. TOP 35% is quiet warm cream handmade paper, only faint atmospheric wash, no subject, tree branch, building or strong edge there: this must remain available for real app title, subtitle and buttons. The recognizable trio gathers together in the LOWER HALF: friendly tan mouse teacher with round spectacles and long blue robe showing a large open blank cream book, friendly golden Chow dog in blue vest at his side, brown/gold striped Lihua cat with white paws in dark red/gold vest at other side. Whole bodies, ears, tails and feet visible with margin. Preserve sheet identities, clothing, colors and scale. Welcoming Chinese storybook garden and little village cottages with jade/indigo tiled roofs occupy middle band and bottom, subtle bamboo and blossom detail at lower side edges. Clear read at mobile size. Teacher is outside in the village with friends, not in a personal home room. Gentle transition from cream upper space to rich lower garden, no hard dividing line. All three are happily sharing stories. Flat gouache and folk woodblock shapes on handmade paper, following the supplied D Story Garden + Paper Detail board for palette and medium only. Warm cream, indigo, muted jade, terracotta and restrained ochre; painted paper details, imperfect cut edges, fine paper grain, shallow soft layer shadows, soft daylight. No photorealism, no glossy 3D, no vector look. Character identity strictly follows supplied approved character sheets: tan mouse teacher with pink ears, round glasses and long blue Chinese robe; golden fluffy Chow with blue vest and ochre toggles; brown/gold striped Lihua cat with white muzzle/paws and dark vest with red and gold trim. Whole expressive faces, friendly natural interaction, same scale and proportions as character sheets. No writing, letters, numbers, symbols resembling text, labels, watermarks, frames, panels or interface. All books and signs blank.",
+      "generation_wall_clock_seconds": 38.745,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "attempts": 1,
+      "generation_status": "accepted",
+      "tool": "built-in image_gen",
+      "validation": "Inspected full image: correct cast, clothing, warm paper/gouache style, blank book where applicable, no text or baked UI, intact full bodies and faces. This art is for public landing and onboarding only; not personal home room.",
+      "coordinate_system": "normalized image coordinates, origin upper left",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "alpha_range": null,
+      "alpha_result": "pass"
+    },
+    {
+      "filename": "welcome-trio.png",
+      "purpose": "Transparent onboarding and welcome-back illustration; all three characters waving together",
+      "text_safe_area": null,
+      "subject_bbox": {
+        "x": 0.018,
+        "y": 0.049,
+        "width": 0.96,
+        "height": 0.857
+      },
+      "focal_point": {
+        "x": 0.5,
+        "y": 0.49
+      },
+      "alt": "A golden Chow, bespectacled mouse teacher in a blue robe and striped cat wave together with friendly smiles.",
+      "crop_rules": "Use contain; keep complete trio and original alpha. Do not crop or split characters because they overlap. Put text outside artwork. No background color removal.",
+      "alpha_required": true,
+      "prompt": "Use case: illustration-story. Create ONE new 3:2 landscape transparent onboarding / welcome-back illustration of the original three friendly animal characters standing close together and waving hello. Inputs are a STYLE reference board and three CHARACTER IDENTITY sheets, not edit targets. Match those identities closely. Left: fluffy golden Chow dog in blue Chinese vest with ochre trim and toggles, sitting upright and raising one front paw. Center: tan mouse teacher with pink-inner ears, round spectacles, long blue Chinese robe, smiling warmly and raising one hand in a welcoming wave. Right: brown and gold striped Lihua cat with white muzzle and paws, dark vest with red and gold trim, sitting upright and waving one front paw, striped tail curled. Three distinct full bodies in one compact balanced grouping, all feet, paws, ears and tails visible, generous empty margin on all four edges. Eye-level frontal view, clearly readable at small sizes. No props, no book, no scenery, no ground plane. TRUE transparent background, real alpha, no checkerboard. Only small soft contact shadows immediately under feet. Flat gouache and folk woodblock shapes on handmade paper, following the supplied D Story Garden + Paper Detail board for palette and medium only. Warm cream, indigo, muted jade, terracotta and restrained ochre; painted paper details, imperfect cut edges, fine paper grain, shallow soft layer shadows, soft daylight. No photorealism, no glossy 3D, no vector look. Character identity strictly follows supplied approved character sheets: tan mouse teacher with pink ears, round glasses and long blue Chinese robe; golden fluffy Chow with blue vest and ochre toggles; brown/gold striped Lihua cat with white muzzle/paws and dark vest with red and gold trim. Whole expressive faces, friendly natural interaction, same scale and proportions as character sheets. No writing, letters, numbers, symbols resembling text, labels, watermarks, frames, panels or interface. All books and signs blank.",
+      "generation_wall_clock_seconds": 36.756,
+      "model_id": null,
+      "usage": null,
+      "cost": null,
+      "attempts": 1,
+      "generation_status": "accepted",
+      "tool": "built-in image_gen",
+      "validation": "Inspected full image: correct cast, clothing, warm paper/gouache style, blank book where applicable, no text or baked UI, intact full bodies and faces. This art is for public landing and onboarding only; not personal home room.",
+      "coordinate_system": "normalized image coordinates, origin upper left",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_result": "pass",
+      "transparent_fraction": 0.41942087809244794,
+      "alpha_over_10_bbox_pixels": [
+        28,
+        51,
+        1500,
+        934
+      ]
+    }
+  ]
+}

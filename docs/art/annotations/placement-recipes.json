@@ -1,0 +1,133 @@
+{
+  "coordinate_system": "normalized image coordinates; top-left origin; suggested rectangles require responsive validation",
+  "marker_rules": {
+    "town": "Put optical centre just above the corresponding house roof, anchored to the same slot button. Do not duplicate the marker inside the image.",
+    "surfaces": "Top-right of the corresponding object hotspot; avoid hiding the screen, book cover, or character face.",
+    "optical_size_px": 32,
+    "minimum_button_size_px": 48,
+    "priority": [
+      "empty",
+      "locked",
+      "pending",
+      "unseen",
+      "none"
+    ],
+    "settings": "marker-pending.png may also be reused as a STATIC settings cog in app chrome, with a settings label; reserve rotation for actual pending generation.",
+    "help": "marker-help.png for tutorial/help affordances, never a job error or content eligibility gate",
+    "failure": "marker-retry.png with real explanatory text and a working retry action"
+  },
+  "objects": {
+    "image_fit": "Trim using visible_bounds_alpha_gt_8 from the master manifest, preserve alpha, contain within target rectangle; never stretch.",
+    "home_wall_frame": {
+      "file": "objects/wall-frame.png",
+      "x": 0.12,
+      "y": 0.15,
+      "width": 0.14,
+      "height": 0.17
+    },
+    "home_wall_scroll": {
+      "file": "objects/wall-scroll.png",
+      "x": 0.682,
+      "y": 0.235,
+      "width": 0.075,
+      "height": 0.245
+    },
+    "home_floor_cushion": {
+      "file": "objects/cushion.png",
+      "x": 0.5,
+      "y": 0.76,
+      "width": 0.12,
+      "height": 0.12
+    },
+    "neighbour_shelf": {
+      "anchor": [
+        0.504,
+        0.358
+      ],
+      "bounding_box": [
+        0.421,
+        0.239,
+        0.166,
+        0.119
+      ],
+      "files": [
+        "objects/teacup.png",
+        "objects/flower.png",
+        "objects/book.png"
+      ],
+      "note": "One selected object at a time, bottom aligned to shelf surface."
+    },
+    "neighbour_table": {
+      "anchor": [
+        0.652,
+        0.575
+      ],
+      "bounding_box": [
+        0.602,
+        0.462,
+        0.101,
+        0.113
+      ],
+      "files": [
+        "objects/apple.png",
+        "objects/basket.png",
+        "objects/teacup.png"
+      ],
+      "note": "One selected object, bottom aligned. Keep original book on left visible."
+    },
+    "neighbour_floor": {
+      "anchor": [
+        0.174,
+        0.895
+      ],
+      "bounding_box": [
+        0.089,
+        0.763,
+        0.17,
+        0.132
+      ],
+      "files": [
+        "objects/cushion.png",
+        "objects/basket.png"
+      ]
+    },
+    "neighbour_wall": {
+      "anchor": [
+        0.795,
+        0.28
+      ],
+      "bounding_box": [
+        0.69,
+        0.15,
+        0.21,
+        0.26
+      ],
+      "files": [
+        "objects/wall-frame.png",
+        "objects/wall-scroll.png",
+        "objects/kite.png",
+        "objects/lantern.png"
+      ]
+    },
+    "wall_frame_text_safe_in_source": [
+      0.19,
+      0.3,
+      0.62,
+      0.4
+    ],
+    "wall_scroll_text_safe_in_source": [
+      0.27,
+      0.29,
+      0.46,
+      0.55
+    ],
+    "text_note": "Render vocabulary as app text. Text-safe coordinates refer to complete original source PNG canvas, before optical trimming. Transform consistently with the picture."
+  },
+  "care": {
+    "watering_can": "Momentary visual prop or labelled care action near the sill; do not cover the fixed phone, console, or camera.",
+    "droplets": "Transient small overlay travelling toward plants during a real care action, never a persistent wet background.",
+    "sparkles": "Transient success feedback only; do not indicate saved progress until save succeeds.",
+    "recovery": "Replace only plant condition; preserve maturity. Keep all trio states registered as supplied."
+  },
+  "status": "artist suggestions; not application integration"
+}

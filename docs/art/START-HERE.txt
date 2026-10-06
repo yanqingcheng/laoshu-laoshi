@@ -1,0 +1,57 @@
+LAOSHU LAOSHI — COMPLETE ART LIBRARY
+
+56 production PNGs: the 19 approved files from the first batch, plus 37 new assets.
+
+NEW ART
+  9 plant layers: 3 growth sizes x healthy / drooping / recovering
+  1 home room with an empty windowsill for those layers
+  10 status/action markers
+  3 landing and welcome illustrations, including a dedicated mobile hero
+  14 care effects, currency, blank vocabulary frames and starter collectibles
+
+START WITH THE PICTURES
+  previews/home-placement-board.jpg
+  previews/landing-desktop-placement.jpg
+  previews/landing-mobile-placement.jpg
+  previews/town-marker-placement-board.jpg
+  previews/neighbour-placement-board.jpg
+  previews/plants-contact-sheet.jpg
+  previews/objects-contact-sheet.jpg
+  previews/markers-contact-sheet.jpg
+
+WHERE EACH PIECE GOES
+prompt-library/ holds 57 exact historical generation prompts (including retries),
+seven versioned on-demand templates, and the append-only workflow for future calls.
+ART-INDEX.csv is a plain catalogue: each file, its purpose, where it goes and its state.
+asset-manifest.json has measured sizes, transparency, optical bounds and annotation links.
+ART-DIRECTION.txt explains the visual rules, motion suggestions and integration semantics.
+annotations/plants.json has the exact shared plant placement and state mappings.
+annotations/placement-recipes.json has suggested object locations and marker rules.
+
+IMPORTANT FOR LOVABLE
+The PNGs are static. Animate markers and care props in the app using the supplied motion
+suggestions; use static alternatives for reduced motion. Connect plants and markers to
+actual saved state. No fake completion, ownership, pending job or streak is baked in.
+Use plants/home-room-empty-windowsill.png for a dynamic home room; do not overlay plants
+on core/home-room.png, which already contains painted plants.
+Plant images are registered to one shared canvas: do not trim individual plant states.
+Small objects and markers can be fitted using their visible bounds; preserve aspect ratio.
+All positions are artist suggestions from inspected images; validate mobile layout and
+touch targets in the app. The original furniture hotspots remain available in core.
+
+SCOPE
+This folder is ready for integration, not an already-integrated app. No app source exists
+locally yet. Personal stories, neighbours, lesson pictures and game-specific art remain
+runtime generation from the learner's approved vocabulary; see ART-DIRECTION.txt.
+
+VALIDATION
+All planned fixed assets in this pass are present. Cutout alpha is checked and placement
+composites inspected. Three plant attempts were repaired. Minor geometry/pot motif and
+palette differences are documented in annotations; plant swapping should use a crossfade.
+No missing final assets. Existing event-art and all generation originals are preserved.
+
+PROVENANCE
+New batch: 40 built-in imagegen calls, including 3 repairs, producing 37 accepted assets.
+Exact prompts and observed timings are in annotations. Model ID, usage and monetary cost
+were not exposed by the tool; image cost is unknown. No reference art or private data
+is included in this delivery.

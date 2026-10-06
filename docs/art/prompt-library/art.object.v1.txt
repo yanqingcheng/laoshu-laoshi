@@ -1,0 +1,5 @@
+Create ONE isolated reusable game art cutout: {{PICTURE_EN}}. Single whole object, centred, generous 15% margins, bold instantly recognisable silhouette at small display size. Front view from very slightly above matching room furniture, soft upper-left daylight. No surface, ground plane, scenery, hands, characters or unrelated props. Small close contact shadow only when appropriate.
+
+TRUE transparent background with real alpha, no checkerboard. Preserve opaque cream inside the subject. No mist, glow, rectangular patches or texture outside the subject. Clean antialiased edges. No colour-based background removal.
+
+Match the attached approved Laoshu Laoshi style reference for palette and medium only, never its layout. Flat gouache and folk woodblock shapes on handmade paper; warm cream, indigo, muted jade, terracotta and restrained ochre; imperfect painted edges, paper grain, shallow layer shadows, soft daylight. No photorealism, glossy 3D or vector look. No writing, letters, numbers, labels, watermarks or interface. Books, boards and screens remain blank. Explicit punctuation symbols are permitted only for the marker template.

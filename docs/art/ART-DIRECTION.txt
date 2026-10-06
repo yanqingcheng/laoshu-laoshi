@@ -1,0 +1,76 @@
+LAOSHU LAOSHI — ARTIST HANDOFF
+Created during the 6 October 2026 hackathon.
+
+SOURCE OF TRUTH
+Current user direction plus the event BUILD-RULES sections 7, 8, 17, 24;
+updated planning docs/design.md and docs/requirements.md R83, R98, R100b,
+R115, R122, R124. Existing event-art is the approved production style.
+Historical prototypes inform requirements only; no prototype art is shipped.
+There is no Lovable source export yet. This is an art handoff, not app integration.
+
+DIRECTORY MAP
+core/       Previous approved rooms, houses, characters, avatars and layout manifest.
+landing/    Desktop and mobile first-visit hero art; transparent welcome-back trio.
+plants/     Empty-windowsill replacement room and interchangeable plant state layers.
+markers/    New/unseen, help, pending, locked, construction, complete, retry, gifts, affection.
+objects/    Care effects, currency, blank vocabulary frames and starter collectibles.
+previews/   Annotated placement boards and visual contact sheets; not production backdrops.
+annotations/ Per-batch prompts, states, dimensions, alpha checks and placement suggestions.
+
+PLANTS
+Growth and care condition are separate axes. Seedling, growing and thriving reflect
+accumulated care. Each has healthy, drooping and recovering artwork. Missing days
+does not reset maturity. Plants never die. Return and care are welcoming.
+Map the real saved review/care state to these images. No visible numeric streak.
+Do not infer completion just because an animation played. Exact thresholds belong
+to the app's selected product rules; historical rehearsal numbers are not mandates.
+Remove the baked plants by using the new empty-windowsill room BEFORE layering the
+trio. Do not place a second plant layer on top of the old painted-in plants.
+Keep all states on the same registered canvas and replace/crossfade the entire trio.
+
+MARKERS
+Canonical map priority: empty plot; otherwise locked if not eligible; otherwise cog
+if open but generation pending; otherwise ! if unseen eligible content; otherwise none.
+Question mark means help. NEW starburst is optional decorative emphasis, not another
+eligibility state. A construction barrier means actual construction/job work, not a
+vocabulary lock. A failed job should show Retry, never perpetual construction.
+Render accessible names and status words as real UI text. No marker alone explains
+an error. Ordinary keyboard focus, text labels and button hit areas remain app-owned.
+
+MOTION SUGGESTIONS (not baked into PNGs)
+Unseen: gentle 2px bob over 2.4 seconds; stop after a few cycles or on interaction.
+Pending cog: slow 6-second rotation only while a job is actually pending.
+New sparkle: one brief opacity/scale pulse on arrival, not continuous flashing.
+Watering: can tilts slightly; droplets travel toward plants; state crossfade 350ms.
+Recovery: a brief sparkle, then static restored plants. No camera shake or punishment.
+Reduced motion: static markers, instant or short opacity-only state changes.
+Marker art at roughly 28-40px; touch targets at least 48px, independent of art size.
+
+LANDING / HOME PAGE
+Desktop hero reserves a quiet left zone for title, short explanation and primary action.
+Mobile hero is separately composed; do not crop the desktop scene to a narrow slice.
+The trio belongs on landing/onboarding/welcome screens. The teacher does not live in
+the learner's personal room. Keep real title and sign-in controls outside the raster.
+
+COLLECTIBLES AND WALL ART
+These are reusable starter art assets, not evidence an item is owned or purchasable.
+The app associates canonical word IDs and only offers items allowed by actual vocabulary.
+Coins reflect committed practice; they are distinct from generation credits.
+Frames/scrolls stay blank so correct Hanzi/pinyin can be rendered as real selectable text.
+Do not invent glyphs inside generated paintings. Place small objects on the shelf/table,
+floor items on the floor, hanging art on clear wall. Store normalized Layout positions.
+
+RUNTIME ART VS FIXED ART
+Personal neighbours, source-specific houses, room themes, lesson images, book scenes,
+comic panels, and game-specific items depend on the learner and approved vocabulary.
+They remain runtime generation tasks. Fixed art here supplies reusable visual foundations;
+no stock placeholder should be claimed as a newly generated personal scene.
+Shop uses stock house/room per event spec. Park/gym uses its existing map slot; unique
+future arcade/cafe/grammar buildings are not required to invent during this art pass.
+
+QUALITY / DELIVERY
+Keep original PNG alpha; never erase cream pixels to remove a background.
+Check foreground trim bounds before placing objects; transparent padding is significant.
+All originals and rejected attempts are preserved outside this delivery folder.
+Detailed prompts and measured times are included; model IDs and cost are unknown when
+not exposed by the built-in image tool. No reference images, secrets, or app code ship.
