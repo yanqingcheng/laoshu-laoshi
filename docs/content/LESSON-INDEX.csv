@@ -1,0 +1,27 @@
+﻿lessonOrder,lessonKey,lessonTitle,packTitle,host,targetCount,plan,status
+0,starter,Getting Started,The Very Mixed-Up Welcome Portrait,mouse,21,lesson-packs/01-starter.json,planned-not-generated
+1,hsk1-numbers-calendar,Numbers & Calendar,Dog's Ten Guests and One Date,dog,16,lesson-packs/02-hsk1-numbers-calendar.json,planned-not-generated
+2,hsk1-family-age,Family & Age,Cat's Family Portrait Frame,cat,14,lesson-packs/03-hsk1-family-age.json,planned-not-generated
+3,hsk1-places-questions,Places & Questions,The Two Doorways,mouse,15,lesson-packs/04-hsk1-places-questions.json,planned-not-generated
+4,hsk1-social-survival,Social Survival & Titles,A Polite Mix-Up at the Visitor Desk,dog,9,lesson-packs/05-hsk1-social-survival.json,planned-not-generated
+5,hsk1-groups-common,Groups & Common Ground,The Friendship Group Photo,cat,8,lesson-packs/06-hsk1-groups-common.json,planned-not-generated
+6,hsk1-actions-consumption,Actions & Consumption,Mouse's Two-Cup Supper Plan,mouse,16,lesson-packs/07-hsk1-actions-consumption.json,planned-not-generated
+7,hsk1-daily-time,Daily Life & Time,Dog's Very Early Supper,dog,15,lesson-packs/08-hsk1-daily-time.json,planned-not-generated
+8,hsk1-travel-position,Travel & Position,Cat's Tabletop Journey,cat,20,lesson-packs/09-hsk1-travel-position.json,planned-not-generated
+9,hsk1-weather-extremes,Weather & Extremes,The Picnic That Moved Indoors,dog,11,lesson-packs/10-hsk1-weather-extremes.json,planned-not-generated
+10,hsk1-media,Media,The Missing Movie Voice,cat,10,lesson-packs/11-hsk1-media.json,planned-not-generated
+11,hsk1-learning-skills,Learning & Skills,The Call with a Hidden Picture,mouse,14,lesson-packs/12-hsk1-learning-skills.json,planned-not-generated
+12,hsk1-shopping-groceries,Shopping & Groceries,"Three Friends, One Small Budget",dog,10,lesson-packs/13-hsk1-shopping-groceries.json,planned-not-generated
+13,hsk2-time-routine,Time & Routine,Dog's Impossible Morning,cat,13,lesson-packs/14-hsk2-time-routine.json,planned-not-generated
+14,hsk2-family-complete,Family Complete,The Family Portrait Mix-up,mouse,10,lesson-packs/15-hsk2-family-complete.json,planned-not-generated
+15,hsk2-health-movement,Health & Movement,The Gentle Walk to the Right Door,dog,12,lesson-packs/16-hsk2-health-movement.json,planned-not-generated
+16,hsk2-position-adjectives,Position & Adjectives,The Long Table Delivery,cat,14,lesson-packs/17-hsk2-position-adjectives.json,planned-not-generated
+17,hsk2-numbers-colors,"Numbers, Measure & Colors",The Hundred-Coin Costume Rehearsal,mouse,9,lesson-packs/18-hsk2-numbers-colors.json,planned-not-generated
+18,hsk2-food,Food,The Three-Tray Lunch,mouse,8,lesson-packs/19-hsk2-food.json,planned-not-generated
+19,hsk2-sports-weather,"Sports, Fun & Weather",The Picnic That Keeps Moving,dog,11,lesson-packs/20-hsk2-sports-weather.json,planned-not-generated
+20,hsk2-school-communication,School & Communication,The Lesson in the Wrong Hands,cat,13,lesson-packs/21-hsk2-school-communication.json,planned-not-generated
+21,hsk2-opinions-modals,Opinions & Modals,May the Book Be the Teacher?,mouse,11,lesson-packs/22-hsk2-opinions-modals.json,planned-not-generated
+22,hsk2-conjunctions-comparison,Conjunctions & Comparison,The Best Place for a Tiny Show,dog,12,lesson-packs/23-hsk2-conjunctions-comparison.json,planned-not-generated
+23,hsk2-places-transport,"Places, Transport & Objects",The Ticket in the Newspaper,cat,13,lesson-packs/24-hsk2-places-transport.json,planned-not-generated
+24,hsk2-aspect-modifiers,Aspect & Modifiers,The Rehearsal That Happened Twice,mouse,10,lesson-packs/25-hsk2-aspect-modifiers.json,planned-not-generated
+25,hsk2-misc,Miscellaneous,The Birthday Shop with No Customer,dog,11,lesson-packs/26-hsk2-misc.json,planned-not-generated

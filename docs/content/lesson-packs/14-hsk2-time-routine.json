@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-time-routine",
+  "lessonOrder": 13,
+  "lessonTitle": "Time & Routine",
+  "targetWords": [
+    "早上",
+    "晚上",
+    "小时",
+    "每",
+    "日",
+    "去年",
+    "时间",
+    "起床",
+    "上班",
+    "洗",
+    "穿",
+    "休息",
+    "累"
+  ],
+  "packTitle": "Dog's Impossible Morning",
+  "host": "cat",
+  "setting": "Cat's existing room hosts a movable picture schedule; routine scenes are inset illustrations.",
+  "motivation": "Cat helps dog make time for work, friends and rest.",
+  "obstacle": "Dog has planned every activity for the same hour and is already tired.",
+  "runningJoke": "Dog puts sleeping and getting up into the same schedule position, then tries to do both.",
+  "communicationGoals": [
+    "Describe a morning and evening routine.",
+    "Distinguish an hour from a clock time.",
+    "Make room for rest in a repeated routine."
+  ],
+  "reviewTargets": [
+    "现在",
+    "点",
+    "分钟",
+    "今天",
+    "明天",
+    "睡觉",
+    "工作"
+  ],
+  "story": {
+    "motivation": "Cat helps dog make time for work, friends and rest.",
+    "obstacle": "Dog has planned every activity for the same hour and is already tired.",
+    "turn": "Learner places rest after work and selects a one-hour activity.",
+    "payoff": "Dog follows a calm day and has energy for friends in the evening.",
+    "pages": [
+      {
+        "page": 1,
+        "action": "Dog arrives tired with all activity cards stacked at one time.",
+        "imageBrief": "Dog leaning on table beside layered blank cards and simple clock faces.",
+        "purpose": "Establish an impossible plan.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 2,
+        "action": "Cat separates getting up, washing, dressing and work.",
+        "imageBrief": "Four clear routine pictures with no embedded text.",
+        "purpose": "Make verbs concrete and ordered.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 3,
+        "action": "Learner places rest after work and selects a one-hour activity.",
+        "imageBrief": "Two duration strips with repeated clock endpoints, distinguish time from duration.",
+        "purpose": "Turn scheduling into a workable choice.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 4,
+        "action": "Dog follows a calm day and has energy for friends in the evening.",
+        "imageBrief": "Two-panel morning/evening room lighting, dog alert then comfortably resting.",
+        "purpose": "Reward balance rather than maximizing work.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "Cat asks about dog's morning.",
+      "Dog shows a pile of activities.",
+      "Mouse notices identical clock faces.",
+      "Learner separates actions into morning and evening.",
+      "Dog mistakes one hour for one o'clock.",
+      "Cat demonstrates a duration strip.",
+      "The learner adds rest.",
+      "Family portraits arrive for the next visit."
+    ],
+    "cliffhanger": "Who are all the people in the portraits?",
+    "delivery": "Six to eight short shots using existing room backgrounds and character identities; one checked line per shot where possible. Audio generated only after each line passes checkText.",
+    "status": "planned-not-generated"
+  },
+  "game": {
+    "mechanic": "Routine repair board",
+    "objective": "Place action cards in the requested time or duration slot while retaining a rest period.",
+    "languageNecessary": "Each picture appears in multiple plausible slots; time and action language determine the requested placement.",
+    "exampleRound_EN": "Intent: Rest for one hour in the evening. Choose an evening one-hour strip rather than a morning strip or the one-o'clock slot.",
+    "distractors": [
+      "Correct action in morning",
+      "Clock time substituted for duration",
+      "Work substituted for rest"
+    ],
+    "controlsDesktop": "Select a card with click or Tab and Enter, then select its destination; drag is optional. Space replays the current checked audio; escape cancels the pending placement. No speed requirement.",
+    "controlsMobile": "Tap a card then tap its destination with at least 48px targets. A persistent replay button and explicit confirm support one-handed play; never require precision dragging or hover.",
+    "win": "Complete three distinct request rounds, including at least one changed attribute combination. A corrected retry can succeed; completion alone is not evidence that every target word was learned.",
+    "feedback": "Show the selected outcome, replay the relevant checked clause, and let the learner revise one choice. Do not reveal the answer using a new word, a translation shortcut or color alone. Report only genuine submitted evidence through the memory layer."
+  },
+  "conversation": {
+    "role": "Learner is the helper; cat hosts and the other recurring friends supply context.",
+    "goal": "Cat helps dog make time for work, friends and rest.",
+    "repairStrategy": "On uncertainty, replay the last checked sentence, shorten it using the same allowed words, then offer two checked alternatives grounded in the scene. Never introduce an unknown synonym or pretend an unintelligible response was correct. Let the learner pass without losing progress.",
+    "validation": "Check each host utterance, suggested learner response and repair independently using actual checkText; these are plans, not validated dialogue.",
+    "turnIntents_EN": [
+      "Tell cat when you get up.",
+      "Describe washing and dressing.",
+      "Say when you go to work.",
+      "Explain that you are tired and choose rest.",
+      "Confirm an evening plan."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Routine washing vignette",
+      "word": "洗",
+      "assetReuse": null,
+      "purpose": "Action card"
+    },
+    {
+      "visual": "Folded clothing",
+      "word": "穿",
+      "assetReuse": null,
+      "purpose": "Dressing action, reuse shopping prop if generated"
+    },
+    {
+      "visual": "Resting dog pose",
+      "word": "休息",
+      "assetReuse": null,
+      "purpose": "Rest is an affirmative outcome"
+    },
+    {
+      "visual": "Simple duration strip",
+      "word": "小时",
+      "assetReuse": null,
+      "purpose": "Separate elapsed time from clock labels"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "purpose": "Four story panels and episode crops",
+      "brief": "Preserve the established gouache paper style and character identities. Compose the four story imageBriefs, leave all lettering blank, and keep separable targets visually clear. Existing reference files are reusable guidance, not evidence that these new panels exist.",
+      "referencePaths": [
+        "/art/core/stock-room.png",
+        "/art/core/cat-neutral.png",
+        "/art/core/cat-delighted.png"
+      ]
+    },
+    {
+      "status": "planned-not-generated",
+      "purpose": "Object and action overlays for the planned game",
+      "brief": "Routine washing vignette; Folded clothing; Resting dog pose; Simple duration strip. Reuse named files where geometry permits; request only missing views. Transparent cutouts with recorded placement and readable silhouettes. Runtime supplies checked Chinese text; no embedded generated writing.",
+      "referencePaths": []
+    }
+  ],
+  "desktopUX": {
+    "entry": "Open this chapter from its host room shelf or TV; shopping scenes enter the existing shop content view.",
+    "layout": "Scene left, current checked line and replay below it; task choices and a clear confirmation panel on the right. Keep image, dialogue and choices visible together.",
+    "accessibility": "Keyboard order follows speaker, replay, alternatives, confirm; meaningful alt descriptions and text state, no color-only cues.",
+    "mapRule": "Retain exactly eight world slots. This lesson adds content chapters to existing rooms or the shop, not a new lesson house."
+  },
+  "mobileUX": {
+    "layout": "Stack scene, current line and two or three large choices. Fix replay and confirm within reachable controls; keep picture pinch zoom optional.",
+    "reading": "One story page or episode beat at a time; previous and next buttons remain distinct from object targets.",
+    "accessibility": "Support text resizing and reduced motion; text and sound alternatives accompany all meaningful state."
+  },
+  "vocabularyRisks": [
+    "Before/after and then may be unavailable; ordering can be visual while sentences stay separate.",
+    "No unsupported alarm, toothbrush, breakfast or schedule nouns.",
+    "Do not confuse every day and last year; include separate episodic review rather than forced combined sentences."
+  ],
+  "vocabularyPolicy": {
+    "source": "src/data/course.json",
+    "cumulativeThroughOrder": 13,
+    "planningLanguage": "English only apart from exact source vocabulary identifiers.",
+    "scriptConstraint": "Final Chinese scripts use only the permitted cumulative course/learner set for this lesson. Availability of a pictured concept or English planning term grants no hidden vocabulary allowance.",
+    "perItemGate": "Before acceptance, run checkText on every story page, episode line, game instruction, request, distractor label, feedback line, conversation turn and repair against the actual allowed set supplied by memory. Rework failures or leave the item blocked; do not bypass with labels, pinyin, synonyms, compounding or translations.",
+    "visualPolicy": "Unlabeled visual concepts may appear for motivation. Any caption, alt text delivered in Chinese, hotspot label or spoken reference must pass its own checkText gate.",
+    "currentValidation": "Only exact target order, prior review membership and cumulative object identifiers checked here. No generated Chinese text, audio, images or runtime content validated or ready."
+  }
+}

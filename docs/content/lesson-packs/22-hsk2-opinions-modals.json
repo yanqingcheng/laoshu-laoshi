@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-opinions-modals",
+  "lessonOrder": 21,
+  "lessonTitle": "Opinions & Modals",
+  "targetWords": [
+    "觉得",
+    "知道",
+    "懂",
+    "希望",
+    "意思",
+    "错",
+    "对",
+    "可以",
+    "可能",
+    "要",
+    "让"
+  ],
+  "targetCoverage": [
+    {
+      "word": "觉得",
+      "intent_EN": "State a personal interpretation",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "知道",
+      "intent_EN": "Separate known information from speculation",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "懂",
+      "intent_EN": "Confirm understanding of a message",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "希望",
+      "intent_EN": "Express a desired outcome without asserting certainty",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "意思",
+      "intent_EN": "Ask what the invitation means",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "错",
+      "intent_EN": "Identify a demonstrably mistaken interpretation",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "对",
+      "intent_EN": "Confirm a correct interpretation with evidence",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "可以",
+      "intent_EN": "Ask permission for the performance",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "可能",
+      "intent_EN": "Preserve uncertainty about attendance",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "要",
+      "intent_EN": "State a wanted action",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "让",
+      "intent_EN": "Ask the host to allow another character to perform",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    }
+  ],
+  "packTitle": "May the Book Be the Teacher?",
+  "host": "mouse",
+  "setting": "An improvised paper theatre inside the existing mouse room.",
+  "motivation": "The mouse wants the friends to agree what the invitation permits before their performance.",
+  "obstacle": "The dog interprets a possibility as permission, then treats the cat's hope as a confirmed plan.",
+  "runningJoke": "The book remains in the teacher's chair, apparently taking every decision very seriously.",
+  "communicationGoals": [
+    "Separate permission, possibility and desire.",
+    "Ask for the meaning of an unclear statement.",
+    "Revise an interpretation without pretending to know something uncertain."
+  ],
+  "reviewTargets": [
+    "想",
+    "会",
+    "能",
+    "书",
+    "老师",
+    "告诉",
+    "问",
+    "准备"
+  ],
+  "story": {
+    "language": "English planning only; not learner-facing Chinese",
+    "pages": [
+      {
+        "page": 1,
+        "action": "The mouse asks the trio to decide who may perform and what they hope to show.",
+        "imageBrief": "Mouse room theatre rehearsal, book on chair, trio considering a blank plan.",
+        "purpose": "Create a decision with different kinds of information."
+      },
+      {
+        "page": 2,
+        "action": "The dog announces a definite plan from a statement that was only a possibility.",
+        "imageBrief": "Dog confidently moving the book toward centre stage; cat hesitant.",
+        "purpose": "Expose modal misunderstanding through consequence."
+      },
+      {
+        "page": 3,
+        "action": "The learner asks what the statement means and separates allowed, possible and wanted.",
+        "imageBrief": "Three distinct nonverbal staging areas with identical candidate pictures.",
+        "purpose": "Resolve by interpreting stance, not by recognising pictures."
+      },
+      {
+        "page": 4,
+        "action": "The performance begins with a shared plan; the book watches from its chair.",
+        "imageBrief": "Trio on small rehearsal area, book audience member.",
+        "purpose": "Pay off honest clarification and agreement."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "The mouse reads the invitation in paraphrase.",
+      "The dog decides the book is definitely teaching.",
+      "The cat says that is not what she understood.",
+      "The mouse distinguishes a wish from something known.",
+      "One permission changes but one uncertain fact remains uncertain.",
+      "The learner chooses an accurate summary.",
+      "The friends agree; the dog gives the book a front-row seat."
+    ],
+    "cliffhanger": "Choosing the performance location will require reasons, not just opinions."
+  },
+  "game": {
+    "mechanic": "Evidence-board classification and interpretation revision",
+    "objective": "Classify six statements as permission, possibility, desire or knowledge, then correct one overconfident plan.",
+    "languageNecessary": "Each statement can refer to the same pictured action; only the checked modal or mental-state wording reveals its force.",
+    "exampleRound_EN": "The cat may come tomorrow is uncertain, not confirmation. Keep her place provisional; do not mark her as definitely present.",
+    "distractors": [
+      "Possible treated as certain",
+      "Wanted treated as allowed",
+      "Unknown treated as incorrect"
+    ],
+    "controlsDesktop": "Select a statement, then one of four stance zones; support keyboard and a separate undo. Show evidence and provisional plan together.",
+    "controlsMobile": "One statement above four large stance buttons; provisional plan in a collapsible bottom card. Never use a precision drag.",
+    "win": "Six statements interpreted with uncertainty preserved; optional explanations do not require unlearned terminology.",
+    "feedback": "Contrast the changed meaning in English scaffolding and replay the checked target phrase; retain the learner's original choice for comparison.",
+    "evidencePolicy": "No automatic schedule evidence from a decorative tap or choice visible in the prompt. Any future graded event must use the app's existing evidence rules and deduplicate requests."
+  },
+  "conversation": {
+    "role": "Rehearsal partner interpreting an invitation",
+    "goal": "Reach a plan that distinguishes what is allowed, hoped for and still unknown.",
+    "repairStrategy": "Offer replay, slower replay and the checked transcript; allow a clarification request or two meaning choices. Confirm intended meaning before proceeding. Do not score pronunciation or equate silence with failure; typed mode remains available.",
+    "turnIntents_EN": [
+      "State what you think the invitation means.",
+      "Ask for clarification.",
+      "Say what you hope to do.",
+      "Respond to a permission boundary.",
+      "Summarize one known fact and one possibility."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Book occupying the teacher chair",
+      "word": "书",
+      "assetReuse": "/art/objects/book.png",
+      "purpose": "Running joke"
+    },
+    {
+      "visual": "Blank meaning card",
+      "word": "意思",
+      "assetReuse": null,
+      "purpose": "Interpretation prompt"
+    },
+    {
+      "visual": "Cat portrait",
+      "word": "朋友",
+      "assetReuse": "/art/core/cat-neutral.png",
+      "purpose": "Uncertain attendance"
+    },
+    {
+      "visual": "Room table",
+      "word": "桌子",
+      "assetReuse": null,
+      "purpose": "Shared planning surface"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "request": "One book-on-chair vignette and a neutral invitation card; state badges rendered by app rather than baked labels.",
+      "referencePaths": [
+        "/art/core/home-room.png",
+        "/art/core/stock-room.png",
+        "/art/core/mouse-neutral.png",
+        "/art/core/mouse-delighted.png",
+        "/art/objects/book.png"
+      ],
+      "constraints": "Match existing handmade-paper story garden palette and silhouettes. Reuse room camera and stable empty UI regions; no new map slot. Object layers require true alpha, clear margins and no baked text. Label intended variants before any generation."
+    }
+  ],
+  "desktopUX": {
+    "layout": "Warm cream reading surface, indigo text, restrained jade/terracotta accents; two-column art and interaction on wide screens. Keep controls off character faces and target objects.",
+    "interaction": "Select a statement, then one of four stance zones; support keyboard and a separate undo. Show evidence and provisional plan together.",
+    "reading": "Always-available replay, transcript, pinyin preference through shared WordText, focus-visible controls and undo. No hover-only information.",
+    "motion": "Only brief state transitions; reduced motion uses static swaps. Never auto-advance a reading page."
+  },
+  "mobileUX": {
+    "layout": "Single-column art crop using contain, never crop evidence. Dialogue and choices below art; portrait-first layout preserves the complete meaningful action.",
+    "interaction": "One statement above four large stance buttons; provisional plan in a collapsible bottom card. Never use a precision drag.",
+    "accessibility": "Minimum 48px targets, visible focus, clear contrast, screen-reader alternatives and safe-area spacing. No pinch, audio-only or drag-only requirement.",
+    "reading": "Short checked utterance chunks with large replay button; expanding transcript must not cover answer choices. Preserve progress across rotation."
+  },
+  "vocabularyRisks": [
+    "Do not equate can, may and know across all contexts. Use carefully authored situations to isolate permission from ability; meaning/wrong/right language must not become a claim about the learner's personal opinion.",
+    "targetWords are exact source entries in source order, not a ready-made allowed-word snapshot. reviewTargets are earlier course entries, not proof the learner knows them.",
+    "Before generating any Chinese, obtain the actual learner allowedWordIds snapshot through word memory. Tokenize with existing data, run checkText before storage and again before display; derive pinyin from stored words and audit compounds. Withhold failed output.",
+    "All scripts, dialogue intents and image directions in this plan are English. Chinese strings occur only as exact source vocabulary identifiers. No Chinese content has been generated or validated by checkText.",
+    "Art and English planning may depict an unnamed item; it must not force an unavailable Chinese name. No new locations, hosts or curriculum unlock assumptions."
+  ]
+}

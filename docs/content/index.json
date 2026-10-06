@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "source": "src/data/course.json",
+  "lessons": [
+    {
+      "lessonOrder": 0,
+      "lessonKey": "starter",
+      "lessonTitle": "Getting Started",
+      "packTitle": "The Very Mixed-Up Welcome Portrait",
+      "host": "mouse",
+      "targetCount": 21,
+      "plan": "lesson-packs/01-starter.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 1,
+      "lessonKey": "hsk1-numbers-calendar",
+      "lessonTitle": "Numbers & Calendar",
+      "packTitle": "Dog's Ten Guests and One Date",
+      "host": "dog",
+      "targetCount": 16,
+      "plan": "lesson-packs/02-hsk1-numbers-calendar.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 2,
+      "lessonKey": "hsk1-family-age",
+      "lessonTitle": "Family & Age",
+      "packTitle": "Cat's Family Portrait Frame",
+      "host": "cat",
+      "targetCount": 14,
+      "plan": "lesson-packs/03-hsk1-family-age.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 3,
+      "lessonKey": "hsk1-places-questions",
+      "lessonTitle": "Places & Questions",
+      "packTitle": "The Two Doorways",
+      "host": "mouse",
+      "targetCount": 15,
+      "plan": "lesson-packs/04-hsk1-places-questions.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 4,
+      "lessonKey": "hsk1-social-survival",
+      "lessonTitle": "Social Survival & Titles",
+      "packTitle": "A Polite Mix-Up at the Visitor Desk",
+      "host": "dog",
+      "targetCount": 9,
+      "plan": "lesson-packs/05-hsk1-social-survival.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 5,
+      "lessonKey": "hsk1-groups-common",
+      "lessonTitle": "Groups & Common Ground",
+      "packTitle": "The Friendship Group Photo",
+      "host": "cat",
+      "targetCount": 8,
+      "plan": "lesson-packs/06-hsk1-groups-common.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 6,
+      "lessonKey": "hsk1-actions-consumption",
+      "lessonTitle": "Actions & Consumption",
+      "packTitle": "Mouse's Two-Cup Supper Plan",
+      "host": "mouse",
+      "targetCount": 16,
+      "plan": "lesson-packs/07-hsk1-actions-consumption.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 7,
+      "lessonKey": "hsk1-daily-time",
+      "lessonTitle": "Daily Life & Time",
+      "packTitle": "Dog's Very Early Supper",
+      "host": "dog",
+      "targetCount": 15,
+      "plan": "lesson-packs/08-hsk1-daily-time.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 8,
+      "lessonKey": "hsk1-travel-position",
+      "lessonTitle": "Travel & Position",
+      "packTitle": "Cat's Tabletop Journey",
+      "host": "cat",
+      "targetCount": 20,
+      "plan": "lesson-packs/09-hsk1-travel-position.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 9,
+      "lessonKey": "hsk1-weather-extremes",
+      "lessonTitle": "Weather & Extremes",
+      "packTitle": "The Picnic That Moved Indoors",
+      "host": "dog",
+      "targetCount": 11,
+      "plan": "lesson-packs/10-hsk1-weather-extremes.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 10,
+      "lessonKey": "hsk1-media",
+      "lessonTitle": "Media",
+      "packTitle": "The Missing Movie Voice",
+      "host": "cat",
+      "targetCount": 10,
+      "plan": "lesson-packs/11-hsk1-media.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 11,
+      "lessonKey": "hsk1-learning-skills",
+      "lessonTitle": "Learning & Skills",
+      "packTitle": "The Call with a Hidden Picture",
+      "host": "mouse",
+      "targetCount": 14,
+      "plan": "lesson-packs/12-hsk1-learning-skills.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 12,
+      "lessonKey": "hsk1-shopping-groceries",
+      "lessonTitle": "Shopping & Groceries",
+      "packTitle": "Three Friends, One Small Budget",
+      "host": "dog",
+      "targetCount": 10,
+      "plan": "lesson-packs/13-hsk1-shopping-groceries.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 13,
+      "lessonKey": "hsk2-time-routine",
+      "lessonTitle": "Time & Routine",
+      "packTitle": "Dog's Impossible Morning",
+      "host": "cat",
+      "targetCount": 13,
+      "plan": "lesson-packs/14-hsk2-time-routine.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 14,
+      "lessonKey": "hsk2-family-complete",
+      "lessonTitle": "Family Complete",
+      "packTitle": "The Family Portrait Mix-up",
+      "host": "mouse",
+      "targetCount": 10,
+      "plan": "lesson-packs/15-hsk2-family-complete.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 15,
+      "lessonKey": "hsk2-health-movement",
+      "lessonTitle": "Health & Movement",
+      "packTitle": "The Gentle Walk to the Right Door",
+      "host": "dog",
+      "targetCount": 12,
+      "plan": "lesson-packs/16-hsk2-health-movement.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 16,
+      "lessonKey": "hsk2-position-adjectives",
+      "lessonTitle": "Position & Adjectives",
+      "packTitle": "The Long Table Delivery",
+      "host": "cat",
+      "targetCount": 14,
+      "plan": "lesson-packs/17-hsk2-position-adjectives.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 17,
+      "lessonKey": "hsk2-numbers-colors",
+      "lessonTitle": "Numbers, Measure & Colors",
+      "packTitle": "The Hundred-Coin Costume Rehearsal",
+      "host": "mouse",
+      "targetCount": 9,
+      "plan": "lesson-packs/18-hsk2-numbers-colors.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 18,
+      "lessonKey": "hsk2-food",
+      "lessonTitle": "Food",
+      "packTitle": "The Three-Tray Lunch",
+      "host": "mouse",
+      "targetCount": 8,
+      "plan": "lesson-packs/19-hsk2-food.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 19,
+      "lessonKey": "hsk2-sports-weather",
+      "lessonTitle": "Sports, Fun & Weather",
+      "packTitle": "The Picnic That Keeps Moving",
+      "host": "dog",
+      "targetCount": 11,
+      "plan": "lesson-packs/20-hsk2-sports-weather.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 20,
+      "lessonKey": "hsk2-school-communication",
+      "lessonTitle": "School & Communication",
+      "packTitle": "The Lesson in the Wrong Hands",
+      "host": "cat",
+      "targetCount": 13,
+      "plan": "lesson-packs/21-hsk2-school-communication.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 21,
+      "lessonKey": "hsk2-opinions-modals",
+      "lessonTitle": "Opinions & Modals",
+      "packTitle": "May the Book Be the Teacher?",
+      "host": "mouse",
+      "targetCount": 11,
+      "plan": "lesson-packs/22-hsk2-opinions-modals.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 22,
+      "lessonKey": "hsk2-conjunctions-comparison",
+      "lessonTitle": "Conjunctions & Comparison",
+      "packTitle": "The Best Place for a Tiny Show",
+      "host": "dog",
+      "targetCount": 12,
+      "plan": "lesson-packs/23-hsk2-conjunctions-comparison.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 23,
+      "lessonKey": "hsk2-places-transport",
+      "lessonTitle": "Places, Transport & Objects",
+      "packTitle": "The Ticket in the Newspaper",
+      "host": "cat",
+      "targetCount": 13,
+      "plan": "lesson-packs/24-hsk2-places-transport.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 24,
+      "lessonKey": "hsk2-aspect-modifiers",
+      "lessonTitle": "Aspect & Modifiers",
+      "packTitle": "The Rehearsal That Happened Twice",
+      "host": "mouse",
+      "targetCount": 10,
+      "plan": "lesson-packs/25-hsk2-aspect-modifiers.json",
+      "status": "planned-not-generated"
+    },
+    {
+      "lessonOrder": 25,
+      "lessonKey": "hsk2-misc",
+      "lessonTitle": "Miscellaneous",
+      "packTitle": "The Birthday Shop with No Customer",
+      "host": "dog",
+      "targetCount": 11,
+      "plan": "lesson-packs/26-hsk2-misc.json",
+      "status": "planned-not-generated"
+    }
+  ]
+}

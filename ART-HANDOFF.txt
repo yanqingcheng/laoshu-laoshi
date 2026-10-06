@@ -66,5 +66,7 @@ Generalized templates are adaptations: each actual result still needs validation
 WHAT IS NOT CLAIMED
 No application integration, live review/plant logic, generated lesson content or
 browser visual QA has been completed by this asset commit. Existing stage flags
-remain truthful. Lesson scenario plans will be supplied under docs/content separately.
+remain truthful. All 26 lesson scenario plans are supplied under docs/content;
+start with docs/content/START-HERE.txt and index.json. These are editorial plans,
+with art briefs and responsive UX requirements, not generated playable content.
 All image costs remain unknown because the built-in image tool did not expose them.

@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-position-adjectives",
+  "lessonOrder": 16,
+  "lessonTitle": "Position & Adjectives",
+  "targetWords": [
+    "旁边",
+    "左边",
+    "右边",
+    "外",
+    "近",
+    "远",
+    "离",
+    "高",
+    "长",
+    "快",
+    "慢",
+    "新",
+    "贵",
+    "便宜"
+  ],
+  "packTitle": "The Long Table Delivery",
+  "host": "cat",
+  "setting": "Cat's room, existing shop counter chapter and town route inset; no new permanent destination.",
+  "motivation": "Cat needs a table that fits beside her chair before friends arrive.",
+  "obstacle": "A new expensive long table looks impressive but does not fit, while an older cheap short option solves the actual need.",
+  "runningJoke": "Dog admires furniture by how difficult it is to carry, treating that as a recommendation.",
+  "communicationGoals": [
+    "Describe left, right, beside and outside from a fixed viewpoint.",
+    "Compare distance, height, length and speed in a practical choice.",
+    "Discuss newness and price independently of usefulness."
+  ],
+  "reviewTargets": [
+    "桌子",
+    "椅子",
+    "买",
+    "钱",
+    "多少",
+    "路",
+    "走"
+  ],
+  "story": {
+    "motivation": "Cat needs a table that fits beside her chair before friends arrive.",
+    "obstacle": "A new expensive long table looks impressive but does not fit, while an older cheap short option solves the actual need.",
+    "turn": "Learner chooses the shorter cheaper option and directs a slow delivery.",
+    "payoff": "Table sits beside chair and all friends can gather.",
+    "pages": [
+      {
+        "page": 1,
+        "action": "Cat shows an empty space beside a chair.",
+        "imageBrief": "Room viewed front-on with clear fixed viewpoint and two candidate furniture silhouettes.",
+        "purpose": "Establish fit as the goal.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 2,
+        "action": "Dog brings the long new table and cannot place it.",
+        "imageBrief": "Table visibly exceeds gap, no collision slapstick.",
+        "purpose": "Make length matter beyond a label.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 3,
+        "action": "Learner chooses the shorter cheaper option and directs a slow delivery.",
+        "imageBrief": "Two price overlays supplied by UI; route near/far represented consistently.",
+        "purpose": "Turn comparisons into fit and navigation.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 4,
+        "action": "Table sits beside chair and all friends can gather.",
+        "imageBrief": "Successful room layout with uncluttered central floor.",
+        "purpose": "Pay off suitability over status.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "Cat measures the gap visually.",
+      "Dog chooses the tallest display.",
+      "Mouse asks about the price.",
+      "Learner compares the long and short candidates.",
+      "Cat fixes the viewpoint for left and right.",
+      "The learner chooses the nearby route.",
+      "Dog walks slowly with the useful table.",
+      "Three similar items now need separate identifying labels."
+    ],
+    "cliffhanger": "How can the friends tell the three similar items apart?",
+    "delivery": "Six to eight short shots using existing room backgrounds and character identities; one checked line per shot where possible. Audio generated only after each line passes checkText.",
+    "status": "planned-not-generated"
+  },
+  "game": {
+    "mechanic": "Fit, describe and deliver",
+    "objective": "Choose an object satisfying two stated attributes and place it at the requested relation.",
+    "languageNecessary": "No option satisfies every attribute by visual salience; the checked combination and relation are necessary.",
+    "exampleRound_EN": "Intent: Put the cheap small table on the right of the chair. Three candidates share one feature; only one meets price and size, then placement must be correct.",
+    "distractors": [
+      "New expensive table",
+      "Cheap table too long",
+      "Correct table left of chair"
+    ],
+    "controlsDesktop": "Select a card with click or Tab and Enter, then select its destination; drag is optional. Space replays the current checked audio; escape cancels the pending placement. No speed requirement.",
+    "controlsMobile": "Tap a card then tap its destination with at least 48px targets. A persistent replay button and explicit confirm support one-handed play; never require precision dragging or hover.",
+    "win": "Complete three distinct request rounds, including at least one changed attribute combination. A corrected retry can succeed; completion alone is not evidence that every target word was learned.",
+    "feedback": "Show the selected outcome, replay the relevant checked clause, and let the learner revise one choice. Do not reveal the answer using a new word, a translation shortcut or color alone. Report only genuine submitted evidence through the memory layer."
+  },
+  "conversation": {
+    "role": "Learner is the helper; cat hosts and the other recurring friends supply context.",
+    "goal": "Cat needs a table that fits beside her chair before friends arrive.",
+    "repairStrategy": "On uncertainty, replay the last checked sentence, shorten it using the same allowed words, then offer two checked alternatives grounded in the scene. Never introduce an unknown synonym or pretend an unintelligible response was correct. Let the learner pass without losing progress.",
+    "validation": "Check each host utterance, suggested learner response and repair independently using actual checkText; these are plans, not validated dialogue.",
+    "turnIntents_EN": [
+      "Describe the space beside the chair.",
+      "Ask which table is cheap.",
+      "Compare long and tall without conflating them.",
+      "Give a left or right instruction from the displayed viewpoint.",
+      "Confirm the final position and delivery pace."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Short and long tables",
+      "word": "长",
+      "assetReuse": null,
+      "purpose": "Length comparison"
+    },
+    {
+      "visual": "Chair",
+      "word": "椅子",
+      "assetReuse": null,
+      "purpose": "Stable spatial reference"
+    },
+    {
+      "visual": "Price card with empty center",
+      "word": "贵",
+      "assetReuse": null,
+      "purpose": "Runtime checked price and adjective overlay"
+    },
+    {
+      "visual": "Two routes",
+      "word": "近",
+      "assetReuse": null,
+      "purpose": "Distance comparison"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "purpose": "Four story panels and episode crops",
+      "brief": "Preserve the established gouache paper style and character identities. Compose the four story imageBriefs, leave all lettering blank, and keep separable targets visually clear. Existing reference files are reusable guidance, not evidence that these new panels exist.",
+      "referencePaths": [
+        "/art/core/stock-room.png",
+        "/art/core/cat-neutral.png",
+        "/art/core/cat-delighted.png"
+      ]
+    },
+    {
+      "status": "planned-not-generated",
+      "purpose": "Object and action overlays for the planned game",
+      "brief": "Short and long tables; Chair; Price card with empty center; Two routes. Reuse named files where geometry permits; request only missing views. Transparent cutouts with recorded placement and readable silhouettes. Runtime supplies checked Chinese text; no embedded generated writing.",
+      "referencePaths": []
+    }
+  ],
+  "desktopUX": {
+    "entry": "Open this chapter from its host room shelf or TV; shopping scenes enter the existing shop content view.",
+    "layout": "Scene left, current checked line and replay below it; task choices and a clear confirmation panel on the right. Keep image, dialogue and choices visible together.",
+    "accessibility": "Keyboard order follows speaker, replay, alternatives, confirm; meaningful alt descriptions and text state, no color-only cues.",
+    "mapRule": "Retain exactly eight world slots. This lesson adds content chapters to existing rooms or the shop, not a new lesson house."
+  },
+  "mobileUX": {
+    "layout": "Stack scene, current line and two or three large choices. Fix replay and confirm within reachable controls; keep picture pinch zoom optional.",
+    "reading": "One story page or episode beat at a time; previous and next buttons remain distinct from object targets.",
+    "accessibility": "Support text resizing and reduced motion; text and sound alternatives accompany all meaningful state."
+  },
+  "vocabularyRisks": [
+    "Comparative constructions must pass actual checkText; known adjectives do not authorize arbitrary grammar.",
+    "Always anchor left/right to screen or identified character viewpoint; never switch silently.",
+    "Old is not a lesson word: show the earlier table visually without naming it unless allowed.",
+    "Cheap and expensive are relative to explicit examples, not moral judgments."
+  ],
+  "vocabularyPolicy": {
+    "source": "src/data/course.json",
+    "cumulativeThroughOrder": 16,
+    "planningLanguage": "English only apart from exact source vocabulary identifiers.",
+    "scriptConstraint": "Final Chinese scripts use only the permitted cumulative course/learner set for this lesson. Availability of a pictured concept or English planning term grants no hidden vocabulary allowance.",
+    "perItemGate": "Before acceptance, run checkText on every story page, episode line, game instruction, request, distractor label, feedback line, conversation turn and repair against the actual allowed set supplied by memory. Rework failures or leave the item blocked; do not bypass with labels, pinyin, synonyms, compounding or translations.",
+    "visualPolicy": "Unlabeled visual concepts may appear for motivation. Any caption, alt text delivered in Chinese, hotspot label or spoken reference must pass its own checkText gate.",
+    "currentValidation": "Only exact target order, prior review membership and cumulative object identifiers checked here. No generated Chinese text, audio, images or runtime content validated or ready."
+  }
+}

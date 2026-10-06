@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk1-travel-position",
+  "lessonOrder": 8,
+  "lessonTitle": "Travel & Position",
+  "targetWords": [
+    "坐",
+    "开",
+    "出租车",
+    "飞机",
+    "火车站",
+    "火车",
+    "车",
+    "住",
+    "能",
+    "桌子",
+    "椅子",
+    "上",
+    "下",
+    "前面",
+    "后面",
+    "面",
+    "里",
+    "这里",
+    "那里",
+    "哪里"
+  ],
+  "packTitle": "Cat's Tabletop Journey",
+  "host": "cat",
+  "setting": "The existing cat room becomes a tabletop travel theatre. Toy vehicles, a station picture, a table and chair provide position clues; no new destinations are added to the town map.",
+  "motivation": "Cat wants to place a travel postcard and choose a suitable vehicle before the friends' pretend trip.",
+  "obstacle": "Dog parks a toy car behind the station picture while cat keeps checking the front.",
+  "runningJoke": "The tiny chair is repeatedly offered to a toy airplane as if it were another guest.",
+  "communicationGoals": [
+    "Locate objects on, under, in front of, behind or inside a clear reference object.",
+    "Distinguish vehicles and the train station without treating the station as a vehicle.",
+    "Use sitting, opening/driving, living and ability only in curated sense-specific contexts."
+  ],
+  "reviewTargets": [
+    "哪儿",
+    "这儿",
+    "那儿",
+    "在",
+    "家",
+    "学校",
+    "去",
+    "回"
+  ],
+  "languageValidation": {
+    "state": "required-before-generation-and-display",
+    "rule": "All eventual learner-visible Chinese wording, scripts, answer choices, subtitles and audio transcripts must pass checkText against the real allowed snapshot at generation time. This English plan is not validated learner content. Also review grammar, source meanings and pragmatic appropriateness; token membership alone is insufficient.",
+    "visualRule": "Visual concepts may exceed nameable vocabulary; do not force their names into Chinese output. Use gesture and layout for unnameable actions.",
+    "courseVocabularyNote": "Cumulative course words here are planning constraints, not a claim of learner-known or allowed memory state."
+  },
+  "story": {
+    "format": "four-page illustrated reader",
+    "pages": [
+      {
+        "page": 1,
+        "beat": "motivation",
+        "action": "Cat lays a station picture and three toy vehicles on a low table, with one chair beside it.",
+        "imageBrief": "Tabletop station flat, train, taxi and airplane separated; no printed names.",
+        "purpose": "Set a clear objective for vehicle and location choices."
+      },
+      {
+        "page": 2,
+        "beat": "obstacle",
+        "action": "The selected car is behind the station flat; cat points to the empty space in front.",
+        "imageBrief": "Camera fixed at slight angle; enough offset to show partial occlusion truthfully.",
+        "purpose": "Make front/behind clues necessary rather than arbitrary answer buttons."
+      },
+      {
+        "page": 3,
+        "beat": "turn",
+        "action": "Learner follows checked position cues to place a vehicle, then selects a sitting or driving vignette appropriate to the prompt.",
+        "imageBrief": "Table, chair and a shallow tray provide on/under/inside relations with accurate occlusion.",
+        "purpose": "Separate position, vehicle and action meanings in distinct short rounds."
+      },
+      {
+        "page": 4,
+        "beat": "payoff",
+        "action": "The tabletop route is complete and cat settles on the chair; the airplane's tiny chair is left humorously empty.",
+        "imageBrief": "Completed small travel theatre contained entirely in the room.",
+        "purpose": "Pay off a successful pretend journey without requiring advanced travel dialogue."
+      }
+    ]
+  },
+  "episode": {
+    "format": "short illustrated episode with checked audio planned later",
+    "beats": [
+      "Cat identifies table and chair as stable reference objects.",
+      "Toy train, taxi and airplane appear one at a time.",
+      "Station picture is distinguished from the train beside it.",
+      "Dog's car disappears partly behind the picture.",
+      "Learner resolves a location cue using the fixed camera.",
+      "A second round contrasts on/under with inside a shallow tray.",
+      "Curated vignettes distinguish sitting from driving and opening.",
+      "Cat's home postcard provides a simple live-at-home response before the pretend trip ends."
+    ],
+    "cliffhanger": "A familiar friend appears beside two differently sized objects, ready for the next course pack's new vocabulary rather than an invented sentence."
+  },
+  "game": {
+    "mechanic": "Occlusion-aware location theatre",
+    "objective": "Place the selected object in the requested relation to table, chair or station flat.",
+    "languageNecessary": "Several valid locations remain visually possible; checked object plus relation identifies the one correct placement.",
+    "exampleRound_EN": "EN planning example: select the train and place it behind the station picture; then identify the cat sitting on the chair.",
+    "distractors": "Train versus station; taxi versus generic car; front/behind reversal; on versus under; here/there relative to wrong speaker.",
+    "controlsDesktop": "Select object then one large labeled-by-app placement zone; keyboard cycles valid zones.",
+    "controlsMobile": "Tap object, then a large ghost preview of each legal placement; never require dragging behind an occluder.",
+    "win": "Four placements across at least three relations and one vehicle/station contrast.",
+    "feedback": "Show a side-on inset only after a mistake, replay the checked relation, and restore the original camera before retry."
+  },
+  "conversation": {
+    "role": "Cat as tabletop travel guide",
+    "goal": "Choose a pictured vehicle and describe its position while answering a simple home-location question.",
+    "turnIntents_EN": [
+      "Identify the selected vehicle.",
+      "Ask where the car or train is.",
+      "Describe one object relative to table or chair.",
+      "Respond to a curated ability question tied to an observable action.",
+      "Say where the fictional host lives."
+    ],
+    "repairStrategy": "Keep the referenced object outlined and offer two contrasting positions; do not introduce new directional nouns while repairing."
+  },
+  "objects": [
+    {
+      "visual": "Toy taxi",
+      "word": "出租车",
+      "assetReuse": null,
+      "purpose": "Specific vehicle choice.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Toy train",
+      "word": "火车",
+      "assetReuse": null,
+      "purpose": "Vehicle contrasted with station.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Station picture flat",
+      "word": "火车站",
+      "assetReuse": null,
+      "purpose": "Fixed location reference.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Simple chair",
+      "word": "椅子",
+      "assetReuse": null,
+      "purpose": "Sitting and positional reference.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Low table",
+      "word": "桌子",
+      "assetReuse": null,
+      "purpose": "On/under reference.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    }
+  ],
+  "artRequests": [
+    {
+      "kind": "prop",
+      "brief_EN": "Toy taxi, train, airplane, station flat and simple chair",
+      "status": "planned-not-generated",
+      "outputPath": "/art/planned/lesson-packs/hsk1-travel-position/prop-1.webp",
+      "constraints": "Reuse the story-garden palette and cast identity. No baked text, UI, watermark or new map plot. App renders all real labels. New scene/prop images are not generated by this planning task.",
+      "referencePaths": [
+        "/art/core/stock-room.webp",
+        "/art/core/sheet-cat.webp"
+      ]
+    }
+  ],
+  "desktopUX": "Keep a fixed camera and show placement zones with accurate front/back layering. Use keyboard-accessible zone selection, not only drag and drop.",
+  "mobileUX": "Render one reference object at a time; show two or three large ghost placement previews below. Never mirror the scene or obscure a target with the learner's finger.",
+  "vocabularyRisks": [
+    "The source gloss for sit does not automatically license every ride-by-transport construction; curate any extended transport usage before release.",
+    "Open/drive are separate senses; use an open-box or driving vignette only with approved known context, never a vague ambiguous verb cue.",
+    "Face/side/surface is not a standalone substitute for front or behind; give it an explicitly approved contextual example.",
+    "Here/there/where variants should be accepted according to the real checker snapshot; avoid assuming token segmentation equivalence.",
+    "Ability must be tied to a depicted possible action, not inferred disability or a judgment about the learner."
+  ],
+  "deliveryScope": "Course pack served inside an existing bundled neighbour room. No new map plot, live generation, API call or ownership mutation is planned here."
+}

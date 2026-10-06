@@ -1,0 +1,22 @@
+{
+  "status": "passed-structural-and-source-checks",
+  "courseSha256": "a2d1a799a0de1b1c6f9be9a384cf821b04bb40ec19ac08019f9de7a433b08f3f",
+  "lessonCount": 26,
+  "uniqueCourseWords": 326,
+  "existingArtReferences": 23,
+  "checks": [
+    "One pack per source lesson, exact order, title and vocabulary sequence",
+    "Prior-course review identifiers; cumulative-course object identifiers",
+    "Four story pages, six to eight episode beats, five conversation intents",
+    "Required language-dependent game and both viewport specifications",
+    "All concrete art URLs resolve to files",
+    "Common conversation/reference fields normalized; minimum touch size 48px"
+  ],
+  "notVerified": [
+    "Mandarin scripts: not generated",
+    "Learner-specific checkText: requires real snapshot",
+    "Scenario art: briefs only, not generated",
+    "Playable activities: not implemented",
+    "Desktop/mobile browser behavior: not implemented or tested"
+  ]
+}

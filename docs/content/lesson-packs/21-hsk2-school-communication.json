@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-school-communication",
+  "lessonOrder": 20,
+  "lessonTitle": "School & Communication",
+  "targetWords": [
+    "课",
+    "考试",
+    "题",
+    "准备",
+    "教室",
+    "第一",
+    "告诉",
+    "问",
+    "说话",
+    "介绍",
+    "送",
+    "您",
+    "给"
+  ],
+  "targetCoverage": [
+    {
+      "word": "课",
+      "intent_EN": "Identify the lesson being prepared",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "考试",
+      "intent_EN": "Replay: prepare a pretend exam, without actual high-stakes grading",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "题",
+      "intent_EN": "Deliver the first question to its intended recipient",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "准备",
+      "intent_EN": "Confirm preparation status",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "教室",
+      "intent_EN": "Name the classroom role of the existing room",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "第一",
+      "intent_EN": "Select the first task, not the largest picture",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "告诉",
+      "intent_EN": "Relay information to another character",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "问",
+      "intent_EN": "Ask rather than assume a recipient",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "说话",
+      "intent_EN": "Request a speaking turn",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "介绍",
+      "intent_EN": "Introduce the guest teacher",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "送",
+      "intent_EN": "Send the book as a deliberate delivery action",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "您",
+      "intent_EN": "Use formal address in the guest greeting",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "给",
+      "intent_EN": "Give an object to a named recipient",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    }
+  ],
+  "packTitle": "The Lesson in the Wrong Hands",
+  "host": "cat",
+  "setting": "The mouse room temporarily arranged as a classroom; no additional map slot.",
+  "motivation": "The cat wants to introduce the dog as the guest teacher without mixing up the lesson materials.",
+  "obstacle": "A book and the first question reach the wrong person because the messenger remembers the object but not the recipient.",
+  "runningJoke": "The dog proudly introduces the book as if it were the visiting teacher.",
+  "communicationGoals": [
+    "Follow who gives or sends an object to whom.",
+    "Distinguish asking a question from telling someone information.",
+    "Make a brief polite introduction and identify the first task."
+  ],
+  "reviewTargets": [
+    "老师",
+    "学生",
+    "书",
+    "同学",
+    "听",
+    "说",
+    "认识"
+  ],
+  "story": {
+    "language": "English planning only; not learner-facing Chinese",
+    "pages": [
+      {
+        "page": 1,
+        "action": "The cat prepares the classroom and introduces the visiting dog.",
+        "imageBrief": "Mouse room, trio, closed book and blank question cards on table.",
+        "purpose": "Establish roles and recipient expectations."
+      },
+      {
+        "page": 2,
+        "action": "The dog receives the question meant for the mouse and the mouse receives the teaching book.",
+        "imageBrief": "Two incorrect deliveries shown with uncertain expressions, no symbolic solution cue.",
+        "purpose": "Create a recipient-role misunderstanding."
+      },
+      {
+        "page": 3,
+        "action": "The learner asks who needs the book, then relays the corrected instruction.",
+        "imageBrief": "Cat listening between mouse and dog; object held centrally.",
+        "purpose": "Make clarification and directed giving the solution."
+      },
+      {
+        "page": 4,
+        "action": "The lesson starts; the dog introduces the book again before remembering the mouse.",
+        "imageBrief": "Correct recipients with dog gesturing grandly at book.",
+        "purpose": "Reward successful coordination and close the joke."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "The cat is given responsibility for introductions.",
+      "The mouse prepares a first question.",
+      "The dog rehearses a formal greeting.",
+      "The materials cross in transit.",
+      "The cat asks rather than guesses.",
+      "The learner delivers the correct message and object.",
+      "The first lesson succeeds despite the dog's unusual introduction."
+    ],
+    "cliffhanger": "The dog asks whether a book can be the teacher; the friends disagree about what the invitation meant."
+  },
+  "game": {
+    "mechanic": "Message relay with sender-action-recipient reconstruction",
+    "objective": "Deliver four messages or objects by selecting a speaker, action and recipient.",
+    "languageNecessary": "The same characters and book occur in every candidate; word order and give/tell/ask semantics select the correct relationship.",
+    "exampleRound_EN": "Tell the mouse that the cat is preparing the lesson. Select cat as source of preparation, tell as relay action, and mouse as recipient; do not send the book to the dog.",
+    "distractors": [
+      "Reversed sender and recipient",
+      "Correct recipient but ask instead of tell",
+      "Object delivery replacing an information message"
+    ],
+    "controlsDesktop": "Keyboard-select sender, action and recipient in three columns; Enter previews the relationship before a separate confirmation.",
+    "controlsMobile": "Three sequential panels retain a compact visible relationship summary. Tap through sender/action/recipient; back edits one field.",
+    "win": "Four reconstructed relationships confirmed, with role icons retained across turns.",
+    "feedback": "Animate only the mistaken relationship after confirmation and replay the relevant checked clause; never mark an accent or optional wording as wrong.",
+    "evidencePolicy": "No automatic schedule evidence from a decorative tap or choice visible in the prompt. Any future graded event must use the app's existing evidence rules and deduplicate requests."
+  },
+  "conversation": {
+    "role": "Classroom helper introducing a guest",
+    "goal": "Get the first question and teaching book to the right people.",
+    "repairStrategy": "Offer replay, slower replay and the checked transcript; allow a clarification request or two meaning choices. Confirm intended meaning before proceeding. Do not score pronunciation or equate silence with failure; typed mode remains available.",
+    "turnIntents_EN": [
+      "Greet the guest politely.",
+      "Introduce one friend.",
+      "Ask who should receive the book.",
+      "Relay a short instruction to the right person.",
+      "Confirm that the classroom is prepared."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Closed teaching book",
+      "word": "书",
+      "assetReuse": "/art/objects/book.png",
+      "purpose": "Object delivery"
+    },
+    {
+      "visual": "Blank lesson card",
+      "word": "课",
+      "assetReuse": null,
+      "purpose": "Lesson selector"
+    },
+    {
+      "visual": "Blank question card",
+      "word": "题",
+      "assetReuse": null,
+      "purpose": "First task"
+    },
+    {
+      "visual": "Teacher mouse portrait",
+      "word": "老师",
+      "assetReuse": "/art/core/mouse-neutral.png",
+      "purpose": "Recipient role"
+    },
+    {
+      "visual": "Dog guest portrait",
+      "word": "朋友",
+      "assetReuse": "/art/core/dog-neutral.png",
+      "purpose": "Speaker role"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "request": "Classroom arrangement overlay and blank lesson/question cards; reuse book and trio portraits.",
+      "referencePaths": [
+        "/art/core/home-room.png",
+        "/art/core/stock-room.png",
+        "/art/core/cat-neutral.png",
+        "/art/core/cat-delighted.png",
+        "/art/objects/book.png"
+      ],
+      "constraints": "Match existing handmade-paper story garden palette and silhouettes. Reuse room camera and stable empty UI regions; no new map slot. Object layers require true alpha, clear margins and no baked text. Label intended variants before any generation."
+    }
+  ],
+  "desktopUX": {
+    "layout": "Warm cream reading surface, indigo text, restrained jade/terracotta accents; two-column art and interaction on wide screens. Keep controls off character faces and target objects.",
+    "interaction": "Keyboard-select sender, action and recipient in three columns; Enter previews the relationship before a separate confirmation.",
+    "reading": "Always-available replay, transcript, pinyin preference through shared WordText, focus-visible controls and undo. No hover-only information.",
+    "motion": "Only brief state transitions; reduced motion uses static swaps. Never auto-advance a reading page."
+  },
+  "mobileUX": {
+    "layout": "Single-column art crop using contain, never crop evidence. Dialogue and choices below art; portrait-first layout preserves the complete meaningful action.",
+    "interaction": "Three sequential panels retain a compact visible relationship summary. Tap through sender/action/recipient; back edits one field.",
+    "accessibility": "Minimum 48px targets, visible focus, clear contrast, screen-reader alternatives and safe-area spacing. No pinch, audio-only or drag-only requirement.",
+    "reading": "Short checked utterance chunks with large replay button; expanding transcript must not cover answer choices. Preserve progress across rotation."
+  },
+  "vocabularyRisks": [
+    "Replace any planning term outside the cumulative snapshot in later scripts; especially do not assume a generic question/problem word is available before its lesson. Polite pronoun is introduced here. Recipient syntax needs explicit token checking.",
+    "targetWords are exact source entries in source order, not a ready-made allowed-word snapshot. reviewTargets are earlier course entries, not proof the learner knows them.",
+    "Before generating any Chinese, obtain the actual learner allowedWordIds snapshot through word memory. Tokenize with existing data, run checkText before storage and again before display; derive pinyin from stored words and audit compounds. Withhold failed output.",
+    "All scripts, dialogue intents and image directions in this plan are English. Chinese strings occur only as exact source vocabulary identifiers. No Chinese content has been generated or validated by checkText.",
+    "Art and English planning may depict an unnamed item; it must not force an unavailable Chinese name. No new locations, hosts or curriculum unlock assumptions."
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk1-media",
+  "lessonOrder": 10,
+  "lessonTitle": "Media",
+  "targetWords": [
+    "看",
+    "听",
+    "说",
+    "读",
+    "写",
+    "书",
+    "电脑",
+    "电视",
+    "电影",
+    "本"
+  ],
+  "packTitle": "The Missing Movie Voice",
+  "host": "cat",
+  "setting": "Cat's existing room with its TV, book and empty table overlay.",
+  "motivation": "Cat wants to share a tiny movie with friends who prefer different media.",
+  "obstacle": "The movie has pictures but no usable voice; dog reads the book silently and wonders why nobody hears it.",
+  "runningJoke": "Dog treats every object as a book and solemnly tries to read the blank back of the television.",
+  "communicationGoals": [
+    "Distinguish watching, listening, speaking, reading and writing.",
+    "Choose book, computer or television for an intended action.",
+    "Count books with the lesson's book classifier."
+  ],
+  "reviewTargets": [
+    "朋友",
+    "一起",
+    "想",
+    "喜欢",
+    "桌子",
+    "帮"
+  ],
+  "story": {
+    "motivation": "Cat wants to share a tiny movie with friends who prefer different media.",
+    "obstacle": "The movie has pictures but no usable voice; dog reads the book silently and wonders why nobody hears it.",
+    "turn": "Learner chooses who reads, who speaks and who writes the short checked lines.",
+    "payoff": "Cat watches while dog reads and mouse listens; their homemade movie works.",
+    "pages": [
+      {
+        "page": 1,
+        "action": "Cat invites everyone to watch a movie.",
+        "imageBrief": "Cat beside blank TV showing only a simple picture sequence.",
+        "purpose": "Establish watching as a shared goal.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 2,
+        "action": "The silent screen leaves dog puzzled; mouse offers a book.",
+        "imageBrief": "Dog with ear tilted, mouse holding closed book, no generated lettering.",
+        "purpose": "Make listening distinct from looking.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 3,
+        "action": "Learner chooses who reads, who speaks and who writes the short checked lines.",
+        "imageBrief": "Three clear action vignettes: open book, speaking gesture, brush over blank page.",
+        "purpose": "Assign complementary media roles.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 4,
+        "action": "Cat watches while dog reads and mouse listens; their homemade movie works.",
+        "imageBrief": "Same room, friends around TV, one book clearly present.",
+        "purpose": "Pay off coordinated communication.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "Cat unveils a short picture sequence.",
+      "Dog sits waiting for sound.",
+      "Mouse brings two books.",
+      "Dog opens the wrong book upside down.",
+      "Learner chooses the reading action.",
+      "Cat speaks a checked line while mouse writes it.",
+      "A small phone-shaped object begins to attract everyone's attention visually."
+    ],
+    "cliffhanger": "Who wants to speak to the friends?",
+    "delivery": "Six to eight short shots using existing room backgrounds and character identities; one checked line per shot where possible. Audio generated only after each line passes checkText.",
+    "status": "planned-not-generated"
+  },
+  "game": {
+    "mechanic": "Director's cue matching",
+    "objective": "Assign the requested action and medium to the correct character.",
+    "languageNecessary": "The same characters and media recur across options; the verb and classifier determine success.",
+    "exampleRound_EN": "Intent: Dog reads one book; cat watches television. Choose two action tiles; a dog merely looking at a closed book is a distractor.",
+    "distractors": [
+      "Listen instead of read",
+      "Write instead of speak",
+      "Two books instead of one"
+    ],
+    "controlsDesktop": "Select a card with click or Tab and Enter, then select its destination; drag is optional. Space replays the current checked audio; escape cancels the pending placement. No speed requirement.",
+    "controlsMobile": "Tap a card then tap its destination with at least 48px targets. A persistent replay button and explicit confirm support one-handed play; never require precision dragging or hover.",
+    "win": "Complete three distinct request rounds, including at least one changed attribute combination. A corrected retry can succeed; completion alone is not evidence that every target word was learned.",
+    "feedback": "Show the selected outcome, replay the relevant checked clause, and let the learner revise one choice. Do not reveal the answer using a new word, a translation shortcut or color alone. Report only genuine submitted evidence through the memory layer."
+  },
+  "conversation": {
+    "role": "Learner is the helper; cat hosts and the other recurring friends supply context.",
+    "goal": "Cat wants to share a tiny movie with friends who prefer different media.",
+    "repairStrategy": "On uncertainty, replay the last checked sentence, shorten it using the same allowed words, then offer two checked alternatives grounded in the scene. Never introduce an unknown synonym or pretend an unintelligible response was correct. Let the learner pass without losing progress.",
+    "validation": "Check each host utterance, suggested learner response and repair independently using actual checkText; these are plans, not validated dialogue.",
+    "turnIntents_EN": [
+      "Ask what cat wants to watch.",
+      "Say which medium you like.",
+      "Offer to read a book.",
+      "Ask the partner to listen.",
+      "Confirm who speaks and who writes."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Blank closed book",
+      "word": "书",
+      "assetReuse": "/art/objects/book.png",
+      "purpose": "Count and select readable media"
+    },
+    {
+      "visual": "Blank-screen TV",
+      "word": "电视",
+      "assetReuse": "/art/core/stock-room.png",
+      "purpose": "Watching destination"
+    },
+    {
+      "visual": "Small computer with blank screen",
+      "word": "电脑",
+      "assetReuse": null,
+      "purpose": "Alternative medium"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "purpose": "Four story panels and episode crops",
+      "brief": "Preserve the established gouache paper style and character identities. Compose the four story imageBriefs, leave all lettering blank, and keep separable targets visually clear. Existing reference files are reusable guidance, not evidence that these new panels exist.",
+      "referencePaths": [
+        "/art/core/stock-room.png",
+        "/art/core/cat-neutral.png",
+        "/art/core/cat-delighted.png"
+      ]
+    },
+    {
+      "status": "planned-not-generated",
+      "purpose": "Object and action overlays for the planned game",
+      "brief": "Blank closed book; Blank-screen TV; Small computer with blank screen. Reuse named files where geometry permits; request only missing views. Transparent cutouts with recorded placement and readable silhouettes. Runtime supplies checked Chinese text; no embedded generated writing.",
+      "referencePaths": [
+        "/art/objects/book.png",
+        "/art/core/stock-room.png"
+      ]
+    }
+  ],
+  "desktopUX": {
+    "entry": "Open this chapter from its host room shelf or TV; shopping scenes enter the existing shop content view.",
+    "layout": "Scene left, current checked line and replay below it; task choices and a clear confirmation panel on the right. Keep image, dialogue and choices visible together.",
+    "accessibility": "Keyboard order follows speaker, replay, alternatives, confirm; meaningful alt descriptions and text state, no color-only cues.",
+    "mapRule": "Retain exactly eight world slots. This lesson adds content chapters to existing rooms or the shop, not a new lesson house."
+  },
+  "mobileUX": {
+    "layout": "Stack scene, current line and two or three large choices. Fix replay and confirm within reachable controls; keep picture pinch zoom optional.",
+    "reading": "One story page or episode beat at a time; previous and next buttons remain distinct from object targets.",
+    "accessibility": "Support text resizing and reduced motion; text and sound alternatives accompany all meaningful state."
+  },
+  "vocabularyRisks": [
+    "Sound, volume, remote and subtitle are visual explanations only.",
+    "Do not label a phone until the next lesson.",
+    "Reading aloud and looking at a book must not be treated as interchangeable evidence."
+  ],
+  "vocabularyPolicy": {
+    "source": "src/data/course.json",
+    "cumulativeThroughOrder": 10,
+    "planningLanguage": "English only apart from exact source vocabulary identifiers.",
+    "scriptConstraint": "Final Chinese scripts use only the permitted cumulative course/learner set for this lesson. Availability of a pictured concept or English planning term grants no hidden vocabulary allowance.",
+    "perItemGate": "Before acceptance, run checkText on every story page, episode line, game instruction, request, distractor label, feedback line, conversation turn and repair against the actual allowed set supplied by memory. Rework failures or leave the item blocked; do not bypass with labels, pinyin, synonyms, compounding or translations.",
+    "visualPolicy": "Unlabeled visual concepts may appear for motivation. Any caption, alt text delivered in Chinese, hotspot label or spoken reference must pass its own checkText gate.",
+    "currentValidation": "Only exact target order, prior review membership and cumulative object identifiers checked here. No generated Chinese text, audio, images or runtime content validated or ready."
+  }
+}

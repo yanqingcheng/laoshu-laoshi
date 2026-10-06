@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk1-groups-common",
+  "lessonOrder": 5,
+  "lessonTitle": "Groups & Common Ground",
+  "targetWords": [
+    "们",
+    "我们",
+    "你们",
+    "他们",
+    "都",
+    "怎么样",
+    "认识",
+    "高兴"
+  ],
+  "packTitle": "The Friendship Group Photo",
+  "host": "cat",
+  "setting": "The existing cat room holds a group-photo rehearsal with the original trio and a learner marker. Colored floor mats show group membership without adding map spaces.",
+  "motivation": "Cat wants everyone to agree who belongs in each group portrait.",
+  "obstacle": "Dog steps onto the photographer's mat, changing who counts as we, you and they.",
+  "runningJoke": "Dog hears a group invitation and joins every group, including the one he is meant to photograph.",
+  "communicationGoals": [
+    "Resolve we, plural you and they from the current speaker and group boundaries.",
+    "Understand all/both only when the entire stated group meets the condition.",
+    "Introduce known friends and express happiness using approved familiar patterns."
+  ],
+  "reviewTargets": [
+    "我",
+    "你",
+    "他",
+    "她",
+    "朋友",
+    "老师",
+    "学生",
+    "和"
+  ],
+  "languageValidation": {
+    "state": "required-before-generation-and-display",
+    "rule": "All eventual learner-visible Chinese wording, scripts, answer choices, subtitles and audio transcripts must pass checkText against the real allowed snapshot at generation time. This English plan is not validated learner content. Also review grammar, source meanings and pragmatic appropriateness; token membership alone is insufficient.",
+    "visualRule": "Visual concepts may exceed nameable vocabulary; do not force their names into Chinese output. Use gesture and layout for unnameable actions.",
+    "courseVocabularyNote": "Cumulative course words here are planning constraints, not a claim of learner-known or allowed memory state."
+  },
+  "story": {
+    "format": "four-page illustrated reader",
+    "pages": [
+      {
+        "page": 1,
+        "beat": "motivation",
+        "action": "Cat places two group mats and invites a portrait rehearsal.",
+        "imageBrief": "Two separated soft floor-mat circles, trio and learner marker with stable colors.",
+        "purpose": "Make group reference physically visible."
+      },
+      {
+        "page": 2,
+        "beat": "obstacle",
+        "action": "Dog shifts from the camera side to a mat and the speaker halo changes.",
+        "imageBrief": "Before/after poses with speaker halo supplied by app.",
+        "purpose": "Show why pronoun reference depends on speaker, not an immutable character label."
+      },
+      {
+        "page": 3,
+        "beat": "turn",
+        "action": "Learner selects the intended group and checks whether all its members share the shown role.",
+        "imageBrief": "Each member retains a clear teacher/student or friend badge.",
+        "purpose": "Link all/both to complete sets without teaching it as merely plural."
+      },
+      {
+        "page": 4,
+        "beat": "payoff",
+        "action": "Cat gets one accurate group portrait; dog holds a tiny self-portrait outside the frame.",
+        "imageBrief": "Whole friendly group and a small dog portrait prop.",
+        "purpose": "Celebrate shared acquaintance and happiness."
+      }
+    ]
+  },
+  "episode": {
+    "format": "short illustrated episode with checked audio planned later",
+    "beats": [
+      "Cat introduces two friends individually.",
+      "Two group mats establish a clear partition.",
+      "Mouse speaks from inside one group.",
+      "Dog replies from outside that group.",
+      "Learner resolves we, plural you and they from each speaker's position.",
+      "A role badge differs for one member, testing all/both.",
+      "Group portrait succeeds after dog leaves the photographer's mat."
+    ],
+    "cliffhanger": "A group choice between two pictured meals appears, but nobody has yet agreed what to eat or drink."
+  },
+  "game": {
+    "mechanic": "Speaker-switch grouping",
+    "objective": "Select exactly the group referred to by the active speaker.",
+    "languageNecessary": "The same arrangement yields different correct groups when speaker identity changes; checked pronoun and all/both cues are essential.",
+    "exampleRound_EN": "EN planning example: mouse says a checked we cue from the learner's mat; select mouse plus learner, not the group facing them.",
+    "distractors": "Other group's members; everyone when only one group is referenced; all/both applied when one role badge differs.",
+    "controlsDesktop": "Click a pre-grouped outline rather than each individual; keyboard cycles group candidates.",
+    "controlsMobile": "Tap whole group outlines; fixed speaker badge remains visible while choices reflow below.",
+    "win": "Five accurate references across two speaker changes and one all/both contrast.",
+    "feedback": "Animate a thin connection from the speaker to the selected group; replay and allow correction before continuing."
+  },
+  "conversation": {
+    "role": "Cat as group-photo director",
+    "goal": "Introduce shared friends and agree which group is pictured.",
+    "turnIntents_EN": [
+      "Identify your group with the current speaker.",
+      "Ask whether the host knows a pictured friend.",
+      "Respond to an introduction.",
+      "Confirm or reject an all-members role claim.",
+      "Express happiness about the agreed group."
+    ],
+    "repairStrategy": "Freeze the groups, isolate the speaker, and briefly fall back to I/you/he/she before rebuilding the plural reference."
+  },
+  "objects": [
+    {
+      "visual": "Trio friend portrait",
+      "word": "朋友",
+      "assetReuse": "/art/landing/welcome-trio.webp",
+      "purpose": "Shared acquaintance cue.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Teacher role badge",
+      "word": "老师",
+      "assetReuse": null,
+      "purpose": "All/both set-membership contrast.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Student role badge",
+      "word": "学生",
+      "assetReuse": null,
+      "purpose": "Role contrast in the same group.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    }
+  ],
+  "artRequests": [
+    {
+      "kind": "prop",
+      "brief_EN": "Two subtle grouping mats and blank role badges",
+      "status": "planned-not-generated",
+      "outputPath": "/art/planned/lesson-packs/hsk1-groups-common/prop-1.webp",
+      "constraints": "Reuse the story-garden palette and cast identity. No baked text, UI, watermark or new map plot. App renders all real labels. New scene/prop images are not generated by this planning task.",
+      "referencePaths": [
+        "/art/core/stock-room.webp",
+        "/art/core/sheet-cat.webp"
+      ]
+    }
+  ],
+  "desktopUX": "Keep scene and speaker panel adjacent. Group outlines must differ by stroke pattern as well as color.",
+  "mobileUX": "Never rearrange group members while a question is active. Use a sticky speaker chip and group-choice thumbnails below the scene.",
+  "vocabularyRisks": [
+    "Plural suffix for people is not a generic plural suffix for arbitrary objects.",
+    "We, you-plural and they need a fixed speaker viewpoint; artwork mirroring or responsive reordering must not silently change meaning.",
+    "All/both requires every member of the referenced group; do not use a partly matching group as positive evidence.",
+    "How-about is a discourse function requiring approved context, not a free-standing universal how question."
+  ],
+  "deliveryScope": "Course pack served inside an existing bundled neighbour room. No new map plot, live generation, API call or ownership mutation is planned here."
+}

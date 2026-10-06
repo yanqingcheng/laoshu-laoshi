@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk1-weather-extremes",
+  "lessonOrder": 9,
+  "lessonTitle": "Weather & Extremes",
+  "targetWords": [
+    "天气",
+    "冷",
+    "热",
+    "大",
+    "小",
+    "多",
+    "少",
+    "漂亮",
+    "太",
+    "吧",
+    "下雨"
+  ],
+  "packTitle": "The Picnic That Moved Indoors",
+  "host": "dog",
+  "setting": "Dog's existing room, its doorway and visible garden; chapter furniture overlay only.",
+  "motivation": "Dog wants the learner and both friends to share tea together.",
+  "obstacle": "Rain starts just as dog chooses the biggest outdoor table; the little indoor table seems too small.",
+  "runningJoke": "Dog keeps selecting an enormous object for a tiny task, then politely accepts the small one.",
+  "communicationGoals": [
+    "Describe today's weather and comfort.",
+    "Contrast large/small and many/few in a concrete choice.",
+    "Suggest a workable shared plan."
+  ],
+  "reviewTargets": [
+    "今天",
+    "水",
+    "茶",
+    "桌子",
+    "椅子",
+    "一起"
+  ],
+  "story": {
+    "motivation": "Dog wants the learner and both friends to share tea together.",
+    "obstacle": "Rain starts just as dog chooses the biggest outdoor table; the little indoor table seems too small.",
+    "turn": "Learner chooses the small indoor table and fewer cups of hot tea.",
+    "payoff": "All three sit inside and enjoy the beautiful rain through the window.",
+    "pages": [
+      {
+        "page": 1,
+        "action": "Dog prepares a large table outside for three friends.",
+        "imageBrief": "Wide doorway vignette with dog, outsized table and three cups represented without labels.",
+        "purpose": "Establish desire and large/small contrast.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 2,
+        "action": "Rain begins; cat feels cold while the indoor tea is too hot.",
+        "imageBrief": "Split interior/exterior view; rain streaks and steam are visual context, no thermometer text.",
+        "purpose": "Ground weather and temperature in consequences.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 3,
+        "action": "Learner chooses the small indoor table and fewer cups of hot tea.",
+        "imageBrief": "Dog carrying a comically large chair toward a small table; mouse indicates a workable place.",
+        "purpose": "Turn a comparison into a useful decision.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 4,
+        "action": "All three sit inside and enjoy the beautiful rain through the window.",
+        "imageBrief": "Warm room with three friends, quiet garden rain, no new building.",
+        "purpose": "Pay off adaptation rather than defeating weather.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "Dog imagines a grand outdoor tea.",
+      "Cat arrives and reacts to the cold.",
+      "Mouse indicates the rain.",
+      "Dog attempts to carry a table too big for the doorway.",
+      "The learner compares two table arrangements.",
+      "Friends choose the smaller indoor setting.",
+      "A forgotten closed book sits outside the doorway."
+    ],
+    "cliffhanger": "Whose closed book is waiting outside?",
+    "delivery": "Six to eight short shots using existing room backgrounds and character identities; one checked line per shot where possible. Audio generated only after each line passes checkText.",
+    "status": "planned-not-generated"
+  },
+  "game": {
+    "mechanic": "Weather briefing and arrangement selection",
+    "objective": "Choose a place and amount that satisfy each spoken briefing.",
+    "languageNecessary": "Visual options are all plausible until the checked language describes location, size and amount.",
+    "exampleRound_EN": "Briefing intent: It is raining; we want to sit inside with a small table. Two illustrated arrangements both include rain, but only one places the small table inside.",
+    "distractors": [
+      "Small table outside",
+      "Large table inside",
+      "Correct setting with too many cups"
+    ],
+    "controlsDesktop": "Select a card with click or Tab and Enter, then select its destination; drag is optional. Space replays the current checked audio; escape cancels the pending placement. No speed requirement.",
+    "controlsMobile": "Tap a card then tap its destination with at least 48px targets. A persistent replay button and explicit confirm support one-handed play; never require precision dragging or hover.",
+    "win": "Complete three distinct request rounds, including at least one changed attribute combination. A corrected retry can succeed; completion alone is not evidence that every target word was learned.",
+    "feedback": "Show the selected outcome, replay the relevant checked clause, and let the learner revise one choice. Do not reveal the answer using a new word, a translation shortcut or color alone. Report only genuine submitted evidence through the memory layer."
+  },
+  "conversation": {
+    "role": "Learner is the helper; dog hosts and the other recurring friends supply context.",
+    "goal": "Dog wants the learner and both friends to share tea together.",
+    "repairStrategy": "On uncertainty, replay the last checked sentence, shorten it using the same allowed words, then offer two checked alternatives grounded in the scene. Never introduce an unknown synonym or pretend an unintelligible response was correct. Let the learner pass without losing progress.",
+    "validation": "Check each host utterance, suggested learner response and repair independently using actual checkText; these are plans, not validated dialogue.",
+    "turnIntents_EN": [
+      "Greet dog and identify today's weather.",
+      "Say whether it is cold or hot.",
+      "Compare the offered large and small arrangement.",
+      "Suggest sitting together inside.",
+      "Confirm the chosen arrangement and thank the host."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Two table sizes",
+      "word": "桌子",
+      "assetReuse": null,
+      "purpose": "Contrast size without adding a new noun"
+    },
+    {
+      "visual": "Rain beyond doorway",
+      "word": "下雨",
+      "assetReuse": null,
+      "purpose": "Show the obstacle"
+    },
+    {
+      "visual": "Tea with steam",
+      "word": "茶",
+      "assetReuse": null,
+      "purpose": "Contrast temperature"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "purpose": "Four story panels and episode crops",
+      "brief": "Preserve the established gouache paper style and character identities. Compose the four story imageBriefs, leave all lettering blank, and keep separable targets visually clear. Existing reference files are reusable guidance, not evidence that these new panels exist.",
+      "referencePaths": [
+        "/art/core/stock-room.png",
+        "/art/core/dog-neutral.png",
+        "/art/core/dog-delighted.png"
+      ]
+    },
+    {
+      "status": "planned-not-generated",
+      "purpose": "Object and action overlays for the planned game",
+      "brief": "Two table sizes; Rain beyond doorway; Tea with steam. Reuse named files where geometry permits; request only missing views. Transparent cutouts with recorded placement and readable silhouettes. Runtime supplies checked Chinese text; no embedded generated writing.",
+      "referencePaths": []
+    }
+  ],
+  "desktopUX": {
+    "entry": "Open this chapter from its host room shelf or TV; shopping scenes enter the existing shop content view.",
+    "layout": "Scene left, current checked line and replay below it; task choices and a clear confirmation panel on the right. Keep image, dialogue and choices visible together.",
+    "accessibility": "Keyboard order follows speaker, replay, alternatives, confirm; meaningful alt descriptions and text state, no color-only cues.",
+    "mapRule": "Retain exactly eight world slots. This lesson adds content chapters to existing rooms or the shop, not a new lesson house."
+  },
+  "mobileUX": {
+    "layout": "Stack scene, current line and two or three large choices. Fix replay and confirm within reachable controls; keep picture pinch zoom optional.",
+    "reading": "One story page or episode beat at a time; previous and next buttons remain distinct from object targets.",
+    "accessibility": "Support text resizing and reduced motion; text and sound alternatives accompany all meaningful state."
+  },
+  "vocabularyRisks": [
+    "Umbrella, picnic, dry and wet are visual-only concepts, not guaranteed vocabulary.",
+    "Do not use left/right or because in learner scripts yet.",
+    "The particle for suggestion requires contextual checking, not a word-only substitution."
+  ],
+  "vocabularyPolicy": {
+    "source": "src/data/course.json",
+    "cumulativeThroughOrder": 9,
+    "planningLanguage": "English only apart from exact source vocabulary identifiers.",
+    "scriptConstraint": "Final Chinese scripts use only the permitted cumulative course/learner set for this lesson. Availability of a pictured concept or English planning term grants no hidden vocabulary allowance.",
+    "perItemGate": "Before acceptance, run checkText on every story page, episode line, game instruction, request, distractor label, feedback line, conversation turn and repair against the actual allowed set supplied by memory. Rework failures or leave the item blocked; do not bypass with labels, pinyin, synonyms, compounding or translations.",
+    "visualPolicy": "Unlabeled visual concepts may appear for motivation. Any caption, alt text delivered in Chinese, hotspot label or spoken reference must pass its own checkText gate.",
+    "currentValidation": "Only exact target order, prior review membership and cumulative object identifiers checked here. No generated Chinese text, audio, images or runtime content validated or ready."
+  }
+}

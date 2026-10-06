@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk1-family-age",
+  "lessonOrder": 2,
+  "lessonTitle": "Family & Age",
+  "targetWords": [
+    "有",
+    "没有",
+    "没",
+    "个",
+    "两",
+    "谁",
+    "爸爸",
+    "妈妈",
+    "儿子",
+    "女儿",
+    "岁",
+    "了",
+    "呢",
+    "爱"
+  ],
+  "packTitle": "Cat's Family Portrait Frame",
+  "host": "cat",
+  "setting": "A family album opens on the table in the existing cat room. Named fictional family portraits are explicitly role-labelled by the app.",
+  "motivation": "Cat wants to finish a family portrait display with the right people and ages.",
+  "obstacle": "Two portrait pockets are empty and one age badge belongs to a different person.",
+  "runningJoke": "A tiny cat paw keeps appearing in every portrait as if it were a separate family member.",
+  "communicationGoals": [
+    "Identify parent/child relationships from an explicitly established fictional family.",
+    "Express having or not having a visible portrait or family-role token.",
+    "Give and ask ages using small known numbers, with correct counting-word and two forms."
+  ],
+  "reviewTargets": [
+    "一",
+    "二",
+    "三",
+    "五",
+    "几",
+    "她",
+    "名字",
+    "朋友"
+  ],
+  "languageValidation": {
+    "state": "required-before-generation-and-display",
+    "rule": "All eventual learner-visible Chinese wording, scripts, answer choices, subtitles and audio transcripts must pass checkText against the real allowed snapshot at generation time. This English plan is not validated learner content. Also review grammar, source meanings and pragmatic appropriateness; token membership alone is insufficient.",
+    "visualRule": "Visual concepts may exceed nameable vocabulary; do not force their names into Chinese output. Use gesture and layout for unnameable actions.",
+    "courseVocabularyNote": "Cumulative course words here are planning constraints, not a claim of learner-known or allowed memory state."
+  },
+  "story": {
+    "format": "four-page illustrated reader",
+    "pages": [
+      {
+        "page": 1,
+        "beat": "motivation",
+        "action": "Cat presents a fictional parent-and-children portrait with two empty pockets.",
+        "imageBrief": "Album view showing four distinct friendly cat relatives, blank role labels and age badges.",
+        "purpose": "Establish who is related to whom without assumptions about the learner's family."
+      },
+      {
+        "page": 2,
+        "beat": "obstacle",
+        "action": "A father portrait is present, a mother pocket is empty, and one age badge has slid between portraits.",
+        "imageBrief": "Clear present-versus-empty contrast; one movable blank age tag.",
+        "purpose": "Support have/not-have and who questions through visible evidence."
+      },
+      {
+        "page": 3,
+        "beat": "turn",
+        "action": "Learner uses role and age cues to restore the portraits; cat's paw peeks from a pocket.",
+        "imageBrief": "Two candidate portraits at a time, no written dialogue in image.",
+        "purpose": "Contrast general quantity with age; use two before a classifier only in an approved pattern."
+      },
+      {
+        "page": 4,
+        "beat": "payoff",
+        "action": "The album display is complete; a final warm family gesture conveys love while the stray paw curls away.",
+        "imageBrief": "Four whole portraits arranged comfortably, cat hugging the album.",
+        "purpose": "Provide emotional payoff without requiring unsupported adjectives or relationship nouns."
+      }
+    ]
+  },
+  "episode": {
+    "format": "short illustrated episode with checked audio planned later",
+    "beats": [
+      "Cat establishes the album as a fictional family, not a personal-data request.",
+      "Father and mother portraits appear separately.",
+      "Son and daughter roles are anchored to the same parents.",
+      "A missing pocket invites a have/not-have choice.",
+      "Small age badges become attached to the wrong portrait.",
+      "Learner resolves who and age cues.",
+      "Cat discovers her own paw made the extra silhouette."
+    ],
+    "cliffhanger": "The completed family portrait is shown against two different buildings, raising the next question of where everyone is."
+  },
+  "game": {
+    "mechanic": "Album evidence match",
+    "objective": "Fill three portrait pockets using role, presence and age clues.",
+    "languageNecessary": "Several portraits share color or clothing, so the checked role and age cue is needed to choose.",
+    "exampleRound_EN": "EN planning example: a checked cue describes a five-year-old daughter; select the explicitly established daughter's portrait and the five badge.",
+    "distractors": "Correct age/wrong family role; correct role/wrong age; an empty pocket for not-have trials.",
+    "controlsDesktop": "Click portrait then pocket; ages selected separately by number buttons.",
+    "controlsMobile": "Tap a portrait card and then a highlighted pocket; one clue per screen.",
+    "win": "Three supported matches plus one accurate not-have response.",
+    "feedback": "Show role lines back to the parents, replay age cue, and let learner revise without losing the assembled album."
+  },
+  "conversation": {
+    "role": "Cat as guide to a fictional album",
+    "goal": "Discuss who appears and one person's age without requiring real family information.",
+    "turnIntents_EN": [
+      "Identify one parent portrait.",
+      "Ask who appears in another pocket.",
+      "Answer whether the album has a particular role portrait.",
+      "Give the selected fictional child's age.",
+      "Return a reciprocal age or identity question."
+    ],
+    "repairStrategy": "Offer a fictional persona preset and two portrait choices; allow skipping any personal-family prompt."
+  },
+  "objects": [
+    {
+      "visual": "Father portrait",
+      "word": "爸爸",
+      "assetReuse": null,
+      "purpose": "Role anchor.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Mother portrait",
+      "word": "妈妈",
+      "assetReuse": null,
+      "purpose": "Role anchor.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Daughter portrait with blank age tag",
+      "word": "女儿",
+      "assetReuse": null,
+      "purpose": "Age/role match.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Son portrait",
+      "word": "儿子",
+      "assetReuse": null,
+      "purpose": "Role contrast.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    }
+  ],
+  "artRequests": [
+    {
+      "kind": "prop",
+      "brief_EN": "Four related fictional cat portraits and blank album pockets",
+      "status": "planned-not-generated",
+      "outputPath": "/art/planned/lesson-packs/hsk1-family-age/prop-1.webp",
+      "constraints": "Reuse the story-garden palette and cast identity. No baked text, UI, watermark or new map plot. App renders all real labels. New scene/prop images are not generated by this planning task.",
+      "referencePaths": [
+        "/art/core/cat-neutral.webp",
+        "/art/core/sheet-cat.webp"
+      ]
+    }
+  ],
+  "desktopUX": "Keep parent-child relationship lines visible beside the album. Allow fictional persona mode with no collection of family data.",
+  "mobileUX": "Use a parent pair header and a single child card below, rather than a dense family tree. Reveal age badges only when relevant.",
+  "vocabularyRisks": [
+    "Two and the two-before-classifier form are not interchangeable; approve constructions explicitly.",
+    "The change/aspect particle and question particle must not be presented as standalone English-equivalent words.",
+    "Have-not and not-have forms require contextual validation; avoid treating every negation as identical.",
+    "Use ages one to ten only, and never make real age or family disclosure necessary."
+  ],
+  "deliveryScope": "Course pack served inside an existing bundled neighbour room. No new map plot, live generation, API call or ownership mutation is planned here."
+}

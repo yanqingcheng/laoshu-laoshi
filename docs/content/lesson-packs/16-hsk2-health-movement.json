@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-health-movement",
+  "lessonOrder": 15,
+  "lessonTitle": "Health & Movement",
+  "targetWords": [
+    "身体",
+    "眼睛",
+    "生病",
+    "药",
+    "走",
+    "跑步",
+    "进",
+    "出",
+    "往",
+    "路",
+    "条",
+    "找"
+  ],
+  "packTitle": "The Gentle Walk to the Right Door",
+  "host": "dog",
+  "setting": "Existing town ground as a route inset and dog's room as start/end; clinic is a pictured off-map destination, not a new house slot.",
+  "motivation": "Dog wants to help a tired visitor find the doctor and then return comfortably.",
+  "obstacle": "Two similar paths reach different entrances, and rushing past the door keeps causing a missed turn.",
+  "runningJoke": "Dog performs an enthusiastic running start for a task that only needs a gentle walk.",
+  "communicationGoals": [
+    "Understand a short route with enter, exit and toward.",
+    "Ask for help finding a person or place.",
+    "Describe feeling unwell and choose rest or professional help."
+  ],
+  "reviewTargets": [
+    "医生",
+    "医院",
+    "累",
+    "休息",
+    "哪儿",
+    "前面",
+    "后面"
+  ],
+  "story": {
+    "motivation": "Dog wants to help a tired visitor find the doctor and then return comfortably.",
+    "obstacle": "Two similar paths reach different entrances, and rushing past the door keeps causing a missed turn.",
+    "turn": "Learner follows a checked direction to leave one space and enter another.",
+    "payoff": "Visitor meets the doctor; dog rests with friends.",
+    "pages": [
+      {
+        "page": 1,
+        "action": "A visitor feels unwell and asks dog to help find the doctor.",
+        "imageBrief": "Visitor seated calmly, dog attentive, no frightening medical imagery.",
+        "purpose": "Give navigation a caring purpose.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 2,
+        "action": "Dog rushes past the correct entrance and returns.",
+        "imageBrief": "Two paths with clear start and doorway topology; no left/right labels yet.",
+        "purpose": "Expose need to listen and go gently.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 3,
+        "action": "Learner follows a checked direction to leave one space and enter another.",
+        "imageBrief": "Sequential doorway frames, mouse guides from familiar room.",
+        "purpose": "Turn comprehension into successful navigation.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 4,
+        "action": "Visitor meets the doctor; dog rests with friends.",
+        "imageBrief": "Calm waiting area vignette and return-home inset, no medicine ingestion shown.",
+        "purpose": "Pay off helpful routing rather than treatment advice.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "Visitor asks for the doctor.",
+      "Dog offers help.",
+      "Mouse shows two paths.",
+      "Dog begins running and misses the entrance.",
+      "Learner chooses a walking route.",
+      "Cat confirms entering the right place.",
+      "Visitor is safely met by the doctor.",
+      "Dog notices a similar-looking door nearby."
+    ],
+    "cliffhanger": "How can the friends describe two nearly identical doorways?",
+    "delivery": "Six to eight short shots using existing room backgrounds and character identities; one checked line per shot where possible. Audio generated only after each line passes checkText.",
+    "status": "planned-not-generated"
+  },
+  "game": {
+    "mechanic": "Doorway route relay",
+    "objective": "Move the character through the entrance sequence specified by short checked directions.",
+    "languageNecessary": "Several valid paths share scenery; the checked movement verbs and destination control the intended route.",
+    "exampleRound_EN": "Intent: Exit here; walk toward the hospital; enter. Routes differ by entering versus passing the doorway, not by unlearned left/right.",
+    "distractors": [
+      "Enter instead of exit",
+      "Run past destination",
+      "Correct actions in wrong order"
+    ],
+    "controlsDesktop": "Select a card with click or Tab and Enter, then select its destination; drag is optional. Space replays the current checked audio; escape cancels the pending placement. No speed requirement.",
+    "controlsMobile": "Tap a card then tap its destination with at least 48px targets. A persistent replay button and explicit confirm support one-handed play; never require precision dragging or hover.",
+    "win": "Complete three distinct request rounds, including at least one changed attribute combination. A corrected retry can succeed; completion alone is not evidence that every target word was learned.",
+    "feedback": "Show the selected outcome, replay the relevant checked clause, and let the learner revise one choice. Do not reveal the answer using a new word, a translation shortcut or color alone. Report only genuine submitted evidence through the memory layer."
+  },
+  "conversation": {
+    "role": "Learner is the helper; dog hosts and the other recurring friends supply context.",
+    "goal": "Dog wants to help a tired visitor find the doctor and then return comfortably.",
+    "repairStrategy": "On uncertainty, replay the last checked sentence, shorten it using the same allowed words, then offer two checked alternatives grounded in the scene. Never introduce an unknown synonym or pretend an unintelligible response was correct. Let the learner pass without losing progress.",
+    "validation": "Check each host utterance, suggested learner response and repair independently using actual checkText; these are plans, not validated dialogue.",
+    "turnIntents_EN": [
+      "Say who you are looking for.",
+      "Describe being unwell or tired in simple terms.",
+      "Ask where the doctor or hospital is.",
+      "Confirm whether to enter or leave.",
+      "Thank the helper and choose rest."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Walking dog pose",
+      "word": "走",
+      "assetReuse": null,
+      "purpose": "Gentle motion cue"
+    },
+    {
+      "visual": "Eye pointing vignette",
+      "word": "眼睛",
+      "assetReuse": null,
+      "purpose": "Body-word grounding without diagnosis"
+    },
+    {
+      "visual": "Sealed medicine package with blank label",
+      "word": "药",
+      "assetReuse": null,
+      "purpose": "Doctor-associated object, never dosage activity"
+    },
+    {
+      "visual": "Two road strips",
+      "word": "路",
+      "assetReuse": null,
+      "purpose": "Supports path classifier in checked descriptions"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "purpose": "Four story panels and episode crops",
+      "brief": "Preserve the established gouache paper style and character identities. Compose the four story imageBriefs, leave all lettering blank, and keep separable targets visually clear. Existing reference files are reusable guidance, not evidence that these new panels exist.",
+      "referencePaths": [
+        "/art/core/stock-room.png",
+        "/art/core/dog-neutral.png",
+        "/art/core/dog-delighted.png"
+      ]
+    },
+    {
+      "status": "planned-not-generated",
+      "purpose": "Object and action overlays for the planned game",
+      "brief": "Walking dog pose; Eye pointing vignette; Sealed medicine package with blank label; Two road strips. Reuse named files where geometry permits; request only missing views. Transparent cutouts with recorded placement and readable silhouettes. Runtime supplies checked Chinese text; no embedded generated writing.",
+      "referencePaths": []
+    }
+  ],
+  "desktopUX": {
+    "entry": "Open this chapter from its host room shelf or TV; shopping scenes enter the existing shop content view.",
+    "layout": "Scene left, current checked line and replay below it; task choices and a clear confirmation panel on the right. Keep image, dialogue and choices visible together.",
+    "accessibility": "Keyboard order follows speaker, replay, alternatives, confirm; meaningful alt descriptions and text state, no color-only cues.",
+    "mapRule": "Retain exactly eight world slots. This lesson adds content chapters to existing rooms or the shop, not a new lesson house."
+  },
+  "mobileUX": {
+    "layout": "Stack scene, current line and two or three large choices. Fix replay and confirm within reachable controls; keep picture pinch zoom optional.",
+    "reading": "One story page or episode beat at a time; previous and next buttons remain distinct from object targets.",
+    "accessibility": "Support text resizing and reduced motion; text and sound alternatives accompany all meaningful state."
+  },
+  "vocabularyRisks": [
+    "This is fictional language practice, not medical triage; no diagnostic or dosage instructions.",
+    "Left/right, near/far arrive next lesson and cannot label route clues yet.",
+    "Running is a movement contrast, not a punishment or timed necessity.",
+    "Medicine remains a named closed prop; taking or prescribing vocabulary is not assumed."
+  ],
+  "vocabularyPolicy": {
+    "source": "src/data/course.json",
+    "cumulativeThroughOrder": 15,
+    "planningLanguage": "English only apart from exact source vocabulary identifiers.",
+    "scriptConstraint": "Final Chinese scripts use only the permitted cumulative course/learner set for this lesson. Availability of a pictured concept or English planning term grants no hidden vocabulary allowance.",
+    "perItemGate": "Before acceptance, run checkText on every story page, episode line, game instruction, request, distractor label, feedback line, conversation turn and repair against the actual allowed set supplied by memory. Rework failures or leave the item blocked; do not bypass with labels, pinyin, synonyms, compounding or translations.",
+    "visualPolicy": "Unlabeled visual concepts may appear for motivation. Any caption, alt text delivered in Chinese, hotspot label or spoken reference must pass its own checkText gate.",
+    "currentValidation": "Only exact target order, prior review membership and cumulative object identifiers checked here. No generated Chinese text, audio, images or runtime content validated or ready."
+  }
+}

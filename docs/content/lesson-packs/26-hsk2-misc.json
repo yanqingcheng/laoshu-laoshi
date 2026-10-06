@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-misc",
+  "lessonOrder": 25,
+  "lessonTitle": "Miscellaneous",
+  "targetWords": [
+    "忙",
+    "好吃",
+    "笑",
+    "快乐",
+    "它",
+    "生日",
+    "事情",
+    "为什么",
+    "开始",
+    "卖",
+    "问题"
+  ],
+  "targetCoverage": [
+    {
+      "word": "忙",
+      "intent_EN": "Ask about a friend's current busyness",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "好吃",
+      "intent_EN": "Respond to an opinion of the food",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "笑",
+      "intent_EN": "Notice the dog's welcoming smile",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "快乐",
+      "intent_EN": "Offer a warm birthday wish",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "它",
+      "intent_EN": "Resolve a pronoun to the book or food, never a person",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "生日",
+      "intent_EN": "Identify the shared celebration",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "事情",
+      "intent_EN": "Ask what matter needs attention",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "为什么",
+      "intent_EN": "Ask why a friend is absent",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "开始",
+      "intent_EN": "Agree when the celebration begins",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "卖",
+      "intent_EN": "Offer one pretend sale at the stall",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "问题",
+      "intent_EN": "State the concrete problem without blaming a friend",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    }
+  ],
+  "packTitle": "The Birthday Shop with No Customer",
+  "host": "dog",
+  "setting": "The existing shop converted for one chapter into a tiny birthday stall, with the home room as payoff.",
+  "motivation": "The dog wants to sell a small birthday treat and use the proceeds for a friend's celebration.",
+  "obstacle": "Everyone is busy preparing something else, and the dog mistakes their absence for a problem with the food.",
+  "runningJoke": "The dog keeps smiling formally at an empty chair as if it were his most important customer.",
+  "communicationGoals": [
+    "Ask why and distinguish a reason from a guess.",
+    "Explain a simple problem and request help.",
+    "Coordinate the start of a shared birthday activity and react to a friend's happiness."
+  ],
+  "reviewTargets": [
+    "因为",
+    "所以",
+    "准备",
+    "已经",
+    "朋友",
+    "钱",
+    "买",
+    "西瓜"
+  ],
+  "story": {
+    "language": "English planning only; not learner-facing Chinese",
+    "pages": [
+      {
+        "page": 1,
+        "action": "The dog sets up a modest birthday stall and practises a welcoming smile.",
+        "imageBrief": "Shop counter with small food portions, empty customer chair, dog smiling.",
+        "purpose": "Establish a warm goal and visual joke."
+      },
+      {
+        "page": 2,
+        "action": "No friends arrive; the dog worries that the food is not delicious.",
+        "imageBrief": "Unchanged food, empty chair, dog puzzled; distant room inset showing hidden preparations without names.",
+        "purpose": "Create an interpretable social mystery without shaming."
+      },
+      {
+        "page": 3,
+        "action": "The learner asks why each friend is busy and discovers that they are preparing the same birthday.",
+        "imageBrief": "Two conversational vignettes with mouse preparing book and cat preparing food.",
+        "purpose": "Resolve by gathering reasons rather than assuming rejection."
+      },
+      {
+        "page": 4,
+        "action": "The friends start the celebration together; the empty chair holds the gift.",
+        "imageBrief": "Home room trio and treat, book gift on the much-addressed chair.",
+        "purpose": "Pay off cooperation, birthday language and kindness."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "The dog prepares to sell one affordable treat.",
+      "He smiles at the empty chair and begins his sales pitch.",
+      "The mouse says he is busy, but gives only part of the explanation.",
+      "The cat names another task and asks when they should begin.",
+      "The learner asks why and connects both explanations.",
+      "The friends discover they planned the same birthday surprise.",
+      "They combine preparations and laugh at the formally greeted gift chair."
+    ],
+    "cliffhanger": "The trio invites the learner to choose the next celebration from their own interests; no additional content is promised until generated and checked."
+  },
+  "game": {
+    "mechanic": "Branching social mystery with evidence questions",
+    "objective": "Ask three useful questions, infer why the stall is empty, and choose a cooperative next action.",
+    "languageNecessary": "All pictured explanations are plausible. The characters' checked answers determine the real cause; optional visual evidence never directly exposes the solution.",
+    "exampleRound_EN": "The mouse is busy because he is preparing a birthday book. Ask when the celebration begins; do not conclude that he dislikes the food.",
+    "distractors": [
+      "Assuming the food is bad without evidence",
+      "Starting before both friends are ready",
+      "Treating a guessed motive as confirmed"
+    ],
+    "controlsDesktop": "Choose among question intents; evidence notebook remains visible beside dialogue. Keyboard focus follows conversation but does not autoplay submissions.",
+    "controlsMobile": "Full-width dialogue with two or three question choices; evidence opens as a sheet and preserves scroll. Thumb-accessible replay and continue.",
+    "win": "An evidence-supported explanation and a plan that includes both friends; buying is optional and no payment is taken.",
+    "feedback": "Show which statement supports or fails to support the inference, replay it, and permit a different question.",
+    "evidencePolicy": "No automatic schedule evidence from a decorative tap or choice visible in the prompt. Any future graded event must use the app's existing evidence rules and deduplicate requests."
+  },
+  "conversation": {
+    "role": "Helpful friend investigating a birthday mix-up",
+    "goal": "Find the reason for the empty stall and arrange a shared start.",
+    "repairStrategy": "Offer replay, slower replay and the checked transcript; allow a clarification request or two meaning choices. Confirm intended meaning before proceeding. Do not score pronunciation or equate silence with failure; typed mode remains available.",
+    "turnIntents_EN": [
+      "Ask what the problem is.",
+      "Ask why one friend is busy.",
+      "Clarify which object a pronoun refers to.",
+      "Suggest when to start together.",
+      "Wish the friend happiness and respond to their smile."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Birthday book gift",
+      "word": "书",
+      "assetReuse": "/art/objects/book.png",
+      "purpose": "Mouse preparation"
+    },
+    {
+      "visual": "Watermelon portions",
+      "word": "西瓜",
+      "assetReuse": null,
+      "purpose": "Treat option"
+    },
+    {
+      "visual": "Small coin",
+      "word": "钱",
+      "assetReuse": "/art/objects/coin.png",
+      "purpose": "Pretend shop price"
+    },
+    {
+      "visual": "Empty customer chair",
+      "word": "椅子",
+      "assetReuse": null,
+      "purpose": "Running joke"
+    },
+    {
+      "visual": "Dog smiling",
+      "word": "笑",
+      "assetReuse": "/art/core/dog-delighted.png",
+      "purpose": "Emotional payoff"
+    },
+    {
+      "visual": "Cat celebration portrait",
+      "word": "朋友",
+      "assetReuse": "/art/core/cat-delighted.png",
+      "purpose": "Cooperative ending"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "request": "Birthday stall overlay, watermelon servings and empty-chair payoff; no baked birthday wording, prices or unrequested party clutter.",
+      "referencePaths": [
+        "/art/core/home-room.png",
+        "/art/core/stock-room.png",
+        "/art/core/dog-neutral.png",
+        "/art/core/dog-delighted.png",
+        "/art/objects/book.png"
+      ],
+      "constraints": "Match existing handmade-paper story garden palette and silhouettes. Reuse room camera and stable empty UI regions; no new map slot. Object layers require true alpha, clear margins and no baked text. Label intended variants before any generation."
+    }
+  ],
+  "desktopUX": {
+    "layout": "Warm cream reading surface, indigo text, restrained jade/terracotta accents; two-column art and interaction on wide screens. Keep controls off character faces and target objects.",
+    "interaction": "Choose among question intents; evidence notebook remains visible beside dialogue. Keyboard focus follows conversation but does not autoplay submissions.",
+    "reading": "Always-available replay, transcript, pinyin preference through shared WordText, focus-visible controls and undo. No hover-only information.",
+    "motion": "Only brief state transitions; reduced motion uses static swaps. Never auto-advance a reading page."
+  },
+  "mobileUX": {
+    "layout": "Single-column art crop using contain, never crop evidence. Dialogue and choices below art; portrait-first layout preserves the complete meaningful action.",
+    "interaction": "Full-width dialogue with two or three question choices; evidence opens as a sheet and preserves scroll. Thumb-accessible replay and continue.",
+    "accessibility": "Minimum 48px targets, visible focus, clear contrast, screen-reader alternatives and safe-area spacing. No pinch, audio-only or drag-only requirement.",
+    "reading": "Short checked utterance chunks with large replay button; expanding transcript must not cover answer choices. Preserve progress across rotation."
+  },
+  "vocabularyRisks": [
+    "Keep why-questions friendly and voluntary. It requires a clear nonhuman referent; do not replace people pronouns. Delicious is a character preference, not a factual health claim. Sell/buy remains a pretend in-game scenario without real checkout.",
+    "targetWords are exact source entries in source order, not a ready-made allowed-word snapshot. reviewTargets are earlier course entries, not proof the learner knows them.",
+    "Before generating any Chinese, obtain the actual learner allowedWordIds snapshot through word memory. Tokenize with existing data, run checkText before storage and again before display; derive pinyin from stored words and audit compounds. Withhold failed output.",
+    "All scripts, dialogue intents and image directions in this plan are English. Chinese strings occur only as exact source vocabulary identifiers. No Chinese content has been generated or validated by checkText.",
+    "Art and English planning may depict an unnamed item; it must not force an unavailable Chinese name. No new locations, hosts or curriculum unlock assumptions."
+  ]
+}

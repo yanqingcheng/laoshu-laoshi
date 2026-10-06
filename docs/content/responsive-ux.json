@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "status": "design-contract-not-browser-verified",
+  "visual_direction": "Warm illustrated story garden; cream reading paper, indigo primary actions, jade secondary accents and terracotta attention. Keep scene art rich and interface quiet.",
+  "viewports_to_test": [{"width":360,"height":800},{"width":390,"height":844},{"width":768,"height":1024},{"width":1280,"height":800},{"width":1440,"height":900}],
+  "global": {
+    "touch_target_min_px": 48,
+    "page_gutter_mobile_px": 16,
+    "text_zoom_test_percent": 200,
+    "hanzi_font_px": [28,32],
+    "pinyin_font_px": [13,15],
+    "ruby": "Shared WordText; one whole lexical word per ruby, pinyin above its own word, wrap only between words; do not compress Hanzi to fit.",
+    "contrast": "Dark indigo/body text on quiet cream; never long text over patterned scenery. Colour is never the only status signal.",
+    "motion": "Subtle paper-layer translation/opacity; reduced-motion static or opacity only. No endless flashing, parallax that blocks reading, or forced timers in story/conversation.",
+    "keyboard": "All actions focusable, visible focus ring, meaningful reading order; Escape closes overlays and returns focus. No hover-only vocabulary or drag-only game.",
+    "performance": "Use /art manifest WebP/small URLs with intrinsic dimensions. Load current scene/state, preload the next page only, lazy-load catalogue art. Avoid layout shifts during image decode.",
+    "private_data": "No learner uploads, transcripts or raw private source text in public art or scenario files."
+  },
+  "reader": {
+    "desktop": "Constrain overall width near 1120px. Illustration and cream caption column can sit side by side with generous gutters; keep caption measure readable and controls near the caption. Preserve one story beat per page.",
+    "mobile": "Single column. Illustration first, then native ruby caption, then full-width next action above safe-area inset. Do not shrink the desktop spread or embed caption in image. Page counter/back remain reachable without covering art.",
+    "art": "3:2 story picture; protect faces and the task-defining object in central safe area. If tall mobile art is needed, request a separately composed image rather than clipping away evidence.",
+    "lookup": "Tap/focus word opens a bottom sheet on mobile and anchored panel on desktop; closing restores reading position.",
+    "failure": "Image failure leaves checked text readable and retry available. Unchecked text is withheld."
+  },
+  "episode": {
+    "desktop": "One illustrated beat with captions in a quiet adjacent/below panel; controls separate from caption.",
+    "mobile": "Still plus caption stack with large next/previous buttons. Readable text wins over filling viewport with art.",
+    "truthful_media": "Label still-image episodes appropriately; do not imply video/audio availability where no playable asset exists. No required autoplay."
+  },
+  "game": {
+    "desktop": "Bounded playfield plus persistent instruction and concise goal. Arrow/WASD controls if movement; Enter/Space or numbered alternatives where appropriate.",
+    "mobile": "Instruction in its own cream strip, unclipped playfield below, bottom control zone outside playfield. Large direction/tap controls, no precision dragging requirement, no hover. Keyboard appearance must not hide the instruction or confirm control.",
+    "language": "Targets must differ semantically; remove shape/colour-only shortcuts. Use English setup/tutorial only when designated by product rules; game Chinese passes the same check.",
+    "pause": "Clear held input on blur/visibility change; preserve progress; explicit restart/exit. No invisible timer continuing behind a dialog.",
+    "acceptance": "Run complete start-play-feedback-finish-restart loop with touch and keyboard; readiness event alone is insufficient."
+  },
+  "conversation": {
+    "desktop": "Character portrait beside constrained conversation column; message text and answers remain readable.",
+    "mobile": "Small portrait/header above transcript, input with tone controls and send button above keyboard/safe area. Transcript scrolls independently without jumping after audio changes.",
+    "alternatives": "Typed path always works; voice has explicit start/end and permission/failure fallback. Hints and retry do not delete draft answer."
+  },
+  "room_and_town": {
+    "desktop": "Preserve source aspect ratios and layout coordinates; concise labels on objects, full accessible action list below. Keep state markers clear of faces and relevant objects.",
+    "mobile": "Whole home room visible plus actions below; town may pan horizontally, initially centred on home, with equivalent place list. Do not force tiny labels to carry the only navigation.",
+    "personalization": "Persist chosen objects/positions separately from backdrop; do not bake ownership or learner text into scene art."
+  },
+  "acceptance_checklist": [
+    "All five viewports with actual longest Mandarin/ruby strings and long English names",
+    "200% text zoom without clipped CTA or lost caption",
+    "Keyboard-only, touch-only and reduced-motion paths",
+    "Loading, empty, vocabulary locked, pending, failed/retry, ready/unseen and completed states",
+    "No hidden overlap between caption, art, input keyboard and safe-area controls",
+    "At least one screenshot per implemented pack surface on desktop and mobile, followed by full interaction loop"
+  ]
+}

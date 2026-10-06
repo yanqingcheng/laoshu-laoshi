@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-conjunctions-comparison",
+  "lessonOrder": 22,
+  "lessonTitle": "Conjunctions & Comparison",
+  "targetWords": [
+    "因为",
+    "所以",
+    "虽然",
+    "但是",
+    "就",
+    "也",
+    "还",
+    "别",
+    "比",
+    "最",
+    "非常",
+    "真"
+  ],
+  "targetCoverage": [
+    {
+      "word": "因为",
+      "intent_EN": "Identify the cause supporting a decision",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "所以",
+      "intent_EN": "Choose the consequence supported by that cause",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "虽然",
+      "intent_EN": "Retain the concession in a contrast",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "但是",
+      "intent_EN": "Identify the deciding contrast",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "就",
+      "intent_EN": "Sequence the agreed next action in a vetted context",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "也",
+      "intent_EN": "Add another true preference",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "还",
+      "intent_EN": "Express a condition that still holds",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "别",
+      "intent_EN": "Discourage the explicitly unsuitable choice",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "比",
+      "intent_EN": "Compare venues on one stated dimension",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "最",
+      "intent_EN": "Choose the extreme within an explicit set",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "非常",
+      "intent_EN": "Intensify a character's opinion",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "真",
+      "intent_EN": "Express sincere reaction without creating a new fact",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    }
+  ],
+  "packTitle": "The Best Place for a Tiny Show",
+  "host": "dog",
+  "setting": "The existing park and home room as two candidate venues, with shop seating as a third inset.",
+  "motivation": "The dog wants a venue where everyone can enjoy the show without walking too far or getting wet.",
+  "obstacle": "The prettiest venue is far away, while the nearest is small; the friends give contrasting reasons.",
+  "runningJoke": "The dog calls every newly considered chair the best chair, even when it is the same chair moved across the room.",
+  "communicationGoals": [
+    "Follow a cause and its consequence.",
+    "Understand an although/but contrast without discarding either fact.",
+    "Compare alternatives on a stated criterion and justify a choice."
+  ],
+  "reviewTargets": [
+    "近",
+    "远",
+    "大",
+    "小",
+    "漂亮",
+    "下雨",
+    "可以",
+    "觉得"
+  ],
+  "story": {
+    "language": "English planning only; not learner-facing Chinese",
+    "pages": [
+      {
+        "page": 1,
+        "action": "The dog displays three possible settings for the show.",
+        "imageBrief": "Three framed venue views inside the room, all same size and visual importance.",
+        "purpose": "Establish alternatives without revealing the answer."
+      },
+      {
+        "page": 2,
+        "action": "Rain rules out one plan, but the closest room cannot fit the whole imagined stage.",
+        "imageBrief": "Wet park inset, small room inset, trio considering tradeoffs.",
+        "purpose": "Introduce genuine cause and contrast."
+      },
+      {
+        "page": 3,
+        "action": "The learner interprets the friends' reasons and chooses the room with a smaller performance.",
+        "imageBrief": "Rehearsal props compactly arranged, dog moving one chair.",
+        "purpose": "Solve the problem by satisfying reasons rather than selecting prettiest art."
+      },
+      {
+        "page": 4,
+        "action": "The show fits; everyone shares the same excellent chair in successive turns.",
+        "imageBrief": "Trio applauding compact show, single chair centre.",
+        "purpose": "Pay off negotiated compromise."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "The dog presents a beautiful far venue.",
+      "The cat prefers something near.",
+      "The mouse warns that it is raining.",
+      "A contrast explains why beauty does not settle the decision.",
+      "A comparison changes when group size is considered.",
+      "The learner selects a defensible plan.",
+      "The dog declares the ordinary chair the most extraordinary seat."
+    ],
+    "cliffhanger": "Visitors now need instructions for reaching the chosen room."
+  },
+  "game": {
+    "mechanic": "Reason-chain and comparative decision puzzle",
+    "objective": "Connect two evidence cards to a consequence and select a venue under a named criterion.",
+    "languageNecessary": "All venues remain plausible; the requested comparison and conjunction determine which evidence matters. Pictures alone cannot establish distance or a character's reason.",
+    "exampleRound_EN": "Although the park is beautiful, it is raining. The room is nearer than the shop. Choose the room when asked for the nearer dry plan, not merely the largest place.",
+    "distractors": [
+      "Reversed cause and consequence",
+      "Correct comparison on wrong criterion",
+      "A true fact that does not support the conclusion"
+    ],
+    "controlsDesktop": "Select evidence cards to build a two-step chain; keyboard reorder buttons. Comparison criterion remains pinned above venue thumbnails.",
+    "controlsMobile": "Present one link per step with back/next controls and a persistent criterion chip; horizontally scroll venue cards only if needed.",
+    "win": "Three reason chains and one justified venue choice; alternative valid explanations accepted.",
+    "feedback": "Highlight the unsupported link, retain true evidence, and replay the conjunction or comparison phrase.",
+    "evidencePolicy": "No automatic schedule evidence from a decorative tap or choice visible in the prompt. Any future graded event must use the app's existing evidence rules and deduplicate requests."
+  },
+  "conversation": {
+    "role": "Co-organizer comparing two venues",
+    "goal": "Agree on a plan and explain both an advantage and a limitation.",
+    "repairStrategy": "Offer replay, slower replay and the checked transcript; allow a clarification request or two meaning choices. Confirm intended meaning before proceeding. Do not score pronunciation or equate silence with failure; typed mode remains available.",
+    "turnIntents_EN": [
+      "Give one reason for a venue.",
+      "Hear the host's contrasting reason.",
+      "Compare two options on distance or size.",
+      "Ask the host not to choose an unsuitable action.",
+      "Conclude with a shared reasoned choice."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Same chair used in each comparison",
+      "word": "椅子",
+      "assetReuse": null,
+      "purpose": "Prevent cosmetic answer cues"
+    },
+    {
+      "visual": "Rain outside room view",
+      "word": "下雨",
+      "assetReuse": null,
+      "purpose": "Constraint"
+    },
+    {
+      "visual": "Book used as miniature stage prop",
+      "word": "书",
+      "assetReuse": "/art/objects/book.png",
+      "purpose": "Scale comparison"
+    },
+    {
+      "visual": "Cat co-organizer",
+      "word": "朋友",
+      "assetReuse": "/art/core/cat-neutral.png",
+      "purpose": "Contrasting opinion"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "request": "Three balanced venue thumbnails and a movable chair overlay; existing park/home/stock room art as references.",
+      "referencePaths": [
+        "/art/core/home-room.png",
+        "/art/core/stock-room.png",
+        "/art/core/dog-neutral.png",
+        "/art/core/dog-delighted.png",
+        "/art/objects/book.png"
+      ],
+      "constraints": "Match existing handmade-paper story garden palette and silhouettes. Reuse room camera and stable empty UI regions; no new map slot. Object layers require true alpha, clear margins and no baked text. Label intended variants before any generation."
+    }
+  ],
+  "desktopUX": {
+    "layout": "Warm cream reading surface, indigo text, restrained jade/terracotta accents; two-column art and interaction on wide screens. Keep controls off character faces and target objects.",
+    "interaction": "Select evidence cards to build a two-step chain; keyboard reorder buttons. Comparison criterion remains pinned above venue thumbnails.",
+    "reading": "Always-available replay, transcript, pinyin preference through shared WordText, focus-visible controls and undo. No hover-only information.",
+    "motion": "Only brief state transitions; reduced motion uses static swaps. Never auto-advance a reading page."
+  },
+  "mobileUX": {
+    "layout": "Single-column art crop using contain, never crop evidence. Dialogue and choices below art; portrait-first layout preserves the complete meaningful action.",
+    "interaction": "Present one link per step with back/next controls and a persistent criterion chip; horizontally scroll venue cards only if needed.",
+    "accessibility": "Minimum 48px targets, visible focus, clear contrast, screen-reader alternatives and safe-area spacing. No pinch, audio-only or drag-only requirement.",
+    "reading": "Short checked utterance chunks with large replay button; expanding transcript must not cover answer choices. Preserve progress across rotation."
+  },
+  "vocabularyRisks": [
+    "Comparison does not imply preference; most needs an explicit comparison set. Avoid translating every then/also/still particle identically. Generated causal claims must match the depicted scenario, not invented universal rules.",
+    "targetWords are exact source entries in source order, not a ready-made allowed-word snapshot. reviewTargets are earlier course entries, not proof the learner knows them.",
+    "Before generating any Chinese, obtain the actual learner allowedWordIds snapshot through word memory. Tokenize with existing data, run checkText before storage and again before display; derive pinyin from stored words and audit compounds. Withhold failed output.",
+    "All scripts, dialogue intents and image directions in this plan are English. Chinese strings occur only as exact source vocabulary identifiers. No Chinese content has been generated or validated by checkText.",
+    "Art and English planning may depict an unnamed item; it must not force an unavailable Chinese name. No new locations, hosts or curriculum unlock assumptions."
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk1-places-questions",
+  "lessonOrder": 3,
+  "lessonTitle": "Places & Questions",
+  "targetWords": [
+    "在",
+    "不",
+    "很",
+    "哪儿",
+    "家",
+    "学校",
+    "中国",
+    "北京",
+    "这",
+    "那",
+    "哪",
+    "这儿",
+    "那儿",
+    "人",
+    "吗"
+  ],
+  "packTitle": "The Two Doorways",
+  "host": "mouse",
+  "setting": "Inside the existing mouse room, a foldout stage shows home and school as picture backdrops. They are content cards, not new navigable map plots.",
+  "motivation": "Mouse wants to help a friend choose the correct backdrop for a class portrait.",
+  "obstacle": "A near doorway and far doorway have nearly identical silhouettes, and a pointer alternates between here and there.",
+  "runningJoke": "Mouse confidently stands in front of the wrong backdrop and is betrayed by the familiar school brush icon.",
+  "communicationGoals": [
+    "Locate a person at home or school and ask where.",
+    "Contrast this/that, here/there and which with stable visual pointing.",
+    "Use yes/no location or identity questions and negative correction in approved simple patterns."
+  ],
+  "reviewTargets": [
+    "老师",
+    "学生",
+    "爸爸",
+    "妈妈",
+    "谁",
+    "朋友"
+  ],
+  "languageValidation": {
+    "state": "required-before-generation-and-display",
+    "rule": "All eventual learner-visible Chinese wording, scripts, answer choices, subtitles and audio transcripts must pass checkText against the real allowed snapshot at generation time. This English plan is not validated learner content. Also review grammar, source meanings and pragmatic appropriateness; token membership alone is insufficient.",
+    "visualRule": "Visual concepts may exceed nameable vocabulary; do not force their names into Chinese output. Use gesture and layout for unnameable actions.",
+    "courseVocabularyNote": "Cumulative course words here are planning constraints, not a claim of learner-known or allowed memory state."
+  },
+  "story": {
+    "format": "four-page illustrated reader",
+    "pages": [
+      {
+        "page": 1,
+        "beat": "motivation",
+        "action": "Mouse sets up two picture backdrops, one home and one school.",
+        "imageBrief": "Existing room with two tabletop folding scenery cards, clear depth difference.",
+        "purpose": "Introduce location through a controlled two-choice stage."
+      },
+      {
+        "page": 2,
+        "beat": "obstacle",
+        "action": "Dog appears near the school picture while mouse points toward the home picture.",
+        "imageBrief": "Pointer and speaker visibly anchored; do not let the camera reverse spatial reference.",
+        "purpose": "Create a real location misunderstanding."
+      },
+      {
+        "page": 3,
+        "beat": "turn",
+        "action": "Learner checks where dog is, rejects the wrong location, then selects the correct this/that card.",
+        "imageBrief": "Two candidate cards with distinct near/far halos controlled by app.",
+        "purpose": "Use location and question contrasts, not unavailable travel verbs."
+      },
+      {
+        "page": 4,
+        "beat": "payoff",
+        "action": "School portrait is correct; the home card folds shut around mouse's misplaced pointer.",
+        "imageBrief": "Friendly portrait behind school backdrop, mouse amused by pointer placement.",
+        "purpose": "Reinforce successful correction and shared reference."
+      }
+    ]
+  },
+  "episode": {
+    "format": "short illustrated episode with checked audio planned later",
+    "beats": [
+      "Mouse shows the learner two pictured places.",
+      "Home and school receive checked labels.",
+      "Dog takes a position beside one card.",
+      "Mouse asks a yes/no location question while pointing incorrectly.",
+      "Learner selects a negative correction and the right location.",
+      "A second round swaps the person but preserves camera orientation.",
+      "A small optional location card anchors Beijing within China without making travel claims."
+    ],
+    "cliffhanger": "A visitor at the room door holds a doctor portrait and needs a polite introduction."
+  },
+  "game": {
+    "mechanic": "Point-of-view place match",
+    "objective": "Identify where a character is and which place a speaker indicates.",
+    "languageNecessary": "The spoken location or deictic cue chooses among two places with multiple characters; arrow color alone is insufficient.",
+    "exampleRound_EN": "EN planning example: determine whether the teacher is at school; correct a mistaken home guess.",
+    "distractors": "Home versus school; here versus there; near versus far; identity-correct but location-wrong.",
+    "controlsDesktop": "Click place or person; a fixed speaker portrait anchors the viewpoint.",
+    "controlsMobile": "Lock scene orientation; tap large outlined regions with a second confirm step.",
+    "win": "Four correct location checks, including one negative correction.",
+    "feedback": "Freeze the pointing gesture and replay the same checked cue; highlight the relation without moving the camera."
+  },
+  "conversation": {
+    "role": "Mouse as portrait organizer",
+    "goal": "Establish who is at which pictured place.",
+    "turnIntents_EN": [
+      "Identify this or that place.",
+      "Ask where the selected friend is.",
+      "Answer a yes/no location question.",
+      "Correct a mistaken location.",
+      "Choose which backdrop matches the class portrait."
+    ],
+    "repairStrategy": "Use a two-picture contrast and a fixed pointer; return to the last unambiguous speaker position."
+  },
+  "objects": [
+    {
+      "visual": "House picture card",
+      "word": "家",
+      "assetReuse": "/art/core/house-home.webp",
+      "purpose": "Home location cue.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "School picture card",
+      "word": "学校",
+      "assetReuse": null,
+      "purpose": "School location cue.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Simple Beijing location card",
+      "word": "北京",
+      "assetReuse": null,
+      "purpose": "Optional proper-place identification within China.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    }
+  ],
+  "artRequests": [
+    {
+      "kind": "prop",
+      "brief_EN": "Two folding location picture cards and stable pointer",
+      "status": "planned-not-generated",
+      "outputPath": "/art/planned/lesson-packs/hsk1-places-questions/prop-1.webp",
+      "constraints": "Reuse the story-garden palette and cast identity. No baked text, UI, watermark or new map plot. App renders all real labels. New scene/prop images are not generated by this planning task.",
+      "referencePaths": [
+        "/art/core/stock-room.webp",
+        "/art/core/sheet-mouse.webp"
+      ]
+    }
+  ],
+  "desktopUX": "Place cards within the room reader, not the town map. Keep a fixed speaker avatar by every deictic prompt.",
+  "mobileUX": "One stable camera scene and two large location buttons; never mirror artwork, since that can change pointing reference.",
+  "vocabularyRisks": [
+    "Home/family is contextual; this pack uses the home-place sense.",
+    "Very must only appear in a grammatical approved pattern with known predicate words, not forced into location statements.",
+    "The person/people token is a human noun; do not label every animal as a human solely to cover it.",
+    "Which, where and the yes/no particle are different question types. Beijing/China are proper-place references, not extra world plots."
+  ],
+  "deliveryScope": "Course pack served inside an existing bundled neighbour room. No new map plot, live generation, API call or ownership mutation is planned here."
+}

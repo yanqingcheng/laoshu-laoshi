@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "starter",
+  "lessonOrder": 0,
+  "lessonTitle": "Getting Started",
+  "targetWords": [
+    "你好",
+    "老鼠",
+    "王",
+    "李",
+    "我",
+    "你",
+    "他",
+    "她",
+    "是",
+    "老师",
+    "学生",
+    "朋友",
+    "叫",
+    "什么",
+    "名字",
+    "好",
+    "狗",
+    "猫",
+    "的",
+    "和",
+    "姓"
+  ],
+  "packTitle": "The Very Mixed-Up Welcome Portrait",
+  "host": "mouse",
+  "setting": "The existing mouse neighbour room becomes a tiny welcome portrait session. The existing trio are the only speakers; portrait cards and a reversible badge carry the visual joke.",
+  "motivation": "The learner wants a place in the friends' welcome portrait and a correct introduction.",
+  "obstacle": "The mouse teacher's portrait stand alternates the teacher and student badges while the dog and cat point to the wrong name card.",
+  "runningJoke": "The mouse solemnly poses under the student badge, notices the learner's face, and quietly swaps it back.",
+  "communicationGoals": [
+    "Recognize and introduce self and another participant using identity and name functions.",
+    "Distinguish a personal name from a surname, with Wang and Li as surname examples only.",
+    "Link mouse, dog and cat portraits to teacher, student and friend roles without narrating unavailable action verbs."
+  ],
+  "reviewTargets": [],
+  "languageValidation": {
+    "state": "required-before-generation-and-display",
+    "rule": "All eventual learner-visible Chinese wording, scripts, answer choices, subtitles and audio transcripts must pass checkText against the real allowed snapshot at generation time. This English plan is not validated learner content. Also review grammar, source meanings and pragmatic appropriateness; token membership alone is insufficient.",
+    "visualRule": "Visual concepts may exceed nameable vocabulary; do not force their names into Chinese output. Use gesture and layout for unnameable actions.",
+    "courseVocabularyNote": "Cumulative course words here are planning constraints, not a claim of learner-known or allowed memory state."
+  },
+  "story": {
+    "format": "four-page illustrated reader",
+    "pages": [
+      {
+        "page": 1,
+        "beat": "motivation",
+        "action": "The mouse greets the learner beside three blank portrait mounts; the learner's empty silhouette gains a friendly wave.",
+        "imageBrief": "Eye-level room vignette; mouse on right, three empty portrait mounts at left, no generated lettering.",
+        "purpose": "Establish hello, I and you through gaze and turn-taking, before asking for an introduction."
+      },
+      {
+        "page": 2,
+        "beat": "obstacle",
+        "action": "Teacher and student badges visually trade places; dog indicates the mouse while the cat indicates herself.",
+        "imageBrief": "Two reversible icon badges, teacher brush silhouette and student notebook silhouette; show puzzled gentle expressions.",
+        "purpose": "Contrast he/she and teacher/student as identities; all badge text will be app-rendered and validated."
+      },
+      {
+        "page": 3,
+        "beat": "turn",
+        "action": "The learner identifies the mouse, dog and cat in sequence, then chooses the correct surname card for a clearly signposted pretend persona.",
+        "imageBrief": "Three distinct portraits and two visually plain name cards; keep actual learner data outside generated art.",
+        "purpose": "Use name, surname and what in brief supported introductions rather than inventing a quest verb."
+      },
+      {
+        "page": 4,
+        "beat": "payoff",
+        "action": "The portrait now contains the learner and all three friends; the mouse's badge is upside down but still his.",
+        "imageBrief": "Warm group portrait with a little sideways badge and no written caption.",
+        "purpose": "Reinforce friend and and through a successful shared introduction; let the visual gag carry narrative complexity."
+      }
+    ]
+  },
+  "episode": {
+    "format": "short illustrated episode with checked audio planned later",
+    "beats": [
+      "Mouse gives a welcoming wave and indicates himself.",
+      "Dog poses confidently while his portrait mount shows the cat silhouette.",
+      "Cat points from the silhouette to herself, then to dog.",
+      "Mouse demonstrates the difference between a full-name card and a surname card using neutral icons.",
+      "Learner resolves two identity choices with gesture-supported language.",
+      "Group portrait aligns correctly; mouse notices his own inverted badge."
+    ],
+    "cliffhanger": "A dog-shaped invitation slips into view displaying an app-rendered row of number symbols; tomorrow's date is deliberately unresolved."
+  },
+  "game": {
+    "mechanic": "Portrait introduction matching",
+    "objective": "Give each existing character the correct portrait and role badge.",
+    "languageNecessary": "Identity cues in the validated spoken prompt determine the portrait; icon locations shuffle, so position alone cannot win.",
+    "exampleRound_EN": "EN planning example: identify the teacher among the mouse, dog and cat, then identify the learner's student badge.",
+    "distractors": "Same cast with roles swapped; surname card versus personal-name card, never two visually indistinguishable choices.",
+    "controlsDesktop": "Click a portrait, then confirm the role; arrow keys and Enter are equivalent.",
+    "controlsMobile": "Tap a large portrait card, then a separate confirm button; no dragging.",
+    "win": "Three correct introductions including one self/other contrast; mistakes never lock the learner out.",
+    "feedback": "Selected portrait responds with a nod or a puzzled look; replay the same checked identity cue and highlight the speaker."
+  },
+  "conversation": {
+    "role": "Mouse as welcoming teacher",
+    "goal": "Complete a short two-way introduction without pretending to know the learner's real name.",
+    "turnIntents_EN": [
+      "Respond to a greeting.",
+      "Choose a pretend or user-approved name identity.",
+      "Ask what the teacher is called.",
+      "Identify dog and cat as friends.",
+      "Close by affirming teacher/student roles."
+    ],
+    "repairStrategy": "Return to two portrait choices, replay the checked model, and accept a tap instead of forced speech."
+  },
+  "objects": [
+    {
+      "visual": "Round spectacles on the mouse portrait",
+      "word": "老师",
+      "assetReuse": null,
+      "purpose": "Teacher identity cue, not a new item to name.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Dog portrait",
+      "word": "狗",
+      "assetReuse": "/art/core/dog-neutral.webp",
+      "purpose": "Identity choice.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Cat portrait",
+      "word": "猫",
+      "assetReuse": "/art/core/cat-neutral.webp",
+      "purpose": "Identity choice.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    }
+  ],
+  "artRequests": [
+    {
+      "kind": "scene",
+      "brief_EN": "Welcome portrait vignette with blank mounts",
+      "status": "planned-not-generated",
+      "outputPath": "/art/planned/lesson-packs/starter/scene-1.webp",
+      "constraints": "Reuse the story-garden palette and cast identity. No baked text, UI, watermark or new map plot. App renders all real labels. New scene/prop images are not generated by this planning task.",
+      "referencePaths": [
+        "/art/core/stock-room.webp",
+        "/art/core/sheet-mouse.webp"
+      ]
+    },
+    {
+      "kind": "prop",
+      "brief_EN": "Three portrait mounts and two blank role badges",
+      "status": "planned-not-generated",
+      "outputPath": "/art/planned/lesson-packs/starter/prop-2.webp",
+      "constraints": "Reuse the story-garden palette and cast identity. No baked text, UI, watermark or new map plot. App renders all real labels. New scene/prop images are not generated by this planning task.",
+      "referencePaths": [
+        "/art/core/mouse-neutral.webp",
+        "/art/core/sheet-mouse.webp"
+      ]
+    }
+  ],
+  "desktopUX": "Portraits sit alongside the four-page reader; speaker focus and replay remain fixed. Use a distinct selected state before submitting a match.",
+  "mobileUX": "One portrait question per screen, two or three large choices below the scene. Keep the learner's chosen name outside raster art and allow skipping personal-name entry.",
+  "vocabularyRisks": [
+    "Do not introduce carry, find, look, welcome, picture or other unavailable verbs/nouns in Chinese narration.",
+    "Wang and Li are surnames in the source, not king or plum meanings.",
+    "Do not make gender a learner inference task; the cast's pronoun labels are explicit and optional user identity is respected.",
+    "The target possessive particle and surname construction require approved patterns; checking tokens alone is insufficient."
+  ],
+  "deliveryScope": "Course pack served inside an existing bundled neighbour room. No new map plot, live generation, API call or ownership mutation is planned here."
+}

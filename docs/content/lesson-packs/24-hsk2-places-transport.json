@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-places-transport",
+  "lessonOrder": 23,
+  "lessonTitle": "Places, Transport & Objects",
+  "targetWords": [
+    "房间",
+    "门",
+    "公司",
+    "宾馆",
+    "机场",
+    "公共汽车",
+    "票",
+    "报纸",
+    "手机",
+    "手表",
+    "铅笔",
+    "帮助",
+    "等"
+  ],
+  "targetCoverage": [
+    {
+      "word": "房间",
+      "intent_EN": "Locate the destination room in an inset",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "门",
+      "intent_EN": "Use a door as the waiting landmark",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "公司",
+      "intent_EN": "Reject the company route in the base round",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "宾馆",
+      "intent_EN": "Select the hotel destination",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "机场",
+      "intent_EN": "Identify the airport as story origin",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "公共汽车",
+      "intent_EN": "Select the bus transport token",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "票",
+      "intent_EN": "Recover the required ticket",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "报纸",
+      "intent_EN": "Search the newspaper",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "手机",
+      "intent_EN": "Replay the phone message",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "手表",
+      "intent_EN": "Interpret the watch joke",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "铅笔",
+      "intent_EN": "Use a pencil to indicate a route",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "帮助",
+      "intent_EN": "Offer assistance to the traveller",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "等",
+      "intent_EN": "Confirm where the traveller should wait",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    }
+  ],
+  "packTitle": "The Ticket in the Newspaper",
+  "host": "cat",
+  "setting": "A travel-help desk inside the existing shop; destinations appear only on a tabletop route board.",
+  "motivation": "The cat wants to help the mouse reach a hotel after arriving from the airport.",
+  "obstacle": "The ticket is tucked in a newspaper, and the dog confuses a company visit with the hotel destination.",
+  "runningJoke": "The dog repeatedly checks his watch upside down, then politely asks the cat for the time.",
+  "communicationGoals": [
+    "Understand origin, destination and a simple transport instruction.",
+    "Ask for help finding a travel object.",
+    "Confirm where to wait and what to take."
+  ],
+  "reviewTargets": [
+    "去",
+    "坐",
+    "车",
+    "时间",
+    "找",
+    "左边",
+    "右边",
+    "近"
+  ],
+  "story": {
+    "language": "English planning only; not learner-facing Chinese",
+    "pages": [
+      {
+        "page": 1,
+        "action": "The cat opens a desk for helping the mouse with his journey.",
+        "imageBrief": "Shop desk, tabletop destination pictures, bus card, phone, watch, newspaper.",
+        "purpose": "Establish a bounded travel goal without adding world locations."
+      },
+      {
+        "page": 2,
+        "action": "The dog finds a company note but cannot find the ticket.",
+        "imageBrief": "Dog holding newspaper with visible ticket edge; mouse looking at wrong route.",
+        "purpose": "Create object search and destination confusion."
+      },
+      {
+        "page": 3,
+        "action": "The learner follows the cat's instruction, finds the ticket, and selects the hotel-bound bus.",
+        "imageBrief": "Newspaper opened enough to reveal ticket; route pieces still unlabeled.",
+        "purpose": "Resolve with both location and destination comprehension."
+      },
+      {
+        "page": 4,
+        "action": "The mouse has the right ticket and waits at the agreed point; the dog rotates his watch.",
+        "imageBrief": "Travel board completed, trio at shop desk, watch joke foreground.",
+        "purpose": "Pay off successful assistance."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "The mouse arrives with several objects and one clear destination.",
+      "The dog offers the company route.",
+      "The cat asks where the mouse actually wants to go.",
+      "The missing ticket stalls the plan.",
+      "A phone message describes its position.",
+      "The learner builds the corrected route and retrieves the ticket.",
+      "The mouse departs; the dog discovers that his watch was upside down."
+    ],
+    "cliffhanger": "The friends disagree about which tasks are already finished and which are still happening."
+  },
+  "game": {
+    "mechanic": "Route dispatch plus spoken object-location search",
+    "objective": "Choose the destination and transport, then pack the needed ticket and locate the waiting point.",
+    "languageNecessary": "Destination art is not highlighted. Multiple routes share the bus and several objects occupy both sides of the table; the checked instruction determines the complete route.",
+    "exampleRound_EN": "Help the mouse go to the hotel by bus; the ticket is in the newspaper on the right. Pick the hotel route and open the right-hand newspaper before confirming.",
+    "distractors": [
+      "Company route instead of hotel",
+      "Correct bus with missing ticket",
+      "Left newspaper instead of right"
+    ],
+    "controlsDesktop": "Click route nodes and transport card, then click to inspect an object. Provide keyboard object list and reversible route selection.",
+    "controlsMobile": "Single route strip above a large object-search scene; an equivalent object list avoids tiny hotspots. Tap then confirm, no time pressure.",
+    "win": "One coherent itinerary with all explicit requirements satisfied; no invented fare or travel deadline.",
+    "feedback": "Show the unresolved part of the itinerary and replay only that instruction; allow the route or item to be changed independently.",
+    "evidencePolicy": "No automatic schedule evidence from a decorative tap or choice visible in the prompt. Any future graded event must use the app's existing evidence rules and deduplicate requests."
+  },
+  "conversation": {
+    "role": "Travel-desk helper",
+    "goal": "Confirm the visitor's destination and recover the object needed for travel.",
+    "repairStrategy": "Offer replay, slower replay and the checked transcript; allow a clarification request or two meaning choices. Confirm intended meaning before proceeding. Do not score pronunciation or equate silence with failure; typed mode remains available.",
+    "turnIntents_EN": [
+      "Ask which place the visitor wants.",
+      "Confirm the transport choice.",
+      "Ask where the ticket is.",
+      "Give a simple waiting instruction.",
+      "Confirm the visitor has the needed object."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Blank ticket",
+      "word": "票",
+      "assetReuse": null,
+      "purpose": "Required travel item"
+    },
+    {
+      "visual": "Folded unlettered newspaper",
+      "word": "报纸",
+      "assetReuse": null,
+      "purpose": "Ticket hiding place"
+    },
+    {
+      "visual": "Phone with blank screen",
+      "word": "手机",
+      "assetReuse": null,
+      "purpose": "Message source"
+    },
+    {
+      "visual": "Simple watch with no written digits",
+      "word": "手表",
+      "assetReuse": null,
+      "purpose": "Time joke"
+    },
+    {
+      "visual": "Pencil",
+      "word": "铅笔",
+      "assetReuse": null,
+      "purpose": "Route pointer"
+    },
+    {
+      "visual": "Bus picture token",
+      "word": "公共汽车",
+      "assetReuse": null,
+      "purpose": "Transport"
+    },
+    {
+      "visual": "Closed room door",
+      "word": "门",
+      "assetReuse": null,
+      "purpose": "Waiting landmark"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "request": "Transport desk cutouts and destination vignettes without signs; reuse shop room geometry and blank book/paper style.",
+      "referencePaths": [
+        "/art/core/home-room.png",
+        "/art/core/stock-room.png",
+        "/art/core/cat-neutral.png",
+        "/art/core/cat-delighted.png",
+        "/art/objects/book.png"
+      ],
+      "constraints": "Match existing handmade-paper story garden palette and silhouettes. Reuse room camera and stable empty UI regions; no new map slot. Object layers require true alpha, clear margins and no baked text. Label intended variants before any generation."
+    }
+  ],
+  "desktopUX": {
+    "layout": "Warm cream reading surface, indigo text, restrained jade/terracotta accents; two-column art and interaction on wide screens. Keep controls off character faces and target objects.",
+    "interaction": "Click route nodes and transport card, then click to inspect an object. Provide keyboard object list and reversible route selection.",
+    "reading": "Always-available replay, transcript, pinyin preference through shared WordText, focus-visible controls and undo. No hover-only information.",
+    "motion": "Only brief state transitions; reduced motion uses static swaps. Never auto-advance a reading page."
+  },
+  "mobileUX": {
+    "layout": "Single-column art crop using contain, never crop evidence. Dialogue and choices below art; portrait-first layout preserves the complete meaningful action.",
+    "interaction": "Single route strip above a large object-search scene; an equivalent object list avoids tiny hotspots. Tap then confirm, no time pressure.",
+    "accessibility": "Minimum 48px targets, visible focus, clear contrast, screen-reader alternatives and safe-area spacing. No pinch, audio-only or drag-only requirement.",
+    "reading": "Short checked utterance chunks with large replay button; expanding transcript must not cover answer choices. Preserve progress across rotation."
+  },
+  "vocabularyRisks": [
+    "Hotel, airport and company are story destinations on the board, not new map slots. Do not introduce travel-document, station or fare vocabulary beyond the snapshot. Decompose origin/destination phrasing only if its tokens are currently available.",
+    "targetWords are exact source entries in source order, not a ready-made allowed-word snapshot. reviewTargets are earlier course entries, not proof the learner knows them.",
+    "Before generating any Chinese, obtain the actual learner allowedWordIds snapshot through word memory. Tokenize with existing data, run checkText before storage and again before display; derive pinyin from stored words and audit compounds. Withhold failed output.",
+    "All scripts, dialogue intents and image directions in this plan are English. Chinese strings occur only as exact source vocabulary identifiers. No Chinese content has been generated or validated by checkText.",
+    "Art and English planning may depict an unnamed item; it must not force an unavailable Chinese name. No new locations, hosts or curriculum unlock assumptions."
+  ]
+}

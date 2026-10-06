@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk1-actions-consumption",
+  "lessonOrder": 6,
+  "lessonTitle": "Actions & Consumption",
+  "targetWords": [
+    "请",
+    "吃",
+    "饭",
+    "喝",
+    "想",
+    "喜欢",
+    "去",
+    "一起",
+    "来",
+    "回",
+    "水",
+    "茶",
+    "米饭",
+    "商店",
+    "饭馆",
+    "菜"
+  ],
+  "packTitle": "Mouse's Two-Cup Supper Plan",
+  "host": "mouse",
+  "setting": "The existing mouse room becomes a supper-planning table with water, tea, cooked rice and dishes. Shop and restaurant appear on invitation cards, never as new town plots.",
+  "motivation": "Mouse wants to arrange a shared meal that matches everyone's preferences.",
+  "obstacle": "Dog enthusiastically agrees to come together but chooses tea for a friend who prefers water.",
+  "runningJoke": "Mouse keeps setting out one extra cup for the portrait on the invitation.",
+  "communicationGoals": [
+    "Express wanting and liking without treating them as equivalent.",
+    "Distinguish eating a meal or rice from drinking water or tea.",
+    "Invite someone to come, go or return together using a clearly anchored destination."
+  ],
+  "reviewTargets": [
+    "我们",
+    "你们",
+    "他们",
+    "都",
+    "谢谢",
+    "不客气",
+    "家",
+    "朋友"
+  ],
+  "languageValidation": {
+    "state": "required-before-generation-and-display",
+    "rule": "All eventual learner-visible Chinese wording, scripts, answer choices, subtitles and audio transcripts must pass checkText against the real allowed snapshot at generation time. This English plan is not validated learner content. Also review grammar, source meanings and pragmatic appropriateness; token membership alone is insufficient.",
+    "visualRule": "Visual concepts may exceed nameable vocabulary; do not force their names into Chinese output. Use gesture and layout for unnameable actions.",
+    "courseVocabularyNote": "Cumulative course words here are planning constraints, not a claim of learner-known or allowed memory state."
+  },
+  "story": {
+    "format": "four-page illustrated reader",
+    "pages": [
+      {
+        "page": 1,
+        "beat": "motivation",
+        "action": "Mouse arranges two cups and a rice bowl beside the friends' invitation.",
+        "imageBrief": "Clear water glass, tea cup, cooked rice and one dish, no labels baked into art.",
+        "purpose": "Connect food/drink vocabulary to a social purpose."
+      },
+      {
+        "page": 2,
+        "beat": "obstacle",
+        "action": "Dog's preferred drink and cat's requested drink differ; mouse nearly serves the same to both.",
+        "imageBrief": "Two preference portrait cards with app-controlled icon choices.",
+        "purpose": "Make want/like and person reference determine the choice."
+      },
+      {
+        "page": 3,
+        "beat": "turn",
+        "action": "Learner matches drinks and meal items, then chooses a restaurant or home invitation route.",
+        "imageBrief": "Tabletop destination cards for shop, restaurant and home; no actual map expansion.",
+        "purpose": "Anchor go/come/return to a named origin and destination."
+      },
+      {
+        "page": 4,
+        "beat": "payoff",
+        "action": "Friends share the agreed meal while mouse notices the portrait's untouched extra cup.",
+        "imageBrief": "Small convivial meal in existing room with one obviously extra cup.",
+        "purpose": "Reward successful communication, then close with a familiar thanks exchange."
+      }
+    ]
+  },
+  "episode": {
+    "format": "short illustrated episode with checked audio planned later",
+    "beats": [
+      "Mouse invites the learner to share a meal.",
+      "Water and tea are contrasted visually and through checked cues.",
+      "Cooked rice is distinguished from a general dish.",
+      "Dog states a preference while cat makes a different immediate request.",
+      "Learner selects the right items for each friend.",
+      "Two pictured destinations establish go/come/return relative to the host.",
+      "Friends agree to act together.",
+      "Mouse removes the portrait's extra place setting."
+    ],
+    "cliffhanger": "The meal plan is ready but the friends' time cards disagree about when to meet."
+  },
+  "game": {
+    "mechanic": "Preference-aware meal tray",
+    "objective": "Assemble the right tray and destination for two friends.",
+    "languageNecessary": "Identical trays can be right for one friend and wrong for another; checked person, drink and desire cues determine the solution.",
+    "exampleRound_EN": "EN planning example: cat wants water while dog likes tea; assign each drink to the correct portrait, then choose the checked shared destination.",
+    "distractors": "Water/tea swap; cooked rice versus general dish; preference versus immediate request; shop versus restaurant.",
+    "controlsDesktop": "Click an item and then recipient tray; destination chosen in a separate stage.",
+    "controlsMobile": "Tap recipient first, then one item from a large bottom tray; avoid precision dragging.",
+    "win": "Both trays and the shared destination correct after at least one change in request.",
+    "feedback": "Recipient gestures to the relevant item slot; replay the original checked cue, preserving correct selections."
+  },
+  "conversation": {
+    "role": "Mouse as meal host",
+    "goal": "Agree what to eat or drink and whether to go together.",
+    "turnIntents_EN": [
+      "Respond to a polite invitation.",
+      "State a drink preference.",
+      "Make an immediate meal request.",
+      "Ask whether the host wants to go together.",
+      "Confirm coming or returning relative to the displayed home anchor."
+    ],
+    "repairStrategy": "Present water/tea or shop/restaurant contrasts; separate preference from request with distinct English intent hints if needed."
+  },
+  "objects": [
+    {
+      "visual": "Jade cup of tea",
+      "word": "茶",
+      "assetReuse": "/art/objects/teacup.webp",
+      "purpose": "Drink choice.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Clear water glass",
+      "word": "水",
+      "assetReuse": null,
+      "purpose": "Drink contrast.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Cooked rice bowl",
+      "word": "米饭",
+      "assetReuse": null,
+      "purpose": "Specific food item.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Small vegetable dish",
+      "word": "菜",
+      "assetReuse": null,
+      "purpose": "Dish/food category example.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    }
+  ],
+  "artRequests": [
+    {
+      "kind": "prop",
+      "brief_EN": "Water glass, cooked rice bowl and single dish cutouts",
+      "status": "planned-not-generated",
+      "outputPath": "/art/planned/lesson-packs/hsk1-actions-consumption/prop-1.webp",
+      "constraints": "Reuse the story-garden palette and cast identity. No baked text, UI, watermark or new map plot. App renders all real labels. New scene/prop images are not generated by this planning task.",
+      "referencePaths": [
+        "/art/objects/teacup.webp",
+        "/art/core/sheet-mouse.webp"
+      ]
+    },
+    {
+      "kind": "prop",
+      "brief_EN": "Shop and restaurant destination picture cards",
+      "status": "planned-not-generated",
+      "outputPath": "/art/planned/lesson-packs/hsk1-actions-consumption/prop-2.webp",
+      "constraints": "Reuse the story-garden palette and cast identity. No baked text, UI, watermark or new map plot. App renders all real labels. New scene/prop images are not generated by this planning task.",
+      "referencePaths": [
+        "/art/core/stock-room.webp",
+        "/art/core/sheet-mouse.webp"
+      ]
+    }
+  ],
+  "desktopUX": "Keep recipient portraits over their trays and show a persistent origin/destination strip only during movement-language questions.",
+  "mobileUX": "Split meal selection and destination into separate steps; sticky recipient name prevents accidental assignment to the wrong friend.",
+  "vocabularyRisks": [
+    "Meal/food/rice and cooked rice overlap but are not universally interchangeable; honor the source senses with contextual examples.",
+    "Dish/vegetable/food uses should be constrained to the illustrated dish, not treated as one precise English noun everywhere.",
+    "Go, come and return depend on speaker location and origin; keep an explicit home anchor.",
+    "Please must appear in an approved polite invitation/request construction. No unsupported recipes or shopping prices."
+  ],
+  "deliveryScope": "Course pack served inside an existing bundled neighbour room. No new map plot, live generation, API call or ownership mutation is planned here."
+}

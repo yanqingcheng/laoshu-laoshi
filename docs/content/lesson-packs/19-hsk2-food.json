@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-food",
+  "lessonOrder": 18,
+  "lessonTitle": "Food",
+  "targetWords": [
+    "鸡蛋",
+    "牛奶",
+    "面条",
+    "鱼",
+    "羊肉",
+    "西瓜",
+    "咖啡",
+    "服务员"
+  ],
+  "targetCoverage": [
+    {
+      "word": "鸡蛋",
+      "intent_EN": "Request one egg",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "牛奶",
+      "intent_EN": "Select milk instead of coffee",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "面条",
+      "intent_EN": "Revise a noodle order",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "鱼",
+      "intent_EN": "Identify cat's chosen dish",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "羊肉",
+      "intent_EN": "Choose mutton in an alternative order",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "西瓜",
+      "intent_EN": "Offer fruit after the meal",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "咖啡",
+      "intent_EN": "Exclude coffee in the base round",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "服务员",
+      "intent_EN": "Identify the temporary waiter role",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    }
+  ],
+  "packTitle": "The Three-Tray Lunch",
+  "host": "mouse",
+  "setting": "A temporary food-service counter inside the existing shop; lunch tables are an interior scene, not new town places.",
+  "motivation": "The mouse wants everyone to receive the lunch they actually asked for before the trio eats together.",
+  "obstacle": "The dog arranges every tray to look impressively full, mixing two customers' orders.",
+  "runningJoke": "The cat solemnly checks every tray for fish, including the tray containing only drinks.",
+  "communicationGoals": [
+    "Understand a food-and-drink order with one exclusion.",
+    "Ask for clarification when two similar trays differ in one item.",
+    "Politely confirm a corrected order and recipient."
+  ],
+  "reviewTargets": [
+    "吃",
+    "喝",
+    "请",
+    "杯子",
+    "两",
+    "没有",
+    "左边",
+    "右边"
+  ],
+  "story": {
+    "language": "English planning only; not learner-facing Chinese",
+    "pages": [
+      {
+        "page": 1,
+        "action": "The mouse opens the counter and learns each friend's lunch preferences.",
+        "imageBrief": "Shop counter with trio and three empty trays; food pictures separate, no lettering.",
+        "purpose": "Set a concrete social goal and establish who ordered what."
+      },
+      {
+        "page": 2,
+        "action": "The dog delivers plentiful trays, but the cat's fish and the mouse's milk have swapped.",
+        "imageBrief": "Two mismatched trays; worried mouse, delighted dog, cat examining a milk cup.",
+        "purpose": "Make understanding recipient and object necessary."
+      },
+      {
+        "page": 3,
+        "action": "The learner replays the orders and moves only the two incorrect items.",
+        "imageBrief": "Close view of two food items being exchanged, unchanged trays around them.",
+        "purpose": "Resolve through selective comprehension rather than indiscriminate swapping."
+      },
+      {
+        "page": 4,
+        "action": "Everyone receives the right lunch; the cat checks the empty drinks tray once more.",
+        "imageBrief": "Trio dining, correct meals clearly visible, cat peering at an empty tray.",
+        "purpose": "Pay off both accurate listening and the fish joke."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "The mouse rehearses being the waiter.",
+      "The dog accepts three different requests and remembers only that everyone is hungry.",
+      "The cat quietly points at the wrong fish.",
+      "The mouse models confirming one item rather than repeating a whole order.",
+      "A second request changes only the drink.",
+      "The learner identifies which tray must change.",
+      "Lunch succeeds and the dog discovers one unopened order picture."
+    ],
+    "cliffhanger": "The unopened request is for a picnic tomorrow; nobody knows what the weather will do."
+  },
+  "game": {
+    "mechanic": "Order assembly with reversible tray editing",
+    "objective": "Serve three orders, each with two requested items and one excluded item.",
+    "languageNecessary": "All tray candidates share at least one item; recipient, quantity and exclusion are given through checked language. Art shows available food but never which customer requested it.",
+    "exampleRound_EN": "Request: The cat wants fish and milk, not coffee. Select fish and milk for the cat; leave coffee on the counter.",
+    "distractors": [
+      "Correct food with wrong drink",
+      "Correct items on wrong recipient's tray",
+      "An attractive extra item explicitly excluded"
+    ],
+    "controlsDesktop": "Click item then tray slot; drag is optional. Number keys select visible items, Enter confirms, Escape cancels. Keep all three trays and transcript side by side.",
+    "controlsMobile": "Single tray focused at a time with persistent recipient portrait; tap item then slot. Swipe switches tray only, never submits. Fixed replay/confirm bar above safe area.",
+    "win": "Three confirmed correct trays; retries do not remove food or impose a timer.",
+    "feedback": "Show the requested phrase and highlight the single disputed tray slot; replay it, then allow correction.",
+    "evidencePolicy": "No automatic schedule evidence from a decorative tap or choice visible in the prompt. Any future graded event must use the app's existing evidence rules and deduplicate requests."
+  },
+  "conversation": {
+    "role": "Customer placing and revising a lunch order",
+    "goal": "Agree on a two-item lunch and repair one deliberately mistaken confirmation.",
+    "repairStrategy": "Offer replay, slower replay and the checked transcript; allow a clarification request or two meaning choices. Confirm intended meaning before proceeding. Do not score pronunciation or equate silence with failure; typed mode remains available.",
+    "turnIntents_EN": [
+      "Greet the waiter and request a food.",
+      "Choose a drink.",
+      "Answer a quantity clarification.",
+      "Reject one incorrect read-back politely.",
+      "Confirm the corrected tray and thank the host."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "An egg on a small dish",
+      "word": "鸡蛋",
+      "assetReuse": null,
+      "purpose": "Food contrast"
+    },
+    {
+      "visual": "Milk in a distinguishable pale cup",
+      "word": "牛奶",
+      "assetReuse": null,
+      "purpose": "Drink contrast"
+    },
+    {
+      "visual": "Noodles in a bowl",
+      "word": "面条",
+      "assetReuse": null,
+      "purpose": "Alternative lunch"
+    },
+    {
+      "visual": "A cooked fish on a dish",
+      "word": "鱼",
+      "assetReuse": null,
+      "purpose": "Recipient-specific request"
+    },
+    {
+      "visual": "A small mutton serving",
+      "word": "羊肉",
+      "assetReuse": null,
+      "purpose": "Replay variant"
+    },
+    {
+      "visual": "A watermelon slice",
+      "word": "西瓜",
+      "assetReuse": null,
+      "purpose": "Fruit option"
+    },
+    {
+      "visual": "Coffee in a dark cup",
+      "word": "咖啡",
+      "assetReuse": null,
+      "purpose": "Drink exclusion"
+    },
+    {
+      "visual": "Plain reusable cup",
+      "word": "杯子",
+      "assetReuse": "/art/objects/teacup.png",
+      "purpose": "Cup silhouette reference"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "request": "One consistent food cutout set with portions distinguishable at small scale; one three-tray counter overlay.",
+      "referencePaths": [
+        "/art/core/home-room.png",
+        "/art/core/stock-room.png",
+        "/art/core/mouse-neutral.png",
+        "/art/core/mouse-delighted.png",
+        "/art/objects/book.png"
+      ],
+      "constraints": "Match existing handmade-paper story garden palette and silhouettes. Reuse room camera and stable empty UI regions; no new map slot. Object layers require true alpha, clear margins and no baked text. Label intended variants before any generation."
+    }
+  ],
+  "desktopUX": {
+    "layout": "Warm cream reading surface, indigo text, restrained jade/terracotta accents; two-column art and interaction on wide screens. Keep controls off character faces and target objects.",
+    "interaction": "Click item then tray slot; drag is optional. Number keys select visible items, Enter confirms, Escape cancels. Keep all three trays and transcript side by side.",
+    "reading": "Always-available replay, transcript, pinyin preference through shared WordText, focus-visible controls and undo. No hover-only information.",
+    "motion": "Only brief state transitions; reduced motion uses static swaps. Never auto-advance a reading page."
+  },
+  "mobileUX": {
+    "layout": "Single-column art crop using contain, never crop evidence. Dialogue and choices below art; portrait-first layout preserves the complete meaningful action.",
+    "interaction": "Single tray focused at a time with persistent recipient portrait; tap item then slot. Swipe switches tray only, never submits. Fixed replay/confirm bar above safe area.",
+    "accessibility": "Minimum 48px targets, visible focus, clear contrast, screen-reader alternatives and safe-area spacing. No pinch, audio-only or drag-only requirement.",
+    "reading": "Short checked utterance chunks with large replay button; expanding transcript must not cover answer choices. Preserve progress across rotation."
+  },
+  "vocabularyRisks": [
+    "Do not introduce dish names, ingredients, tray, order or waiter dialogue grammar beyond the snapshot; service terminology can remain English controls. Check food measure words and animal-food assumptions; preferences are story choices.",
+    "targetWords are exact source entries in source order, not a ready-made allowed-word snapshot. reviewTargets are earlier course entries, not proof the learner knows them.",
+    "Before generating any Chinese, obtain the actual learner allowedWordIds snapshot through word memory. Tokenize with existing data, run checkText before storage and again before display; derive pinyin from stored words and audit compounds. Withhold failed output.",
+    "All scripts, dialogue intents and image directions in this plan are English. Chinese strings occur only as exact source vocabulary identifiers. No Chinese content has been generated or validated by checkText.",
+    "Art and English planning may depict an unnamed item; it must not force an unavailable Chinese name. No new locations, hosts or curriculum unlock assumptions."
+  ]
+}

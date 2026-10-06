@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-aspect-modifiers",
+  "lessonOrder": 24,
+  "lessonTitle": "Aspect & Modifiers",
+  "targetWords": [
+    "已经",
+    "正在",
+    "从",
+    "到",
+    "再",
+    "完",
+    "过",
+    "一下",
+    "得",
+    "着"
+  ],
+  "targetCoverage": [
+    {
+      "word": "已经",
+      "intent_EN": "Identify an already completed preparation",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "正在",
+      "intent_EN": "Track an action in progress now",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "从",
+      "intent_EN": "Identify a movement source",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "到",
+      "intent_EN": "Identify a movement destination",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "再",
+      "intent_EN": "Repeat only the specified task",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "完",
+      "intent_EN": "Confirm completion of an action",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "过",
+      "intent_EN": "Separate past experience from completion today",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "一下",
+      "intent_EN": "Request a brief attempt",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "得",
+      "intent_EN": "Describe action manner in one vetted complement pattern",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "着",
+      "intent_EN": "Contrast a continuing state with a newly completed action",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    }
+  ],
+  "packTitle": "The Rehearsal That Happened Twice",
+  "host": "mouse",
+  "setting": "Existing home room and park depicted as two ends of a rehearsal route; one chapter player.",
+  "motivation": "The mouse wants to coordinate a short show without repeating a finished task or interrupting one in progress.",
+  "obstacle": "The dog says everything is done while the cat is still practising; a remembered past performance gets confused with today's action.",
+  "runningJoke": "The dog proudly repeats the ending every time he hears the word again, regardless of which action was requested.",
+  "communicationGoals": [
+    "Distinguish already completed, currently ongoing and previous experience.",
+    "Follow from/to movement and a request to repeat briefly.",
+    "Describe how an action is performed using a checked complement pattern."
+  ],
+  "reviewTargets": [
+    "准备",
+    "跳舞",
+    "唱歌",
+    "走",
+    "快",
+    "慢",
+    "现在",
+    "时间"
+  ],
+  "story": {
+    "language": "English planning only; not learner-facing Chinese",
+    "pages": [
+      {
+        "page": 1,
+        "action": "The mouse lays out the afternoon's rehearsal stages.",
+        "imageBrief": "Room table with three neutral time-state cards and trio practising.",
+        "purpose": "Set a coordination goal with repeated familiar actions."
+      },
+      {
+        "page": 2,
+        "action": "The dog marks the dance finished while the cat is visibly dancing; an old performance picture adds confusion.",
+        "imageBrief": "Cat mid-dance, dog displaying older performance image, mouse puzzled.",
+        "purpose": "Expose aspect difference without relying on clock time alone."
+      },
+      {
+        "page": 3,
+        "action": "The learner hears the status reports and moves each action to the correct state, then requests one brief repeat.",
+        "imageBrief": "Same action pictured as ongoing and completed in paired panels.",
+        "purpose": "Resolve through grammatical status and context."
+      },
+      {
+        "page": 4,
+        "action": "The show is ready; the dog performs only the requested ending this time.",
+        "imageBrief": "Trio ready in room, park inset quiet, dog pausing for confirmation.",
+        "purpose": "Reward accurate coordination and repair the running joke."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "The mouse asks what has already been prepared.",
+      "The cat is still performing one action.",
+      "The dog recalls having performed it on another day.",
+      "An instruction sends a prop from the room to the park inset.",
+      "The learner separates experience from current completion.",
+      "A brief repeat improves one action.",
+      "The dog waits for the specific repeat cue before performing the ending."
+    ],
+    "cliffhanger": "Everything is ready for a celebration, but nobody has named whose birthday it is."
+  },
+  "game": {
+    "mechanic": "Action-state timeline editing with context pairs",
+    "objective": "Place six reports into completed-now, ongoing-now or past-experience contexts; execute one from/to route and one requested repeat.",
+    "languageNecessary": "Pairs use the same action art and actor. Checked aspect wording and explicit context select the state; color, facial expression and image order do not reveal it.",
+    "exampleRound_EN": "The cat is dancing now, while the dog has danced before. Keep the cat's task in progress and place the dog's claim in past experience; neither means today's show is finished.",
+    "distractors": [
+      "Past experience counted as completion today",
+      "Ongoing action counted as not started",
+      "Repeating every task instead of the named task"
+    ],
+    "controlsDesktop": "Select report then state column; route and repeat use explicit buttons. Keyboard labels expose action and actor independent of color.",
+    "controlsMobile": "One report and three state buttons; previous placements in expandable list. One route at a time, explicit repeat button.",
+    "win": "All reports assigned consistently and only the requested task repeated.",
+    "feedback": "Contrast the two contexts with a replay and English explanation; never teach an aspect marker as a fixed English tense.",
+    "evidencePolicy": "No automatic schedule evidence from a decorative tap or choice visible in the prompt. Any future graded event must use the app's existing evidence rules and deduplicate requests."
+  },
+  "conversation": {
+    "role": "Rehearsal coordinator",
+    "goal": "Establish accurate task status and request one helpful repeat.",
+    "repairStrategy": "Offer replay, slower replay and the checked transcript; allow a clarification request or two meaning choices. Confirm intended meaning before proceeding. Do not score pronunciation or equate silence with failure; typed mode remains available.",
+    "turnIntents_EN": [
+      "Say which task is already finished.",
+      "Ask what is happening now.",
+      "Distinguish a previous experience from today's result.",
+      "Give a from/to movement instruction.",
+      "Ask for one brief repeat and confirm completion."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Closed book after reading",
+      "word": "书",
+      "assetReuse": "/art/objects/book.png",
+      "purpose": "Completed action cue"
+    },
+    {
+      "visual": "Open book during reading",
+      "word": "书",
+      "assetReuse": null,
+      "purpose": "Same-object aspect pair"
+    },
+    {
+      "visual": "Cat dancing",
+      "word": "跳舞",
+      "assetReuse": null,
+      "purpose": "Ongoing action"
+    },
+    {
+      "visual": "Dog singing",
+      "word": "唱歌",
+      "assetReuse": null,
+      "purpose": "Experience contrast"
+    },
+    {
+      "visual": "Reusable cup",
+      "word": "杯子",
+      "assetReuse": "/art/objects/teacup.png",
+      "purpose": "Moved object"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "request": "Matched action-state pairs with consistent camera and characters; empty state labels owned by the app.",
+      "referencePaths": [
+        "/art/core/home-room.png",
+        "/art/core/stock-room.png",
+        "/art/core/mouse-neutral.png",
+        "/art/core/mouse-delighted.png",
+        "/art/objects/book.png"
+      ],
+      "constraints": "Match existing handmade-paper story garden palette and silhouettes. Reuse room camera and stable empty UI regions; no new map slot. Object layers require true alpha, clear margins and no baked text. Label intended variants before any generation."
+    }
+  ],
+  "desktopUX": {
+    "layout": "Warm cream reading surface, indigo text, restrained jade/terracotta accents; two-column art and interaction on wide screens. Keep controls off character faces and target objects.",
+    "interaction": "Select report then state column; route and repeat use explicit buttons. Keyboard labels expose action and actor independent of color.",
+    "reading": "Always-available replay, transcript, pinyin preference through shared WordText, focus-visible controls and undo. No hover-only information.",
+    "motion": "Only brief state transitions; reduced motion uses static swaps. Never auto-advance a reading page."
+  },
+  "mobileUX": {
+    "layout": "Single-column art crop using contain, never crop evidence. Dialogue and choices below art; portrait-first layout preserves the complete meaningful action.",
+    "interaction": "One report and three state buttons; previous placements in expandable list. One route at a time, explicit repeat button.",
+    "accessibility": "Minimum 48px targets, visible focus, clear contrast, screen-reader alternatives and safe-area spacing. No pinch, audio-only or drag-only requirement.",
+    "reading": "Short checked utterance chunks with large replay button; expanding transcript must not cover answer choices. Preserve progress across rotation."
+  },
+  "vocabularyRisks": [
+    "Aspect markers are not tense labels; distinguish experiential, durative and result contexts. De/ongoing/completion patterns require human review plus checkText. Do not demand unavailable temporal words or grammar merely because the English planning beat uses them.",
+    "targetWords are exact source entries in source order, not a ready-made allowed-word snapshot. reviewTargets are earlier course entries, not proof the learner knows them.",
+    "Before generating any Chinese, obtain the actual learner allowedWordIds snapshot through word memory. Tokenize with existing data, run checkText before storage and again before display; derive pinyin from stored words and audit compounds. Withhold failed output.",
+    "All scripts, dialogue intents and image directions in this plan are English. Chinese strings occur only as exact source vocabulary identifiers. No Chinese content has been generated or validated by checkText.",
+    "Art and English planning may depict an unnamed item; it must not force an unavailable Chinese name. No new locations, hosts or curriculum unlock assumptions."
+  ]
+}

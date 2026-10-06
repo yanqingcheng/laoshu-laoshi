@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-family-complete",
+  "lessonOrder": 14,
+  "lessonTitle": "Family Complete",
+  "targetWords": [
+    "哥哥",
+    "姐姐",
+    "弟弟",
+    "妹妹",
+    "丈夫",
+    "妻子",
+    "孩子",
+    "大家",
+    "男",
+    "女"
+  ],
+  "packTitle": "The Family Portrait Mix-up",
+  "host": "mouse",
+  "setting": "Mouse's existing room; an album opens on its table, visitors appear in pictures rather than extra houses.",
+  "motivation": "Mouse wants each visiting family to receive the correct portrait.",
+  "obstacle": "The relationships are relative to different speakers, so the same person is a sister in one description and a wife in another.",
+  "runningJoke": "Dog keeps assigning his own family relationships to everyone else's album.",
+  "communicationGoals": [
+    "Identify older and younger siblings from a stated speaker.",
+    "Recognize spouses and children without guessing from clothing.",
+    "Introduce everyone with explicit family context."
+  ],
+  "reviewTargets": [
+    "爸爸",
+    "妈妈",
+    "儿子",
+    "女儿",
+    "谁",
+    "他们",
+    "认识"
+  ],
+  "story": {
+    "motivation": "Mouse wants each visiting family to receive the correct portrait.",
+    "obstacle": "The relationships are relative to different speakers, so the same person is a sister in one description and a wife in another.",
+    "turn": "Learner listens to one speaker describe a sibling and spouse.",
+    "payoff": "The right families receive their pages and everyone is introduced.",
+    "pages": [
+      {
+        "page": 1,
+        "action": "Mouse discovers two similar portrait pages for the visit.",
+        "imageBrief": "Two animal-family portraits with varied heights not sufficient for relationship inference.",
+        "purpose": "Establish the sorting need.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 2,
+        "action": "Dog points to a person and confidently names his own older brother.",
+        "imageBrief": "Dog with misplaced pointer, cat calmly indicates the actual speaker icon.",
+        "purpose": "Expose perspective error.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 3,
+        "action": "Learner listens to one speaker describe a sibling and spouse.",
+        "imageBrief": "Relationship links shown only after the clue, neutral character clothes.",
+        "purpose": "Turn relational language into evidence.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 4,
+        "action": "The right families receive their pages and everyone is introduced.",
+        "imageBrief": "Friends together with two correct album pages, no family stereotypes.",
+        "purpose": "Pay off accurate introductions.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "Mouse lays out portrait pages.",
+      "Cat introduces a family member.",
+      "Dog guesses using height.",
+      "Mouse changes the speaker icon.",
+      "The learner asks whose family is being described.",
+      "A sibling clue resolves one page.",
+      "A spouse clue resolves another.",
+      "One visitor cannot find the route to the room."
+    ],
+    "cliffhanger": "Can the friends help the visitor find the way?",
+    "delivery": "Six to eight short shots using existing room backgrounds and character identities; one checked line per shot where possible. Audio generated only after each line passes checkText.",
+    "status": "planned-not-generated"
+  },
+  "game": {
+    "mechanic": "Speaker-relative portrait detective",
+    "objective": "Select the person matching the active speaker's relationship clue.",
+    "languageNecessary": "Appearance and age are deliberately insufficient; checked introductions establish the relationship graph.",
+    "exampleRound_EN": "Intent: This is my younger sister. Speaker marker sits on a known sibling; two same-height women have different relationship links provided in prior checked clues.",
+    "distractors": [
+      "Correct relationship to wrong speaker",
+      "Older instead of younger sibling",
+      "Spouse instead of sibling"
+    ],
+    "controlsDesktop": "Select a card with click or Tab and Enter, then select its destination; drag is optional. Space replays the current checked audio; escape cancels the pending placement. No speed requirement.",
+    "controlsMobile": "Tap a card then tap its destination with at least 48px targets. A persistent replay button and explicit confirm support one-handed play; never require precision dragging or hover.",
+    "win": "Complete three distinct request rounds, including at least one changed attribute combination. A corrected retry can succeed; completion alone is not evidence that every target word was learned.",
+    "feedback": "Show the selected outcome, replay the relevant checked clause, and let the learner revise one choice. Do not reveal the answer using a new word, a translation shortcut or color alone. Report only genuine submitted evidence through the memory layer."
+  },
+  "conversation": {
+    "role": "Learner is the helper; mouse hosts and the other recurring friends supply context.",
+    "goal": "Mouse wants each visiting family to receive the correct portrait.",
+    "repairStrategy": "On uncertainty, replay the last checked sentence, shorten it using the same allowed words, then offer two checked alternatives grounded in the scene. Never introduce an unknown synonym or pretend an unintelligible response was correct. Let the learner pass without losing progress.",
+    "validation": "Check each host utterance, suggested learner response and repair independently using actual checkText; these are plans, not validated dialogue.",
+    "turnIntents_EN": [
+      "Introduce yourself as the active speaker.",
+      "Identify an older sibling.",
+      "Clarify a younger sibling.",
+      "Identify a spouse or child in the fictional album.",
+      "Introduce everyone together."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Sibling portrait card",
+      "word": "妹妹",
+      "assetReuse": null,
+      "purpose": "Relative relationship example"
+    },
+    {
+      "visual": "Spouse portrait pair",
+      "word": "妻子",
+      "assetReuse": null,
+      "purpose": "Explicitly stated relationship only"
+    },
+    {
+      "visual": "Group of visiting children",
+      "word": "孩子",
+      "assetReuse": null,
+      "purpose": "Plural context without naming unknown occupations"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "purpose": "Four story panels and episode crops",
+      "brief": "Preserve the established gouache paper style and character identities. Compose the four story imageBriefs, leave all lettering blank, and keep separable targets visually clear. Existing reference files are reusable guidance, not evidence that these new panels exist.",
+      "referencePaths": [
+        "/art/core/stock-room.png",
+        "/art/core/mouse-neutral.png",
+        "/art/core/mouse-delighted.png"
+      ]
+    },
+    {
+      "status": "planned-not-generated",
+      "purpose": "Object and action overlays for the planned game",
+      "brief": "Sibling portrait card; Spouse portrait pair; Group of visiting children. Reuse named files where geometry permits; request only missing views. Transparent cutouts with recorded placement and readable silhouettes. Runtime supplies checked Chinese text; no embedded generated writing.",
+      "referencePaths": []
+    }
+  ],
+  "desktopUX": {
+    "entry": "Open this chapter from its host room shelf or TV; shopping scenes enter the existing shop content view.",
+    "layout": "Scene left, current checked line and replay below it; task choices and a clear confirmation panel on the right. Keep image, dialogue and choices visible together.",
+    "accessibility": "Keyboard order follows speaker, replay, alternatives, confirm; meaningful alt descriptions and text state, no color-only cues.",
+    "mapRule": "Retain exactly eight world slots. This lesson adds content chapters to existing rooms or the shop, not a new lesson house."
+  },
+  "mobileUX": {
+    "layout": "Stack scene, current line and two or three large choices. Fix replay and confirm within reachable controls; keep picture pinch zoom optional.",
+    "reading": "One story page or episode beat at a time; previous and next buttons remain distinct from object targets.",
+    "accessibility": "Support text resizing and reduced motion; text and sound alternatives accompany all meaningful state."
+  },
+  "vocabularyRisks": [
+    "Do not infer gender, marriage or sibling order from appearance; fictional facts are stated.",
+    "Use relationships matching source meanings, not assumed cultural family rules.",
+    "Album, portrait, cousin and grandparents remain unlabeled visual concepts.",
+    "Every relational clue needs an explicit current speaker; no ambiguous decontextualized flashcard."
+  ],
+  "vocabularyPolicy": {
+    "source": "src/data/course.json",
+    "cumulativeThroughOrder": 14,
+    "planningLanguage": "English only apart from exact source vocabulary identifiers.",
+    "scriptConstraint": "Final Chinese scripts use only the permitted cumulative course/learner set for this lesson. Availability of a pictured concept or English planning term grants no hidden vocabulary allowance.",
+    "perItemGate": "Before acceptance, run checkText on every story page, episode line, game instruction, request, distractor label, feedback line, conversation turn and repair against the actual allowed set supplied by memory. Rework failures or leave the item blocked; do not bypass with labels, pinyin, synonyms, compounding or translations.",
+    "visualPolicy": "Unlabeled visual concepts may appear for motivation. Any caption, alt text delivered in Chinese, hotspot label or spoken reference must pass its own checkText gate.",
+    "currentValidation": "Only exact target order, prior review membership and cumulative object identifiers checked here. No generated Chinese text, audio, images or runtime content validated or ready."
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-numbers-colors",
+  "lessonOrder": 17,
+  "lessonTitle": "Numbers, Measure & Colors",
+  "targetWords": [
+    "百",
+    "千",
+    "件",
+    "次",
+    "只",
+    "颜色",
+    "白",
+    "黑",
+    "红"
+  ],
+  "packTitle": "The Hundred-Coin Costume Rehearsal",
+  "host": "mouse",
+  "setting": "Mouse's room for rehearsal and existing shop slot for inventory; color is one clue among count, kind and location.",
+  "motivation": "Mouse needs the correct clothing bundles and animal picture cards for a small show.",
+  "obstacle": "Two orders look similar, and dog confuses how many garments there are with how many times to rehearse.",
+  "runningJoke": "Dog rehearses once while carrying three garments, then proudly announces three rehearsals.",
+  "communicationGoals": [
+    "Distinguish hundred and thousand in displayed quantities.",
+    "Use classifiers for garments, animals and occurrences.",
+    "Identify white, black and red with redundant accessible cues."
+  ],
+  "reviewTargets": [
+    "衣服",
+    "钱",
+    "块",
+    "两",
+    "三",
+    "左边",
+    "右边",
+    "便宜"
+  ],
+  "story": {
+    "motivation": "Mouse needs the correct clothing bundles and animal picture cards for a small show.",
+    "obstacle": "Two orders look similar, and dog confuses how many garments there are with how many times to rehearse.",
+    "turn": "Learner checks the exact order and price, then rehearses the requested number of times.",
+    "payoff": "The correct clothes and cards are ready; the trio completes the rehearsal together.",
+    "pages": [
+      {
+        "page": 1,
+        "action": "Mouse prepares a show with clothing and animal cards.",
+        "imageBrief": "Table with folded garment stacks and cat/dog picture tokens; labels blank.",
+        "purpose": "Establish sorting purpose.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 2,
+        "action": "Dog mistakes a garment count for a rehearsal count.",
+        "imageBrief": "Dog holding three garments beside one completed action marker.",
+        "purpose": "Ground classifier contrast.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 3,
+        "action": "Learner checks the exact order and price, then rehearses the requested number of times.",
+        "imageBrief": "One hundred and one thousand represented by clear grouped UI counters, not hundreds of tiny drawn coins.",
+        "purpose": "Turn language into precise inventory and action.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 4,
+        "action": "The correct clothes and cards are ready; the trio completes the rehearsal together.",
+        "imageBrief": "Three friends with matching order layout; celebratory gestures, not a new venue.",
+        "purpose": "Pay off accurate counting and descriptors.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "Mouse displays two similar orders.",
+      "Cat sorts garments by described color and location.",
+      "Dog counts picture animals as garments.",
+      "Learner chooses the appropriate classifier intent.",
+      "Mouse compares one hundred with one thousand on a price display.",
+      "Dog confuses repetitions with objects.",
+      "The learner completes the correct repetitions.",
+      "Friends discover a final food picture for their next gathering."
+    ],
+    "cliffhanger": "What food will everyone choose for the gathering?",
+    "delivery": "Six to eight short shots using existing room backgrounds and character identities; one checked line per shot where possible. Audio generated only after each line passes checkText.",
+    "status": "planned-not-generated"
+  },
+  "game": {
+    "mechanic": "Order inspector with counted actions",
+    "objective": "Fulfil a checked multi-attribute order and perform the requested number of distinct rehearsals.",
+    "languageNecessary": "Color alone cannot solve a round: noun class, quantity, location and price must match; repetition is separately checked.",
+    "exampleRound_EN": "Intent: Choose two red garments on the right for one hundred yuan, then rehearse once. Red items also carry a stable accessible word label or pattern; alternatives vary quantity, location or price.",
+    "distractors": [
+      "Three garments rather than two",
+      "One thousand rather than one hundred",
+      "Correct goods but two repetitions",
+      "Two animal cards instead of garments"
+    ],
+    "controlsDesktop": "Select a card with click or Tab and Enter, then select its destination; drag is optional. Space replays the current checked audio; escape cancels the pending placement. No speed requirement.",
+    "controlsMobile": "Tap a card then tap its destination with at least 48px targets. A persistent replay button and explicit confirm support one-handed play; never require precision dragging or hover.",
+    "win": "Complete three distinct request rounds, including at least one changed attribute combination. A corrected retry can succeed; completion alone is not evidence that every target word was learned.",
+    "feedback": "Show the selected outcome, replay the relevant checked clause, and let the learner revise one choice. Do not reveal the answer using a new word, a translation shortcut or color alone. Report only genuine submitted evidence through the memory layer."
+  },
+  "conversation": {
+    "role": "Learner is the helper; mouse hosts and the other recurring friends supply context.",
+    "goal": "Mouse needs the correct clothing bundles and animal picture cards for a small show.",
+    "repairStrategy": "On uncertainty, replay the last checked sentence, shorten it using the same allowed words, then offer two checked alternatives grounded in the scene. Never introduce an unknown synonym or pretend an unintelligible response was correct. Let the learner pass without losing progress.",
+    "validation": "Check each host utterance, suggested learner response and repair independently using actual checkText; these are plans, not validated dialogue.",
+    "turnIntents_EN": [
+      "Ask the clothing color.",
+      "Confirm how many garments are needed.",
+      "Identify how many pictured animals there are.",
+      "Clarify whether a number means objects or repetitions.",
+      "Confirm hundred versus thousand and finish the order."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Folded garment tokens",
+      "word": "件",
+      "assetReuse": null,
+      "purpose": "Classifier use tied to clothing noun"
+    },
+    {
+      "visual": "Dog and cat picture cards",
+      "word": "只",
+      "assetReuse": null,
+      "purpose": "Animal classifier without unknown animal nouns"
+    },
+    {
+      "visual": "Rehearsal action marker",
+      "word": "次",
+      "assetReuse": null,
+      "purpose": "Occurrence count, not a tangible object"
+    },
+    {
+      "visual": "Coin icon",
+      "word": "钱",
+      "assetReuse": "/art/objects/coin.png",
+      "purpose": "Numerical scale context"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "purpose": "Four story panels and episode crops",
+      "brief": "Preserve the established gouache paper style and character identities. Compose the four story imageBriefs, leave all lettering blank, and keep separable targets visually clear. Existing reference files are reusable guidance, not evidence that these new panels exist.",
+      "referencePaths": [
+        "/art/core/stock-room.png",
+        "/art/core/mouse-neutral.png",
+        "/art/core/mouse-delighted.png"
+      ]
+    },
+    {
+      "status": "planned-not-generated",
+      "purpose": "Object and action overlays for the planned game",
+      "brief": "Folded garment tokens; Dog and cat picture cards; Rehearsal action marker; Coin icon. Reuse named files where geometry permits; request only missing views. Transparent cutouts with recorded placement and readable silhouettes. Runtime supplies checked Chinese text; no embedded generated writing.",
+      "referencePaths": [
+        "/art/objects/coin.png"
+      ]
+    }
+  ],
+  "desktopUX": {
+    "entry": "Open this chapter from its host room shelf or TV; shopping scenes enter the existing shop content view.",
+    "layout": "Scene left, current checked line and replay below it; task choices and a clear confirmation panel on the right. Keep image, dialogue and choices visible together.",
+    "accessibility": "Keyboard order follows speaker, replay, alternatives, confirm; meaningful alt descriptions and text state, no color-only cues.",
+    "mapRule": "Retain exactly eight world slots. This lesson adds content chapters to existing rooms or the shop, not a new lesson house."
+  },
+  "mobileUX": {
+    "layout": "Stack scene, current line and two or three large choices. Fix replay and confirm within reachable controls; keep picture pinch zoom optional.",
+    "reading": "One story page or episode beat at a time; previous and next buttons remain distinct from object targets.",
+    "accessibility": "Support text resizing and reduced motion; text and sound alternatives accompany all meaningful state."
+  },
+  "vocabularyRisks": [
+    "Never use color as the only differentiator; add spatial/count cues and accessible labels.",
+    "One thousand must not require counting one thousand drawn objects; grouped counters and replay support it.",
+    "Classifier knowledge is contextual; do not accept swapping garment, animal and occurrence classifiers.",
+    "Pattern names, costume, rehearsal and show are planning concepts only; final Chinese must use cumulative paraphrases."
+  ],
+  "vocabularyPolicy": {
+    "source": "src/data/course.json",
+    "cumulativeThroughOrder": 17,
+    "planningLanguage": "English only apart from exact source vocabulary identifiers.",
+    "scriptConstraint": "Final Chinese scripts use only the permitted cumulative course/learner set for this lesson. Availability of a pictured concept or English planning term grants no hidden vocabulary allowance.",
+    "perItemGate": "Before acceptance, run checkText on every story page, episode line, game instruction, request, distractor label, feedback line, conversation turn and repair against the actual allowed set supplied by memory. Rework failures or leave the item blocked; do not bypass with labels, pinyin, synonyms, compounding or translations.",
+    "visualPolicy": "Unlabeled visual concepts may appear for motivation. Any caption, alt text delivered in Chinese, hotspot label or spoken reference must pass its own checkText gate.",
+    "currentValidation": "Only exact target order, prior review membership and cumulative object identifiers checked here. No generated Chinese text, audio, images or runtime content validated or ready."
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk1-daily-time",
+  "lessonOrder": 7,
+  "lessonTitle": "Daily Life & Time",
+  "targetWords": [
+    "现在",
+    "点",
+    "分钟",
+    "零",
+    "年",
+    "昨天",
+    "明天",
+    "上午",
+    "中午",
+    "下午",
+    "做",
+    "睡觉",
+    "工作",
+    "帮",
+    "时候"
+  ],
+  "packTitle": "Dog's Very Early Supper",
+  "host": "dog",
+  "setting": "The existing dog room contains a clock card and a three-part daily schedule. Sun position is visual support; all time text is rendered by the app.",
+  "motivation": "Dog wants to help prepare the agreed meal at the correct time.",
+  "obstacle": "He mistakes yesterday's practice card for tomorrow's plan and is ready while everyone else is asleep.",
+  "runningJoke": "Dog's nap cushion arrives at every activity, even when he is meant to work.",
+  "communicationGoals": [
+    "Ask and tell supported clock times with zero and minutes.",
+    "Distinguish yesterday, today, tomorrow and morning/noon/afternoon.",
+    "Coordinate work, help and sleep as simple activities at an agreed time."
+  ],
+  "reviewTargets": [
+    "今天",
+    "星期",
+    "月",
+    "号",
+    "几",
+    "饭",
+    "一起",
+    "来"
+  ],
+  "languageValidation": {
+    "state": "required-before-generation-and-display",
+    "rule": "All eventual learner-visible Chinese wording, scripts, answer choices, subtitles and audio transcripts must pass checkText against the real allowed snapshot at generation time. This English plan is not validated learner content. Also review grammar, source meanings and pragmatic appropriateness; token membership alone is insufficient.",
+    "visualRule": "Visual concepts may exceed nameable vocabulary; do not force their names into Chinese output. Use gesture and layout for unnameable actions.",
+    "courseVocabularyNote": "Cumulative course words here are planning constraints, not a claim of learner-known or allowed memory state."
+  },
+  "story": {
+    "format": "four-page illustrated reader",
+    "pages": [
+      {
+        "page": 1,
+        "beat": "motivation",
+        "action": "Dog proudly presents a supper plan beside a clock with blank face inserts.",
+        "imageBrief": "Room table, simple clock face and three schedule cards; text/numbers supplied by app.",
+        "purpose": "Establish why accurate time matters."
+      },
+      {
+        "page": 2,
+        "beat": "obstacle",
+        "action": "Yesterday's card is highlighted while a moonlit dog holds a meal tray next to sleeping friends' portraits.",
+        "imageBrief": "Clear past/current/future card positions without generated words.",
+        "purpose": "Create a visual date/time mismatch without requiring unavailable narrative tense."
+      },
+      {
+        "page": 3,
+        "beat": "turn",
+        "action": "Learner selects tomorrow's card, the agreed afternoon hour and a short helping activity.",
+        "imageBrief": "One schedule row per period, clock hands reflect the selected time.",
+        "purpose": "Combine temporal reference with familiar meal motivation and new daily activities."
+      },
+      {
+        "page": 4,
+        "beat": "payoff",
+        "action": "Friends meet at the correct displayed time; dog parks his cushion under the work table.",
+        "imageBrief": "Warm daylight meeting, cushion visibly out of the work area.",
+        "purpose": "Reinforce successful scheduling and helping; the joke remains visual."
+      }
+    ]
+  },
+  "episode": {
+    "format": "short illustrated episode with checked audio planned later",
+    "beats": [
+      "Dog reviews the familiar gathering date.",
+      "A clock card introduces a supported hour and minute pair.",
+      "Yesterday and tomorrow cards are contrasted around today.",
+      "Morning, noon and afternoon receive distinct daylight pictures.",
+      "Dog pairs a sleeping pose with the wrong scheduled activity.",
+      "Learner assigns work and help to the agreed time.",
+      "A one-minute practice wait is optional and never a completion requirement.",
+      "The meal begins on the correct card while dog retrieves his cushion."
+    ],
+    "cliffhanger": "A route postcard arrives with a chair, a station and a vehicle, inviting a journey-planning puzzle inside the room."
+  },
+  "game": {
+    "mechanic": "Schedule repair",
+    "objective": "Repair the day, time and activity on a three-slot schedule.",
+    "languageNecessary": "Visual activities alone cannot resolve the day and clock value; checked temporal cues select the exact combination.",
+    "exampleRound_EN": "EN planning example: choose tomorrow, afternoon three o'clock, and helping at the meal table, all through separately checked cues.",
+    "distractors": "Yesterday/tomorrow; morning/afternoon; same hour with different known minute value; sleep/work mismatch.",
+    "controlsDesktop": "Click day then clock then activity; keyboard supports each independently.",
+    "controlsMobile": "Three sequential panels with persistent summary; use buttons rather than tiny clock-hand dragging.",
+    "win": "Three internally consistent schedules including one zero-minute time.",
+    "feedback": "Highlight only the inconsistent slot and replay its cue; keep the complete visual day timeline available."
+  },
+  "conversation": {
+    "role": "Dog as eager helper",
+    "goal": "Agree a day, time and simple helping activity.",
+    "turnIntents_EN": [
+      "Ask what time it is now.",
+      "Distinguish yesterday's practice from tomorrow's plan.",
+      "Choose morning, noon or afternoon.",
+      "Offer or accept help with an approved known activity.",
+      "Confirm the final meeting time."
+    ],
+    "repairStrategy": "Reduce the schedule to day and whole hour first; introduce minutes only after the first correction succeeds."
+  },
+  "objects": [
+    {
+      "visual": "Clock teaching card",
+      "word": "点",
+      "assetReuse": null,
+      "purpose": "Time cue.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Small duration strip",
+      "word": "分钟",
+      "assetReuse": null,
+      "purpose": "Minutes contrast.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Sleeping dog and cushion vignette",
+      "word": "睡觉",
+      "assetReuse": "/art/objects/cushion.webp",
+      "purpose": "Activity cue.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Calendar year field",
+      "word": "年",
+      "assetReuse": null,
+      "purpose": "Temporal scale recognition with approved number values.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    }
+  ],
+  "artRequests": [
+    {
+      "kind": "prop",
+      "brief_EN": "Blank clock face, three-day schedule cards and daylight miniatures",
+      "status": "planned-not-generated",
+      "outputPath": "/art/planned/lesson-packs/hsk1-daily-time/prop-1.webp",
+      "constraints": "Reuse the story-garden palette and cast identity. No baked text, UI, watermark or new map plot. App renders all real labels. New scene/prop images are not generated by this planning task.",
+      "referencePaths": [
+        "/art/core/stock-room.webp",
+        "/art/core/sheet-dog.webp"
+      ]
+    }
+  ],
+  "desktopUX": "Timeline and editable schedule stay visible together; actual date/clock values must remain synchronized between audio, text and hands.",
+  "mobileUX": "Use whole-hour presets and separate minute buttons; preserve the day summary at the top so a later choice cannot obscure yesterday/tomorrow.",
+  "vocabularyRisks": [
+    "Number composition beyond ten is not automatically licensed by knowing component digits; use approved whole-hour and 0–10 minute patterns.",
+    "Year numbers should be curated and checked, not generated by concatenating known digits.",
+    "Do not equate time/moment with every usage of o'clock or minute.",
+    "No automatic real-world reminder or actual waiting is implied by this fictional scheduling game."
+  ],
+  "deliveryScope": "Course pack served inside an existing bundled neighbour room. No new map plot, live generation, API call or ownership mutation is planned here."
+}

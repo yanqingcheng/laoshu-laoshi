@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk1-numbers-calendar",
+  "lessonOrder": 1,
+  "lessonTitle": "Numbers & Calendar",
+  "targetWords": [
+    "一",
+    "二",
+    "三",
+    "四",
+    "五",
+    "六",
+    "七",
+    "八",
+    "九",
+    "十",
+    "今天",
+    "月",
+    "号",
+    "星期",
+    "天",
+    "几"
+  ],
+  "packTitle": "Dog's Ten Guests and One Date",
+  "host": "dog",
+  "setting": "The existing dog neighbour room hosts a paper invitation desk. A blank calendar and up to ten animal portrait tokens make quantities visible.",
+  "motivation": "Dog wants the learner to agree on the date for a friends' gathering.",
+  "obstacle": "Two calendar cards share similar numerals but disagree about month, date and weekday.",
+  "runningJoke": "Dog repeatedly adds his own portrait to the count, then realizes he is already on the invitation.",
+  "communicationGoals": [
+    "Recognize and select numbers one through ten from spoken or written cues.",
+    "Distinguish month, calendar date and weekday fields.",
+    "Ask and answer a small-number quantity or date question with visual support."
+  ],
+  "reviewTargets": [
+    "你好",
+    "朋友",
+    "狗",
+    "猫",
+    "老师",
+    "什么"
+  ],
+  "languageValidation": {
+    "state": "required-before-generation-and-display",
+    "rule": "All eventual learner-visible Chinese wording, scripts, answer choices, subtitles and audio transcripts must pass checkText against the real allowed snapshot at generation time. This English plan is not validated learner content. Also review grammar, source meanings and pragmatic appropriateness; token membership alone is insufficient.",
+    "visualRule": "Visual concepts may exceed nameable vocabulary; do not force their names into Chinese output. Use gesture and layout for unnameable actions.",
+    "courseVocabularyNote": "Cumulative course words here are planning constraints, not a claim of learner-known or allowed memory state."
+  },
+  "story": {
+    "format": "four-page illustrated reader",
+    "pages": [
+      {
+        "page": 1,
+        "beat": "motivation",
+        "action": "Dog lays out friend portraits and points to an empty calendar field.",
+        "imageBrief": "Dog at table, blank calendar with three visually distinct fields; ten portrait discs in a tray.",
+        "purpose": "Make a concrete reason to practice a date and small quantities."
+      },
+      {
+        "page": 2,
+        "beat": "obstacle",
+        "action": "Two candidate invitations look almost alike, but the highlighted date fields differ.",
+        "imageBrief": "Split pair of blank invitations; field highlights supplied by app, no baked numerals.",
+        "purpose": "Train attention to month/date/weekday functions rather than guessing from a single numeral."
+      },
+      {
+        "page": 3,
+        "beat": "turn",
+        "action": "Learner selects the requested field values, then checks the portrait count as dog adds himself twice.",
+        "imageBrief": "Up to ten countable discs with wide gaps, a duplicate dog disc held outside the main line.",
+        "purpose": "Make the language cue necessary for selection; quantities stay at ten or below."
+      },
+      {
+        "page": 4,
+        "beat": "payoff",
+        "action": "Friends agree on one invitation; dog's extra portrait becomes a comical tiny host badge.",
+        "imageBrief": "Correct invitation on display with real app text, dog wearing a blank portrait badge.",
+        "purpose": "Consolidate today's date and the agreed friend count without new event nouns in target language."
+      }
+    ]
+  },
+  "episode": {
+    "format": "short illustrated episode with checked audio planned later",
+    "beats": [
+      "Dog introduces himself as the gathering host.",
+      "Three calendar fields appear with distinct layout and optional English support.",
+      "Dog presents two nearly matching dates.",
+      "Learner hears the date cue and chooses the matching field values.",
+      "Friend portraits appear in groups of two through ten.",
+      "Dog's extra self-portrait triggers a recount.",
+      "One invitation remains, ready for the cat."
+    ],
+    "cliffhanger": "Cat arrives with a family portrait containing familiar faces and an unexplained age badge."
+  },
+  "game": {
+    "mechanic": "Calendar field detective",
+    "objective": "Construct the requested invitation date and identify a small portrait count.",
+    "languageNecessary": "The request specifies which field and number matters; identical color treatment prevents a purely visual answer.",
+    "exampleRound_EN": "EN planning example: choose month three, date five and weekday two from checked cues; count four visible friend portraits.",
+    "distractors": "Nearby numbers; month/date reversals; weekday field in place of date. Never invalid calendar dates or quantities above ten.",
+    "controlsDesktop": "Click field then number; keyboard focus follows month, date, weekday.",
+    "controlsMobile": "Tap one field at a time in a bottom sheet; large numeral choices and replay.",
+    "win": "Three complete date matches and two quantity matches.",
+    "feedback": "Highlight only the incorrect field and replay its checked cue; leave correct fields intact."
+  },
+  "conversation": {
+    "role": "Dog as invitation host",
+    "goal": "Agree on today's displayed date and a small guest count.",
+    "turnIntents_EN": [
+      "Greet the host.",
+      "Respond to a question about today's month.",
+      "Confirm the displayed date.",
+      "Ask the weekday using an approved pattern.",
+      "Choose the number of friend portraits."
+    ],
+    "repairStrategy": "Reduce to two field choices and replay one value; never explain errors using new calendar vocabulary."
+  },
+  "objects": [
+    {
+      "visual": "Blank calendar panel",
+      "word": "月",
+      "assetReuse": null,
+      "purpose": "Month field.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Numbered date insert rendered by app",
+      "word": "号",
+      "assetReuse": null,
+      "purpose": "Date field.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Dog portrait token",
+      "word": "狗",
+      "assetReuse": "/art/core/dog-neutral.webp",
+      "purpose": "Countable invitation participant.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    }
+  ],
+  "artRequests": [
+    {
+      "kind": "prop",
+      "brief_EN": "Blank three-field calendar and ten separated portrait discs",
+      "status": "planned-not-generated",
+      "outputPath": "/art/planned/lesson-packs/hsk1-numbers-calendar/prop-1.webp",
+      "constraints": "Reuse the story-garden palette and cast identity. No baked text, UI, watermark or new map plot. App renders all real labels. New scene/prop images are not generated by this planning task.",
+      "referencePaths": [
+        "/art/core/stock-room.webp",
+        "/art/core/sheet-dog.webp"
+      ]
+    }
+  ],
+  "desktopUX": "Calendar and portrait tray share the existing room panel; field labels and number choices are accessible real text, not baked into the image.",
+  "mobileUX": "Show one calendar field per step, then a separate uncluttered counting screen. Reflow ten portraits into two rows without overlap.",
+  "vocabularyRisks": [
+    "Calendar values must be internally valid; use dates at most ten until broader number patterns are approved.",
+    "Do not imply weekday ordinals map directly to English numbering without curated date logic.",
+    "Day/sky is the source range for the day token; this pack uses day only.",
+    "Do not require unavailable words for invitation, party, guest, count or tomorrow in learner-facing Chinese."
+  ],
+  "deliveryScope": "Course pack served inside an existing bundled neighbour room. No new map plot, live generation, API call or ownership mutation is planned here."
+}

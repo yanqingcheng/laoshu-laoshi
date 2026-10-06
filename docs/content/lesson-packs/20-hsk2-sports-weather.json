@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk2-sports-weather",
+  "lessonOrder": 19,
+  "lessonTitle": "Sports, Fun & Weather",
+  "targetWords": [
+    "运动",
+    "踢足球",
+    "打篮球",
+    "游泳",
+    "跳舞",
+    "唱歌",
+    "玩",
+    "旅游",
+    "阴",
+    "晴",
+    "雪"
+  ],
+  "targetCoverage": [
+    {
+      "word": "运动",
+      "intent_EN": "Discuss exercise as a general activity",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "踢足球",
+      "intent_EN": "Choose the football action",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "打篮球",
+      "intent_EN": "Contrast basketball with football",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "游泳",
+      "intent_EN": "Discuss a swimming alternative only in suitable conditions",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "跳舞",
+      "intent_EN": "Invite cat to dance",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "唱歌",
+      "intent_EN": "Invite mouse to sing",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "玩",
+      "intent_EN": "Make a general play invitation",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "旅游",
+      "intent_EN": "Choose an imaginary travel activity card in replay",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "阴",
+      "intent_EN": "Interpret cloudy forecast",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "晴",
+      "intent_EN": "Interpret sunny forecast",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    },
+    {
+      "word": "雪",
+      "intent_EN": "Recognize snow and revise plans",
+      "delivery": "Base story/game/conversation or optional checked replay variant; do not force every target into one utterance."
+    }
+  ],
+  "packTitle": "The Picnic That Keeps Moving",
+  "host": "dog",
+  "setting": "The existing park plus a reversible indoor activity inset in the dog room.",
+  "motivation": "The dog wants one afternoon in which each friend can enjoy an activity.",
+  "obstacle": "The weather changes and a plan that worked in sunshine no longer works in snow.",
+  "runningJoke": "The dog brings the same enormous ball to singing, dancing and every other activity.",
+  "communicationGoals": [
+    "Understand weather and an activity preference together.",
+    "Choose a feasible alternative when conditions change.",
+    "Invite someone to join an activity and accept a different suggestion."
+  ],
+  "reviewTargets": [
+    "天气",
+    "下雨",
+    "冷",
+    "热",
+    "今天",
+    "明天",
+    "喜欢",
+    "一起"
+  ],
+  "story": {
+    "language": "English planning only; not learner-facing Chinese",
+    "pages": [
+      {
+        "page": 1,
+        "action": "The dog shows three friends an afternoon plan.",
+        "imageBrief": "Park, trio, separate football, basketball and dance/singing picture cards.",
+        "purpose": "Introduce a shared plan with preferences."
+      },
+      {
+        "page": 2,
+        "action": "A snow forecast arrives after the sunny plan is arranged.",
+        "imageBrief": "Weather strip with sun changing to snow; trio looking at sports pictures.",
+        "purpose": "Create a meaningful need to revise."
+      },
+      {
+        "page": 3,
+        "action": "The learner preserves each friend's preference where possible and moves singing and dancing indoors.",
+        "imageBrief": "Park and dog-room insets, activity cards being reassigned without arrows containing text.",
+        "purpose": "Demonstrate adapting a plan through comprehension."
+      },
+      {
+        "page": 4,
+        "action": "Everyone enjoys the revised day; the ball becomes the dog's silent audience.",
+        "imageBrief": "Indoor singing/dancing group with unused ball in front row.",
+        "purpose": "Pay off flexibility without treating one weather as failure."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "The dog imagines a whole day of sport.",
+      "The cat wants to dance, while the mouse wants to sing.",
+      "A sunny forecast supports the first plan.",
+      "A snowy forecast forces a change.",
+      "The dog proposes swimming as a visual joke, and the trio chooses a safe alternative.",
+      "The learner combines preference and weather to preserve two plans.",
+      "The dog takes the ball into the indoor lesson."
+    ],
+    "cliffhanger": "The mouse announces that tomorrow everyone gets to teach one small lesson."
+  },
+  "game": {
+    "mechanic": "Constraint-based activity timetable",
+    "objective": "Fill three afternoon slots with activities consistent with stated preferences and current weather.",
+    "languageNecessary": "Several activities fit the illustrated weather; the spoken preference and invitation determine the answer. No universal rule such as sunshine equals football is used.",
+    "exampleRound_EN": "It is snowing. The cat wants to dance with the mouse. Move the dance activity to the room and invite the mouse; do not substitute football.",
+    "distractors": [
+      "Weather-compatible but unwanted activity",
+      "Right activity with wrong partner",
+      "Previous forecast's plan"
+    ],
+    "controlsDesktop": "Select an activity card then a timetable slot; arrow keys traverse slots. Pin weather and preference transcript beside the whole plan.",
+    "controlsMobile": "Stack weather, one preference and three large slots vertically. Tap activity then slot; offer move buttons instead of requiring drag.",
+    "win": "A plan satisfies all three explicitly stated constraints; multiple valid plans are accepted.",
+    "feedback": "Point to the unmet preference or weather condition without erasing the whole timetable; allow replay and a single-slot edit.",
+    "evidencePolicy": "No automatic schedule evidence from a decorative tap or choice visible in the prompt. Any future graded event must use the app's existing evidence rules and deduplicate requests."
+  },
+  "conversation": {
+    "role": "Friend co-planning the afternoon",
+    "goal": "Agree on an activity, partner and fallback for changed weather.",
+    "repairStrategy": "Offer replay, slower replay and the checked transcript; allow a clarification request or two meaning choices. Confirm intended meaning before proceeding. Do not score pronunciation or equate silence with failure; typed mode remains available.",
+    "turnIntents_EN": [
+      "Describe the weather you hear.",
+      "Say which activity you like.",
+      "Invite the host.",
+      "Respond when the weather changes.",
+      "Agree on a feasible shared alternative."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Weather card with snow",
+      "word": "雪",
+      "assetReuse": null,
+      "purpose": "Condition"
+    },
+    {
+      "visual": "Cloudy weather card",
+      "word": "阴",
+      "assetReuse": null,
+      "purpose": "Condition"
+    },
+    {
+      "visual": "Sunny weather card",
+      "word": "晴",
+      "assetReuse": null,
+      "purpose": "Condition"
+    },
+    {
+      "visual": "Dog kicking a football",
+      "word": "踢足球",
+      "assetReuse": null,
+      "purpose": "Whole action identity"
+    },
+    {
+      "visual": "Cat throwing a basketball",
+      "word": "打篮球",
+      "assetReuse": null,
+      "purpose": "Whole action identity"
+    },
+    {
+      "visual": "Mouse singing",
+      "word": "唱歌",
+      "assetReuse": null,
+      "purpose": "Indoor alternative"
+    },
+    {
+      "visual": "Cat dancing",
+      "word": "跳舞",
+      "assetReuse": null,
+      "purpose": "Indoor alternative"
+    },
+    {
+      "visual": "Supervised pool picture",
+      "word": "游泳",
+      "assetReuse": null,
+      "purpose": "Activity only, not navigation"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "request": "Small consistent weather cards and action vignettes; park and dog-room plates reused.",
+      "referencePaths": [
+        "/art/core/home-room.png",
+        "/art/core/stock-room.png",
+        "/art/core/dog-neutral.png",
+        "/art/core/dog-delighted.png",
+        "/art/objects/book.png"
+      ],
+      "constraints": "Match existing handmade-paper story garden palette and silhouettes. Reuse room camera and stable empty UI regions; no new map slot. Object layers require true alpha, clear margins and no baked text. Label intended variants before any generation."
+    }
+  ],
+  "desktopUX": {
+    "layout": "Warm cream reading surface, indigo text, restrained jade/terracotta accents; two-column art and interaction on wide screens. Keep controls off character faces and target objects.",
+    "interaction": "Select an activity card then a timetable slot; arrow keys traverse slots. Pin weather and preference transcript beside the whole plan.",
+    "reading": "Always-available replay, transcript, pinyin preference through shared WordText, focus-visible controls and undo. No hover-only information.",
+    "motion": "Only brief state transitions; reduced motion uses static swaps. Never auto-advance a reading page."
+  },
+  "mobileUX": {
+    "layout": "Single-column art crop using contain, never crop evidence. Dialogue and choices below art; portrait-first layout preserves the complete meaningful action.",
+    "interaction": "Stack weather, one preference and three large slots vertically. Tap activity then slot; offer move buttons instead of requiring drag.",
+    "accessibility": "Minimum 48px targets, visible focus, clear contrast, screen-reader alternatives and safe-area spacing. No pinch, audio-only or drag-only requirement.",
+    "reading": "Short checked utterance chunks with large replay button; expanding transcript must not cover answer choices. Preserve progress across rotation."
+  },
+  "vocabularyRisks": [
+    "Treat sports phrases as their exact bundled word entries, not invented component tokens. Swimming and travel remain pictures/choices, not new places. Do not imply swimming in snow is safe.",
+    "targetWords are exact source entries in source order, not a ready-made allowed-word snapshot. reviewTargets are earlier course entries, not proof the learner knows them.",
+    "Before generating any Chinese, obtain the actual learner allowedWordIds snapshot through word memory. Tokenize with existing data, run checkText before storage and again before display; derive pinyin from stored words and audit compounds. Withhold failed output.",
+    "All scripts, dialogue intents and image directions in this plan are English. Chinese strings occur only as exact source vocabulary identifiers. No Chinese content has been generated or validated by checkText.",
+    "Art and English planning may depict an unnamed item; it must not force an unavailable Chinese name. No new locations, hosts or curriculum unlock assumptions."
+  ]
+}

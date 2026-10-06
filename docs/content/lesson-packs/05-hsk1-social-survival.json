@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk1-social-survival",
+  "lessonOrder": 4,
+  "lessonTitle": "Social Survival & Titles",
+  "targetWords": [
+    "谢谢",
+    "不客气",
+    "对不起",
+    "没关系",
+    "再见",
+    "先生",
+    "小姐",
+    "医生",
+    "医院"
+  ],
+  "packTitle": "A Polite Mix-Up at the Visitor Desk",
+  "host": "dog",
+  "setting": "Dog's existing room has a small visitor desk and a doctor portrait card. A hospital postcard establishes the doctor's workplace without a medical scenario.",
+  "motivation": "Dog wants visitors to feel welcome after a harmless name-card mix-up.",
+  "obstacle": "He offers the wrong title card and accidentally nudges a visitor's blank notebook.",
+  "runningJoke": "Dog's oversized polite bow makes his own name card flip over each time.",
+  "communicationGoals": [
+    "Use thanks and a suitable response for a visible helpful gesture.",
+    "Distinguish apology/reassurance from thanks/acknowledgment.",
+    "Recognize the doctor and hospital roles and use titles only in appropriate curated contexts."
+  ],
+  "reviewTargets": [
+    "你好",
+    "姓",
+    "名字",
+    "王",
+    "李",
+    "谁",
+    "在",
+    "吗"
+  ],
+  "languageValidation": {
+    "state": "required-before-generation-and-display",
+    "rule": "All eventual learner-visible Chinese wording, scripts, answer choices, subtitles and audio transcripts must pass checkText against the real allowed snapshot at generation time. This English plan is not validated learner content. Also review grammar, source meanings and pragmatic appropriateness; token membership alone is insufficient.",
+    "visualRule": "Visual concepts may exceed nameable vocabulary; do not force their names into Chinese output. Use gesture and layout for unnameable actions.",
+    "courseVocabularyNote": "Cumulative course words here are planning constraints, not a claim of learner-known or allowed memory state."
+  },
+  "story": {
+    "format": "four-page illustrated reader",
+    "pages": [
+      {
+        "page": 1,
+        "beat": "motivation",
+        "action": "Dog greets a visiting doctor and presents two blank title cards.",
+        "imageBrief": "Welcoming room desk, doctor visitor represented by an identity portrait, no medical tools.",
+        "purpose": "Provide a social reason for greetings and formal identification."
+      },
+      {
+        "page": 2,
+        "beat": "obstacle",
+        "action": "A name card flips and the notebook is gently nudged; dog looks apologetic.",
+        "imageBrief": "Tiny harmless desk mishap, notebook remains intact.",
+        "purpose": "Create an apology context clearly distinct from a gift or favor."
+      },
+      {
+        "page": 3,
+        "beat": "turn",
+        "action": "Learner chooses reassurance; then doctor helps set the name card upright and dog thanks them.",
+        "imageBrief": "Two clearly separate gesture beats, each with its own speech slot.",
+        "purpose": "Contrast the two response pairs through their pragmatic situations."
+      },
+      {
+        "page": 4,
+        "beat": "payoff",
+        "action": "Everyone exchanges a calm farewell; dog's last bow flips only his own card.",
+        "imageBrief": "Friendly departure at room edge, no text in art.",
+        "purpose": "Finish a complete social encounter with a visual running joke."
+      }
+    ]
+  },
+  "episode": {
+    "format": "short illustrated episode with checked audio planned later",
+    "beats": [
+      "Doctor's portrait and hospital postcard establish role and workplace.",
+      "Dog practices a respectful greeting using a curated title context.",
+      "Dog selects the wrong blank name card.",
+      "A harmless desk nudge cues an apology.",
+      "Visitor reassures dog; learner chooses the appropriate reply.",
+      "A small helpful gesture creates a separate thanks exchange.",
+      "Farewell closes the visit while the card flips again."
+    ],
+    "cliffhanger": "The departing visitor introduces several friends at once, leaving dog unsure which group pronoun to use."
+  },
+  "game": {
+    "mechanic": "Social response director",
+    "objective": "Select the response that fits each distinct interaction.",
+    "languageNecessary": "The situation and checked utterance determine the response; the same character can thank, apologize or say goodbye.",
+    "exampleRound_EN": "EN planning example: after an accidental notebook nudge and a checked apology, choose reassurance rather than you're-welcome.",
+    "distractors": "Thanks-response swapped with apology-response; greeting instead of farewell; wrong role/title in a curated identity task.",
+    "controlsDesktop": "Select one of three response cards; replay both scene and utterance separately.",
+    "controlsMobile": "Tap large response cards below a short looping vignette; captions are optional, not image text.",
+    "win": "Complete four exchanges with both response pairs represented.",
+    "feedback": "Replay the consequence-free gesture and a model exchange; allow immediate retry and do not award speed."
+  },
+  "conversation": {
+    "role": "Dog as visitor-desk host",
+    "goal": "Complete a greeting, small repair, thanks exchange and farewell.",
+    "turnIntents_EN": [
+      "Greet a named fictional visitor.",
+      "Confirm the visitor's doctor role.",
+      "Offer an apology for the harmless mix-up.",
+      "Respond appropriately to a helpful gesture.",
+      "Say goodbye."
+    ],
+    "repairStrategy": "Replay one full paired exchange with portraits highlighting who speaks; offer intent labels in English if enabled."
+  },
+  "objects": [
+    {
+      "visual": "Doctor portrait badge",
+      "word": "医生",
+      "assetReuse": null,
+      "purpose": "Professional role cue.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Hospital postcard",
+      "word": "医院",
+      "assetReuse": null,
+      "purpose": "Workplace recognition.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    },
+    {
+      "visual": "Fictional Mr. Wang title card",
+      "word": "先生",
+      "assetReuse": null,
+      "purpose": "Curated title context; text app-rendered.",
+      "ownership": "catalogue candidate only; app decides wordId association and ownership"
+    }
+  ],
+  "artRequests": [
+    {
+      "kind": "scene",
+      "brief_EN": "Harmless visitor-desk mix-up with reversible blank name cards",
+      "status": "planned-not-generated",
+      "outputPath": "/art/planned/lesson-packs/hsk1-social-survival/scene-1.webp",
+      "constraints": "Reuse the story-garden palette and cast identity. No baked text, UI, watermark or new map plot. App renders all real labels. New scene/prop images are not generated by this planning task.",
+      "referencePaths": [
+        "/art/core/stock-room.webp",
+        "/art/core/sheet-dog.webp"
+      ]
+    }
+  ],
+  "desktopUX": "Separate scene replay from utterance replay and preserve turn order. Keep optional etiquette notes outside target-language dialogue.",
+  "mobileUX": "One exchange per view with three stacked large replies; show speaker portrait above every utterance to avoid reply-direction confusion.",
+  "vocabularyRisks": [
+    "The Miss/young-lady title has context-sensitive social usage; do not recommend it as a universal address for strangers. Use curated fictional contexts.",
+    "Mr./husband is the source range; this pack uses Mr. only.",
+    "Doctor/hospital introduces roles, not diagnoses, symptoms or medical advice.",
+    "Do not reward a phrase simply because it is polite; thanks and apology pairs must fit the depicted event."
+  ],
+  "deliveryScope": "Course pack served inside an existing bundled neighbour room. No new map plot, live generation, API call or ownership mutation is planned here."
+}

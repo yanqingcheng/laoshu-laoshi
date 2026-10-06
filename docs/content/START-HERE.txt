@@ -1,0 +1,58 @@
+LESSON SCENARIO PACKS — EDITORIAL PLANS, NOT GENERATED LESSON CONTENT
+
+Scope: one detailed scenario pack for each of the 26 lessons in src/data/course.json.
+These plans extend the existing mouse/dog/cat rooms, shop and park with chapters;
+they do not create 26 additional map slots or change curriculum order.
+
+Each pack contains the exact lesson key/order/target words, a motivated scenario,
+earlier review words, a four-page story, episode beats, a language-essential game,
+a guided conversation, vocabulary-linked objects, art briefs and two viewport plans.
+English describes intent. It is not learner-facing Mandarin and must not bypass
+the checked generation pipeline. Exact source words are identifiers, not scripts.
+
+HOW TO TURN A PACK INTO CONTENT
+1. Resolve lessonKey through the real curriculum; never match by display title alone.
+2. Freeze the generation snapshot: NEW targets, prior BRING IN words and explicitly
+   allowed words/names. For shared bundled content use the appropriate course prefix.
+   For personalized content use actual repertoire and approved source-level rules.
+3. Plan natural Mandarin sentences/tokens from the frozen set. Keep the narrative
+   motivation and payoff; reduce the words, not the story's interest. At early levels,
+   imagery can carry an unspoken action that the language cannot yet describe.
+4. Validate all learner-facing tokens through checkText, including choices, game
+   instructions, labels, captions, conversation options and intended answers.
+   A proposed earlier word is available only if the real learner actually has it.
+5. Generate character-consistent illustrations from accepted art briefs using
+   docs/art/prompt-library/templates.json. Reuse existing props when they match.
+   Log prompts before calls; keep text out of rasters. No generation calls have been
+   made for these packs merely by saving this plan.
+6. Perform independent narrative and linguistic review, bounded repairs, then store
+   ContentItem records and exact requiredWordIds. Never mark an English plan ready.
+7. The chooser alone serves eligible content. A bundled place opening at 80% does
+   not imply that every item in it is eligible. Retain missing-word and pending states.
+
+EVIDENCE AND REWARDS
+Read/episode completion records seen/completed, not automatic recall grades.
+Games follow their existing evidence contract; do not invent success as word mastery.
+Conversation evidence follows only approved production rules and confirmed answers.
+Coins and objects require real committed transactions. A pictured object is not owned.
+No extra content gate blocks foundational learning or the accessible action list.
+
+NARRATIVE BAR
+A character wants something; a concrete obstacle makes the language useful; a choice
+changes what happens; the ending pays off a visual or verbal setup. Avoid vocabulary
+parades, disconnected errands, humiliating mistakes and generic congratulation screens.
+Keep a recurring cast and a living village, with warm callbacks to earlier chapters.
+The player must read/listen to distinguish choices; identical colours or matching
+pictures cannot replace understanding the Chinese instruction.
+
+DESKTOP AND MOBILE
+See responsive-ux.json for shared layout/interaction acceptance, then each pack's
+desktopUX/mobileUX for scene-specific decisions. Preview compositions are plans;
+browser screenshots and interaction checks must happen after app implementation.
+Test with exact checked Mandarin, ruby, longest choices and real safe-area keyboards.
+
+FILES
+lesson-packs/: one versioned structured editorial plan per source lesson.
+index.json and LESSON-INDEX.csv: catalogue and coverage.
+validation-report.json: source-word, reference and structure checks; never a claim
+of linguistic validation, playable games, generated art or completed browser QA.

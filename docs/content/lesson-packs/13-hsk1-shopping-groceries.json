@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-not-generated",
+  "lessonKey": "hsk1-shopping-groceries",
+  "lessonOrder": 12,
+  "lessonTitle": "Shopping & Groceries",
+  "targetWords": [
+    "买",
+    "钱",
+    "多少",
+    "块",
+    "衣服",
+    "杯子",
+    "水果",
+    "苹果",
+    "些",
+    "东西"
+  ],
+  "packTitle": "Three Friends, One Small Budget",
+  "host": "dog",
+  "setting": "The existing shop slot only; counter scene is a content chapter, never a ninth map house.",
+  "motivation": "Dog wants to buy enough for a visit without spending all the shared money.",
+  "obstacle": "The display contains similar bundles at different prices, and the friends want different things.",
+  "runningJoke": "Dog asks the price of the entire display when he only needs a few apples.",
+  "communicationGoals": [
+    "Ask what something costs.",
+    "Request some fruit, cups or clothing in an appropriate quantity.",
+    "Choose and confirm a purchase within a visible budget."
+  ],
+  "reviewTargets": [
+    "商店",
+    "想",
+    "喜欢",
+    "水",
+    "多",
+    "少",
+    "两"
+  ],
+  "story": {
+    "motivation": "Dog wants to buy enough for a visit without spending all the shared money.",
+    "obstacle": "The display contains similar bundles at different prices, and the friends want different things.",
+    "turn": "Learner hears the two prices and chooses the affordable requested bundle.",
+    "payoff": "Friends carry the useful things home with some money remaining.",
+    "pages": [
+      {
+        "page": 1,
+        "action": "Dog, cat and mouse arrive at the shop with a small shared purse.",
+        "imageBrief": "Existing shop counter with apples, plain cups, folded clothing and visible coin icons.",
+        "purpose": "Establish a motivated purchase.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 2,
+        "action": "Dog points at everything while cat indicates a few apples.",
+        "imageBrief": "Same price cards with text left blank for checked UI overlay.",
+        "purpose": "Contrast amount and price questions.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 3,
+        "action": "Learner hears the two prices and chooses the affordable requested bundle.",
+        "imageBrief": "Two similar fruit bundles; shape and count distinct, no reliance on color.",
+        "purpose": "Make language determine a meaningful purchase.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      },
+      {
+        "page": 4,
+        "action": "Friends carry the useful things home with some money remaining.",
+        "imageBrief": "Three friends with chosen goods, unbought display remains in shop.",
+        "purpose": "Pay off planning without requiring arithmetic vocabulary.",
+        "textStatus": "English planning intent only; no learner-facing script generated",
+        "textValidation": "Run checkText for this individual page against the actual permitted lesson/learner word set before storing or displaying it."
+      }
+    ]
+  },
+  "episode": {
+    "beats": [
+      "Dog announces the visit supplies.",
+      "Cat asks for fruit.",
+      "Mouse indicates cups for water.",
+      "Dog tries to buy the whole counter.",
+      "Learner asks the price of a small bundle.",
+      "Shop response distinguishes two otherwise similar offers.",
+      "The group confirms the purchase.",
+      "Dog imagines using everything at once tomorrow."
+    ],
+    "cliffhanger": "When will everyone have time to use their new things?",
+    "delivery": "Six to eight short shots using existing room backgrounds and character identities; one checked line per shot where possible. Audio generated only after each line passes checkText.",
+    "status": "planned-not-generated"
+  },
+  "game": {
+    "mechanic": "Listen, price-check and purchase",
+    "objective": "Select a bundle matching noun, amount and price, then confirm it.",
+    "languageNecessary": "Budget and visuals alone do not identify the requested bundle; exact noun, quantity and price must be understood.",
+    "exampleRound_EN": "Intent: Buy two apples for three yuan. Offers: two apples at three, two at five, three apples at three.",
+    "distractors": [
+      "Correct quantity at wrong price",
+      "Wrong quantity at correct price",
+      "Cups instead of apples"
+    ],
+    "controlsDesktop": "Select a card with click or Tab and Enter, then select its destination; drag is optional. Space replays the current checked audio; escape cancels the pending placement. No speed requirement.",
+    "controlsMobile": "Tap a card then tap its destination with at least 48px targets. A persistent replay button and explicit confirm support one-handed play; never require precision dragging or hover.",
+    "win": "Complete three distinct request rounds, including at least one changed attribute combination. A corrected retry can succeed; completion alone is not evidence that every target word was learned.",
+    "feedback": "Show the selected outcome, replay the relevant checked clause, and let the learner revise one choice. Do not reveal the answer using a new word, a translation shortcut or color alone. Report only genuine submitted evidence through the memory layer."
+  },
+  "conversation": {
+    "role": "Learner is the helper; dog hosts and the other recurring friends supply context.",
+    "goal": "Dog wants to buy enough for a visit without spending all the shared money.",
+    "repairStrategy": "On uncertainty, replay the last checked sentence, shorten it using the same allowed words, then offer two checked alternatives grounded in the scene. Never introduce an unknown synonym or pretend an unintelligible response was correct. Let the learner pass without losing progress.",
+    "validation": "Check each host utterance, suggested learner response and repair independently using actual checkText; these are plans, not validated dialogue.",
+    "turnIntents_EN": [
+      "Greet the shop host.",
+      "State what you want to buy.",
+      "Ask the price.",
+      "Confirm the number or amount and choose the bundle.",
+      "Thank the host and finish the purchase."
+    ]
+  },
+  "objects": [
+    {
+      "visual": "Single apple",
+      "word": "苹果",
+      "assetReuse": "/art/objects/apple.png",
+      "purpose": "Countable purchase"
+    },
+    {
+      "visual": "Coin icon",
+      "word": "钱",
+      "assetReuse": "/art/objects/coin.png",
+      "purpose": "Money context, numeral UI supplies value"
+    },
+    {
+      "visual": "Plain cup",
+      "word": "杯子",
+      "assetReuse": null,
+      "purpose": "Alternative practical purchase"
+    },
+    {
+      "visual": "Folded clothing",
+      "word": "衣服",
+      "assetReuse": null,
+      "purpose": "Contrast category without clothing classifier not yet learned"
+    }
+  ],
+  "artRequests": [
+    {
+      "status": "planned-not-generated",
+      "purpose": "Four story panels and episode crops",
+      "brief": "Preserve the established gouache paper style and character identities. Compose the four story imageBriefs, leave all lettering blank, and keep separable targets visually clear. Existing reference files are reusable guidance, not evidence that these new panels exist.",
+      "referencePaths": [
+        "/art/core/stock-room.png",
+        "/art/core/dog-neutral.png",
+        "/art/core/dog-delighted.png"
+      ]
+    },
+    {
+      "status": "planned-not-generated",
+      "purpose": "Object and action overlays for the planned game",
+      "brief": "Single apple; Coin icon; Plain cup; Folded clothing. Reuse named files where geometry permits; request only missing views. Transparent cutouts with recorded placement and readable silhouettes. Runtime supplies checked Chinese text; no embedded generated writing.",
+      "referencePaths": [
+        "/art/objects/apple.png",
+        "/art/objects/coin.png"
+      ]
+    }
+  ],
+  "desktopUX": {
+    "entry": "Open this chapter from its host room shelf or TV; shopping scenes enter the existing shop content view.",
+    "layout": "Scene left, current checked line and replay below it; task choices and a clear confirmation panel on the right. Keep image, dialogue and choices visible together.",
+    "accessibility": "Keyboard order follows speaker, replay, alternatives, confirm; meaningful alt descriptions and text state, no color-only cues.",
+    "mapRule": "Retain exactly eight world slots. This lesson adds content chapters to existing rooms or the shop, not a new lesson house."
+  },
+  "mobileUX": {
+    "layout": "Stack scene, current line and two or three large choices. Fix replay and confirm within reachable controls; keep picture pinch zoom optional.",
+    "reading": "One story page or episode beat at a time; previous and next buttons remain distinct from object targets.",
+    "accessibility": "Support text resizing and reduced motion; text and sound alternatives accompany all meaningful state."
+  },
+  "vocabularyRisks": [
+    "Expensive, cheap, sell and clothing classifier are not yet available.",
+    "Avoid invented bargaining, change, discount or total vocabulary.",
+    "Display numeral values accessibly, but correct linguistic request still controls the task.",
+    "Price totals need no learner-facing advanced arithmetic wording."
+  ],
+  "vocabularyPolicy": {
+    "source": "src/data/course.json",
+    "cumulativeThroughOrder": 12,
+    "planningLanguage": "English only apart from exact source vocabulary identifiers.",
+    "scriptConstraint": "Final Chinese scripts use only the permitted cumulative course/learner set for this lesson. Availability of a pictured concept or English planning term grants no hidden vocabulary allowance.",
+    "perItemGate": "Before acceptance, run checkText on every story page, episode line, game instruction, request, distractor label, feedback line, conversation turn and repair against the actual allowed set supplied by memory. Rework failures or leave the item blocked; do not bypass with labels, pinyin, synonyms, compounding or translations.",
+    "visualPolicy": "Unlabeled visual concepts may appear for motivation. Any caption, alt text delivered in Chinese, hotspot label or spoken reference must pass its own checkText gate.",
+    "currentValidation": "Only exact target order, prior review membership and cumulative object identifiers checked here. No generated Chinese text, audio, images or runtime content validated or ready."
+  }
+}
