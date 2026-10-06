@@ -130,7 +130,7 @@ export const bookApprove = createServerFn({ method: "POST" })
     const byKey = new Map(unknown.map((u) => [u.key, u]));
     const { data: src, error: se } = await supabaseAdmin.from("sources").insert({
       learner_id: learner.id, title: job.input.title, kind: job.input.kind === "describe" ? "described" : "book",
-      word_ids: unknown.map((u) => u.wordId), plan: { lessons: lessonsPlan }, status: "ready",
+      word_ids: unknown.map((u) => u.wordId), plan: { lessons: lessonsPlan, repertoireAtApproval: [...repertoire], topWords: [...(plan0.found as Any[])].sort((a, b) => b.count - a.count).slice(0, 10).map((f: Any) => f.hanzi) }, status: "ready",
     }).select("id").single();
     if (se) throw new Error(se.message);
     const created: Any[] = [];
