@@ -66,7 +66,6 @@ function Lesson() {
           {!examples ? (
             <>
               <WordText tokens={[{ w: w.word.hanzi, id: w.word.id }]} lexicon={{ [w.word.id]: w.word }} tappable={false} size="lg" />
-              <p className="mt-1 text-sm font-semibold text-muted-foreground">{toMarked(w.word.pinyin)}</p>
               <p className="mt-3 text-xl">{w.word.meaning}</p>
               <div className="mt-6 flex flex-wrap gap-2">
                 <Button onClick={() => setExamples(true)} disabled={!w.examples.length}>{w.examples.length ? "See examples" : "No examples yet"}</Button>
