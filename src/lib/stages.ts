@@ -10,7 +10,7 @@ export const STAGES: Stage[] = [
   { n: 4, name: "Lessons", status: "partial", note: "Word, examples, two-question quiz, I already knew this. Generated sentences for words without any (lesson.sentences) not yet." },
   { n: 5, name: "Import a learner", status: "built", note: "Settings → Import my words, one transaction, dedupes, skips existing." },
   { n: 6, name: "Home and town", status: "partial", note: "Room and town with real buttons and real unlock markers; temporary placeholders until art; layout editor not yet." },
-  { n: 7, name: "Bring a book", status: "unbuilt" },
+  { n: 7, name: "Bring a book", status: "partial", note: "Photos or described story → source.read/describe → editable text with [?] → split + source.words → compare with repertoire → Exact lesson plan → approve (source, lessons, queued words, reserved plot, photos deleted) → lesson.sentences with checkText. Awaiting a real end-to-end book run." },
   { n: 8, name: "Make a place", status: "unbuilt" },
   { n: 9, name: "Place art", status: "unbuilt" },
   { n: 10, name: "Games", status: "unbuilt" },
