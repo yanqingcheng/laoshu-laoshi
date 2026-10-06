@@ -12,3 +12,5 @@
 - [ ] Next backlog stage: book/camera import (OCR → vocab → proposed lessons → approval).
 - [ ] Ruby module rewrite: per-character aligned pinyin, erhua, no duplicate pinyin line; shared by app + video/games; tested
 - [ ] Book/camera import stage (design drafted by helper, then build)
+- [ ] Import check with Tom-demo-backup.json (waiting on user file)
+- [ ] QA leftovers: review Good focus/Nearly, town dialog (check after features)
