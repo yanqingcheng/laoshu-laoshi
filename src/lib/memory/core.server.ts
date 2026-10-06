@@ -126,7 +126,7 @@ export async function submitEvidence(sb: SB, learner: Learner, ev: EvidenceInput
         .eq("learner_id", learner.id)
         .eq("request_id", ev.requestId)
         .single();
-      return { ...(again?.result as object), duplicate: true } as { due: string; enteredRepertoire: boolean };
+      return { ...(again?.result as { due: string; enteredRepertoire: boolean }), duplicate: true };
     }
     throw new Error(evErr.message);
   }

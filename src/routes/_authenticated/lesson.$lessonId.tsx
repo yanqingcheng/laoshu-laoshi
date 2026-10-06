@@ -78,7 +78,7 @@ function Lesson() {
           ) : (
             <>
               <ul className="space-y-5">
-                {w.examples.map((s) => (
+                {w.examples.map((s: any) => (
                   <li key={s.id}>
                     <WordText tokens={s.tokens} lexicon={d.lexicon} targetId={w.word.id} size="md" pinyin={d.pinyinOn} />
                     <p className="mt-1 text-muted-foreground">{s.english}</p>
