@@ -1,0 +1,80 @@
+LANTERNWING — local playable candidate, 6 October 2026
+
+DELIVERED
+game.v1.html is the self-contained candidate; data.v1.json contains real course
+numbers/readings. preview.html is a separate development host. Production app
+integration is owned by the parent chat; this folder does not change stage flags.
+Requested build model: gpt-6-astra, max. Exact prompts and original art proof are
+saved. The author does not have exposed actual model/token/cost metadata: null.
+
+PUBLIC PREVIEW
+http://127.0.0.1:4317/experiments/astra-numbers/preview.html
+Append ?capture for an exact-size frame without host description.
+The host assembles the existing lab/renderer.js, first-head exact CSP and
+sandbox="allow-scripts". Candidate itself performs no network calls.
+
+PUBLIC CONTROLS / WALKTHROUGH
+#action: title play, read-phase play, then Send fireflies to the lantern.
+#arena: tap or drag to steer the mouse to the indicated position. Arrows/WASD
+steer with the keyboard. It is a canvas world with no hidden solve control.
+#count and #inventory: visible current cargo. #drop or X/Backspace releases one.
+#listen: posts the current round's checked numeral to host speech.
+#help / #help-close: suspend the run, replay the illustrated demonstration, return.
+#motion: reduce motion. #restart / R: restart from every screen.
+#continue / Enter: acknowledge a correction or restart a finished run.
+Escape pauses/resumes. Read each request at leisure, then start flying. Catch
+exactly the number of fireflies requested and deliver. The first request is three;
+later requests use every number one through ten. Rain clouds release one light;
+they do not take a life. Incorrect delivery takes one of three lives and displays
+the attempted quantity, the requested numeral and its correct quantity. Ten correct
+deliveries win. There is no reading timer or game-completion memory evidence.
+
+OBSERVED CHECKS
+Edge/Chromium 154.0.4258.53 with installed Playwright; real sandbox, real data.
+320x480 and 390x700 used isMobile:true/hasTouch:true with real touch taps.
+900x600 used pointer interaction. At all three sizes the corrected candidate:
+- reported ready and showed native ruby/current request;
+- accepted title/read/play controls and collected a visible firefly by pointer;
+- changed visible cargo, released one using the public minus button;
+- showed a wrong-delivery correction, then reset through visible Restart;
+- replayed/closed demonstration and toggled reduced motion;
+- completed a three-mistake loss, with exactly one done event and integer score 0;
+- accepted repeated parent init, produced the second ready, and reset.
+No browser page exceptions were captured in these matrix checks. Screenshots of
+intro/read/correction at every size are in evidence/. Full screenshot inspection
+was performed on the desktop art proof and compact phone read screen. Parent
+also independently exercised real app touch controls, keyboard and restart.
+
+FIRST FAILURE / REPAIR TRACE
+The initial continuously translated Play button prevented Playwright's normal
+stable-target tap. The original source and failure log are preserved. Editorial
+repair v2 changed the invitation animation to shadow only, keeping the hitbox
+still. Normal touch taps then passed. A later test read hostEvents before the
+asynchronous done delivery; the test was corrected to await the host event.
+This was a harness timing issue, not a fabricated game pass. The capture host
+also had a max-height inherited from its narrow-screen layout; fixed capture mode
+to remove that host-only limit. Corrected captures are full specified dimensions.
+
+OUTSTANDING / NOT ACCEPTANCE
+The parent requested immediate handoff after critical smoke. The scripted full
+ten-round win was stopped before completion; no full-win claim is made. Full
+keyboard-only win, all-state restart, every collision/reachability case, all seeds,
+longest-text mutation, nonparent-message rejection and complete resize matrix
+remain to be independently exercised. Game has one fixed scenario rather than
+configurable content generation. Production checkText has not been run. Offline
+course-token checks do not replace it. Trusted renderer is the existing development
+version, not a newly certified renderer. No fresh blind learner play, independent
+Mandarin/visual acceptance, iOS/WebKit test, production isolation proof or cloud
+publication gate was performed. This is a playable local experiment, not an
+accepted cloud-generated production game. User feedback overrides scripted success.
+
+REPRODUCTION
+Run build.cjs to inline source components into game.v1.html and reconstruct data
+from src/data/course.json. qa.v1.cjs uses only public buttons, pointer coordinates,
+visible cargo and host event observations. It does not invoke private game methods.
+Its optional complete-win sweep is not yet a passing acceptance test.
+NODE_PATH = C:/Users/yanqi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules
+node docs/content/games/experiments/astra-numbers/qa.v1.cjs
+
+Artifact SHA256 hashes are saved in hashes.v1.json. The original visual proof
+source and pre-browser-repair source remain in evidence/.

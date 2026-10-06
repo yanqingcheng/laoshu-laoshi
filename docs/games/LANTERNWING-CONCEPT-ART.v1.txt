@@ -1,0 +1,91 @@
+LANTERNWING — concept and art direction v1, 2026-10-06
+Requested model: gpt-6-astra, max reasoning. Actual model, usage and cost metadata
+are not exposed to this artifact author; record null rather than infer billing.
+
+Six play choices considered before implementation
+1. Lanternwing: directly steer a mouse's leaf glider through drifting fireflies,
+   collect exactly the Mandarin request, then send them to power a paper lantern.
+   Twenty seconds: read an untimed request, launch, curve past a rain cloud, catch
+   three lights, deliberately discard an accidental extra, launch the lantern.
+   Mandarin determines when the inventory is right; geometry determines the route.
+2. Moon-mine cart: move a cart between switching rails, collect exact ore counts.
+   Good physical causality, but phone rail junctions can turn into answer lanes.
+3. Rooftop hop: aim a mouse between platforms and stop after the requested count.
+   Strong movement, but counting jumps competes with reading and missed jumps.
+4. Tide-pool gardener: swim a small turtle collecting requested seed quantities.
+   Navigation and currents work; delivering back to an island is too close to the
+   rejected ferry fantasy and risks unnecessary walking.
+5. Clockwork fireworks: turn numbered gears then aim fireworks at moving targets.
+   Spectacular payoff, but planning gears can resemble a static answer panel.
+6. Balancing acrobats: drag cat/mouse performers onto a seesaw, use requested
+   counts to balance a moving troupe. Charming, harder to teach without extra
+   vocabulary; multiple balancing rules compete with this early numbers lesson.
+
+Selection: Lanternwing. It has a immediately visible cause and reward: capture
+small lights, pour the exact number into a giant lantern, watch a new lantern join
+the festival. No three-answer grid or coloured answer lane. The player directly
+steers with one-finger tap/drag or arrows. Space sends the cargo; Backspace/X lets
+one firefly go. Ten requests use each real course number once. The first request
+is a guided three; remaining requests are unscaffolded and deliberately unordered.
+Calendar vocabulary is explicitly deferred. No fake calendar coverage claims.
+
+Visual composition — actually draw these
+An illustrated dusk paper theatre, cream-lit violet sky, peach horizon, layered
+teal mountain islands and indigo foreground eaves. Fine paper flecks, curved cloud
+cutouts, hanging string lights and dim distant windows create depth. No emoji.
+The stage is framed by a branch with paper pennants at top left and a carved
+festival platform at bottom. The central flight space stays visually open.
+The hero is a recognisable cream mouse: two large pink inner ears, long snout,
+black bead eyes, copper aviator goggles, curved tail, coral scarf with two flowing
+ends, tiny gripping paws, in a curled jade leaf glider with visible ribs and cord
+rigging. The body tilts, the leaf rolls, scarf trails, ears bounce and paws squash
+when collecting. Its caught lights orbit in a little glass belly lantern.
+Fireflies have gold abdomens, dark heads, two paper-thin wings and dotted trails.
+Cloud obstacles are soft blue sculpted rain puffs with falling teardrops and
+sleepy faces. Contact releases one light and deflects the glider, with invulnerability;
+it does not punish reading by costing a life. More clouds appear after tutorial.
+The delivery lantern is a large apricot ribbed hot-air paper lantern with brass
+rim, tassel, visible candle, scalloped seams and a warm pool of light. On success,
+fireflies stream from the glider to its candle, it inflates, rises, becomes one of
+the distant festival lights, and a new unlit lantern swings into place.
+Misses make the lantern gently droop and flash a clear crossed count comparison.
+Corrected Chinese plus explicit quantity appears only after a committed mistake.
+Victory sends the entire lantern parade through the sky with paper confetti,
+mouse salute, extra little mouse spectators peeking over the lower eaves.
+
+Motion and actual decisions
+Single RAF loop, real clamped delta time. Inertial steering with spring smoothing;
+fireflies drift slowly along curved deterministic paths. Player chooses routes
+through an open arena, avoids clouds and chooses when to stop collecting. Inventory
+caps at ten. Cargo is shown as collected quantity, never a translated target.
+Each round begins with an untimed read/rest phase; only explicit play starts motion.
+Pickup streams never run out. Three wrong deliveries end a run; cloud contact and
+overcollection are recoverable. Ten correct deliveries win. Score rewards precise
+delivery and successive first tries, never reading speed. Corrections remain until
+acknowledged. Reduced motion removes parallax, shaking and ambient flourishes,
+but preserves functional movement with slower hazards and immediate rewards.
+
+Onboarding
+The title screen is the real world, not a blank card. It runs a wordless animated
+demonstration: the same hero collects three lights, the checked number-three ruby
+is shown, a illustrated fingertip presses the lantern control, light enters the
+lantern and it rises. Three pictogram beats remain beneath the title. First play
+round uses three fixed slow pickups and an explicit illustrated drag cue. The
+request stays visible; a dotted path and destination cue are tutorial-only, removed
+on round two. A persistent ? replays the demonstration, suspending the live run.
+Host-facing English how-to is a separate artifact and preview host panel.
+
+Layout and text
+Canvas fills frame; responsive logical world uses available arena between fixed
+top controls/request and lower cargo/action bar. On 320x480 the scene crops side
+mountains, enlarges the mouse and preserves the same 56px controls; desktop opens
+the side scenery. No whole-scene scaling that shrinks text. Every Chinese surface
+calls the injected renderer; Hanzi 28px and pinyin 14px native ruby are untouched.
+All text arrives in parent-only init; source contains no Chinese/pinyin literals.
+
+Evidence requirements
+First preserve static proof made by the shipping draw routine, then screenshot
+three viewport sizes. Exercise public controls only: complete win, three mistakes,
+discard, restart, duplicate init, keyboard/touch and help/reduced motion. Record
+production checkText and independent blind play as outstanding if unavailable.
+This handcrafted experiment is not an unattended pipeline acceptance claim.

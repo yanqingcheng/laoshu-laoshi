@@ -1,0 +1,7 @@
+Editorial browser repair request — 2026-10-06
+Requested model gpt-6-astra. Actual exposed model/usage/cost metadata null.
+Parent and builder browser smoke found that the Play button's continuously
+translated hit box never settles for a standard accessible click. Preserve the
+play invitation by pulsing only its glow/shadow; keep its actual hitbox stable.
+Preserve the rich scene and all gameplay. Rebuild and repeat the public interaction
+smoke. Original pre-repair source is evidence/pre-smoke-repair.source.html.

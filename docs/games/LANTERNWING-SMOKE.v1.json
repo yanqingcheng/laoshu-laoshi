@@ -1,0 +1,70 @@
+{
+  "timestampUTC": "2026-10-06T19:20:13.316Z",
+  "browser": "154.0.4258.53",
+  "runtime": "installed Playwright + Edge",
+  "static": {
+    "sourceChineseFree": true,
+    "scriptSyntax": true,
+    "prohibitedApiScan": true,
+    "courseTokenReadings": true,
+    "tokenOccurrencesChecked": 25
+  },
+  "matrix": [
+    {
+      "viewport": "320x480 touch",
+      "checks": [
+        "ready",
+        "read/play",
+        "visible pickup",
+        "discard",
+        "wrong correction",
+        "restart",
+        "demo reopen/close",
+        "reduced motion toggle",
+        "three-error loss",
+        "one done score 0",
+        "duplicate init"
+      ],
+      "result": "passed"
+    },
+    {
+      "viewport": "390x700 touch",
+      "checks": [
+        "ready",
+        "read/play",
+        "visible pickup",
+        "discard",
+        "wrong correction",
+        "restart",
+        "demo reopen/close",
+        "reduced motion toggle",
+        "three-error loss",
+        "one done score 0",
+        "duplicate init"
+      ],
+      "result": "passed"
+    },
+    {
+      "viewport": "900x600 pointer",
+      "checks": [
+        "ready",
+        "read/play",
+        "visible pickup",
+        "discard",
+        "wrong correction",
+        "restart",
+        "demo reopen/close",
+        "reduced motion toggle",
+        "three-error loss",
+        "one done score 0",
+        "duplicate init"
+      ],
+      "result": "passed"
+    }
+  ],
+  "browserErrors": [],
+  "fullWin": "stopped before completion at parent immediate-handoff request",
+  "productionCheckText": "not run",
+  "blindPlay": "not performed",
+  "basis": "Public-interaction qa.v1.cjs console assertions observed through all three matrix runs before cancellation. Prior failures preserved separately."
+}

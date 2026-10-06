@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "mechanic": "lanternwing",
+  "title": [
+    {
+      "w": "一",
+      "p": "yi1"
+    },
+    {
+      "w": "，"
+    },
+    {
+      "w": "二",
+      "p": "er4"
+    },
+    {
+      "w": "，"
+    },
+    {
+      "w": "三",
+      "p": "san1"
+    },
+    {
+      "w": "！"
+    }
+  ],
+  "how_to": [],
+  "how_to_en": "Help the mouse light a lantern festival. Read the number, then press Play. Tap or drag through the sky to catch that many fireflies. Your jar shows how many you have. Avoid rain clouds; they release one light. The minus button releases an extra light. Press the lantern button to deliver. Light all ten lanterns. You have three chances for an incorrect count. Take as long as you need to read. Keyboard: arrows or WASD to steer, Space to launch or deliver, X or Backspace to release one, Enter to continue, R to restart, H for the demonstration, Escape to pause.",
+  "feedback": {
+    "good": [
+      {
+        "w": "好",
+        "p": "hao3"
+      },
+      {
+        "w": "！"
+      }
+    ],
+    "retry": []
+  },
+  "rounds": [
+    {
+      "id": "request-1",
+      "word": [
+        {
+          "w": "三",
+          "p": "san1"
+        }
+      ],
+      "target": 3,
+      "tones": [
+        1
+      ],
+      "meaning_en": "three"
+    },
+    {
+      "id": "request-2",
+      "word": [
+        {
+          "w": "一",
+          "p": "yi1"
+        }
+      ],
+      "target": 1,
+      "tones": [
+        1
+      ],
+      "meaning_en": "one"
+    },
+    {
+      "id": "request-3",
+      "word": [
+        {
+          "w": "五",
+          "p": "wu3"
+        }
+      ],
+      "target": 5,
+      "tones": [
+        3
+      ],
+      "meaning_en": "five"
+    },
+    {
+      "id": "request-4",
+      "word": [
+        {
+          "w": "二",
+          "p": "er4"
+        }
+      ],
+      "target": 2,
+      "tones": [
+        4
+      ],
+      "meaning_en": "two"
+    },
+    {
+      "id": "request-5",
+      "word": [
+        {
+          "w": "七",
+          "p": "qi1"
+        }
+      ],
+      "target": 7,
+      "tones": [
+        1
+      ],
+      "meaning_en": "seven"
+    },
+    {
+      "id": "request-6",
+      "word": [
+        {
+          "w": "四",
+          "p": "si4"
+        }
+      ],
+      "target": 4,
+      "tones": [
+        4
+      ],
+      "meaning_en": "four"
+    },
+    {
+      "id": "request-7",
+      "word": [
+        {
+          "w": "九",
+          "p": "jiu3"
+        }
+      ],
+      "target": 9,
+      "tones": [
+        3
+      ],
+      "meaning_en": "nine"
+    },
+    {
+      "id": "request-8",
+      "word": [
+        {
+          "w": "六",
+          "p": "liu4"
+        }
+      ],
+      "target": 6,
+      "tones": [
+        4
+      ],
+      "meaning_en": "six"
+    },
+    {
+      "id": "request-9",
+      "word": [
+        {
+          "w": "十",
+          "p": "shi2"
+        }
+      ],
+      "target": 10,
+      "tones": [
+        2
+      ],
+      "meaning_en": "ten"
+    },
+    {
+      "id": "request-10",
+      "word": [
+        {
+          "w": "八",
+          "p": "ba1"
+        }
+      ],
+      "target": 8,
+      "tones": [
+        1
+      ],
+      "meaning_en": "eight"
+    }
+  ],
+  "requiredWords": [
+    {
+      "w": "一",
+      "p": "yi1"
+    },
+    {
+      "w": "二",
+      "p": "er4"
+    },
+    {
+      "w": "三",
+      "p": "san1"
+    },
+    {
+      "w": "四",
+      "p": "si4"
+    },
+    {
+      "w": "五",
+      "p": "wu3"
+    },
+    {
+      "w": "六",
+      "p": "liu4"
+    },
+    {
+      "w": "七",
+      "p": "qi1"
+    },
+    {
+      "w": "八",
+      "p": "ba1"
+    },
+    {
+      "w": "九",
+      "p": "jiu3"
+    },
+    {
+      "w": "十",
+      "p": "shi2"
+    },
+    {
+      "w": "好",
+      "p": "hao3"
+    }
+  ],
+  "ui": {
+    "play": "Start flying",
+    "deliver": "Send fireflies to the lantern",
+    "discard": "Release one firefly",
+    "help": "Watch the demonstration",
+    "closeHelp": "Return to your flight",
+    "motion": "Reduce motion",
+    "restart": "Restart",
+    "listen": "Hear the current number",
+    "continue": "Continue",
+    "arena": "Flight area. Tap or drag to steer; arrow keys also steer.",
+    "cargo": "Fireflies in your jar",
+    "pause": "Pause or resume",
+    "title": "Lanternwing"
+  },
+  "meta": {
+    "lessonKey": "hsk1-numbers-calendar",
+    "focusWords": [
+      "一",
+      "二",
+      "三",
+      "四",
+      "五",
+      "六",
+      "七",
+      "八",
+      "九",
+      "十"
+    ],
+    "deferredWords": [
+      "今天",
+      "月",
+      "号",
+      "星期",
+      "天",
+      "几"
+    ],
+    "sourcePath": "src/data/course.json",
+    "sourceSHA256": "a2d1a799a0de1b1c6f9be9a384cf821b04bb40ec19ac08019f9de7a433b08f3f",
+    "requestedModel": "gpt-6-astra",
+    "requestedReasoning": "max",
+    "actualModel": null,
+    "usage": null,
+    "cost": null
+  }
+}

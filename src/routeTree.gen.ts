@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as DemoPackRouteImport } from './routes/demo-pack'
+import { Route as GamePreviewRouteImport } from './routes/game-preview'
 import { Route as ParkPreviewRouteImport } from './routes/park-preview'
 import { Route as AuthenticatedBookRouteImport } from './routes/_authenticated/book'
 import { Route as AuthenticatedDevRouteImport } from './routes/_authenticated/dev'
@@ -42,6 +43,11 @@ const AuthRoute = AuthRouteImport.update({
 const DemoPackRoute = DemoPackRouteImport.update({
   id: '/demo-pack',
   path: '/demo-pack',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GamePreviewRoute = GamePreviewRouteImport.update({
+  id: '/game-preview',
+  path: '/game-preview',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ParkPreviewRoute = ParkPreviewRouteImport.update({
@@ -106,6 +112,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/demo-pack': typeof DemoPackRoute
+  '/game-preview': typeof GamePreviewRoute
   '/park-preview': typeof ParkPreviewRoute
   '/book': typeof AuthenticatedBookRoute
   '/dev': typeof AuthenticatedDevRoute
@@ -122,6 +129,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/demo-pack': typeof DemoPackRoute
+  '/game-preview': typeof GamePreviewRoute
   '/park-preview': typeof ParkPreviewRoute
   '/book': typeof AuthenticatedBookRoute
   '/dev': typeof AuthenticatedDevRoute
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
   '/demo-pack': typeof DemoPackRoute
+  '/game-preview': typeof GamePreviewRoute
   '/park-preview': typeof ParkPreviewRoute
   '/_authenticated/book': typeof AuthenticatedBookRoute
   '/_authenticated/dev': typeof AuthenticatedDevRoute
@@ -158,6 +167,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/demo-pack'
+    | '/game-preview'
     | '/park-preview'
     | '/book'
     | '/dev'
@@ -174,6 +184,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/demo-pack'
+    | '/game-preview'
     | '/park-preview'
     | '/book'
     | '/dev'
@@ -191,6 +202,7 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/auth'
     | '/demo-pack'
+    | '/game-preview'
     | '/park-preview'
     | '/_authenticated/book'
     | '/_authenticated/dev'
@@ -209,6 +221,7 @@ export interface RootRouteChildren {
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AuthRoute: typeof AuthRoute
   DemoPackRoute: typeof DemoPackRoute
+  GamePreviewRoute: typeof GamePreviewRoute
   ParkPreviewRoute: typeof ParkPreviewRoute
 }
 
@@ -240,6 +253,13 @@ declare module '@tanstack/react-router' {
       path: '/demo-pack'
       fullPath: '/demo-pack'
       preLoaderRoute: typeof DemoPackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/game-preview': {
+      id: '/game-preview'
+      path: '/game-preview'
+      fullPath: '/game-preview'
+      preLoaderRoute: typeof GamePreviewRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/park-preview': {
@@ -356,6 +376,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AuthRoute: AuthRoute,
   DemoPackRoute: DemoPackRoute,
+  GamePreviewRoute: GamePreviewRoute,
   ParkPreviewRoute: ParkPreviewRoute,
 }
 export const routeTree = rootRouteImport
