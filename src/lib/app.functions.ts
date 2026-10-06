@@ -26,7 +26,7 @@ function shuffle<T>(arr: T[], r: () => number): T[] {
 function hashStr(s: string) {
   let h = 2166136261;
   for (const c of s) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
-  return h >>> 0;
+  return (h >>> 0) % 2147483647;
 }
 
 async function ctxAll(context: Any) {
@@ -153,7 +153,7 @@ export const getReview = createServerFn({ method: "POST" })
       if (error) throw new Error(error.message);
       const already = new Set<string>(sess ? sess.items.cards.map((c: Any) => c.wordId) : []);
       const dueCards = (cards ?? []).filter((c: Any) => repertoire.has(c.word_id) && core.isDue(new Date(c.due), learner) && !(data.more && already.has(c.word_id) && false));
-      const seed = sess ? sess.seed + 1 : hashStr(learner.id + day + data.direction);
+      const seed = sess ? (sess.seed + 1) % 2147483647 : hashStr(learner.id + day + data.direction);
       const r = rng(seed);
       const byDay = new Map<string, Any[]>();
       for (const c of dueCards) {
