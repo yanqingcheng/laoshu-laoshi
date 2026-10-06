@@ -24,9 +24,12 @@ function Dev() {
   const st = useServerFn(devStatus);
   const syn = useServerFn(devSynthetic);
   const reset = useServerFn(devReset);
+  const aiCheck = useServerFn(checkAiConnection);
   const qc = useQueryClient();
   const q = useQuery({ queryKey: ["dev"], queryFn: () => st() });
   const [msg, setMsg] = useState<string | null>(null);
+  const [ai, setAi] = useState<Awaited<ReturnType<typeof checkAiConnection>> | null>(null);
+  const [aiBusy, setAiBusy] = useState(false);
   const counts = q.data?.counts as Record<string, number> | null;
   return (
     <AppShell title="Developer">
