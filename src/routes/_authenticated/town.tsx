@@ -8,18 +8,13 @@ import { homeSummary } from "@/lib/app.functions";
 import { stageBuilt } from "@/lib/stages";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { BUNDLED, isOpen } from "@/lib/places";
 
 export const Route = createFileRoute("/_authenticated/town")({
   head: () => ({ meta: [{ title: "Town — Laoshu Laoshi" }, { name: "description", content: "Your town of neighbours, shop, park and gym." }, { property: "og:title", content: "Town — Laoshu Laoshi" }, { property: "og:description", content: "Your town." }] }),
   component: Town,
 });
 
-// Bundled neighbours open when 80% of their course lesson's words are known.
-const BUNDLED = [
-  { slot: "mouse", label: "老师 · the mouse teacher", lesson: 0 },
-  { slot: "dog", label: "毛毛 · the dog", lesson: 1 },
-  { slot: "cat", label: "咪咪 · the cat", lesson: 2 },
-];
 
 function Town() {
   const boot = useBootstrap();
@@ -38,7 +33,7 @@ function Town() {
     spot("home", "Home", true, { onActivate: () => nav({ to: "/home" }) }),
     ...BUNDLED.map((b) => {
       const l = L[b.lesson];
-      const open = l ? l.learned / l.total >= 0.8 : false;
+      const open = isOpen(l);
       return spot(b.slot, b.label, true, {
         badge: open ? undefined : "🔒",
         onActivate: () =>
