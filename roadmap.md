@@ -17,3 +17,4 @@
 - [ ] Pull pushed art: import screen + wire home-room/town/houses/sheets
 - [ ] Write game acceptance-service contract doc for Astra/Fable
 - [ ] Coordinate: Fable/Astra own game templates, acceptance service, park drills, README
+- [ ] Test photo book import with user's page photos
