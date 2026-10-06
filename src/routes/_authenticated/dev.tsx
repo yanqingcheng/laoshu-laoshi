@@ -4,6 +4,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
 import { AppShell, CouldNotLoad } from "@/components/AppShell";
 import { devStatus, devSynthetic, devReset } from "@/lib/app.functions";
+import { checkAiConnection } from "@/lib/ai/openai.functions";
 import { STAGES } from "@/lib/stages";
 import { WordText } from "@/components/WordText";
 import { Button } from "@/components/ui/button";
